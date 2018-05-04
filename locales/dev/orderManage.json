@@ -1,0 +1,39 @@
+{
+  "title": "Nostro titolo",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "revoke":"revoke",
+  "undone":"undone",
+  "dui":{
+    "xbuy":"Buy Limit",
+    "xsell":"Sell Limit",
+    "sbuy":"Market buy",
+    "ssell":"Market sell"
+  },
+  "orderManage":{
+
+    "allstatus":"Status",
+    "Pending":"Pending",
+    "Deleted":"Deleted",
+    "Filled":"Filled",
+    "Date":"Date",
+    "Pair":"Pair",
+    "Type":"Type",
+    "Price":"Price",
+    "Amount":"Amount",
+    "Total":"Total",
+    "Completed":"Completed",
+    "AveragePrice":"Average Price",
+    "open":"open",
+    "Status":"Status"
+  },
+
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

@@ -1,0 +1,194 @@
+.message_Carousel{
+    overflow: hidden;
+    height: 20px;
+}
+.ms .message_Carousel{
+    overflow: hidden;
+    height: 24px;
+}
+.message_Carousel .roll_list,.message_Carousel .roll_list1{
+    width: 37500px;
+}
+.roll_list span.active_message,.roll_list1 span.active_message{
+    position: relative;
+    padding-left: 33px;
+    color: #fffd00;
+}
+.bgloading {
+  background-color: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none; }
+#loading{
+    display: none;
+}
+
+
+/*替换ios自带的样式*/
+input::-webkit-input-placeholder { color:#acc9ef; }
+input:-moz-placeholder {   color:#acc9ef; }
+input::-moz-placeholder {  color:#acc9ef; }
+input:-ms-input-placeholder {  color:#acc9ef;}
+input[type="button"], 
+input[type="submit"], 
+input[type="reset"], 
+input[type="password"] {
+-webkit-appearance: none;
+
+}
+
+/*活动第一步*/
+.in_grab_first #mail1.input-info,
+.in_grab_first #mail11.input-info,
+.in_grab_second  #mail1.input-info,
+.in_grab_second  #mail11.input-info{
+    width: 310px;
+    height: 40px;
+    background: #0f3c78;
+    border: 1px solid #0e3569;
+    border-radius: 5px;
+    padding-left: 35px;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.ms .in_grab_first #mail1.input-info,
+.ms .in_grab_first #mail11.input-info,
+.ms .in_grab_second  #mail1.input-info,
+.ms .in_grab_second  #mail11.input-info{
+    width: 80%;
+    height: 90px; font-size: 28px;
+    /*background-color: #8aafe1;*/
+
+}
+.ms .in_grab_first #mail1.input-info input,
+.ms .in_grab_first #mail1.input-info input,
+.ms .in_grab_first #mail11.input-info input,
+.ms .in_grab_second  #mail1.input-info input,
+.ms .in_grab_second  #mail11.input-info input{
+	background-color: #386cb1;
+}
+
+.in_grab_first input[type="button"],
+.in_grab_second input[type="button"]{
+    width: 312px;
+    border-radius: 5px;
+    color: #fff;
+    height: 39px;
+    border: 1px solid #0e3569;
+    margin-top: 40px;
+     padding: 0px 60px;
+}
+
+.ms .in_grab_first input[type="button"],
+.ms .in_grab_second input[type="button"]{
+    width: 80%;
+    height: 80px; font-size: 28px;
+    margin-top: 0px;
+    border-radius: 5px;
+}
+.zx_save{
+    display: inline-block;
+    color: #fff !important;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.h318{
+    height: 318px;
+}
+.bottom-box.posi-fix{
+    position: static;
+}
+#btc-eth .img_regist,.words_ETH{
+    width: auto;
+
+}
+section img{
+    width: auto;
+}
+.input-info{
+    position: relative;
+}
+.right_icon{
+    width: auto;
+    position: absolute;
+    left: 585px;
+    top: 50%; margin-top:-20px ;
+
+}
+.ms .right_icon {
+    margin-top: -30px;
+    left:50%;
+    top: 50%;
+    margin-left: 160px;
+    width: 28px;
+}
+.code-wrap {
+    width: 310px;
+    height: 38px;
+    border: 1px solid #0e3569;
+    border-radius: 3px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.code-wrap  input{
+    width: 100px;
+    border: none;
+    height: 38px;
+    margin-bottom: 30px;
+    border-radius: 0;
+    color: #fff;
+    background: #386cb1;
+    float: left;
+    padding:0px 32px;
+}
+/*placeholder属性*/
+.ms input::-webkit-input-placeholder { /* WebKit browsers */
+　　color:#8aafe1;
+}
+.ms input::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+　　color:#8aafe1;
+}
+.ms input::-moz-placeholder { /* Mozilla Firefox 19+ */
+　　color:#8aafe1;
+}
+.ms input::-ms-input-placeholder { /* Internet Explorer 10+ */
+　　color:#8aafe1;
+}
+.code-wrap {
+	background: #386cb1; overflow: hidden;
+}
+.ms .code-wrap {
+    width: 80%;
+    height: 80px;font-size: 28px;
+    border-radius: 10px;
+    background-color: #386cb1;
+}
+.ms .code-wrap input{
+    height: 80px;font-size: 28px; width:100%; padding:0px 0px 0px 32px;
+}
+.code-wrap .input-info{
+    padding-right: 0;
+     
+}
+.in_grab_second input.loginInputBox { width: 100%;}
+.in_grab_second input[type="button"].btn-gain{
+    width: 150px; position: absolute; right:0px; margin:0 auto;
+    border-radius: 0;
+    color: #fff;
+    height: 36px;
+    border: 0;
+    cursor: pointer;
+}
+.ms .in_grab_second input[type="button"].btn-gain{
+    height: 80px;
+    padding-left: 0px;
+}
+
+.ms .button_grab,
+.ms .button_get{
+    margin-top: -80px;
+}

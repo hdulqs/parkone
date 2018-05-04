@@ -1,0 +1,122 @@
+<!DOCTYPE html  class="html-register">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title data-i18n="common:htmlTitle"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telphone=no,email=no">
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.js"></script>
+    <![endif]-->
+    <!--css文件引入开始-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/orderManage/orderManage.css">
+    <!--css文件引入结束-->
+</head>
+<body class="order-manage trading" >
+<div id="loaded" class="dn loaded">
+    <div class="page"  id="orderBox" v-cloak>
+        <div class="top-box" id="headerNav"></div>
+		<div class="notice-wrap" id="topNotice"></div>
+        <div class="warp-box">
+            <div class="text-center chart-box">
+                <div class="row">
+                    <div class="col-xs-2 active-select">
+                        <i data-i18n="orderManage.titleMsg"></i>
+                        <p class="font-select handmouse text-center" :class="showWindow ? 'arrow-up' : '' " v-show="showOther"  v-text="selectValue" v-on:click="toggle()"></p>
+                        <p class="font-select handmouse text-center" :class="showWindow ? 'arrow-up' : '' "  v-show="showAll" data-i18n="selectall" v-on:click="toggle()"></p>
+                        <ul class="window-pair handmouse" v-show="showWindow">
+                            <li data-i18n="selectall"  value="0"  v-on:click="toggle(0);selectOnchang(all,0)"></li>
+                            <li :value="index" v-for="(item,index) in listTrade" v-on:click="toggle(1);selectOnchang(item,index)" >{{item}}</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-10 ">
+                        <ul class="list-inline">
+                            <!--<li><p data-i18n="orderManage.allstatus"  @click="setData(0),statusIndex=0" :class="statusIndex==0?statusIndexClassActive:statusIndexClass">{{statusIndex}}全部状态</p></li>-->
+                            <li><p data-i18n="orderManage.Pending" @click="setData(1,1),statusIndex=1,cur=1" :class="statusIndex==1?statusIndexClassActive:statusIndexClass">委托中</p></li>
+                            <li><p  data-i18n="orderManage.Deleted" @click="setData(5,1),statusIndex=2,cur=1" :class="statusIndex==2?statusIndexClassActive:statusIndexClass">已撤销</p></li>
+                            <li><p  data-i18n="orderManage.navFilled" @click="setDataEnd(1),statusIndex=3,cur=1" :class="statusIndex==3?statusIndexClassActive:statusIndexClass">已成交</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="platform-box personal-box ">
+                <div class="text-center">
+                    <ul class="list-inline list-title">
+                        <li style="width:18%" data-i18n="orderManage.Date">时间</li>
+                        <li data-i18n="orderManage.Pair">交易对</li>
+                        <li style="width:5%" data-i18n="orderManage.Type">交易类型</li>
+                        <li data-i18n="orderManage.Price">委托价</li>
+                        <li data-i18n="orderManage.Amount">委托量</li>
+                        <li data-i18n="orderManage.Total">委托总额</li>
+                        <li data-i18n="orderManage.Completed">已成交</li>
+                        <li data-i18n="orderManage.AveragePrice">成交均价</li>
+                        <li v-if="statusIndex==3" data-i18n="orderManage.Fee">手续费</li>
+                        <li v-else data-i18n="orderManage.open">未成交</li>
+                        <li v-if="statusIndex==1" style="width:7%" data-i18n="orderManage.Status">操作</li>
+                        <li v-else style="width:7%" data-i18n="orderManage.Status">状态</li>
+                    </ul>
+                    <ul class="list-inline list-info" v-for="item in getOrderList">
+                        <li style="width:18%;">{{item.create_time| time}}</li>
+                        <li>{{item.biz_type}}</li>
+                        <li style="width:5%;" :data-i18n="'dui.xbuy'+item.trade_type"></li>
+                        <li v-if="!item.consignation_price">-</li>
+                        <li v-if="item.consignation_price">{{formatNumber(scientificToNumber(item.consignation_price),6)}}</li>
+                        <li>{{item.trade_type==3?"-":formatNumber(scientificToNumber(item.consignation_count),4)}}</li>
+                        <li>{{item.trade_type==4?"-":formatNumber(scientificToNumber(item.consignationTotalMoney),8)}}</li>
+                        <li>{{formatNumber(scientificToNumber(item.made_count),4)}}</li>
+                        <li>{{formatNumber(scientificToNumber(item.made_average_price),6)}}</li>
+                        <li v-if="statusIndex==3">{{formatNumber(scientificToNumber(item.poundage),8)}}</li>
+                        <li v-else>{{(item.trade_type==4||item.trade_type==3)?"-":formatNumber(scientificToNumber(item.unTradeCount),8)}}</li>
+                        <li style="width:7%;" v-if="item.consignation_status==4"><i data-i18n="orderManage.Filled">已成交</i></li>
+                        <li style="width:7%;" v-if="item.consignation_status==5"><i data-i18n="undone">已撤单</i></li>
+                        <li style="width:7%;" v-if="item.consignation_status==1||item.consignation_status==2||item.consignation_status==3" @click="revokeOrder(item.consignation_no)"><i data-i18n="revoke" class="btn-revoke">撤单</i></li>
+                    </ul>
+                    <div class="no-data-msg1 text-center" v-show="show==true">
+                        <p class="icon-document-text text-center"></p>
+                        <p class="font-hint text-center" data-i18n="common:commonMsg.noData"></p>
+                    </div>
+                </div>
+            </div>
+
+			<div class="pagination-wrap text-right">
+			    <div class="page-bar pagination">
+			        <ul v-show="all > 1">
+			            <li><a @click="cur != 1 ? btnClick(1) : ''"><i class="icon-angle-double-left"></i></a></li>
+			            <li><a @click="cur != 1 ? (cur-- && pageClick()) : ''"><i class="icon-chevron-thin-left"></i>
+			            </a></li>
+			            <li v-for="index in indexs"  v-bind:class="{ 'active': cur == index}">
+			                <a @click="btnClick(index)">{{ index }} </a>
+			            </li>
+			            <li><a @click="all != cur && all != 0 ? (cur++ && pageClick()) : ''"><i class="icon-chevron-thin-right"></i></a></li>
+			            <li><a @click="all != cur && all != 0 ? btnClick(all) : ''"><i class="icon-angle-double-right"></i></a></li>
+			        </ul>
+			    </div>
+			</div>
+        </div>
+    </div>
+    <div class="bottom-box dn posi-fix" id="footerNav">
+</div>
+<div class="loading" id="loading">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+</div>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../js/comm.js"></script>
+<!-- 多语言切换开始-->
+<script src="../../js/jquery.cookie.js"></script>
+<script src="../../js/i18next-1.6.3.min.js"></script>
+<script src="../../js/changeLang.js"></script>
+<!-- 多语言切换结束-->
+<script src="../../js/jquery.jqpagination.min.js"></script>
+<script src="../../js/jquery.cookie.js"></script>
+<script src="../../js/vue.min.js"></script>
+<script src="../../js/vue-resource.js"></script>
+<script src="../../js/orderManage/orderManage.js"></script>
+</body>
+</html>

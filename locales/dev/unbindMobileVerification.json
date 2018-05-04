@@ -1,0 +1,21 @@
+{
+  "activelang": "English",
+  "bindMobileVerification":{
+    "title": "Remove mobile phone verification",
+    "inputLoginPsw": "Login password",
+    "warning1": "Invalid login password",
+    "warning3": "The login password is required.",
+    "inputMobile": "Phone number",
+    "warning2": "Invalid Mobile number",
+    "warning4": "The mobile number is required.",
+    "warning5": "The identifying code is required.",
+    "inputCode": "SMS Code",
+    "inputGetCode": "Send SMS",
+    "submitCheck": "Confirm"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

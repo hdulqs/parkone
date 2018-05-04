@@ -1,0 +1,45 @@
+.announcement-center .top-box .ul-select {
+    background: #020d2b;
+}
+.announcement-center .no-data-msg2{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    left: 50%;
+}
+html{
+    font-size: 100px;
+}
+.list .links-node p:first-child {
+    font-size: 14px;
+}
+.list .links-node p:last-child {
+    font-size: 12px;
+    color: #666;
+}
+.list .links-node p:nth-child(2) {
+    padding-right: 0;
+}
+.no-data-msg2, .no-data-msg, .no-data-msg1 {
+    margin-top: 10px;
+}
+.content-box .nav-box li{
+    font-size: 16px;
+    position:relative;
+    padding-left:20px;
+}
+
+.nav-box li .left-icon{
+    position: absolute;
+    top:2px;
+    left:0;
+    display: inline-block;
+    width:6px;
+    height: 20px;
+    background:#13b5b1;
+    margin-right: 15px;
+}

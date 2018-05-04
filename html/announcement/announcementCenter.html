@@ -1,0 +1,112 @@
+<!DOCTYPE html   class="html-register">
+<html>
+<head>
+    <title data-i18n="common:htmlTitle"></title>
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--css文件引入开始-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/announcement/announcementCenter.css">
+    <link rel="stylesheet" href="../../css/personalCenter/myMessage.css">
+    <!--css文件引入结束-->
+</head>
+<body class="my-message announcement-center">
+	<div  id="loaded" class="dn loaded">
+		<div class="page">
+			<div class="top-box" id="headerNav"></div>
+			<div class="notice-wrap" id="topNotice"></div>
+			<div class="warp-box">
+                <div class="content-box" id="annContent">
+                    <ul class="clearfix nav-box">
+                        <li>
+                        <i class="left-icon"></i>
+                        <i data-i18n="announcementCenter.announcement"></i></li>
+                    </ul>
+                    <div class="list-wrap" v-show="contentText ? true : false">
+                        <div class="list" v-for="(item,index) in contentText">
+                            <a :href="'../announcement/announcementCenterDetail.html?id='+item.id" target="_self" class="links-node">
+                                <p class="clearfix"><i>{{item.title}}</i><i class="pull-right font-date">{{item.annTime}}</i></p>
+                                <p class="clearfix">{{item.callName}}{{item.desText}}</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="no-data-msg1 text-center" v-show="contentText ? false : true">
+                        <p class="icon-document-text text-center"></p>
+                        <p class="text-center" data-i18n="common:commonMsg.noData"></p>
+                        <a href="https://blockchain.info" style="color:#13b5b1;">https://blockchain.info</a>
+                        <br>
+                    </div>
+                </div>
+        	</div>
+        </div>
+		<div class="bottom-box dn posi-fix" id="footerNav">
+    </div>
+    <div class="loading"  id="loading" >
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/comm.js"></script>
+<script src="../../js/vue.min.js"></script>
+<!-- 多语言切换开始-->
+<script  src="../../js/jquery.cookie.js"></script>
+<script src="../../js/i18next-1.6.3.min.js"></script>
+<script  src="../../js/changeLang.js"></script>
+<!-- 多语言切换结束-->
+<script>
+	var utm_source = getUrlParam("utm_source");
+    sessionStorage.setItem("utm_source",utm_source);
+	var annContent = new Vue({
+		el: "#annContent",
+		data:{
+			logoName:"CoinToBe",
+			contentText:""
+		}
+	});
+	$(function(){
+		readJsonFile(updateQes);
+		$("body").on("click","#ul-language li",function(){
+			setTimeout(function(){		
+				readJsonFile(updateQes);
+			},1);
+		});
+	    $("li.yes-box").click(function(){
+	    	if(!$(this).children("i").hasClass("img-yes-active")){
+	            $(this).children("i").removeClass("img-yes").addClass("img-yes-active");
+	            $("li.no-box").children("i").removeClass("img-no-active").addClass("img-no");
+			}else{
+	            $(this).children("i").removeClass("img-yes-active").addClass("img-yes");
+			}
+		});
+	    $("li.no-box").click(function(){
+	        if(!$(this).children("i").hasClass("img-no-active")){
+	            $(this).children("i").removeClass("img-no").addClass("img-no-active");
+	            $("li.yes-box").children("i").removeClass("img-yes-active").addClass("img-yes");
+	        }else{
+	            $(this).children("i").removeClass("img-no-active").addClass("img-no");
+	        }
+	    })
+	});
+	//读取文案json
+	function readJsonFile(callback){ 
+		var lan = $.cookie('newlang');
+		var isR = false;
+		var source = "../../locales/"+lan+"/announcementCenterDetail.json?v=2.0";
+		$.get(source,function(data){
+			callback(data);
+		})
+	}
+	function updateQes(d){
+		annContent.contentText = d['mContent'];
+		setTimeout(function(){
+			resizebody();
+		},0)
+	}
+</script>
+</body>
+</html>

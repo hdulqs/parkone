@@ -1,0 +1,42 @@
+{
+  "title": "Nostro titolo",
+  "selectall":"全部",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "revoke":"撤单",
+  "undone":"已撤单",
+  "dui":{
+    "xbuy1":"买",
+    "xbuy2":"卖",
+    "xbuy3":"买",
+    "xbuy4":"卖"
+  },
+  "alert": "Fare clic su OK per chiudere.",
+  "orderManage": {
+    "allstatus": "全部状态",
+    "Pending": "当前委托",
+    "Deleted": "历史委托",
+    "navFilled":"历史成交",
+    "Filled": "已成交",
+    "Date": "时间",
+    "Pair": "交易对",
+    "Type": "交易类型",
+    "Price": "委托价",
+    "Amount": "委托量",
+    "Total": "委托总额",
+    "Completed": "已成交",
+    "AveragePrice": "成交均价",
+    "open": "未成交",
+    "Status": "状态/操作",
+    "titleMsg": "交易对：",
+    "Fee":"手续费"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

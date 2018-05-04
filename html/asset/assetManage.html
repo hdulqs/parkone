@@ -1,0 +1,219 @@
+<!DOCTYPE html  class="html-register">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title data-i18n="common:htmlTitle"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telphone=no,email=no">
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.js"></script>
+    <![endif]-->
+    
+    <!--css文件引入开始-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/asset/assetManage.css">
+    <!--css文件引入结束-->
+</head>
+<body class="asset-manage">
+    <div  id="loaded" class="dn loaded">
+        <div class="page">
+            <div class="top-box" id="headerNav"></div>
+			<div class="notice-wrap" id="topNotice"></div>
+			<div class="warp-box">
+				<div id="assetHAT" v-cloak>
+	                <div class="tag-wrap text-center">
+	                    <div class="row" id="TopTotalNumber">
+	                        <div class="col-sm-4">
+								<p data-i18n="assetManage.Estimated"></p>
+								<p>{{formatNumber(totalDataList.totalBTC>0 ? scientificToNumber(totalDataList.totalBTC) : 0,8)}}</p>
+								<p><span data-i18n="assetManage.moneyType"></span>{{getFloat((totalDataList.totalUSD>0 ? scientificToNumber(totalDataList.totalUSD) : 0.00)*RateMoney,2)}}</p>
+							</div>
+							<div class="col-sm-4">
+								<p data-i18n="assetManage.Avaliable"></p>
+								<p>{{formatNumber(totalDataList.availableBTC>0 ? scientificToNumber(totalDataList.availableBTC) : 0,8)}}</p>
+								<p><span data-i18n="assetManage.moneyType"></span>{{getFloat((totalDataList.availableUSD>0 ? scientificToNumber(totalDataList.availableUSD) : 0.00)*RateMoney,2)}}</p>
+							</div>
+							<div class="col-sm-4">
+								<p><span title="" data-i18n="assetManage.FreezingValuation"></span><i class="font-ask"></i></p>
+								<p>{{formatNumber(totalDataList.freezingBTC>0 ? scientificToNumber(totalDataList.freezingBTC) : 0,8)}}</p>
+								<p><span data-i18n="assetManage.moneyType"></span>{{getFloat((totalDataList.freezingUSD>0 ? scientificToNumber(totalDataList.freezingUSD) : 0.00)*RateMoney)}}</p>
+							</div>
+	                    </div>
+	                </div>
+	                <div class=" text-center currency-wrap">
+	                    <div class="container">
+	                        <div class="row first-row">
+	                            <div class="col-sm-2" data-i18n="assetManage.coinKind">
+	                            </div>
+	                            <div class="col-sm-2" data-i18n="assetManage.fullName">                                
+	                            </div>
+	                            <div class="col-sm-3" data-i18n="assetManage.total">
+	                            </div>
+	                            <div class="col-sm-2" data-i18n="assetManage.avaliable">                                
+	                            </div>
+	                            <div class="col-sm-2" data-i18n="assetManage.Frozen">	                              
+	                            </div>
+	                            <div class="col-sm-2" data-i18n="assetManage.Actions">
+	                            </div>
+	                        </div>
+	                    </div>
+						<div id="listView">
+							<div class="container" v-for="(item,k) in assetDataList">
+								<div class="row data-row">
+									<div class="col-sm-2"><a :class="'img-coin biT'+item.currencyType"></a><span class="bit-name">{{item.currencyName}}</span></div>
+									<div class="col-sm-2">{{item.currencyFullName}}</div>
+									<div class="col-sm-3">{{formatNumber(scientificToNumber(item.totalAmount),item.currencyType == 4 ? 6 : 8)}}</div>
+									<div class="col-sm-2">{{formatNumber(scientificToNumber(item.availableAmount),item.currencyType == 4 ? 6 : 8)}}</div>
+									<div class="col-sm-2">{{formatNumber(scientificToNumber(item.freezingAmount),item.currencyType == 4 ? 6 : 8)}}</div>
+									<div class="col-sm-2">
+										<span @mouseenter="toggleCharge(k)" @mouseleave="hideCW(k)" v-show="item.chargeStatus != 1 ? true : false" :class="'disabled-charge discha'+k"></span><p :disabled="item.chargeStatus != 1 ? true : false" :id="'currv.'+item.currencyName" :data-with="k+'1'" data-diatype="1" @click="item.chargeStatus == 1 ? getAddress(item.currencyType,item.currencyName,k) : ''" :data-currencyName="item.currencyName" :data-currencyType="item.currencyType"  class="btn chongbi-btns display-block" data-i18n="assetManage.deposit"></p>
+										<span @mouseenter="toggleWithdraw(k)" @mouseleave="hideCW(k)" v-show="item.withdrawStatus != 1 ? true : false" :class="'disabled-withdraw diswit'+k"></span><p :disabled="item.withdrawStatus != 1 ? true : false" :data-with="k+'2'" data-diatype="2" @click="item.withdrawStatus == 1 ? tibiCtrl(item.currencyType,item.currencyName,k) : ''" :data-currencyName="item.currencyName" :data-currencyType="item.currencyType" class="btn tixian-btns display-block" data-i18n="assetManage.withdrawa"></p>
+									</div>
+									<p v-show="item.chargeStatus != 1 ? true : false" :class="'dn disabled-charge-warning dischaw'+k" data-i18n="assetManage.disabled-charge"></p>
+									<p v-show="item.withdrawStatus != 1 ? true : false" :class="'dn disabled-withdraw-warning diswitw'+k" data-i18n="assetManage.disabled-withdraw"></p>
+								</div>
+								<div :class="'row chongti-dialogs chongbi-dialog dn rowWithdrawal'+k+'1'">
+									<!--<div class="col-sm-1"></div>-->
+									<div class="col-sm-11 text-left">
+										<ul class="list-inline clearfix">
+											<li>
+												<p class="font-address">{{item.currencyName}}<span data-i18n="assetManage.addressVal">充值地址</span><i class="chongAddress"></i></p>
+											</li>
+											<li><p class="btn-copy text-center" @click="copyEcod()" data-i18n="assetManage.CopyAddress"></p></li>
+											<li class="code-wrap">
+												<div class="qrcode"></div>
+												<div class="float-qrcode"></div>
+											</li>
+										</ul>
+										<ul class="list-inline" style="margin-top: 10px">
+											<li style="float: inherit">
+												<p class="font-warning">
+													<span data-i18n="assetManage.warningbtcTop">BTC钱包服务已升级，请不要再向之前的 BTC充币地址进行充值。</span>
+													<span data-i18n="assetManage.warning1">禁止充值除</span>{{item.currencyName}}<span data-i18n="assetManage.warning2">之外的其他资产，任何非</span>{{item.currencyName}}<span data-i18n="assetManage.warning3">资产充值将不可找回！</span></p>
+												<p v-if="item.currencyName=='BTC'" class="font-warning"><span data-i18n="assetManage.warningbtc">BTC充值入账需要6个网络确认（需时约30 minutes，有时更久）。充值完成后，你可以通过历史记录跟踪进度。</span></p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div :class="'row chongti-dialogs tixian-dialog row-withdraw dn rowWithdrawal'+k+'2'">
+									<div class="col-sm-3  text-right font-address-wrap">{{item.currencyName}}<span data-i18n="assetManage.LTCWithdrawalAddr">提币地址</span></div>
+									<div class="col-sm-9 text-left">
+										<p v-if="item.currencyName=='SANC' " style="height: 64px;line-height: 64px;" class="font-warning" data-i18n="assetManage.SANCNotic">请确认您选择的SANC钱包账户中有资产余额，否则会导致提币失败。</p>
+										<div class="select-wrap" v-show="tixianAddress.length >0 ? true : false">
+											
+											<div class="tip-wrap handmouse" @click="toogleTibiAddress">
+												<span data-i18n="assetManage.addressNotice"></span>
+												<p class="btn-wrap"><i class="icon-triangle-up" @click="tibiTriangleUp()"></i><i class="icon-triangle-down" @click="tibiTriangleDown()"></i></p>
+											</div>
+											<div class="add-address-wrap handmouse" v-show="tibiAddressShow">
+												<p class="clearfix" v-for="(addItem,addK) in tixianAddress"><i @click="copyTibiAddress(addItem.address)">{{addItem.address}}</i><i @click="delectAddress(addItem.id,addK)" class="glyphicon glyphicon-remove-circle pull-right"></i></p>
+												<p class="clearfix" @click="toogleTibiAddress"><i class="icon-plus"></i><span data-i18n="assetManage.addNewAddress"></span></p>
+											</div>
+										</div>
+										<div class="address-wrap">
+											<input type="text" data-i18n="[placeholder]assetManage.backMark" placeholder="备注标签" class="input-tag markAddress" @keyup="checkKeyup('markAddress','fh-warn0')">
+											<input type="text" v-model="tibiInputAddress" data-i18n="[placeholder]assetManage.WithdrawalAddr" @keyup="checkKeyup('withdrawalAddress','fh-warn0')" placeholder="提币地址" class="input-address withdrawalAddress">
+										</div>
+										<p class="font-hint fh-warn0 dn"><i data-i18n="assetManage.warning10"></i><span></span></p>
+										<div class="num-wrap">
+											<input v-if="item.currencyType == 4" type="text" v-model="tibiInputNumber" @keyup="checkInputVal" data-i18n="[placeholder]assetManage.WithdrawalNum" @keydown="checkFloat6" class="input-num withdrawalAmount" :data-typeName="item.currencyName" placeholder="提币数量">
+											<input v-if="item.currencyType != 4" type="text" v-model="tibiInputNumber" @keyup="checkInputVal" data-i18n="[placeholder]assetManage.WithdrawalNum" @keydown="checkFloat8" class="input-num withdrawalAmount" :data-typeName="item.currencyName" placeholder="提币数量">
+											<div class="balance-wrap"><span data-i18n="assetManage.avaliableNum">：</span><span class="allAmount">{{formatNumber(scientificToNumber(item.availableAmount),item.currencyType == 4 ? 6 : 8)}}</span><i class="btn-all" data-i18n="assetManage.allWithdrawal" @click="tiBiAll(formatNumber(scientificToNumber(item.availableAmount),item.currencyType == 4 ? 6 : 8))">全部</i></div>
+										</div>
+										<p class="font-hint fh-warn1 dn"><i data-i18n="assetManage.warning11"></i><span></span></p>
+										<div class="fee-wrap clearfix">
+											<p class="pull-left"><span data-i18n="assetManage.fee">：</span><i class="withdrawalFee">{{item.poundage}}</i>{{item.currencyName}}</p>
+											<p class="pull-right" style="width: 0;height: 0;overflow: hidden;"><span data-i18n="assetManage.willget">：</span><span class="theAccount">{{formatNumber(scientificToNumber(tibiInputNumber > 0 && Number(tibiInputNumber)-Number(item.poundage) >0 ? tibiInputNumber-item.poundage : 0),item.currencyType == 4 ? 6 : 8)}}</span></p>
+										</div>
+										<div class="address-wrap ">
+											<input data-i18n="[placeholder]assetManage.password" @keyup="checkKeyup('input-pwd','fh-warn2')" placeholder="请输入资金密码" type="password" class="input-pwd">
+										</div>
+										<p class="font-hint fh-warn2 dn"><i data-i18n="assetManage.warning12"></i><span></span></p>
+										<p class="btn-withdraw text-center" @click="tibiSubmitForm()" :data-currencyName="item.currencyName" data-i18n="assetManage.WithdrawalBtn">提币</p>
+									</div>
+								</div>
+							</div>
+						</div>
+	                </div>
+	                <div class="no-data-msg1 text-center dn">
+	                    <p class="icon-document-text text-center"></p>
+	                    <p class="text-center" data-i18n="common:commonMsg.noData"></p>
+	                </div>
+	                <div class="history-wrap">
+	                    <div class="nav-wrap">
+	                        <ul class="list-inline">
+	                            <li data-i18n="assetManage.History" class="font-histry"></li>
+	                            <li :class="historyShowType == 0 ? 'on-active' : +''" @click="changeHisType(0)" data-i18n="assetManage.all"></li>
+	                            <li :class="historyShowType == 1 ? 'on-active':+''" @click="changeHisType(1)" data-i18n="assetManage.depositRoot"></li>
+	                            <li :class="historyShowType == 2 ? 'on-active':+''" @click="changeHisType(2)" data-i18n="assetManage.withdrawalRoot"></li>
+	                        </ul>
+	                    </div>
+						<div id="hidtoryList" v-show="historyDataList.length > 0">
+							<div class="row" v-for="(item,k) in historyDataList">
+								<div class="histor-l1"><a :class="'img-coin hisimg-coin biT'+item.currencyType"></a><span class="bit-name">{{item.currencyName}}</span></div>
+								<div class="histor-l2">
+									<p :data-i18n="'assetManage.'+assetHistory(item.operationType,item.result,item.remark)"></p>
+									<p>{{getFulldateFormate(item.createtime)}}</p>
+								</div>
+								<div class="histor-l3">
+									<p><span :data-i18n="'assetManage.'+msgAmount[item.operationType]">：</span>{{formatNumber(scientificToNumber(item.asset),item.currencyType == 4 ? 6 : 8)}}</p>
+									<p v-show="((item.operationType === 1 ||  item.operationType === 2) && item.result == 1) ? false : true"><span :data-i18n="'assetManage.'+msgAvaliable[item.operationType]">：</span>{{formatNumber(scientificToNumber(item.afterAsset),item.currencyType == 4 ? 6 : 8)}}</p>	
+								</div>
+								<div class="histor-l6">
+									<p><i data-i18n="assetManage.useAddress"></i>：{{item.operationType >= 3 ? '--' : item.address}}</p>
+									<p>Txid：{{item.operationType >= 3 ? '--' : item.externalOrderNo}}</p>
+								</div>
+							</div>
+						</div>
+		                <div class="no-data-msg2 text-center" v-show="historyDataList.length <= 0">
+		                    <p class="icon-document-text text-center"></p>
+		                    <p class="text-center" data-i18n="common:commonMsg.noData"></p>
+		                </div>
+	                </div>
+					<div class="pagination-wrap text-right" id="pages">
+						<ul class="pagination pagination-sm" v-show="totlepage > 1">
+                            <li @click="currPage != 1 ? goto(1) :''"><a><i class="icon-angle-double-left"></i></a></li>
+                            <li @click="currPage != 1 ? currPage-- && goto(currPage--) : ''"><a><i class="icon-chevron-thin-left"></i></a></li>
+                            <li v-show="totlepage != 1" v-for="index in pages" @click="goto(index)"  :key="index">
+                              <a :class="{'active':currPage == index}">{{index}}</a>
+                            </li>
+                            <li @click="totlepage != currPage && totlepage != 0 ? currPage++ && goto(currPage++) : ''"><a><i class="icon-chevron-thin-right"></i></a></li>
+                            <li @click="totlepage != currPage && totlepage != 0 ? goto(totlepage) : ''"><a><i class="icon-angle-double-right"></i></a></li>
+                        </ul>
+					</div>
+	            </div>
+			</div>
+        </div>
+        <div class="bottom-box dn posi-fix" id="footerNav">
+    </div>
+    <div class="loading"  id="loading" >
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+	<!-- Small modal -->
+	<div class="dn aletSuccess" data-i18n="assetManage.aletSuccess"></div>
+	<div class="dn deleteSuccess" data-i18n="assetManage.deleteSuccess"></div>
+	<div class="dn warning8" data-i18n="assetManage.warning8"></div>
+	<div class="dn alertNoRole" data-i18n="assetManage.alertNoRole"></div>
+	<div class="dn deleteTitle" data-i18n="assetManage.deleteTitle"></div>
+	<div class="dn deleteCon" data-i18n="assetManage.deleteCon"></div>
+	<div class="dn deletebtn1" data-i18n="assetManage.deletebtn1"></div>
+	<div class="dn deletebtn2" data-i18n="assetManage.deletebtn2"></div>
+	
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/qrcode.min.js"></script>
+<script src="../../js/vue.min.js"></script>
+<script src="../../js/comm.js"></script>
+<!-- 多语言切换开始-->
+<script  src="../../js/jquery.cookie.js"></script>
+<script src="../../js/i18next-1.6.3.min.js"></script>
+<script  src="../../js/changeLang.js"></script>
+<!-- 多语言切换结束-->
+<script src="../../js/asset/assetManage.js" type="text/javascript"></script>
+</body>
+</html>

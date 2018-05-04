@@ -1,0 +1,26 @@
+{
+  "title": "Nostro titolo",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "coinstandard": {
+    "title":"上幣申請及說明",
+    "des1":"CoinToBe壹直致力於將數字貨幣上幣過程透明、公平和簡單化，如果您有上幣需求，請下載上幣申請表填寫完整，並附上其它相關資料以附件的形式發送到（",
+    "des2":"）。CoinToBe團隊收到資料後將第壹時間回復您。",
+    "btnLink":"下載上幣申請資料",
+    "paraCon1":"為了保護投資者的利益，CoinToBe會對資產進行評估，所有上線交易所的品種需要滿足但不限於以下條件：",
+    "paraCon2":"強有力的團隊或社區維護；",
+    "paraCon3":"有實際的技術支撐或有實際應用的項目；",
+    "paraCon4":"項目無政策風險並達到專業和合規要求；",
+    "paraCon5":"能真實及時的披露項目信息包含項目白皮書，階段性發展及進度報告；",
+    "paraCon6":"交易平臺關於上線幣種交易的其它要求。",
+    "paraCon7":"如果您完成申請，我們將審核您的提交，並在1-2周內告知。"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

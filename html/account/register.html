@@ -1,0 +1,166 @@
+<!DOCTYPE html class="html-register">
+<html>
+<head>
+    <title data-i18n="common:htmlTitle"></title>
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--css文件引入开始-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <!--[if IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.js"></script>
+    <!end if-->
+    <link rel="stylesheet" href="../../css/phone.css">
+    <link rel="stylesheet" href="../../css/account/register.css">
+
+    <!--css文件引入结束-->
+    <style>
+        .register{
+            font-size: 14px;
+        }
+        .register .font4 {
+            margin: 0px 17% 8px 17%;
+        }
+        .register-switch {
+            margin: 6px auto 25px;
+        }
+        .register .bg-white {
+            padding: 30px 0px 40px;
+        }
+    </style>
+</head>
+<body class="register">
+<div  id="loaded" class="dn loaded">
+    <div class="page">
+		<div class="top-box" id="headerNav"></div>
+			<div class="warp-box">
+	        <div class="bg-register" id="example-blue">
+	            <div class="content-wrap">
+	                <div class="bg-white">
+                        <p class="register-font" data-i18n="title">注册 CoinToBe</p>
+                        <div class="register-switch">
+                            <span><i class="icon"></i><i data-i18n="tip6"></i></span><span  class="active"><i class="icon"></i><i data-i18n="tip7"></i></span>
+                        </div>
+                        <div class="form-box register-hide">
+                             <div>
+                                <input id="mail" type="text" class="input-info no-martop" placeholder="邮箱地址"   data-i18n="[placeholder]emailplh" onblur="validatemail(this)" onkeyup="validatemailKeyUp(this)"  autocomplete="new-password">
+                                <p class="font-warning" id="warning-mail"></p>
+
+                                <input id="firstpassword"  type="password" class="input-info" placeholder="密码"   data-i18n="[placeholder]pwdplh" onblur="validatfirstpassword(this)" onkeyup="validatfirstpasswordKeyUp(this)"  autocomplete="new-password">
+                                <p class="font-warning" id="warning-firstpassword"></p>
+                                <input id="secondpassword"  type="password" class="input-info" placeholder="确认密码"   data-i18n="[placeholder]cfmpwdplh" onblur="validatsecondpassword(this)" onkeyup="validatsecondpasswordKeyUp(this)"  autocomplete="new-password">
+                                <p class="font-warning" id="warning-secondpassword"></p>
+                                <div id="codeCheck" data-codeVal=""></div>
+                                <p class="warning-para font-warning opt-dn" id="serviceError"><i class="icon-exclamation-circle"></i><span></span></p>
+                                <p  class="font4">
+                                    <span class="icon-checkbox-unchecked" id="btn-check"></span> <i data-i18n="tip1" id="font-agree">我已阅读并同意CoinToBe</i>
+                                    <a href="../account/termService.html" target="_self" class="links-node font3  handmouse" data-i18n="tip2">服务条款</a> <i class="font-and">&</i> <a href="../account/privacyStatement.html" class="nav1" data-i18n="tip5">隐私声明</a>
+                                </p>
+                                <div class="btn"  id="btn-submit" data-i18n="button">提交</div>
+                            </div>
+                        </div>
+                        <div class="form-box">
+                             <div>
+                                <div id="phone" class="input-info" >
+                                    <div class="select-box handmouse"  v-on:click.stop="toggle()">
+                                        <div class="flag-box">
+                                            <i :class="selectCountry" class="iti-flag"></i>
+                                        </div>
+                                        <span class="icon-sort-down"></span>
+                                    </div>
+                                    <div class="phone-box handmouse " v-show="isShow">
+                                        <ul>
+                                            <li class="country"  v-for="item in items" v-on:click.stop="toggle();getCountry(item.className,item.phone)" >
+                                                <div class="flag-box">
+                                                    <i :class=" item.className" class="iti-flag"></i>
+                                                </div>
+                                                <i class="country-name">{{ item.country }}</i>
+                                                <i class="dial-code">+{{ item.phone }}</i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <input id="mail1" type="text" class="input-info no-martop" placeholder="手机号"  data-i18n="[placeholder]tip7" onblur="validatemail1(this)" onkeyup="validatemail1KeyUp(this)" autocomplete="new-password"/>
+                                    <!-- <input id="mail1" type="text"  data-i18n="[placeholder]bindMobileVerification.inputMobile" placeholder="手机号" onkeyup="validatMobile(this)"> -->
+                                </div>
+                                <p class="font-warning" id="warning-mail1"></p>
+                                <div class="eye">
+                                    <div class="eye-box">
+                                        <input id="firstpassword1"  type="password" class="input-info" placeholder="密码"   data-i18n="[placeholder]pwdplh" onblur="validatfirstpassword1(this)" onkeyup="validatfirstpassword1KeyUp(this)" />
+                                    </div>
+                                    <span class="eye-bg"></span>
+                                </div>
+                                <p class="font-warning" id="warning-firstpassword1"></p>
+                                <div class="code-wrap">
+                                    <input id="code" type="text" class="input-info" data-i18n="[placeholder]inputCode" placeholder="验证码" onblur="validatCode11(this)" onkeyup="validatCode11KeyUp(this)" >
+                                    <input type="button" class="btn-gain btn-again" data-i18n="[value]inputGetCode" value="获取验证码" onclick="getUnbindMobile(this)"/>
+                                </div>
+                                <p class="font-warning" id="warning-secondpassword1"></p>
+                                <div id="codeCheck1" data-codeVal=""></div>
+                                <p class="warning-para font-warning opt-dn" id="serviceError1"><i class="icon-exclamation-circle"></i><span></span></p>
+                                <p  class="font4">
+                                    <span class="icon-checkbox-unchecked" id="btn-check1"></span> <i data-i18n="tip1" id="font-agree1">我已阅读并同意CoinToBe</i>
+                                    <a href="../account/termService.html" target="_self" class="links-node font3  handmouse" data-i18n="tip2">服务条款</a> <i class="font-and">&</i> <a href="../account/privacyStatement.html" class="nav1" data-i18n="tip5">隐私声明</a>
+                                </p>
+                                <div class="btn"  id="btn-submit1" data-i18n="button">提交</div>
+                            </div>
+                        </div>
+                    
+                    </div>
+	                <p class="font5 text-center"><i data-i18n="tip3">已有账号？</i><a href="../account/login.html" target="_self" class="links-node font6 handmouse"  data-i18n="tip4">登录</a></p>
+	            </div>
+	        </div>
+	    </div>
+    </div>
+    <div class="bottom-box dn posi-fix" id="footerNav">
+</div>
+<div class="loading"  id="loading" >
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+</div>
+<script  type="text/javascript" src="../../js/vue.min.js"></script>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/jquery-stars.js"></script>
+<script src="../../js/smothscrool.js"></script>
+<script src="../../js/yundun.js"></script>
+<script src="../../js/comm.js"></script>
+<script src="../../js/account/register.js"></script>
+<!-- 多语言切换开始-->
+<script type="text/javascript" src="../../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/i18next-1.6.3.min.js"></script>
+<script src="../../js/changeLang.js"></script>
+<script type="text/javascript">
+        var ua = navigator.userAgent;
+    var browserRedirect = function(isLoad) {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            return 1;
+        } else {
+            return 2;
+        }
+    }
+    var isPC = browserRedirect(0);
+    var deviceId = "";
+    if(isPC == 1) deviceId = "ms";
+    if(isPC == 2) deviceId = "pc";
+    if(browserRedirect() == 1){
+        window.location.href='Mregister.html';       
+    }
+</script>
+<!-- 多语言切换结束-->
+</body>
+</html>

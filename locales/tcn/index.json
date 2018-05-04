@@ -1,0 +1,28 @@
+{
+    "land": "登陸",
+    "register": "註冊",
+    "tip1":"歡迎使用 CoinToBe",
+    "tip2":"安全、專業、便捷的數字資產交易平臺",
+    "tip3":"客服：support@cointobe.com",
+	"tip4":"商務：bd@cointobe.com",
+	"atOnce":"立即參與",
+	"san":"../../images/font1-sstn.png",
+	"mobile":{
+		"src":"../../images/mobile.png"
+	},
+	"group":{
+		"title1":"安全專業",
+		"content1":"CoinToBe采用全球領先的加密技術，整體受SSL保護、多層加密、離線存儲，等同於銀行保險櫃。所有關鍵操作均需多重身份驗證，全方位確保用戶資産安全。",
+		"title2":"豐富的幣種",
+		"content2":"CoinToBe集合數字資産中的優質幣種，提供種類豐富的數字貨幣，包括BTC、ETH、LTC等，後續將有更多優質幣種上線。",
+		"title3":"用戶體驗至上",
+		"contetn3":"CoinToBe支持全球多種主流語言，覆蓋Web端、iOS、Android、H5等多種平臺，打造行業領先的用戶服務體系，致力於為用戶提供便捷流暢的交易服務體驗。"
+	},
+	"group1":{
+		"title":"隨時在線，暢快交易",
+		"content":"我們還將提供移動工具，讓您可以隨時隨地查看行情、買賣數字資産。",
+		"button":"敬請期待"
+	},
+	"moneyType":"CNY",
+	"moneyTypeF": "￥"
+}

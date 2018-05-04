@@ -1,0 +1,987 @@
+body{
+    font-size: 14px;
+}
+.page {
+    padding-bottom: 0;
+}
+.sanc-activity .part2,.sanc-activity .part3,.sanc-activity .part4,.sanc-activity .part5,.sanc-activity .part6{
+    padding: 74px 0 95px 0;
+}
+.sanc-activity .part1{
+    width: 100%;
+    height:auto;
+    background: url("../../images/bg1-s.jpg") no-repeat center;
+    background-size: 100% 100%;
+    padding-top:163px;
+    color: #fff;
+    padding-bottom: 50px;
+}
+.sanc-activity .part2{
+    width: 100%;
+    height: auto;
+    background: url("../../images/bg2-s.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.sanc-activity .part3{
+    width: 100%;
+    height: auto;
+    background: url("../../images/bg3-s.jpg") no-repeat center;
+    background-size: 100% 100%;
+    color: #fff;
+    padding-bottom: 119px;
+}
+.sanc-activity .part4{
+    width: 100%;
+    height: auto;
+    background: url("../../images/bg4-s.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.sanc-activity .part5{
+    width: 100%;
+    height: auto;
+    background: url("../../images/bg5-s.jpg") no-repeat center;
+    background-size: 100% 100%;
+    color: #fff;
+}
+.sanc-activity .part6{
+    width: 100%;
+    height: auto;
+    background: url("../../images/bg6-s.jpg") no-repeat center;
+    background-size: 100% 100%;
+    padding-bottom: 175px;
+}
+.sanc-activity .part7{
+    width: 100%;
+    height: 517px;
+    background: url("../../images/bg7-s.jpg") no-repeat center;
+    background-size: 100% 100%;
+    padding-top: 200px;
+}
+.sanc-activity .img-slogan{
+    width: 40%;
+    height: auto;
+    display: block;
+}
+.sanc-activity .part1 .font1{
+    margin:3px 0;
+}
+.sanc-activity .part1 .img-down{
+    display: block;
+    width: 28px;
+    height: auto;
+    margin: 7px auto 0 auto;
+}
+.sanc-activity .font-title{
+    width: 47%;
+    height: auto;
+    background: url("../../images/line-s.png") no-repeat center;
+    background-size: contain;
+    margin: 0 auto;
+    font-size: 26px;
+    color: #fff;
+    padding-bottom: 31px;
+}
+.sanc-activity .part2 .font1{
+    font-size: 16px;
+    color: #fff;
+    margin-top: 102px;
+}
+.sanc-activity .part2 .font2{
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5%;
+}
+.sanc-activity .btn-login{
+    width: 217px;
+    height: 47px;
+    line-height: 47px;
+    background: #fff;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #000;
+    margin-top: 115px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background: url(../../images/btnbg-s.png) no-repeat center;
+    background-size: 100% 100%;
+}
+.sanc-activity .package-box{
+    position: relative;
+    width: 50%;
+    height: 326px;
+    left: 50%;
+    margin-left: -25%;
+}
+.sanc-activity .package-box .img1{
+    position: absolute;
+    top: 113px;
+    left: 0px;
+    width: 64px;
+    height: auto;
+    animation:flash 3s infinite;
+ }
+.sanc-activity .package-box .img2{
+    position: absolute;
+    top: 73px;
+    left: 7.5%;
+    width: 38px;
+    height: auto;
+    animation:flash 2.3s 1s infinite;
+}
+.sanc-activity .package-box .img3{
+    position: absolute;
+    top: 95px;
+    left: 24.8%;
+    width: 36px;
+    height: auto;
+    animation:flash 3s .4s infinite;
+}
+.sanc-activity .package-box .img4{
+    position: absolute;
+    top: -10px;
+    left: 36.3%;
+    width: 34px;
+    height: auto;
+    animation:flash 3s infinite;
+}
+.sanc-activity .package-box .img5{
+    position: absolute;
+    top: 32px;
+    left: 47%;
+    width: 44px;
+    height: auto;
+    animation:flash 3s .3s infinite;
+}
+.sanc-activity .package-box .img6{
+    position: absolute;
+    top: -2px;
+    left: 70.3%;
+    width: 33px;
+    height: auto;
+    animation:flash 3s infinite;
+}
+.sanc-activity .package-box .img7{
+    position: absolute;
+    top: 75px;
+    left: 74%;
+    width: 9px;
+    height: auto;
+    animation:flash 3s .7s infinite;
+}
+.sanc-activity .package-box .img8{
+    position: absolute;
+    top: 117px;
+    left: 92.5%;
+    width: 40px;
+    height: auto;
+    animation:flash 3s .1s infinite;
+}
+.sanc-activity .package-box .img9{
+    position: absolute;
+    top: 111px;
+    left: 98.6%;
+    width: 49px;
+    height: auto;
+    animation:flash 3s .6s infinite;
+}
+.sanc-activity .package-box .img10{
+    position: absolute;
+    top: 79px;
+    left: 15.4%;
+    width: 59px;
+    height: auto;
+    animation:flash 3s .5s infinite;
+}
+.sanc-activity .package-box .img11{
+    position: absolute;
+    top: 1px;
+    left: 24%;
+    width: 70px;
+    height: auto;
+    animation:flash 3s .2s infinite;
+}
+.sanc-activity .package-box .img12{
+    position: absolute;
+    top: 56px;
+    left: 33.9%;
+    width: 84px;
+    height: auto;
+    animation:flash 3s .6s infinite;
+}
+.sanc-activity .package-box .img13{
+    position: absolute;
+    top: -11px;
+    left: 53%;
+    width: 55px;
+    height: auto;
+    animation:flash 3s .7s infinite;
+}
+.sanc-activity .package-box .img14{
+    position: absolute;
+    top: 52px;
+    left: 56.6%;
+    width: 76px;
+    height: auto;
+    animation:flash 3s .1s infinite;
+}
+.sanc-activity .package-box .img15{
+    position: absolute;
+    top: 11px;
+    left: 72%;
+    width: 74px;
+    height: auto;
+    animation:flash 3s .4s infinite;
+}
+.sanc-activity .package-box .img16{
+    position: absolute;
+    top: 109px;
+    left: 76.6%;
+    width: 61px;
+    height: auto;
+    animation:flash 3s .5s infinite;
+}
+.sanc-activity .package-box .img17{
+    position: absolute;
+    top: 36px;
+    left: 84.4%;
+    width: 65px;
+    height: auto;
+    animation:flash 3s .3s infinite;
+}
+.sanc-activity .package-box .img18{
+    position: absolute;
+    top: 152px;
+    left: 50%;
+    width: 284px;
+    background: url(../../images/bg-package.png) no-repeat center;
+    background-size: 100% 100%;
+    padding: 16px 0 35px 0;
+    cursor: pointer;
+    margin-left: -142px;
+}
+.sanc-activity .font-chai{
+    width: 54px;
+    height: 54px;
+    background: url(../../images/bg-chai.png) no-repeat center;
+    background-size: 100% 100%;
+    font-size: 16px;
+    color: #cf0a24;
+    line-height: 54px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    left: 50%;
+    margin:0 0 44px -27px;
+}
+.sanc-activity .font-tip{
+    font-size: 18px;
+    color: #fce155;
+}
+.sanc-activity .bg-fly{
+    height: 42px;
+    line-height: 66px;
+    margin: 0 auto 25px auto;
+    display: inline-block;
+}
+.sanc-activity .left-wing,.sanc-activity .right-wing{
+    width: 46px;
+    height: auto;
+    position: relative;
+    top: -16px;
+}
+.sanc-activity .left-wing{
+   left: 25px;
+}
+.sanc-activity .right-wing{
+    left: -25px;
+ }
+.sanc-activity .part3 .font2,.sanc-activity .part3 .font1{
+   font-size: 16px;
+    padding: 0 5%;
+}
+.sanc-activity .part4 .font4{
+    position: relative;
+    z-index: 1;
+}
+.sanc-activity .part4 .font1{
+    color: #fff;
+    margin-bottom: 5px;
+}
+.sanc-activity .part4 .font2{
+    color: #fce155;
+    cursor: pointer;
+}
+.sanc-activity .part4 .line,.sanc-activity .part5 .line{
+    border:none;
+    border-bottom:  1px solid #313131;
+}
+.sanc-activity .part4 .line{
+    width: 54%;
+}
+.sanc-activity .part4 .font3{
+    font-size:12px;
+}
+.sanc-activity .part5 .line{
+    width: 46%;
+    margin-bottom: 11px;
+}
+.sanc-activity .part4 .font3,.sanc-activity .part5 .font3{
+    color: #fff;
+    font-size: 12px;
+}
+.sanc-activity .part4 .btn-login{
+    margin-top: 35px;
+}
+.sanc-activity table{
+    margin: 0 auto;
+    color: #fff;
+}
+.sanc-activity .part5 table{
+    width: 46%;
+}
+.sanc-activity table td.title{
+    font-size: 16px;
+    color: #fce155;
+    line-height: 59px;
+}
+.sanc-activity table tr td{
+    line-height: 42px;
+}
+.sanc-activity .bg-even{
+     background: #313131;
+ }
+.sanc-activity .bg-odd{
+    background: #1b1b1b;
+}
+.sanc-activity .table1{
+    margin-bottom: 53px;
+}
+.sanc-activity .table2{
+    margin-bottom: 27px;
+}
+.sanc-activity .rule-box{
+    width: 39%;
+    margin: 66px auto 0 auto;
+    background: url(../../images/dashed-s.png) repeat-x left bottom;
+    background-size: auto;
+    padding-bottom: 25px;
+}
+.sanc-activity .rule-box li{
+    color: #fff;
+    margin-bottom: 6px;
+}
+.sanc-activity .chart-box,.sanc-activity .detail-box{
+    width: 54%;
+    height: auto;
+    margin: 40px auto 0 auto;
+    color: #fff;
+    position: relative;
+}
+.sanc-activity .nav-tabs {
+background:#313131;
+}
+.sanc-activity .nav-tabs li{
+    width: 25%;
+}
+.sanc-activity .nav-tabs li a{
+    color: #fff;
+}
+.sanc-activity .nav-tabs li a:hover{
+    background: none;
+    border: none;
+}
+.sanc-activity .nav-tabs {
+    border-bottom: none;
+}
+.sanc-activity .nav-tabs>li.active>a,.sanc-activity  .nav-tabs>li.active>a:focus,.sanc-activity  .nav-tabs>li.active>a:hover {
+    background: #434343;
+    border-radius: 0;
+    color: #fce155;
+}
+.sanc-activity .tab-content table{
+  width: 100%;
+}
+.sanc-activity .tab-content table tr td{
+    width: 33%;
+    text-align: center;
+}
+.sanc-activity .chart-box .nav-tabs>li>a {
+    line-height: 56px;
+    padding: 0;
+}
+.sanc-activity .detail-box .nav-tabs li{
+    width: 24%;
+    padding: 12px 0px 12px 16px;
+}
+.sanc-activity .detail-box .nav-tabs li a{
+    line-height: 19px;
+}
+.sanc-activity .detail-box .tab-content table.table-eth{
+    margin: 0 2%;
+}
+.sanc-activity .clearfloat{
+    clear: both;
+}
+.sanc-activity .detail-box  .nav-tabs > li.active > a, .sanc-activity .detail-box .nav-tabs > li.active > a:focus, .sanc-activity .detail-box .nav-tabs > li.active > a:hover {
+    background: none;
+    border-radius: 0;
+    color: #cc9966;
+    border-bottom: 1px solid #cc9966;
+}
+.sanc-activity .detail-box .tab-content .tab-pane{
+    padding: 0px 16px 16px 16px;
+    background: #313131;
+}
+.sanc-activity .detail-box .tab-content table tr {
+   border-bottom:1px solid #e0b88f;
+}
+.sanc-activity .detail-box .tab-content table{
+    width: 32%;
+    float: left;
+    border:1px solid #e0b88f;
+    border-bottom:none;
+    background: #151414;
+}
+.sanc-activity .detail-box thead{
+    font-size: 14px;
+}
+.sanc-activity .detail-box tbody{
+    font-size: 12px;
+}
+.sanc-activity .nav-tabs li{
+    font-size: 16px;
+}
+.sanc-activity .detail-box tbody td {
+    line-height: 32px;
+}
+.sanc-activity .detail-box .img-close{
+    width: 24px;
+    height: auto;
+    position: absolute;
+    right: -21px;
+    top: -21px;
+    cursor: pointer;
+}
+.sanc-activity .part3 .font1{
+    margin: 130px 0 16px 0;
+}
+.sanc-activity .data-box td{
+    font-size: 12px;
+}
+.sanc-activity .part5 .font-hint{
+    font-size: 18px;
+    margin: 187px 0 161px 0;
+}
+.sanc-activity .part5 .font-register{
+    margin-top: 22px;
+}
+.sanc-activity .part5 .btn-register{
+    color:#fce155;
+    cursor: pointer;
+}
+.sanc-activity .part3 .font-tip1{
+    margin: 84px 0 26px 0;
+}
+.sanc-activity .part1 .img-point{
+    display: block;
+    width: 7px;
+    margin: 2px auto 0 auto;
+}
+.sanc-activity .part1 .down-box{
+    width: 100px;
+    height: 100px;
+    margin: 17px auto 0 auto;
+    cursor: pointer;
+}
+.sanc-activity .pagination-wrap {
+    width: 46%;
+}
+.sanc-activity .part3 .font1{
+    margin-top: 98px;
+}
+.sanc-activity .part6 .font-risk1,.sanc-activity .part6 .font-risk2,.sanc-activity .part6 .font-risk3{
+    width: 39%;
+    margin: 0 auto;
+    font-size: 12px;
+    color:#fff;
+    margin-top: 14px;
+}
+.sanc-activity .part6 .font-risk2{
+    line-height: 28px;
+}
+.sanc-activity .part6 .font-ask{
+    color:#cc9966;
+}
+.sanc-activity .part7 .font1{
+    font-size:18px;
+    color: #fff;
+}
+.sanc-activity .part7 .img-cue{
+    width: 389px;
+    height: auto;
+    display: block;
+    margin: 0 auto 35px auto;
+}
+
+.window-bg{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    top:0;
+    z-index: 111;
+}
+.window-bg .window-sanc{
+    width: 600px;
+    height: auto;
+    padding: 87px 0;
+    background: #161616;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: -165px 0 0 -300px;
+}
+.window-bg .img-close{
+    width: 40px;
+    height: auto;
+    position: absolute;
+    right: -39px;
+    top: -30px;
+    cursor: pointer;
+}
+.window-bg .window-font1{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.window-bg .window-font2{
+    font-size: 16px;
+    color: #fff;
+    margin: 0 auto 14px auto;
+    width: 90%;
+}
+.window-bg .window-btn{
+    display: block;
+    width: 38%;
+    height: auto;
+    margin: 0 auto;
+    line-height: 46px;
+    font-size: 16px;
+    background: url(../../images/btnbg-s.png) no-repeat center;
+    background-size: 100% 100%;
+    margin-top: 30px;
+}
+@media screen and (max-width: 992px) {
+    .sanc-activity .part1{
+        padding-top: 91px;
+    }
+    .sanc-activity .part4{
+        height:926px;
+    }
+    .sanc-activity .part1 .down-box {
+        margin: 8px auto 0 auto;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+    .sanc-activity .part1{
+        height: 630px;
+    }
+}
+@media screen and (max-width: 1050px){
+    html, body {
+        min-width: auto;
+    }
+}
+@media screen and (min-width: 414px) and (max-width: 1024px) {
+    body{
+        font-size: 20px;
+    }
+    .sanc-activity .font-title{
+        width: 70%;
+        height: auto;
+        /* background: url(../../images/line-s.png) no-repeat center; */
+        background-size: contain;
+        margin: 0 auto;
+        font-size: 50px;
+        color: #fff;
+        padding-bottom: 68px;
+    }
+    .sanc-activity .part2 .font1,.sanc-activity .part2 .font2{
+        font-size: 30px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .sanc-activity .part5 .font-register {
+        font-size: 28px;
+    }
+    .sanc-activity .btn-login {
+        width: 52%;
+        height: 73px;
+        line-height: 73px;
+        font-size: 28px;
+    }
+    .sanc-activity .part6 .font-risk1{
+        font-size: 26px;
+        text-align: center;
+    }
+    .sanc-activity .part6 .font-risk2,.sanc-activity .part6 .font-risk3 {
+        font-size: 28px;
+        line-height: 42px;
+    }
+    .sanc-activity .rule-box li {
+        font-size: 30px;
+    }
+    .sanc-activity .part1 .font1, .sanc-activity .part1 .font2 {
+       font-size: 30px;
+    }
+    .sanc-activity .part7 .font1 {
+        font-size: 33px;
+        letter-spacing: 1px;
+    }
+    .sanc-activity .part7 .img-cue {
+        width: 56%;
+        height: auto;
+    }
+    .sanc-activity .img-slogan {
+        width: 72%;
+        height: auto;
+    }
+    .sanc-activity .package-box {
+        position: relative;
+        width: 64%;
+        height: 326px;
+        left: 50%;
+        margin-left: -32%;
+    }
+    sanc-activity .part3 .font1 {
+        font-size: 30px;
+    }
+    .sanc-activity .part5 table {
+        width: 87%;
+        font-size: 22px;
+    }
+    .sanc-activity table td.title {
+        font-size: 24px;
+    }
+    .sanc-activity table tr td {
+        line-height: 56px;
+    }
+    .sanc-activity .part5 .line {
+        width: 87%;
+    }
+    .sanc-activity .part3 .font1 {
+        font-size: 26px;
+    }
+    .sanc-activity .pagination-wrap {
+        width: 87%;
+    }
+    .window-bg .window-sanc {
+        width: 79%;
+        height: auto;
+        padding: 87px 0;
+        background: #161616;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+         margin:inherit;
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+}
+@media screen and (max-width: 414px) {
+    .sanc-activity .part1 .font1, .sanc-activity .part1 .font2 {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+        .sanc-activity .font-title {
+            font-size: 24px;
+            padding-bottom: 32px;
+            letter-spacing: -1px;
+            width: 68%;
+        }
+        .sanc-activity .part2 .font1, .sanc-activity .part2 .font2{
+            font-size: 14px;
+        }
+    .sanc-activity .btn-login {
+        width: 54%;
+        height: 47px;
+        line-height: 47px;
+        font-size: 16px;
+        margin-top: 64px;
+    }
+    .sanc-activity .part5 .font-register {
+        font-size: 18px;
+    }
+    .sanc-activity .rule-box li {
+        font-size: 15px;
+    }
+    .sanc-activity .part6 .font-risk1 {
+        font-size: 14px;
+        text-align: center;
+    }
+    .sanc-activity .part6 .font-risk2, .sanc-activity .part6 .font-risk3 {
+        font-size: 13px;
+        line-height: 26px;
+    }
+    .sanc-activity .part7 .img-cue{
+        width: 72%;
+        height: auto;
+        margin: 0 auto 10px auto;
+    }
+    .sanc-activity .part7 .font1 {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .sanc-activity .img-slogan {
+        width: 87%;
+    }
+    .sanc-activity .part2, .sanc-activity .part3, .sanc-activity .part4, .sanc-activity .part5, .sanc-activity .part6 {
+        padding: 36px 0 64px 0;
+    }
+    .sanc-activity .rule-box {
+        margin: 8px auto 0 auto;
+    }
+    .sanc-activity .part6 {
+        padding-bottom: 44px;
+    }
+    .sanc-activity .part7 {
+        padding: 46px 0 46px 0;
+        height: auto;
+    }
+    .sanc-activity .package-box .img1 {
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        width: 24px;
+        height: auto;
+         animation: flash 3s infinite;
+    }
+    .sanc-activity .package-box .img2 {
+        position: absolute;
+        top: 46px;
+        left: 7.5%;
+        width: 14px;
+        height: auto;
+        animation: flash 2.3s 1s infinite;
+    }
+    .sanc-activity .package-box .img3 {
+        position: absolute;
+        top: 56px;
+        left: 24.8%;
+        width: 8px;
+        height: auto;
+        animation: flash 3s .4s infinite;
+    }
+    .sanc-activity .package-box .img4 {
+        position: absolute;
+        top: 1px;
+        left: 39.3%;
+        width: 7px;
+        height: auto;
+        animation: flash 3s infinite;
+    }
+    .sanc-activity .package-box .img5 {
+        position: absolute;
+        top: 18px;
+        left: 47%;
+        width: 4px;
+        height: auto;
+        animation: flash 3s .3s infinite;
+    }
+    .sanc-activity .package-box .img6 {
+        position: absolute;
+        top: -2px;
+        left: 70.3%;
+        width: 10px;
+        height: auto;
+        animation: flash 3s infinite;
+    }
+    .sanc-activity .package-box .img7 {
+        position: absolute;
+        top: 31px;
+        left: 77%;
+        width: 7px;
+        height: auto;
+        animation: flash 3s .7s infinite;
+    }
+    .sanc-activity .package-box .img8 {
+        position: absolute;
+        top: 62px;
+        left: 92.5%;
+        width: 14px;
+        height: auto;
+        animation: flash 3s .1s infinite;
+    }
+    .sanc-activity .package-box .img9 {
+        position: absolute;
+        top: 57px;
+        left: 98.6%;
+        width: 21px;
+        height: auto;
+        animation: flash 3s .6s infinite;
+    }
+    .sanc-activity .package-box .img10 {
+        position: absolute;
+        top: 48px;
+        left: 15.4%;
+        width: 19px;
+        height: auto;
+        animation: flash 3s .5s infinite;
+    }
+    .sanc-activity .package-box .img11 {
+        position: absolute;
+        top: 1px;
+        left: 24%;
+        width: 26px;
+        height: auto;
+        animation: flash 3s .2s infinite;
+    }
+    .sanc-activity .package-box .img12 {
+        position: absolute;
+        top: 36px;
+        left: 33.9%;
+        width: 30px;
+        height: auto;
+        animation: flash 3s .6s infinite;
+    }
+    .sanc-activity .package-box .img13 {
+        position: absolute;
+        top: -2px;
+        left: 50%;
+        width: 15px;
+        height: auto;
+        animation: flash 3s .7s infinite;
+    }
+    .sanc-activity .package-box .img14 {
+        position: absolute;
+        top: 28px;
+        left: 56.6%;
+        width: 20px;
+        height: auto;
+        animation: flash 3s .1s infinite;
+    }
+    .sanc-activity .package-box .img15 {
+        position: absolute;
+        top: 4px;
+        left: 74%;
+        width: 34px;
+        height: auto;
+        animation: flash 3s .4s infinite;
+    }
+    .sanc-activity .package-box .img16 {
+        position: absolute;
+        top: 58px;
+        left: 76.6%;
+        width: 21px;
+        height: auto;
+        animation: flash 3s .5s infinite;
+    }
+    .sanc-activity .package-box .img17 {
+        position: absolute;
+        top: 28px;
+        left: 89.4%;
+        width: 25px;
+        height: auto;
+        animation: flash 3s .3s infinite;
+    }
+    .sanc-activity .package-box .img18 {
+        position: absolute;
+        top: 79px;
+        left: 50%;
+        width: 64.8%;
+        margin-left: -32.4%;
+        background: url(../../images/bg-package.png) no-repeat center;
+        background-size: 100% 100%;
+        padding: 6px 0 20px 0;
+        cursor: pointer;
+    }
+    .sanc-activity .font-chai {
+        width: 38px;
+        height: 38px;
+        background: url(../../images/bg-chai.png) no-repeat center;
+        background-size: 100% 100%;
+        font-size: 12px;
+        color: #cf0a24;
+        line-height: 39px;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        left: 50%;
+        margin: 0 0 14px -19px;
+    }
+    .sanc-activity .font-tip {
+        font-size: 12px;
+    }
+    .sanc-activity .package-box {
+        position: relative;
+        width: 60%;
+        height: 170px;
+        left: 50%;
+        margin-left: -30%;
+    }
+    .sanc-activity .part5 table {
+        width: 90%;
+    }
+    .sanc-activity .part2 .font1 {
+        margin: 50px auto 0 auto;
+        width: 90%;
+    }
+    .sanc-activity .part5 .line {
+        width: 90%;
+    }
+    .sanc-activity .part1 {
+        padding-bottom: 2px;
+    }
+    .sanc-activity .pagination-wrap {
+        width: 100%;
+        padding-right: 5%;
+    }
+    .window-bg .window-sanc {
+        width: 73%;
+        height: auto;
+        padding: 42px 0 30px 0;
+        background: #161616;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        margin: inherit;
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+    .window-bg .window-btn {
+        display: block;
+        width: 55%;
+        height: auto;
+        margin: 0 auto;
+        line-height: 46px;
+        font-size: 16px;
+        background: url(../../images/btnbg-s.png) no-repeat center;
+        background-size: 100% 100%;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .sanc-activity .font-title {
+        font-size: 24px;
+        padding-bottom: 32px;
+        letter-spacing: -1px;
+        width: 73%;
+    }
+}

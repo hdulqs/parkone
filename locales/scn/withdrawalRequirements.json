@@ -1,0 +1,9 @@
+{
+  "title": "您需要先满足以下条件才能进行提币",
+  "withdrawal1": "1、开启二次验证 ",
+  "withdrawal2": "2、设置资金密码",
+  "withdrawal3": "3、身份认证",
+  "button1":  "去设置",
+  "button2":  "去认证",
+  "button3":  "提币"
+}

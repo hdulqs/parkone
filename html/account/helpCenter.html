@@ -1,0 +1,88 @@
+<!DOCTYPE html class="html-register">
+<html>
+<head>
+    <title data-i18n="common:htmlTitle"></title>
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--css文件引入开始-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/account/termService.css">
+    <link rel="stylesheet" href="../../css/account/helpCenter.css">
+    <!--css文件引入结束-->
+</head>
+<body class="term-service help-center">
+<div  id="loaded" class="dn loaded">
+    <div class="page">
+        <div class="top-box" id="headerNav"></div>
+        <div class="clearfix"></div>
+        <div class="head-banner">
+            <div class="ad">
+                <p class="title" data-i18n="pageTitle">帮助中心</p>
+                <img src="../../images/help-img.jpg">
+            </div>
+        </div>
+		<div class="warp-box" style="height:860px;">
+			<div class="help-main" id="helpContent">
+				<div class="left-box">
+
+						<div class="list-l">
+							<div class="item posi-tl" v-for="(item,index) in langBodyDataA">
+								<a target="_salf" class="links-node title">{{langBodyDataA[index].title}}</a>
+								<div class="i-list">
+									<a :href="'helpCenterDetail.html?id='+langBodyDataA[index].id+'&ansId='+ansId" target="_salf" class="links-node para" v-for="(quesTitleA,ansId) in langBodyDataA[index].ques" :title="quesTitleA">{{ quesTitleA }}</a>
+								</div>
+							</div>
+						</div>
+						<div class="list-r">
+							<div class="item posi-tl" v-for="(item,index) in langBodyDataB">
+								<a target="_salf" class="links-node title">{{langBodyDataB[index].title}}</a>
+								<div class="i-list">
+									<a :href="'helpCenterDetail.html?id='+langBodyDataB[index].id+'&ansId='+ansId" target="_salf" class="links-node para" v-for="(quesTitleB,ansId) in langBodyDataB[index].ques" :title="quesTitleB">{{ quesTitleB }}</a>
+								</div>
+							</div>
+						</div>
+                </div>
+                <div class="right-box">
+                    <h3>{{others.title}}</h3>
+					<div class="tip-box" v-for="(item,index) in others.ques">
+						<p class="ques-title">
+							<a :href="'helpCenterDetail.html?othersId='+index" >{{others.ques[index]}}</a>
+						</p>						
+						<p class="ans" v-html="others.ans[index]"></p>
+					</div>
+                    <div class="others-ques">
+                        <p>{{others.othersques}}</p>
+						<a href="workOrder.html">{{others.othersLinks}}</a>
+                    </div>
+                </div>
+			</div>
+		</div>
+    </div>
+	<div class="bottom-box dn posi-fix" id="footerNav">
+	<input type="hidden" value="" data-i18n="[value]body" id="bodyLangData" />
+</div>
+<div class="loading"  id="loading" >
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/comm.js"></script>
+<script src="../../js/vue.min.js"></script>
+<!-- 多语言切换开始-->
+<script src="../../js/jquery.cookie.js"></script>
+<script src="../../js/i18next-1.6.3.min.js"></script>
+<script src="../../js/changeLang.js"></script>
+<!-- 多语言切换结束-->
+<script src="../../js/account/helpCenter.js"></script>
+</body>
+</html>

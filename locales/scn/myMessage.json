@@ -1,0 +1,21 @@
+{
+  "activelang": "中文简体",
+  "myMessage":{
+    "htmlTitle": "国际站",
+    "title": "我的消息",
+    "noReadyNum": "条未读",
+    "clearAll": "清空所有通知",
+    "readyAll": "全部设为已读",
+    "safe": "安全",
+    "deleteBtn": "删除",
+    "titleType1": "安全",
+    "titleType2": "系统通知",
+    "titleType3": "充值提现",
+    "titleType4": "认证"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

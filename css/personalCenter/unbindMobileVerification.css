@@ -1,0 +1,102 @@
+.verification-wrap {
+  border: 1px solid #e9eaea;
+  -webkit-box-shadow: 0px 0px 8px #e9eaea;
+  -moz-box-shadow: 0px 0px 8px #e9eaea;
+  -ms-box-shadow: 0px 0px 8px #e9eaea;
+  -o-box-shadow: 0px 0px 8px #e9eaea;
+  box-shadow: 0px 0px 8px #e9eaea;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #fff;
+  padding-bottom: 55px; }
+
+.input-info {
+  display: block;
+  border: 1px solid #CCCCCC;
+  width: 280px;
+  margin: 0 auto;
+  height: 39px;
+  line-height: 39px;
+  border-radius: 5px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 0px 20px;
+  color: #999999;
+  font-size: 14px; }
+
+.font-hint {
+  color: #13b5b1;
+  font-size: 12px;
+  text-align: center;
+  width: 80%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0px;
+  line-height: 18px;
+  padding-bottom: 10px; }
+
+.font1 {
+  font-size: 16px;
+  border-bottom: 1px solid #e7e7e7;
+  width: 100%;
+  height: 66px;
+  line-height: 66px;
+  padding: 0px 0px 0px 19px;
+  margin-bottom: 45px; }
+
+.font-warning {
+  width: 280px;
+  height: auto;
+  line-height: 18px;
+  margin: -10px auto;
+  font-size: 12px;
+  color: #e70353;
+  position: relative; }
+  .font-warning .icon-exclamation-circle {
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 3px; }
+
+.btn {
+  display: block;
+  padding: 0px;
+  margin: 0 auto;
+  width: 280px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  background: #ccc;
+  position: relative;
+  outline: none;
+  cursor: default;
+  overflow: hidden;
+  user-select: none;
+  margin-top: 16px; }
+
+.code-wrap {
+  position: relative;
+  width: 280px;
+  margin: 0 auto; }
+
+.btn-gain {
+  min-width: 96px;
+  position: absolute;
+  font-size: 12px;
+  top: 0;
+  right: 0;
+  height: 39px;
+  line-height: 39px;
+  background: none;
+  border-left: 1px solid #ccc !important;
+  padding: 0 10px;
+  color: #13B5B1; }
+
+.code-wrap .input-info {
+  padding-right: 110px; }
+
+/*# sourceMappingURL=unbindMobileVerification.css.map */

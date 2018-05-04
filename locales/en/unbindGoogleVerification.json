@@ -1,0 +1,16 @@
+﻿{
+  "activelang": "English",
+  "unbindGoogleVerification":{
+    "title": "Disable Google verification",
+    "inputLoginPsw": "Login Password",
+    "inputGoogleCode": "Google authentication code",
+    "warning1": "The login password is required.",
+    "warning2": "The Google authentication code is required.",
+    "submitCheck": "Confirm"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

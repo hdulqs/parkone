@@ -1,0 +1,59 @@
+.withdrawal-requirements .withdrawal-wrap {
+  border: 1px solid #e9eaea;
+  -webkit-box-shadow: 0px 0px 8px #e9eaea;
+  -ms-box-shadow: 0px 0px 8px #e9eaea;
+  -o-box-shadow: 0px 0px 8px #e9eaea;
+  box-shadow: 0px 0px 8px #e9eaea;
+  border-radius: 5px;
+  background: #fff;
+  padding-bottom: 75px;
+}
+.withdrawal-requirements .font-title{
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 35px;
+  height: 66px;
+  line-height: 66px;
+  padding-left: 19px;
+}
+.withdrawal-requirements .font-withdrawal{
+  font-size: 14px;
+  padding-left: 46px;
+  margin-bottom: 9px;
+}
+.withdrawal-requirements .font-set{
+  font-size: 14px;
+  color:#13B5B1;
+  margin-left: 8px;
+}
+.withdrawal-requirements .btn-withdrawal{
+  display: block;
+  width: 196px;
+  height: 49px;
+  line-height:49px;
+  background: #B5B5B5;
+  color: #fff;
+  font-size: 18px;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
+  margin: 95px auto 0 auto;
+  letter-spacing: 2px;
+}
+.withdrawal-requirements .icon-error{
+  background: url(../../images/icon8.png) no-repeat center;
+}
+.withdrawal-requirements .icon-ok{
+  background: url(../../images/icon7.png) no-repeat center;
+}
+.withdrawal-requirements .icon-error,.withdrawal-requirements .icon-ok{
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-left: 8px;
+  background-size: contain;
+  vertical-align: -3px;
+}
+html{
+  font-size: 100px;
+}

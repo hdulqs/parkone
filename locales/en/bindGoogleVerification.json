@@ -1,0 +1,27 @@
+﻿{
+  "activelang": "English",
+  "bindGoogleVerification":{
+    "htmlTitle": "國際站",
+    "title": "Enable Google Authenticator",
+    "title1": "1.Download and install:",
+    "title2": "2. Add CoinToBe Account to Google Authenticator:",
+    "openMsg": "Open Google Authenticator and scan the QR code. If you can't scan the QR code, please input manually to add your account",
+    "openMsgtip": ".",
+    "inputMsg": "Manually Input",
+    "title3": "3. Enable Google Authenticator Code:",
+    "inputPsw": "Login password",
+    "warningLoginPwd": "The login password is required.",
+    "warningLoginPwdE": "Invalid login password",
+    "inputGoogleCode": "Google authenticator code",
+    "warningGoogleCode": "The google Authenticator code is required.",
+    "warningGoogleCodeE": "Invalid Google Authenticator code",
+    "submitCheck": "Confirm",
+    "account":"Account",
+    "secretKey":"Secret Key"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

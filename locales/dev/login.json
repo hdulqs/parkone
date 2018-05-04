@@ -1,0 +1,17 @@
+{
+  "title": "Log In",
+  "emailplh": "Email address",
+  "pwdplh": "Your Password",
+  "error": {
+    "cue1": "The email address is required.",
+    "cue2": "Invalid email address.",
+    "cue3": "The Password field is required.",
+    "cue4": "Passwords must be at least 8-20 characters with 1 capital letter and 1 number"
+  },
+  "button": "Log In",
+  "tip1": "Forgot your password",
+  "tip2": "Don't have an account",
+  "tip3": "Sign Up",
+  "tip4": "I agree to",
+  "tip5": "the Terms & Conditions"
+}

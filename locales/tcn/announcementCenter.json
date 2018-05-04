@@ -1,0 +1,42 @@
+{
+  "title": "Nostro titolo",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "alert": "Fare clic su OK per chiudere.",
+  "announcementCenter": {
+    "announcement": "公告中心"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文簡體",
+    "traditionalchinese": "中文繁體"
+  },
+  "group":{
+    "title":"CoinToBe上線公告",
+    "content":"尊敬的用戶：CoinToBe平臺於今日正式上線。CoinToBe致力於為用戶提供安全、便捷的區塊鏈資產兌換服務，聚合全球優質區塊鏈資產，打造世界級的區塊鏈資產交易平臺。"
+  },
+  "group1":{
+    "title":"萊特幣（LTC）錢包維護公告",
+    "content":"尊敬的用戶：由於最近平臺註冊用戶激增，造成萊特幣（LTC）錢包記錄太多，為提升用戶體驗，我們將關閉...",
+    "time":"2017年12月20日"
+  },
+  "group2":{
+    "title":"萊特幣（LTC）錢包維護完成公告",
+    "content":"尊敬的用戶：萊特幣（LTC）錢包維護已完成，萊特幣（LTC）充值提現功能已開放...",
+    "time":"2017年12月21日"
+  },
+  "group3":{
+    "title":"CoinToBe上線SanChain（SANC）",
+    "content":"尊敬的用戶：CoinToBe上線SanChain（SANC），並開通SANC/BTC、SANC/ETH交易市場...",
+    "time":"2017年12月29日"
+  },
+  "group4":{
+    "title":"CoinToBe上線OmiseGo（OMG）",
+    "content":"尊敬的用戶：CoinToBe上線OmiseGo（OMG），並開通OMG/BTC、OMG/ETH交易市場...",
+    "time":"2017年12月29日"
+  },
+  "time":"2017年12月6日"
+}

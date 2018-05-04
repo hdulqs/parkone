@@ -1,0 +1,21 @@
+{
+  "activelang": "中文繁体",
+  "bindMobileVerification": {
+    "title": "解除手機驗證",
+    "inputLoginPsw": "登錄密碼",
+    "warning1": "密碼有誤",
+    "warning3": "密碼不能為空",
+    "inputMobile": "手機號",
+    "warning2": "無效的手機號",
+    "warning4": "手機號不能為空",
+    "warning5": "驗證碼不能為空",
+    "inputCode": "驗證碼",
+    "inputGetCode": "獲取驗證碼",
+    "submitCheck": "確定"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

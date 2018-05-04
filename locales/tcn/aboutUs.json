@@ -1,0 +1,28 @@
+{
+  "title": "關於CoinToBe",
+  "contactUs":{
+    "title":"聯系我們",
+    "tip1":"客服",
+    "tip2":"support@cointobe.com",
+    "tip3":"QQ",
+    "tip4":"交流壹群：165564500",
+    "tip5":"商務",
+    "tip6":"bd@cointobe.com",
+    "tip7":"Telegram",
+    "tip8":"官方中文群：",
+    "tip9":"官方英文群："
+  },
+  "focusUs":"關註我們",
+  "item1":{
+    "title": "CoinToBe - 安全、專業、便捷的數字資產交易平臺",
+    "content":"CoinToBe是專業的虛擬數字資產交易服務平臺，擁有壹支經驗豐富的團隊，核心成員來自於世界500強企業。CoinToBe提供優質的數字資產和最新的交易行情，致力於為用戶打造壹個安全、專業、便捷的數字資產交易平臺。"
+  },
+  "item2":{
+    "title1": "安全專業",
+    "content1":"CoinToBe采用全球領先的加密技術，整體受SSL保護、多層加密、離線存儲，等同於銀行保險櫃。所有關鍵操作均需多重身份驗證，全方位確保用戶資產安全。",
+    "title2": "豐富的幣種",
+    "content2":"CoinToBe集合數字資產中的優質幣種，提供種類豐富的數字貨幣，包括BTC、ETH、LTC等，後續將有更多優質幣種上線。",
+    "title3": "用戶體驗至上",
+    "content3":"CoinToBe支持全球的多種主流語言，並覆蓋Web端、iOS、Android、H5等多種平臺，打造行業領先的用戶服務體系，致力於為用戶提供便捷流暢的交易服務體驗。"
+  }
+}

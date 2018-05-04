@@ -1,0 +1,27 @@
+{
+  "activelang": "中文繁体",
+  "bindGoogleVerification": {
+    "htmlTitle": "國際站",
+    "title": "綁定谷歌驗證",
+    "title1": "1.下載並安裝:",
+    "title2": "2. 添加谷歌驗證碼:",
+    "openMsg": "打開谷歌驗證App，直接掃描條形碼；如果您無法掃描二維碼，請手動輸入",
+    "openMsgtip": "來創建",
+    "inputMsg": "手動輸入",
+    "title3": "3. 綁定谷歌驗證碼:",
+    "inputPsw": "登陸密碼",
+    "warningLoginPwd": "密碼不能為空",
+    "warningLoginPwdE": "密碼錯誤",
+    "inputGoogleCode": "谷歌驗證碼",
+    "warningGoogleCode": "驗證碼不能為空",
+    "warningGoogleCodeE": "驗證碼錯誤",
+    "submitCheck": "確定",
+    "account":"賬戶",
+    "secretKey":"密鑰"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

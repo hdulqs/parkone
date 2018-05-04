@@ -1,0 +1,13 @@
+{
+  "activelang": "English",
+  "bodyHtml": {
+	"title":"Sorry, we couldn't find that page.",
+	"des":"Maybe it was moved, deleted, or you accidentally mistyped the URL.",
+	"backIndex":"Go to Home Page"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

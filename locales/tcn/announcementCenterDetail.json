@@ -1,0 +1,341 @@
+{
+	"lang": {
+		"english": "English",
+		"simplifiedchinese": "中文簡體",
+		"traditionalchinese": "中文繁體"
+	},
+	"mianBaoXie":{
+		"mbx1":{
+			"name":"公告中心",
+			"links":""
+		},
+		"mbx2":{
+			"name":"公告詳情",
+			"links":""
+		}
+	},
+	"mContent":{
+		"list28":{
+			"id":28,
+			"title":"關於CoinToBe官網升級維護公告",
+			"callName":"尊敬的用護：",
+			"desText":"CoinToBe官網將於2018年3月23日20:00進行系統升級，預計12小時。屆時CoinToBe官網（ www.cointobe.com ）將暫停服務...",
+			"contentText":[
+				"CoinToBe官網將於2018年3月23日20:00進行系統升級，預計12小時。屆時CoinToBe官網（<a target='_blank' href='http://www.cointobe.com'>www.cointobe.com</a> ）將暫停服務。",
+				"本次維護涉及撮合引擎升級和錢包優化，維護完成後，錢包充幣和提幣恢復正常使用。如您有掛單，將會撤銷，資產會退回您的賬戶。",
+				"給您帶來的不便敬請諒解，操作過程中若有任何疑問，可提交工單，工作人員會盡快處理，祝您交易愉快！",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年03月23日"
+		},
+		"list27":{
+			"id":27,
+			"title":"關於CoinToBe暫停充幣和提幣的公告",
+			"callName":"尊敬的用護：",
+			"desText":"由於CoinToBe錢包升級，將暫停所有幣種的充幣和提幣，恢復時間請關註官方公告。",
+			"contentText":[
+				"由於CoinToBe錢包升級，將暫停所有幣種的充幣和提幣，恢復時間請關註官方公告。",
+				"給您帶來的不便敬請諒解，操作過程中若有任何疑問，可提交工單，工作人員會盡快處理，祝您交易愉快！",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年03月17日"
+		},
+		"list26":{
+			"id":26,
+			"title":"關於CoinToBe官網升級維護及充幣地址變更的公告",
+			"callName":"尊敬的用護：",
+			"desText":"為提高您的交易體驗，CoinToBe官網將於2018年3月10日21:00進行系統升級，預計3小時...",
+			"contentText":[
+				"為提高您的交易體驗，CoinToBe官網將於2018年3月10日21:00進行系統升級，預計3小時。屆時，CoinToBe官網（ <a target='_blank' href='http://www.cointobe.com'>www.cointobe.com</a> ）將暫停服務。",
+				"<span style='color:#E70353;'>系統升級後，除BTC之外的幣種將會變更充幣地址，為了您的資金安全，請不要再向之前的充幣地址進行充幣。</span>新的充幣地址，請進入【資產】-【充幣】重新獲取充幣地址。",
+				"給您帶來的不便敬請諒解，操作過程中若有任何疑問，可提交工單，工作人員會盡快處理，祝您交易愉快！",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年03月10日"
+		},
+		"list25":{
+			"id":25,
+			"title":"全站交易0手續費”活動公告",
+			"callName":"尊敬的用護：",
+			"desText":"為回饋新老用戶對CoinToBe的支持與認可，平臺特推出限時“全站交易0手續費”活動...",
+			"contentText":[
+				"為回饋新老用戶對CoinToBe的支持與認可，平臺特推出限時“全站交易0手續費”活動。",
+				"活動時間：2018年3月1日，結束時間以官方公告為準。",
+				"活動對象：平臺所有註冊用戶",
+				"活動說明：在活動期間，用戶進行買賣交易，免收手續費。",
+				"活動期間若您有任何疑問，可提交工單，工作人員會盡快處理，祝您交易愉快！",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年03月1日"
+		},
+		"list24":{
+			"id":24,
+			"title":"關於CoinToBe平臺活動結束的公告",
+			"callName":"尊敬的用護：",
+			"desText":"“CoinToBe火熱上線，BTC ETH百萬豪禮限量搶”與“SanChain感恩大回饋”活動將於2018年3月1日18:00（HKT）結束...",
+			"contentText":[
+				"“CoinToBe火熱上線，BTC ETH百萬豪禮限量搶”與“SanChain感恩大回饋”活動將於2018年3月1日18:00（HKT）結束。參與活動獲得的獎勵將在1-3個工作日發送完畢，感謝您對CoinToBe的支持！後續將推出更多福利活動，敬請期待。",
+				"操作過程中若有任何疑問，可提交工單，工作人員會盡快處理，祝您交易愉快！",
+				"風險提示：數字資產交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年02月28日"
+		},
+		"list23":{
+			"id":23,
+			"title":"關於CoinToBe官網維護的公告",
+			"callName":"尊敬的用護：",
+			"desText":"CoinToBe官網將於2018年2月6日21:00—23:00（HKT）進行系統維護。屆時，CoinToBe官網（ www.cointobe.com ）將...",
+			"contentText":[
+				"CoinToBe官網將於2018年2月6日21:00—23:00（HKT）進行系統維護。屆時，CoinToBe官網（<a target='_blank' href='www.cointobe.com'>www.cointobe.com</a> ）將暫停服務。給您帶來的不便，敬請諒解。",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年02月06日"
+		},
+		"list22":{
+			"id":22,
+			"title":"關於三界寶（SANC）到賬延遲的公告",
+			"callName":"尊敬的用護：",
+			"desText":"由於近期三界寶（SANC）區塊鏈網絡擁堵，導致用戶提取三界寶（SANC）時確認時間加長，會出現到賬延遲的情況...",
+			"contentText":[
+				"由於近期三界寶（SANC）區塊鏈網絡擁堵，導致用戶提取三界寶（SANC）時確認時間加長，會出現到賬延遲的情況，請您耐心等待，給您帶來的不便敬請諒解。",
+				"操作過程中若有任何疑問，可提交工單，工作人員會盡快處理，祝您交易愉快！",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年02月06日"
+		},
+		"list21":{
+			"id":21,
+			"title":"關於CoinToBe官網維護的公告",
+			"callName":"尊敬的用護：",
+			"desText":"為提升用戶體驗，CoinToBe官網將於2018年2月1日21:00—22:00（HKT）進行系統維護...",
+			"contentText":[
+				"為提升用戶體驗，CoinToBe官網將於2018年2月1日21:00—22:00（HKT）進行系統維護。屆時，CoinToBe官網（<a target='_blank' href='www.cointobe.com'>www.cointobe.com</a> ）將暫停服務。給您帶來的不便，敬請諒解。",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年02月01日"
+		},
+		"list20":{
+			"id":20,
+			"title":"關於CoinToBe贊助首屆區塊鏈Hackathon的公告",
+			"callName":"尊敬的用護：",
+			"desText":"1月27日至28日，由CoinToBe冠名贊助，DoraHacks舉辦的區塊鏈Hackathon活動在光華路SOHO成功落幕...",
+			"contentText":[
+				"1月27日至28日，由CoinToBe冠名贊助，DoraHacks舉辦的區塊鏈Hackathon活動在光華路SOHO成功落幕。此次大會吸引了10個區塊鏈項目組隊競賽，以及近百位區塊鏈黑客和興趣愛好者的圍觀。Hacker們在現場組隊，共同探索區塊鏈技術和未來應用，將創意實現。",
+				"ValueBank & CoinToBe CEO Jacky在閉幕式上做的精彩演講：區塊鏈的核心使命是金融的全球化。",
+				"<p style='width:500px; heigth:500px; margin:0 auto;'><img src='https://wx3.sinaimg.cn/mw690/9799fe91ly1fnxkor4i23j21kw11xkjo.jpg' /></p>",
+				"<p style=' text-align:center; '>ValueBank & CoinToBe CEO Jacky</p>",
+				"<p style='width:500px; heigth:500px; margin:0 auto;'><img src='https://wx4.sinaimg.cn/mw690/9799fe91ly1fnxkov7mvqj21kw11xb2i.jpg' /></p>",
+				"<p style=' text-align:center; '>Hackathon參會人員大合照</p><br /><br />",
+				"感謝您的關註！",
+				"CoinToBe團隊"
+			],
+			"annTime":"2018年01月29日"
+		},
+		"list19":{
+			"id":19,
+			"title":"關於比特幣（BTC）錢包維護完成和充幣地址變更的公告",
+			"callName":"尊敬的用護：",
+			"desText":"比特幣（BTC）錢包升級維護已完成，比特幣（BTC）充值提現功能已開放。 用戶發起的比特幣充提幣交易...",
+			"contentText":[
+				"比特幣（BTC）錢包升級維護已完成，比特幣（BTC）充值提現功能已開放。 用戶發起的比特幣充提幣交易，可在比特幣區塊瀏覽器（<a target='_blank' href='https://blockchain.info'>https://blockchain.info</a>）中輸入充提幣地址查詢進度。",
+				"<i style='color:red;'>為了提高充幣速度和體驗，CoinToBe已變更BTC的充幣地址，請不要再向之前的 BTC充幣地址進行充幣。新的充幣地址，請進入【資產】-【充幣】重新獲取BTC的充幣地址。</i>",
+				"給您帶來的不便敬請諒解。若您有任何疑問，請提交工單。祝您交易愉快！",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年01月26日"
+		},
+		"list18":{
+			"id":18,
+			"title":"“SanChain感恩大回饋”活動上線公告",
+			"callName":"尊敬的用護：",
+			"desText":"為慶祝CoinToBe與SANC達成深度戰略合作，平臺特推出“SanChain感恩大回饋”活動...",
+			"contentText":[
+				"為慶祝CoinToBe與SANC達成深度戰略合作，平臺特推出“SanChain感恩大回饋”活動。",
+				"活動開始時間：2018年1月26日10:30（HKT）",
+				"參與對象：平臺所有註冊用戶",
+				"獎勵規則：",
+				"1、每日首次登錄即可領取平臺隨機贈送的SANC;",
+				"2、每日首次充值任意幣種任意金額，即可獲得平臺隨機贈送的SANC；",
+				"後續更多福利活動，敬請期待。",
+				"活動說明：成功參與活動獲得的SANC，將在1-3個工作日發放至個人資產。",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。",
+				"祝您交易愉快！"
+			],
+			"annTime":"2018年01月25日"
+		},
+		"list17":{
+			"id":17,
+			"title":"關於CoinToBe官網維護的公告",
+			"callName":"尊敬的用戶：",
+			"desText":"為進壹步提升用戶體驗，CoinToBe官網將於2018年1月25日21:00—24:00(HKT)進行系統維護...",
+			"contentText":[
+				"為進壹步提升用戶體驗，CoinToBe官網將於2018年1月25日21:00—24:00(HKT)進行系統維護。屆時，CoinToBe官網（ <a target='_blank'  href='https://www.cointobe.com/'>www.cointobe.com </a>）將暫停服務。給您帶來的不便，敬請諒解。",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年01月25日"
+		},
+		"list16":{
+			"id":16,
+			"title":"關於ETZ糖果發放完成的公告",
+			"callName":"尊敬的用戶：",
+			"desText":"ETZ已於區塊高度4936270（北京時間：2018年1月20日02：30）分叉成功，CoinToBe已按照1:1的比例，將ETZ分發至擁有ETH的用戶個人賬戶中...",
+			"contentText":[
+				"ETZ已於區塊高度4936270（北京時間：2018年1月20日02：30）分叉成功，CoinToBe已按照1:1的比例，將ETZ分發至擁有ETH的用戶個人賬戶中。",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年01月22日"
+		},
+		"list15":{
+			"id":15,
+			"title":"比特幣（BTC）錢包維護公告",
+			"callName":"尊敬的用戶：",
+			"desText":"為提升用戶體驗，平臺將對比特幣（BTC）錢包服務進行升級，在此期間將關閉比特幣（BTC）充值提現功能。錢包升級完成後，平臺將第壹時間發布公告，通知廣大用戶...",
+			"contentText":[
+				"為提升用戶體驗，平臺將對比特幣（BTC）錢包服務進行升級，在此期間將關閉比特幣（BTC）充值提現功能。錢包升級完成後，平臺將第壹時間發布公告，通知廣大用戶。",
+				"給您帶來的不便，敬請諒解。感謝您的理解與支持。如有任何疑問，請聯系客服。",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年01月21日"
+		},
+		"list14":{
+			"id":14,
+			"title":"CoinToBe上線dininb（db）",
+			"callName":"尊敬的用戶：",
+			"desText":"CoinToBe上線dininb（db），並開通db/BTC、db/ETH交易市場...",
+			"contentText":[
+				"CoinToBe上線dininb（db），並開通db/BTC、db/ETH交易市場。",
+				"開放充提時間：2018/01/19 14:18(HKT)    <a target='_blank' href='https://www.cointobe.com/asset/assetManage.html'>去充幣</a>",
+				"開放交易時間：2018/01/19 14:18(HKT)    <a target='_blank' href='https://www.cointobe.com/tradingCenter/trading.html'>去交易</a>",
+				"費率說明：<a target='_blank' href='https://www.cointobe.com/account/rateStandard.html'>https://www.cointobe.com/account/rateStandard.html</a>",
+				"幣種簡介：豆幣（英文名：dininb）旨在打造壹個基於區塊鏈投資策略服務交易平臺，為潛在投資者和價值策略輸出者提供雙贏的解決方案：價值策略輸出者可以獲得新的受眾和額外收入來源，而潛在投資者則可以習得經驗。",
+				"dininb官網：<a target='_blank' href='http://www.dininb.io/'>http://www.dininb.io/</a>",
+				"白皮書：<a target='_blank' href='http://www.db.ink/public/file/DININB+White+paper+V20180119.pdf'>http://www.db.ink/public/file/DININB+White+paper+V20180119.pdf</a>",
+				"區塊瀏覽器：<a target='_blank' href='https://etherscan.io/'>https://etherscan.io/</a>",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年01月18日"
+		},
+		"list12":{
+			"id":12,
+			"title":"關於分發ETH糖果ETZ的公告",
+			"callName":"尊敬的用戶：",
+			"desText":"ETZ將於分叉高度，第4936270 個Block（預計北京時間1月20日02：30-03：30之間）分叉...",
+			"contentText":[
+				"ETZ將於分叉高度，第4936270 個Block（預計北京時間1月20日02：30-03：30之間）分叉。",
+				"發行總量：大概1.94億。",
+				"發行比例：根據分叉時賬戶余額等量1：1發放大概9700萬ETZ。",
+				"團隊預留：預留9700萬ETZ作為後續開發，市場運營，開發者獎勵資金。",
+				"通貨膨脹：每年新增大約1200萬ETZ，通脹率約6.5%，逐年下降。",
+				"CoinToBe將於分叉成功快照後分發ETZ。充提及交易開通時間將另行通知。",
+				"馬上充值ETH，等待糖果ETZ的降臨！ &nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.cointobe.com/asset/assetManage.html'>去充幣</a>",
+				"以太零介紹：",
+				"以太零(EtherZero，簡稱ETZ)是由壹群專業的DAPP開發者發起的，為滿足DAPP開發而發起的新壹代智能合約開發平臺，是壹個基於以太坊底層框架的硬分叉項目。以太零舍棄了以太坊傳統的gas手續費系統，使得每個交易包括智能合約的交易都實現了0交易費用。",
+				"以太零技術運營團隊：",
+				"目前我們是由壹個20人的團隊組成，團隊中有來自不同國家的外籍技術人員，並且我們與來自印度和東歐的多家業內知名的DAPP開發工作室合作，我們大部分成員都是專業的DAPP開發者，雖然我們目前不知名，但是我們在開發技術上完全沒有問題。",
+				"以太零官網地址： <a target='_blank' href='https://etherzero.org'>https://etherzero.org</a>",
+				"白皮書地址：<a target='_blank' href='http://etherzero.org/ETZ以太零中文白皮書v2.0.pdf'>http://etherzero.org/ETZ以太零中文白皮書v2.0.pdf</a>",
+				"區塊瀏覽器：<a target='_blank' href='https://etherscan.io'>https://etherscan.io</a>",				
+				"風險提示：數字貨幣交易具有極高的風險，且分叉幣存在分叉不成功的風險，希望廣大用戶充分認知分叉幣的投資風險。CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2018年01月17日"
+		},
+		"list10":{
+			"id":10,
+			"title":"關於以太坊（ETH）和OMG錢包維護公告",
+			"callName":"尊敬的用護：",
+			"desText":"CoinToBe自上線以來，受到廣大用戶的青睞，近期新用戶註冊量增長較快...",
+			"contentText":[
+				"CoinToBe自上線以來，受到廣大用戶的青睞，近期新用戶註冊量增長較快，充提以太坊（ETH）和OMG人數較多。",
+				"為提升用戶體驗，預防以太坊（ETH）和OMG錢包記錄過多造成擁堵，充分保障用戶的資金安全，平臺決定對以太坊（ETH）和OMG錢包進行升級維護。在此期間將暫停以太坊（ETH）和OMG的充提功能。",
+				"平臺會盡量縮短業務暫停時間，錢包維護完成後，會在第壹時間發布公告，通知廣大用戶。",
+				"給您帶來的不便，敬請諒解。感謝您的理解與支持。如有任何疑問，請聯系客服。"
+			],
+			"annTime":"2018年01月13日"
+		},
+		"list9":{
+			"id":9,
+			"title":"以太坊（ETH）開放充提公告",
+			"callName":"尊敬的用護：",
+			"desText":"以太坊（ETH）網絡交易已暢通，以太坊（ETH）充值提現功能已開放...",
+			"contentText":[
+				"以太坊（ETH）網絡交易已暢通，以太坊（ETH）充值提現功能已開放。",
+				"用戶發起的以太坊充提幣交易，可在以太坊區塊瀏覽器（<a target='_blank' href='https://etherscan.io'>https://etherscan.io</a>）中輸入Txid查詢進度。如遇到以下情況，交易記錄不能生成Txid、交易記錄已經生成Txid但是網絡上壹直沒有確認、網絡上顯示Pending（待確認）的狀態，請做如下處理：",
+				"1、如果用戶發起的充提幣交易不能生成Txid，請耐心等待壹下，壹般壹個小時內網絡可以確認；",
+				"2、如果區塊瀏覽器上能根據Txid查詢到交易記錄，但是壹直處於Pending狀態，請耐心等待壹下，壹般壹小時內網絡可以確認；",
+				"3、如果超過2個小時根據Txid在區塊瀏覽器上查詢，什麽也查詢不到，請點擊網站右下角“客服”聯系我們處理；",
+				"4、如果區塊瀏覽器中可以查詢到已經確認的記錄，但是顯示紅色的錯誤，說明合約執行失敗，請點擊網站右下角“客服”聯系我們處理；",
+				"5、如果區塊瀏覽器中可以查詢到已經確認的記錄，但是代幣數量沒有顯示，說明合約執行失敗，請點擊網站右下角“客服”聯系我們處理；",
+				"6、如果區塊瀏覽器中可以查詢到已經確認的記錄，且無上述情況，說明已經處理成功，請聯系接收方處理。",
+				"給您帶來的不便敬請諒解。若您有任何疑問，請提交工單。祝您交易愉快！"
+			],
+			"annTime":"2018年01月11日"
+		},
+		"list7":{
+			"id":7,
+			"title":"以太坊（ETH）暫停充提公告",
+			"callName":"尊敬的用戶：",
+			"desText":"由於近期以太坊網絡交易出現擁堵，用戶充提以太坊（ETH）出現長時間不到賬、沒有交易哈希等情況...",
+			"contentText":[
+				"由於近期以太坊網絡交易出現擁堵，用戶充提以太坊（ETH）出現長時間不到賬、沒有交易哈希等情況。為提升用戶體驗，平臺暫停以太坊（ETH）充提功能。待以太坊（ETH）網絡穩定後，平臺將第壹時間恢復以太坊（ETH）充提並發布公告，通知廣大用戶。",
+				"給用戶帶來的不便深表歉意，敬請諒解。若您有任何疑問，請聯系客服。",
+				"祝您交易愉快！"
+			],
+			"annTime":"2018年01月10日"
+		},
+		"list4":{
+			"id":4,
+			"title":"CoinToBe上線SanChain（SANC）",
+			"callName":"尊敬的用戶：",
+			"desText":"CoinToBe上線SanChain（SANC），並開通SANC/BTC、SANC/ETH交易市場...",
+			"contentText":[
+				"CoinToBe上線SanChain（SANC），並開通SANC/BTC、SANC/ETH交易市場。",
+				"開放充提時間：2017/12/29 22:00(HKT)&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.cointobe.com/asset/assetManage.html'>去充幣</a>",
+				"開放交易時間：2017/12/30 14:00(HKT)&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.cointobe.com/tradingCenter/trading.html'>去交易</a>",
+				"費率說明：<a target='_blank' href='https://www.cointobe.com/account/rateStandard.html'>https://www.cointobe.com/account/rateStandard.html</a>",
+				"幣種簡介：SanChain旨在構建全新的區塊鏈生態系統，成為互聯網價值的壹部分，實現高性能數字資產交易，並與行業有機結合。SAN生態系統使用SAN作為燃料，通過底層技術架構的SAN內生燃料驅動各類DAPP應用和開發，實現分散化應用，讓區塊鏈與商業世界真正結合在壹起。隨著網絡公開源代碼的推出，開發商可以建立並發布新的項目，以促進區塊鏈技術在更多的行業應用。項目不僅獨立運作，而且合作共同，形成了強大的向心力，目前SAN系統得到了迅速的發展。",
+				"SANC官網：<a target='_blank' href='https://sanchain.org/home'>https://sanchain.org/home</a>",
+				"白皮書：<a target='_blank' href='https://s3-us-west-1.amazonaws.com/sanchain/SanCHAIN+Whitepaper.pdf'>https://s3-us-west-1.amazonaws.com/sanchain/SanCHAIN+Whitepaper.pdf</a>",
+				"錢包下載：<a target='_blank' href='https://wallet.sanchain.org'>https://wallet.sanchain.org</a>",
+				"區塊瀏覽器：<a target='_blank' href='http://info.sanchain.org/home'>http://info.sanchain.org/home</a>",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2017年12月29日"
+		},
+		"list5":{
+			"id":5,
+			"title":"CoinToBe上線OmiseGo（OMG）",
+			"callName":"尊敬的用戶：",
+			"desText":"CoinToBe上線OmiseGo（OMG），並開通OMG/BTC、OMG/ETH交易市場...",
+			"contentText":[
+				"CoinToBe上線OmiseGo（OMG），並開通OMG/BTC、OMG/ETH交易市場。",
+				"開放充提時間：2017/12/29 22:00(HKT)&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.cointobe.com/asset/assetManage.html'>去充幣</a>",
+				"開放交易時間：2017/12/30 14:00(HKT)&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.cointobe.com/tradingCenter/trading.html'>去交易</a>",
+				"費率說明：<a target='_blank' href='https://www.cointobe.com/account/rateStandard.html'>https://www.cointobe.com/account/rateStandard.html</a>",
+				"幣種簡介：OmiseGO是壹種基於以太坊的公共金融技術，可用於主流數字錢包，實現跨管轄區和組織孤島，以及法定貨幣和分散貨幣的實時，點對點價值交換和支付服務。旨在實現金融包容和破壞現有機構的設計，將通過OmiseGO網絡和數字錢包框架向每個人提供訪問。",
+				"OMG官網： <a target='_blank' href='https://omisego.network/'>https://omisego.network/</a>",
+				"白皮書：  <a target='_blank' href='https://cdn.omise.co/omg/whitepaper.pdf'>https://cdn.omise.co/omg/whitepaper.pdf</a>",
+				"區塊瀏覽器：<a target='_blank' href='https://etherscan.io/token/OmiseGo'>https://etherscan.io/token/OmiseGo</a>",
+				"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+			],
+			"annTime":"2017年12月29日"
+		},
+		"list1":{
+			"id":1,
+			"title":"CoinToBe上線公告",
+			"callName":"尊敬的用戶：",
+			"desText":"CoinToBe平臺於今日正式上線。CoinToBe致力於為用戶提供安全、便捷的區塊鏈資產兌換服務，聚合全球優質區塊鏈資產，打造世界級的區塊鏈資產交易平臺...",
+			"contentText":[
+				"CoinToBe平臺於今日正式上線。CoinToBe致力於為用戶提供安全、便捷的區塊鏈資產兌換服務，聚合全球優質區塊鏈資產，打造世界級的區塊鏈資產交易平臺。",
+				"為慶祝CoinToBe上線，感謝您的支持與認可，讓您更加充分體驗我們的交易服務，平臺將於12月6日10：00推出“cointobe火熱上線，BTC ETH百萬豪禮限量搶”活動，即新用戶使用手機號或郵箱註冊成功以及首次充幣並交易任意幣種任意數量後，都可獲得由平臺隨機贈送的BTC或ETH，本活動持續期間，全站交易免手續費。",
+				"12月6日10:00（HKT）開放BTC、ETH、LTC充值提現業務，12月8日10:00（HKT）開放ETH/BTC、LTC/BTC、LTC/ETH交易。",
+				"十二月伊始，我們順勢起航，選擇CoinToBe，驚喜遠超期待！",
+				"祝您交易愉快！"	
+			],
+			"annTime":"2017年12月6日"
+		}
+	},
+	"team":"CoinToBe社群",
+    "time":"2017年12月20日",
+    "group":"CoinToBe社群",
+    "Telegram":"https://t.me/cointobe_chinese"
+}

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title data-i18n="common:htmlTitle"></title>
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- <meta name="viewport" content="width=device-width"> -->
+    <!--css文件引入开始-->
+    <link rel="stylesheet" href="../../css/animate.min.css">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <!--[if IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.js"></script>
+    <!end if-->
+    <link rel="stylesheet" href="../../css/detail_activity/sancActivity.css">
+    <!--css文件引入结束-->
+
+
+</head>
+<body class="sanc-activity">
+        <div id="loaded" class="dn loaded">
+            <div class="page" id="sancActivity">
+                <div class="top-box" id="headerNav"></div>
+                <div class="part1 text-center" id="part1">
+                    <img id="img-slogan" src="" data-i18n="[src]part1.slogan" class="img-slogan">
+                </div>
+                <div class="part2 text-center" id="part2">
+                    <p data-i18n="part2.title" class="font-title wow bounceInLeft animated"></p>
+                    <p data-i18n="part2.font1" class="font1 login wow fadeInUp animated-fast" id="before-login"></p>
+                    <p class="font2 wow fadeInUp animated-fast dn" id="after-login"><i data-i18n="part2.font2"></i><i>{{giveSanc.loginGiveSanc}}</i><i data-i18n="sanActive.biztype"></i><i data-i18n="sanActive.randomSend" v-show="giveSanc.loginGiveSanc > 0 ? false : true"></i><i data-i18n="part2.font3"></i></p>
+                    <a href="../account/login.html" id="btn-login" data-i18n="part2.button" class="btn-login wow pulse animated"></a>
+                </div>
+                <div class="part3 text-center" id="part3">
+                    <p data-i18n="part3.title" class="font-title wow bounceInLeft animated"></p>
+                   <div id="after-recharge">
+                       <p data-i18n="part3.hint1" class="font1" id="hint1"></p>
+                       <p id="hint2" class="font2"><i data-i18n="part3.hint2"></i><i>{{giveSanc.rechargeGiveSanc}}</i><i data-i18n="sanActive.biztype"></i><i data-i18n="sanActive.randomSend" v-show="giveSanc.loginGiveSanc > 0 ? false : true"></i><i data-i18n="part3.hint3"></i></p>
+                   </div>
+                    <div class="package-box wow fadeInDown animated-fast" id="package-box">
+                        <img src="../../images/icon1-s.png" class="img1">
+                        <img src="../../images/icon2-s.png" class="img2">
+                        <img src="../../images/icon3-s.png" class="img3">
+                        <img src="../../images/icon4-s.png" class="img4">
+                        <img src="../../images/icon5-s.png" class="img5">
+                        <img src="../../images/icon6-s.png" class="img6">
+                        <img src="../../images/icon7-s.png" class="img7">
+                        <img src="../../images/icon8-s.png" class="img8">
+                        <img src="../../images/icon9-s.png" class="img9">
+                        <img src="../../images/icon10-s.png" class="img10">
+                        <img src="../../images/icon11-s.png" class="img11">
+                        <img src="../../images/icon12-s.png" class="img12">
+                        <img src="../../images/icon13-s.png" class="img13">
+                        <img src="../../images/icon14-s.png" class="img14">
+                        <img src="../../images/icon15-s.png" class="img15">
+                        <img src="../../images/icon16-s.png" class="img16">
+                        <img src="../../images/icon17-s.png" class="img17">
+                        <div id="btn-package" class="img18 wow pulse animated" data-wow-iteration="infinite" data-wow-duration="1.3s">
+                            <i class="font-chai" data-i18n="part3.chai"></i>
+                            <p class="font-tip" data-i18n="part3.tip" ></p>
+                        </div>
+                    </div>
+                    <div id="before-recharge">
+                        <p data-i18n="part3.tip2" class="font1"></p>
+                        <a href="../asset/assetManage.html" id="btn-recharge" data-i18n="part3.recharge" class="btn-login"></a>
+                    </div>
+                </div>
+                <div class="part4 text-center dn" id="part4">
+                    <div class="font-title wow bounceInLeft animated">
+                      <p class="bg-fly">
+                          <img src="../../images/left-wing-s.png" class="left-wing wow bounceInLeft animated" data-wow-delay=".5s">
+                          <i data-i18n="part4.title" class="font4"></i>
+                          <img src="../../images/right-wing-s.png" class="right-wing wow bounceInRight animated" data-wow-delay=".5s">
+                      </p>
+                    </div>
+                    <p class="font1 wow fadeInUp animated-fast" data-i18n="part4.font1"></p>
+                    <p class=" wow fadeInUp animated-fast"><i class="font1" data-i18n="part4.font2"></i><i class="font2" data-i18n="part4.font3" id="btn-detail"></i></p>
+                    <div class="chart-box wow fadeInUp animated-fast" id="chart-box">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#btc-chart" data-toggle="tab" data-i18n="part4.chart1Title.btc"></a>
+                            </li>
+                            <li>
+                                <a href="#eth-chart" data-toggle="tab" data-i18n="part4.chart1Title.eth"></a>
+                            </li>
+                            <li>
+                                <a href="#sanc-recharge-chart" data-toggle="tab" data-i18n="part4.chart1Title.sancRecharge"></a>
+                            </li>
+                            <li>
+                                <a href="#sanc-deal-chart" data-toggle="tab" data-i18n="part4.chart1Title.sancDeal"></a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="btc-chart">
+                                <table>
+                                    <tr>
+                                        <td data-i18n="part4.table1.tr1td1"></td>
+                                        <td data-i18n="part4.table1.tr1td2"></td>
+                                        <td data-i18n="part4.table1.tr1td3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>90****@qq.com</td>
+                                        <td>12.34SANC</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="eth-chart">
+                                <table>
+                                    <tr>
+                                        <td data-i18n="part4.table1.tr1td1"></td>
+                                        <td data-i18n="part4.table1.tr1td2"></td>
+                                        <td data-i18n="part4.table1.tr1td3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>90****@qq.com</td>
+                                        <td>12.34SANC</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="sanc-recharge-chart">
+                                <table>
+                                    <tr>
+                                        <td data-i18n="part4.table1.tr1td1"></td>
+                                        <td data-i18n="part4.table1.tr1td2"></td>
+                                        <td data-i18n="part4.table1.tr1td3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>90****@qq.com</td>
+                                        <td>12.34SANC</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="sanc-deal-chart">
+                                <table>
+                                    <tr>
+                                        <td data-i18n="part4.table1.tr1td1"></td>
+                                        <td data-i18n="part4.table1.tr1td2"></td>
+                                        <td data-i18n="part4.table1.tr1td3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>90****@qq.com</td>
+                                        <td>12.34SANC</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-box dn" id="detail-box">
+                        <img src="../../images/icon_close.png" class="img-close" id="btn-close">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#recharge-detail" data-toggle="tab" data-i18n="part4.chart2Title.rechargeDetail"></a>
+                            </li>
+                            <li>
+                                <a href="#deal-detail" data-toggle="tab" data-i18n="part4.chart2Title.dealDetail"></a>
+                            </li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade in active" id="recharge-detail">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2" data-i18n="part4.detail.title.title1"></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td data-i18n="part4.ranking"></td>
+                                        <td data-i18n="part4.reward"></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="part4.category1">2</td>
+                                        <td data-i18n="part4.detail.reward1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="part4.category2">2</td>
+                                        <td data-i18n="part4.detail.reward2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="part4.category3">2</td>
+                                        <td data-i18n="part4.detail.reward3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="part4.category4">2</td>
+                                        <td data-i18n="part4.detail.reward4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="part4.category5">2</td>
+                                        <td data-i18n="part4.detail.reward5"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table-eth">
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2" data-i18n="part4.detail.title.title2"></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-i18n="part4.ranking"></td>
+                                            <td data-i18n="part4.reward"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="part4.category1">2</td>
+                                            <td data-i18n="part4.detail.reward1"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="part4.category2">2</td>
+                                            <td data-i18n="part4.detail.reward2"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="part4.category3">2</td>
+                                            <td data-i18n="part4.detail.reward3"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="part4.category4">2</td>
+                                            <td data-i18n="part4.detail.reward4"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="part4.category5">2</td>
+                                            <td data-i18n="part4.detail.reward5"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2" data-i18n="part4.detail.title.title3"></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td data-i18n="part4.ranking"></td>
+                                        <td data-i18n="part4.reward"></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="part4.category1">2</td>
+                                        <td data-i18n="part4.detail.reward1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="part4.category2">2</td>
+                                        <td data-i18n="part4.detail.reward2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="part4.category3">2</td>
+                                        <td data-i18n="part4.detail.reward3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="part4.category4">2</td>
+                                        <td data-i18n="part4.detail.reward4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="part4.category5">2</td>
+                                        <td data-i18n="part4.detail.reward5"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="clearfloat"></div>
+                            </div>
+                            <div class="tab-pane fade" id="deal-detail">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2" data-i18n="part4.detail2.title"></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-i18n="part4.ranking"></td>
+                                            <td data-i18n="part4.reward"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="part4.category1">2</td>
+                                            <td data-i18n="part4.detail2.reward1"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="part4.category2">2</td>
+                                            <td data-i18n="part4.detail2.reward2"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="part4.category3">2</td>
+                                            <td data-i18n="part4.detail2.reward3"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="part4.category4">2</td>
+                                            <td data-i18n="part4.detail2.reward4"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="part4.category5">2</td>
+                                            <td data-i18n="part4.detail.reward5"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="clearfloat"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="line wow fadeInUp animated-fast">
+                    <p data-i18n="part4.font4" class="font3 wow fadeInUp animated-fast"></p>
+                    <a href="../tradingCenter/trading.html" data-i18n="part4.button" class="btn-login wow pulse animated"></a>
+                </div>
+                <div class="part5 text-center" id="part5">
+                    <p data-i18n="part5.title" class="font-title wow bounceInLeft animated"></p>
+                    <div id="data-box" class="dn">
+                        <table id="table-detail" class="table1 text-center wow fadeInUp animated-fast">
+                            <tr>
+                                <td colspan="4" class="title" data-i18n="part5.table1.title"></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="part5.table1.tr1td1"></td>
+                                <td data-i18n="part5.table1.tr1td2"></td>
+                                <td data-i18n="part5.table1.tr1td3"></td>
+                                <td data-i18n="part5.table1.tr1td4"></td>
+                            </tr>
+                            <tr class="data-box" :class="key%2==0 ? 'bg-even' : 'bg-odd' " v-for="(item,key) in history">
+                                <td>{{getDate(item.createdTime)}}</td>
+                                <td :data-i18n="item.remark.indexOf('LONGIN') > -1 ? 'sanActive.login' : 'sanActive.recharge'"></td>
+                                <td>{{item.currencyName}}</td>
+                                <td>{{item.asset}}</td>
+                            </tr>
+                        </table>
+                        <table class="table2 text-center wow fadeInUp animated-fast dn">
+                            <tr>
+                                <td colspan="4" class="title" data-i18n="part5.table2.title"></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="part5.table2.tr1td1"></td>
+                                <td data-i18n="part5.table2.tr1td2"></td>
+                                <td data-i18n="part5.table2.tr1td3"></td>
+                                <td data-i18n="part5.table2.tr1td4"></td>
+                            </tr>
+                             <tr class="data-box">
+                                <td>2018-1-5 14:28:27</td>
+                                <td>登录</td>
+                                <td>CTB</td>
+                                <td>1-5</td>
+                            </tr>
+                        </table>
+                        <div class="pagination-wrap text-right">
+                            <ul class="pagination pagination-sm" v-show="totlepage > 1">
+                                <li @click="currPage != 1 ? goto(1) : ''"><a><i class="icon-angle-double-left"></i></a></li>
+                                <li @click="currPage != 1 ? currPage-- && goto(currPage--) : ''" ><a><i class="icon-chevron-thin-left"></i></a></li>
+                                <li v-for="index in pages" @click="goto(index)"  :key="index">
+                                    <a :class="{'active':currPage == index || (currPage == 0 && index == 1)}">{{index}}</a>
+                                </li>
+                                <li @click="totlepage != currPage && totlepage != 0 ? currPage++ && goto(currPage++) : ''"><a><i class="icon-chevron-thin-right"></i></a></li>
+                                <li @click="totlepage != currPage && totlepage != 0 ? goto(totlepage) : ''"><a><i class="icon-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <hr class="line wow fadeInUp animated-fast">
+                        <p data-i18n="part4.font4" class="font3 wow fadeInUp animated-fast dn"></p>
+                    </div>
+                    <div id="hint-box">
+                        <!-- <p class="font-hint wow fadeInUp animated-fast" data-i18n="part5.tip1"></p> -->
+                        <a href="../account/login.html" data-i18n="part5.button" class="btn-login wow pulse animated animated"></a>
+                        <p class="font-register wow fadeInUp animated-fast"><i data-i18n="part5.tip2"></i><a href="../account/register.html" data-i18n="part5.tip3" class="btn-register"></a></p>
+                    </div>
+                </div>
+                <div class="part6" id="part6">
+                    <p data-i18n="part6.title" class="font-title text-center wow bounceInLeft animated"></p>
+                    <ul class="rule-box text-left wow fadeInUp animated-fast">
+                        <li data-i18n="part6.rules.rule1"></li>
+                        <li data-i18n="part6.rules.rule2"></li>
+                        <li data-i18n="part6.rules.rule3"></li>
+                        <li data-i18n="part6.rules.rule4"></li>
+                        <li data-i18n="part6.rules.rule5"></li>
+                    </ul>
+                    <p class="font-risk1 wow fadeInUp animated-fast" data-i18n="part6.tip1"></p>
+                    <p class="font-risk2 wow fadeInUp animated-fast" data-i18n="part6.tip2"></p>
+                    <p class="font-risk3 wow fadeInUp animated-fast"><i data-i18n="part6.tip3"></i><a href="../account/workOrder.html" data-i18n="part6.tip4" class="font-ask"></a></p>
+                </div>
+                <div class="part7" id="part7">
+                    <img src="" data-i18n="[src]part7.cue" class="img-cue">
+                    <p class="text-center font1" data-i18n="part7.tip1" id="font-come"></p>
+                </div>
+            </div>
+        </div>
+        <div class="loading"  id="loading" >
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+        <div class="window-bg dn" id="window-bg">
+            <div class="window-sanc text-center">
+                <img src="../../images/close-s.png" class="img-close" onclick="closeWindow(this)">
+                <p class="window-font1" data-i18n="sancWindow.title"></p>
+                <p class="window-font2"><i data-i18n="sancWindow.tip1"></i><i id="gain"></i><i data-i18n="sanActive.biztype"></i><i id="giveRandomEmpty" class="dn" data-i18n="sanActive.randomSend"></i><i data-i18n="sancWindow.tip2"></i></p>
+                <p class="window-font2" data-i18n="sancWindow.tip3"></p>
+                <a class="window-btn" href="javascript:void(0);"  onclick="closeWindow(this)" data-i18n="sancWindow.button"></a>
+            </div>
+        </div>
+    <script src="../../js/jquery.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/comm.js"></script>
+    <script type="text/javascript" src="../../js/vue.min.js"></script>
+    <script  src="../../js/jquery.cookie.js"></script>
+     <script src="../../js/detail_activity/sancActivity.js"></script>
+	<!-- 多语言切换开始-->
+	<script src="../../js/i18next-1.6.3.min.js"></script>
+	<script  src="../../js/changeLang.js"></script>
+	<!-- 多语言切换结束-->
+    <script src="../../js/wow.min2.js" type="text/javascript"></script>
+</body>
+</html>

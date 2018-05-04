@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title data-i18n="common:htmlTitle"></title>
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--css文件引入开始-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/common/icon.css">
+    <link rel="stylesheet" href="../../css/powerange.css">
+    <link rel="stylesheet" href="../../css/tradingCenter/trading.css">
+    <link rel="stylesheet" href="../../css/kline.css">
+    <style type="text/css">
+        .trading #chart2 {
+            width: 900px;
+            height: 360px;
+            display: none;
+            margin: 0 auto;
+        }
+
+        td, th {
+            text-align: center;
+        }
+        .right-fixed{
+            display: none;
+        }
+    </style>
+    <!--css文件引入结束-->
+</head>
+<body class="trading">
+<div id="loaded" class="dn loaded">
+    <div class="page">
+        <div class="top-box" id="headerNav"></div>
+        <div class="notice-wrap" id="topNotice"></div>
+        <div class="warp-box" style="padding-top: 14px">
+            <div id="buyAndSell" class="market-container" v-cloak>
+                <div class="market-left">
+				<input type="hidden" v-model="ChangeMoenyType = i18n.t('assetManage.moneyType') == 'assetManage.moneyType' ? ChangeMoenyType : i18n.t('assetManage.moneyType')" value="">
+					<!--币种切换 开始 v-on:change="ChangeMoenyType=$event.targt.value" -->
+                    <div class="chart-box transaction-box">
+                        <div class="market clearfix">
+                            <p class="pull-left" data-i18n="assetManage.market">市场</p>
+                            <div class="pull-left market-search">
+                                <i></i>
+                                <input type="text" v-model='search'>
+                            </div>
+                            <div class="pull-right">
+                                <span class="btn-switch" :class={"btn-switch-active":isCNY}
+                                      @click="toggleIsCNY()"><i></i></span><i>{{ChangeMoenyType}}</i>
+                            </div>
+                        </div>
+                        <div class="transaction-title">
+                            <span v-for="(item,key,index) in tradeData"
+                                  @click="marketCheckout('market'+key);marketActive(key)"
+                                  :class={"active":transactionTit['market'+key]}>{{key}}</span>
+                            <span data-i18n="assetManage.recent" @click="recentBrowse"
+                                  :class={"active":recent}>最近</span>
+                        </div>
+                        <p class="market-row market-tit">
+                            <span :class="['rowL',{asce:currentOpen&&currentType==1},{desc:!currentOpen&&currentType==1}]"
+                                  data-i18n="assetManage.table.pair" @click="pairSort()">币种</span>
+                            <span :class="['rowC','last-price',{asce:currentOpen&&currentType==2},{desc:!currentOpen&&currentType==2}]"
+                                  @click="lastprice()">
+                                <span data-i18n="assetManage.lastprice">最新价</span>
+                                <span v-show="isCNY" class="i-color">（<i>{{ChangeMoenyType}}</i>）
+                                </span>
+                                <i v-show="!isCNY">（{{tradeDataKey}}）</i>
+                            </span>
+                            <span :class="['rowR',{asce:currentOpen&&currentType==3},{desc:!currentOpen&&currentType==3}]"
+                                  data-i18n="assetManage.change" @click="hSort()">24h涨跌</span>
+                        </p>
+                        <div v-for="(items,key,index) in computeTradeData" v-show="transactionTit['market'+key]"
+                             class="marketRowBox marketRowBox1" :key="index">
+                            <p class="market-row" v-for="(item,inde) in (computeTradeData[key])"
+                               @click="TransactionPairFun(item.pair,TransactionPairList[item.pair]);toggleMarketBg(key,inde);addRecentBrowse(item.pair,item.new,item.increase,key);resetWeituor()"
+                               :class="marketCheck[key]==inde ? 'market-rowBg':''">
+                                <span class="rowL"><!--  <b :class="'img-coin biT'+TransactionPairList[item.pair]"></b> -->{{item.pair}}</span>
+                                <span v-show="!isCNY" class="rowC">{{getFloat(scientificToNumber(item.new),6)}}</span>
+                                <span v-show="isCNY" class="rowC">{{getFloat(scientificToNumber(item.new)*Rate[tradeDataKey]*RateMoney,2)}}</span>
+                                <span v-if="item.increase>0" class="rowR font-green">+{{getFloat(scientificToNumber(item.increase*100),2)}}%</span>
+                                <span v-else-if="item.increase==0" class="rowR font-green">{{getFloat(scientificToNumber(item.increase*100),2)}}%</span>
+                                <span v-else class="rowR font-red1">{{getFloat(scientificToNumber(item.increase*100),2)}}%</span>
+                            </p>
+                        </div>
+                        <div v-show="transactionTit['recent']" class="marketRowBox">
+                            <p class="market-row" v-for="(item,inde) in computeTradeDataRecent"
+                               @click="TransactionPairFun(item.pair,TransactionPairList[item.pair]);toggleMarketBg(item.key,inde);addRecentBrowse(item.pair,item.new,item.increase,item.key)"
+                               :class="marketCheck[item.key]==inde ? 'market-rowBg':''">
+                                <span class="rowL"><!--  <b :class="'img-coin biT'+TransactionPairList[item.pair]"></b> -->{{item.pair}}</span>
+                                <span v-show="!isCNY" class="rowC">{{getFloat(scientificToNumber(item.new),6)}}</span>
+                                <span v-show="isCNY" class="rowC">{{getFloat(scientificToNumber(item.new)*Rate[tradeDataKey]*RateMoney,2)}}</span>
+                                <span v-if="item.increase>0" class="rowR font-green">+{{getFloat(scientificToNumber(item.increase*100),2)}}%</span>
+                                <span v-else-if="item.increase==0" class="rowR font-green">{{getFloat(scientificToNumber(item.increase*100),2)}}%</span>
+                                <span v-else class="rowR font-red1">{{getFloat(scientificToNumber(item.increase*100),2)}}%</span>
+                            </p>
+                        </div>
+                        <div class="topo-loading dn">
+                            <div class="loading-main"><span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--币种切换 结束-->
+                    <!--盘口列表	开始-->
+                    <div class="consult-info pankou-info chart-box">
+                        <!--切换-->
+                        <div class="consult-tab">
+                            <a href="javascript:;" @click="consultInit"
+                               :class="{'active':consult.buyShow&&consult.offShow}"></a>
+                            <a href="javascript:;" @click="consultBuy"
+                               :class="{'active':!consult.offShow&&consult.offShowMax}"></a>
+                            <a href="javascript:;" @click="consultOfftake"
+                               :class="{'active':!consult.buyShow&&consult.buyShowMax}"></a>
+                        </div>
+                        <div class="clearfix font-trading-title">
+                            <i class="pull-left rowl-1">&nbsp;</i>
+
+                            <i class="pull-left text-left"><span data-i18n="assetManage.Price">价格</span>（{{ isCNY ? ChangeMoenyType : market}}）</i><i
+                                class="pull-right text-right"><span data-i18n="assetManage.number">数量</span>（{{buyAndCoin}}）</i>
+
+                        </div>
+                        <div class="pankou-info-warp">
+                            <div class="animation-scroll-box">
+                                <!--卖-->
+                                <div class="pankou-sell marketRowBox">
+                                    <p v-show="SellTop10List.length > 0 ? true : false"
+                                       class="clearfix font-trading-des" v-for="(item,index) in SellTop10List"
+                                       @click="inputSellFiled(item.money,index,item.sumCount)">
+										<i class="pull-left text-left font-red rowl-1"><span data-i18n="assetManage.sell">卖</span>{{SellTop10List.length-index}}</i>
+										<i class="pull-left text-center handmouse font-money rowl-2">{{isCNY ? getFloat(scientificToNumber(item.money)*Rate[tradeDataKey]*RateMoney,2) : item.money}}</i>
+										<i class="pull-right text-right ratio-wrap rowl-3">
+											<i class="bg-ratio" :style="'padding-left:'+item.count/totalS*140+'px'"></i>
+											<i class="font-num">{{formatNumber(item.count,4)}}</i>
+										</i>
+                                    </p>
+                                </div>
+                                <p class="text-center new-price">
+                                    <i :class="newList.increase>0?'font-green':'font-red1'">{{isCNY ? getFloat(scientificToNumber(newList.new*Rate[tradeDataKey]*RateMoney),2):scientificToNumber(newList.new)}}</i><i
+                                        :class="newList.increase>0?'font-green icons-arrow-up':'font-red1 icons-arrow-down'"></i>
+                                </p>
+                                <!--买-->
+                                <div class="pankou-buy marketRowBox">
+                                    <p v-show="BuyTop10List.length > 0 ? true:false" class="clearfix font-trading-des"
+                                       v-for="(item,index) in BuyTop10List"
+                                       @click="inputBuyFiled(item.money,index,item.sumCount)">
+                                        <i class="pull-left text-left font-green rowl-1">
+                                            <span data-i18n="assetManage.buy">买</span>
+                                            {{index+1}}
+                                        </i>
+                                        <i class="pull-left text-center handmouse font-money rowl-2">{{isCNY ? getFloat(scientificToNumber(item.money)*Rate[tradeDataKey]*RateMoney,2) : item.money}}</i>
+                                        <i class="pull-left text-right ratio-wrap rowl-3">
+                                            <i class="bg-ratio" :style="'padding-left:'+item.count/totalM*140+'px'"></i>
+                                            <i class="font-num">{{formatNumber(item.count,4)}}</i>
+                                        </i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="topo-loading dn">
+                                <div class="loading-main">
+                                    <span></span><span></span><span></span><span></span><span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--盘口列表 结束-->
+                </div>
+                <div class="market-right">
+                    <!--K线 开始-->
+                    <div class="chart-box kline-box">
+                        <!--当前币种最新数据 开始-->
+                        <div class="newList-box">
+                            <div class="active-status handmouse" @click="toggleWindowTrade()">
+                                <p class="font-pair">{{buyAndCoin}}/{{market}}</p>
+                            </div>
+                            <div class="transaction-num">
+                                <dl class="transcation-head">
+                                    <dt><span data-i18n="assetManage.lastprice"></span>{{getFloat(scientificToNumber(newList.new),6)}} ≈ <i
+                                            v-if="getFloat(scientificToNumber(newList.new)*Rate[market]*RateMoney,2)>0 && !isNaN(getFloat(scientificToNumber(newList.new)*RateMoney,2))"
+                                            data-i18n="assetManage.moneyTypeF"></i><i
+                                            v-if="getFloat(scientificToNumber(newList.new)*Rate[market]*RateMoney,2)>0 && !isNaN(getFloat(scientificToNumber(newList.new)*RateMoney,2))"> {{getFloat(scientificToNumber(newList.new)*Rate[market]*RateMoney,2)}}</i> </dt>
+                                    <dt class="font-increase"><span data-i18n="assetManage.change"></span><i
+                                            :class="newList.increase>=0?'font-green':'font-red1'">{{newList.increase>0? '+':''}}{{getFloat(scientificToNumber(Number(newList.increase)*100),2)}}%</i>
+                                    </dt>
+                                    <dt><span data-i18n="assetManage.hightprice"></span>{{getFloat(scientificToNumber(newList.max),6)}}
+                                    </dt>
+                                    <dt><span data-i18n="assetManage.lowprice"></span>{{getFloat(scientificToNumber(newList.min),6)}}
+                                    </dt>
+                                    <dt class="font-volume"><span data-i18n="assetManage.dayvolume">24H</span>{{getFloat(scientificToNumber(newList.volume),8)}}{{scientificToNumber(newList.volume)==0
+                                        ? '':market}}
+                                    </dt>
+                                </dl>
+                            </div>
+                        </div>
+                        <!--当前币种最新数据 开始-->
+                        <div class="klineStyle">
+                            <div id="kline"></div>
+                        </div>
+                    </div>
+                    <!--K线 结束-->
+
+                    <div class="deal-new">
+                        <!--限价/市价交易  开始-->
+                        <div class="deal-info chart-box pull-left">
+                            <ul id="myTab" class="nav nav-tabs">
+                                <li class="active"><a class="handmouse" href="#check-price" data-toggle="tab"
+                                                      data-i18n="assetManage.limitPrice">限价交易</a></li>
+                                <li><a href="#market-price" class=" handmouse" data-toggle="tab"
+                                       data-i18n="assetManage.marketPrice">市价交易</a></li>
+                            </ul>
+                            <div id="myTabContent" class="tab-content">
+                                <div class="tab-pane fade in active clearfix" id="check-price">
+                                    <form class="pull-left buying-box xianjia-buy">
+                                        <div class="bi-difference">
+                                            <p class="pull-left"><span data-i18n="assetManage.available1">可用</span>{{market}}<i>：{{formatNumber(assetList[market],6)
+                                                == 0 ? '' : formatNumber(assetList[market],6)}}</i></p><a
+                                                :href="'../asset/assetManage.html?currencyname='+market"
+                                                class="btn-recharge" data-i18n="assetManage.deposit">充币</a>
+                                        </div>
+                                        <p class="label-title lt-buy-price" data-i18n="assetManage.buyPrice">买入价</p>
+                                        <div class="inputprice-wrap">
+                                            <input class="" type="text"
+                                                   @blur="hidePriceNum('.xianjia-buy .inputprice-wrap',3)"
+                                                   @keyup="checkKeyUpPoint('buyPrice');"
+                                                   @focusIn="checkFocusIn(this,'buyPrice');showPriceNum('.xianjia-buy .inputprice-wrap',3)"
+                                                   v-model="buyPrice"/>
+                                            <i class="font-type">{{market}}</i>
+                                            <div class="input-prompt dn">
+                                                <span class="ip-text"></span><span
+                                                    class="ip-unit" data-i18n="assetManage.moneyTypeF"></span><span class="ip-value">{{formatNumber(buyPrice*Rate[market]*RateMoney,2)}}</span>
+                                            </div>
+                                        </div>
+                                        <p class="label-title" data-i18n="assetManage.buyVolume">买入数量</p>
+                                        <div class="inputnum-wrap">
+                                            <input class="" type="text" min="0" @keyup="checkKeyUpPoint('buyVolume')"
+                                                   @blur="hidePriceNum('.xianjia-buy .inputnum-wrap')"
+                                                   @focusIn="checkFocusIn(this,'buyVolume');showPriceNum('.xianjia-buy .inputnum-wrap',1)"
+                                                   v-model="buyVolume">
+                                            <i class="font-type">{{buyAndCoin}}</i>
+                                            <div class="input-prompt"
+                                                 @click="setMaxTradNum('.xianjia-buy .inputnum-wrap','buyVolume')">
+                                                <span class="ip-text"></span><span class="ip-value dn">{{formatNumber(assetList[market]/newList.new,4)}}</span><span
+                                                    class="ip-unit dn"></span>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix fontnum-wrap">
+                                            <input type="text" class="js-check-click1 range"/>
+                                        </div>
+                                        <p class="label-title lt-buy-num"><span data-i18n="assetManage.sellvolumemoney">交易额</span>：
+                                        </p>
+                                        <div class="clearfix dealnum-wrap">
+                                            <p class="dealnum-input input-check-warp">
+                                                <i>{{!isNaN(buyPrice*buyVolume) ?
+                                                    formatNumber(decimalNum(scientificToNumber(buyPrice),scientificToNumber(buyVolume)),8)
+                                                    : 0}}{{market}}</i>
+                                                <i v-show="isNaN(Rate[market])"><br></i>
+                                                <i class="gray-color" v-show="!isNaN(Rate[market])">≈<span data-i18n="assetManage.moneyTypeF"></span>{{!isNaN(buyPrice*buyVolume*Rate[market]*RateMoney)
+                                                    ?
+                                                    formatNumber(scientificToNumber(buyPrice*buyVolume*Rate[market]*RateMoney),2)
+                                                    : 0 }}</i>
+                                            </p>
+                                            <div class="input-prompt dn">
+                                                <span class="ip-text"></span><span class="ip-value dn"></span><span
+                                                    class="ip-unit dn"></span>
+                                            </div>
+                                        </div>
+                                        <div class="no-login" v-show="isLogin">
+                                            <a href="../account/login.html"
+                                               data-i18n="common:header.nav6"></a><span>or</span><a
+                                                href="../account/register.html"
+                                                data-i18n="common:header.nav7"></a><span data-i18n="assetManage.toTread">进行交易</span>
+                                        </div>
+                                        <button v-show="!isLogin" type="button" class="btn-submit handmouse"
+                                                @click="FixedPriceBuyCoin"><span data-i18n="assetManage.buy">买入</span>&nbsp;<i>{{buyAndCoin}}</i>
+                                        </button>
+                                        <p class="fees-links"><a href="../account/rateStandard.html"
+                                                                 data-i18n="assetManage.fees">费率</a></p>
+                                    </form>
+                                    <form class="pull-right offtake-box xianjia-sell">
+                                        <div class="bi-difference">
+                                            <p class="pull-left"><span data-i18n="assetManage.available1">可用</span>{{buyAndCoin}}<i>：{{formatNumber(assetList[buyAndCoin],6)
+                                                == 0 ? '' :formatNumber(assetList[buyAndCoin],6)}}</i></p><a
+                                                :href="'../asset/assetManage.html?currencyname='+buyAndCoin"
+                                                class="btn-recharge" data-i18n="assetManage.deposit">充币</a>
+                                        </div>
+                                        <p class="label-title lt-buy-price" data-i18n="assetManage.sellPrice">卖出价</p>
+                                        <div class="inputprice-wrap">
+                                            <input type="text" @keyup="checkKeyUpPoint('sellPrice')"
+                                                   @blur="hidePriceNum('.xianjia-sell .inputprice-wrap')"
+                                                   @focusIn="checkFocusIn(this,'sellPrice');showPriceNum('.xianjia-sell .inputprice-wrap',3)"
+                                                   v-model="sellPrice">
+                                            <i class="text-center font-type">{{market}}</i>
+                                            <div class="input-prompt dn">
+                                                <span class="ip-text"></span><span
+                                                    class="ip-unit" data-i18n="assetManage.moneyTypeF"></span><span class="ip-value">{{formatNumber(sellPrice*Rate[market]*RateMoney,2)}}</span>
+                                            </div>
+                                        </div>
+                                        <p class="label-title" data-i18n="assetManage.sellvolume">卖出数量</p>
+                                        <div class="inputnum-wrap">
+                                            <input type="text" min="0"
+                                                   @blur="hidePriceNum('.xianjia-sell .inputnum-wrap')"
+                                                   @keyup="checkKeyUpPoint('sellvolume')"
+                                                   @focusIn="checkFocusIn(this,'sellvolume');showPriceNum('.xianjia-sell .inputnum-wrap',2)"
+                                                   v-model="sellvolume">
+                                            <i class="text-center font-type">{{buyAndCoin}}</i>
+                                            <div class="input-prompt dn"
+                                                 @click="setMaxTradNum('.xianjia-sell .inputnum-wrap','sellvolume')">
+                                                <span class="ip-text"></span><span class="ip-value dn">{{formatNumber(assetList[buyAndCoin],4)}}</span><span
+                                                    class="ip-unit dn"></span>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix fontnum-wrap">
+                                            <input type="text" class="js-check-click2 range"/>
+                                        </div>
+                                        <p class="label-title lt-buy-num"><span data-i18n="assetManage.sellvolumemoney">交易额</span>：
+                                        </p>
+                                        <div class="clearfix dealnum-wrap">
+                                            <p class="dealnum-input input-check-warp">
+                                                <i>{{!isNaN(sellPrice*sellvolume) ?
+                                                    formatNumber(decimalNum(scientificToNumber(sellPrice),scientificToNumber(sellvolume)),8)
+                                                    : 0}}{{market}}</i>
+                                                <i v-show="isNaN(Rate[market])"><br></i>
+                                                <i class="gray-color" v-show="!isNaN(Rate[market])">≈<span data-i18n="assetManage.moneyTypeF"></span>{{!isNaN(sellPrice*sellvolume*Rate[market]*RateMoney)
+                                                    ?
+                                                    formatNumber(scientificToNumber(sellPrice*sellvolume*Rate[market]*RateMoney),2)
+                                                    : 0}}</i>
+                                            </p>
+                                            <div class="input-prompt dn">
+                                                <span class="ip-text"></span><span class="ip-value dn"></span><span
+                                                    class="ip-unit dn"></span>
+                                            </div>
+                                        </div>
+                                        <div class="no-login" v-show="isLogin">
+                                            <a href="../account/login.html"
+                                               data-i18n="common:header.nav6"></a><span>or</span><a
+                                                href="../account/register.html"
+                                                data-i18n="common:header.nav7"></a><span data-i18n="assetManage.toTread">进行交易</span>
+                                        </div>
+                                        <button type="button" v-show="!isLogin" class="btn-submit handmouse"
+                                                @click="FixedPriceSellCoin"><span data-i18n="assetManage.sale">卖出</span>&nbsp;<i>{{buyAndCoin}}</i>
+                                        </button>
+                                        <p class="fees-links"><a href="../account/rateStandard.html"
+                                                                 data-i18n="assetManage.fees">费率</a></p>
+                                    </form>
+                                    <div class="topo-loading dn"></div>
+                                </div>
+                                <div class="tab-pane fade" id="market-price">
+                                    <form class="pull-left buying-box shijia-buy">
+                                        <div class="bi-difference"><p class="pull-left"><span
+                                                data-i18n="assetManage.available1">可用</span>{{market}}<i>：{{formatNumber(assetList[market],6)
+                                            == 0 ? '' : formatNumber(assetList[market],6)}}</i></p><a
+                                                :href="'../asset/assetManage.html?currencyname='+market"
+                                                class="btn-recharge" data-i18n="assetManage.deposit">充币</a></div>
+                                        <p class="label-title" data-i18n="assetManage.Price">价格</p>
+                                        <div class="clearfix dealnum-wrap">
+                                            <p class="dealnum-input">
+                                                <i class="gray-color" data-i18n="assetManage.bestPricebuy"></i>
+                                                <i class="text-center font-type">{{buyAndCoin}}</i>
+                                            </p>
+                                        </div>
+                                        <p class="label-title" data-i18n="assetManage.buyAsset">买入资产</p>
+                                        <div class="inputnum-wrap">
+                                            <input type="text" @blur="hidePriceNum('.shijia-buy .inputnum-wrap')"
+                                                   @keyup="checkKeyUpPoint('shijiabuy')"
+                                                   @focusIn="checkFocusIn(this,'shijiabuy');showPriceNum('.shijia-buy .inputnum-wrap',1)"
+                                                   v-model="shijiabuy">
+                                            <i class="text-center font-type">{{market}}</i>
+                                            <div class="input-prompt dn"
+                                                 @click="setMaxTradNum('.shijia-buy .inputnum-wrap','shijiabuy')">
+                                                <span class="ip-text"></span><span class="ip-value dn">{{formatNumber(assetList[market],4)}}</span><span
+                                                    class="ip-unit dn"></span>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix fontnum-wrap">
+                                            <input type="text" class="js-check-click3 range"/>
+                                        </div>
+                                        <p class="label-title lt-buy-num"><span data-i18n="assetManage.sellvolumemoney">交易额</span>：
+                                        </p>
+                                        <div class="clearfix dealnum-wrap">
+                                            <p class="dealnum-input input-check-warp">
+                                                <i>{{shijiabuy}}{{market}}</i>
+                                                <i v-show="isNaN(Rate[market])"><br></i>
+                                                <i class="gray-color" v-show="!isNaN(Rate[market])"><!-- ≈<span data-i18n="assetManage.moneyTypeF"></span>{{!isNaN(shijiabuy*Rate[market]*RateMoney)
+                                                    ?
+                                                    formatNumber(scientificToNumber(shijiabuy*Rate[market]*RateMoney),2)
+                                                    : 0}} --></i>
+                                            </p>
+                                            <div class="input-prompt dn">
+                                                <span class="ip-text"></span><span class="ip-value dn"></span><span
+                                                    class="ip-unit dn"></span>
+                                            </div>
+                                        </div>
+                                        <div class="no-login" v-show="isLogin">
+                                            <a href="../account/login.html"
+                                               data-i18n="common:header.nav6"></a><span>or</span><a
+                                                href="../account/register.html"
+                                                data-i18n="common:header.nav7"></a><span data-i18n="assetManage.toTread">进行交易</span>
+                                        </div>
+                                        <button type="button" v-show="!isLogin" class="btn-submit handmouse"
+                                                @click="shijiamairu"><span data-i18n="assetManage.buy">买入</span>&nbsp;<i>{{buyAndCoin}}</i>
+                                        </button>
+                                        <p class="fees-links"><a href="../account/rateStandard.html"
+                                                                 data-i18n="assetManage.fees">费率</a></p>
+                                    </form>
+                                    <form class="pull-right offtake-box shijia-sell">
+                                        <div class="bi-difference">
+                                            <p class="pull-left"><span data-i18n="assetManage.available1">可用</span>{{buyAndCoin}}<i>：{{formatNumber(assetList[buyAndCoin],6)
+                                                == 0 ? '' : formatNumber(assetList[buyAndCoin],6)}}</i></p><a
+                                                class="btn-recharge"
+                                                :href="'../asset/assetManage.html?currencyname='+buyAndCoin"
+                                                data-i18n="assetManage.deposit">充币</a>
+                                        </div>
+                                        <p class="label-title" data-i18n="assetManage.Price">价格</p>
+                                        <div class="clearfix dealnum-wrap">
+                                            <p class="dealnum-input">
+                                                <i class="gray-color" data-i18n="assetManage.bestPricesell"></i>
+                                                <i class="text-center font-type">{{buyAndCoin}}</i>
+                                            </p>
+                                        </div>
+                                        <p class="label-title" data-i18n="assetManage.sellvolume">卖出数量</p>
+                                        <div class="inputnum-wrap">
+                                            <input class="" type="text"
+                                                   @blur="hidePriceNum('.shijia-sell .inputnum-wrap')"
+                                                   @keyup="checkKeyUpPoint('shijiasell')"
+                                                   @focusIn="checkFocusIn(this,'shijiasell');showPriceNum('.shijia-sell .inputnum-wrap',2)"
+                                                   v-model="shijiasell">
+                                            <i class="text-center font-type">{{buyAndCoin}}</i>
+                                            <div class="input-prompt dn"
+                                                 @click="setMaxTradNum('.shijia-sell .inputnum-wrap','shijiasell')">
+                                                <span class="ip-text"></span><span class="ip-value dn">{{formatNumber(assetList[buyAndCoin],4)}}</span><span
+                                                    class="ip-unit dn"></span>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix fontnum-wrap">
+                                            <input type="text" class="js-check-click4 range"/>
+                                        </div>
+                                        <p class="label-title lt-buy-num"><span data-i18n="assetManage.sellvoluAmount">交易量</span>：
+                                        </p>
+                                        <div class="clearfix dealnum-wrap">
+                                            <p class="dealnum-input input-check-warp">
+                                                <i>{{shijiasell}}{{buyAndCoin}}</i>
+                                                <i v-show="isNaN(Rate[market])"><br></i>
+                                                <i class="gray-color" v-show="!isNaN(Rate[market])"><!-- ≈<span data-i18n="assetManage.moneyTypeF"></span>{{!isNaN(shijiasell*Rate[market]*RateMoney)
+                                                    ?
+                                                    formatNumber(scientificToNumber(shijiasell*Rate[market]*RateMoney),2)
+                                                    : 0}} --></i>
+                                            </p>
+                                            <div class="input-prompt dn">
+                                                <span class="ip-text"></span><span class="ip-value dn"></span><span
+                                                    class="ip-unit dn"></span>
+                                            </div>
+                                        </div>
+                                        <div class="no-login" v-show="isLogin">
+                                            <a href="../account/login.html"
+                                               data-i18n="common:header.nav6"></a><span>or</span><a
+                                                href="../account/register.html"
+                                                data-i18n="common:header.nav7"></a><span data-i18n="assetManage.toTread">进行交易</span>
+                                        </div>
+                                        <button type="button" v-show="!isLogin" class="btn-submit handmouse"
+                                                @click="shijiamaichu"><span data-i18n="assetManage.sale">卖出</span>&nbsp;<i>{{buyAndCoin}}</i>
+                                        </button>
+                                        <p class="fees-links"><a href="../account/rateStandard.html"
+                                                                 data-i18n="assetManage.fees">费率</a></p>
+                                    </form>
+                                    <div class="topo-loading dn"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--限价/市价交易  结束-->
+                        <!--最新成交 开始-->
+                        <div class="chart-box new-trades pull-right consult-info">
+                            <div class="new-trades-nav clearfix">
+                                <p class="pull-left">
+                                    <span data-i18n="assetManage.newHistoryTrade">最新成交</span>（{{buyAndCoin}} / {{market}}）</p>
+                                <div class="tab pull-right">
+                                    <a href="javascript:;" data-i18n="assetManage.market"
+                                       :class="{active:changeToMarketTrade}" @click="LastMarket" id="LastMarket">市场</a>
+                                    <a href="javascript:;" data-i18n="assetManage.wode" :class="{active:changeToMyTrade}"
+                                       @click="LastMy" id="myLast">我的</a>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="clearfix font-trading-title1">
+                                    <i class="pull-left text-center"><span data-i18n="assetManage.Price">价格</span>（{{isCNY ? ChangeMoenyType : market}}）</i>
+                                    <i class="pull-left text-left"><span data-i18n="assetManage.number">数量</span>（{{buyAndCoin}}）</i>
+                                    <i class="pull-left text-right"><span
+                                            data-i18n="assetManage.table.Date">时间</span></i>
+                                </p>
+                                <div class="consult-buying marketRowBox">
+                                    <transition-group name="newList" tag="p" v-show="changeToMarketTrade">
+                                        <p class="clearfix font-trading-des" v-for="item in consignationDataList"
+                                           @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_average_price),6),'',formatNumber(scientificToNumber(item.made_count),4)):inputSellFiled(formatNumber(scientificToNumber(item.made_average_price),6),'',formatNumber(scientificToNumber(item.made_count),4))"
+                                           :key="item">
+                                            <i :class="'pull-left text-left'">
+                                                {{(isCNY ? formatNumber(scientificToNumber(item.made_average_price)*Rate[tradeDataKey]*RateMoney,2) : scientificToNumber(item.made_average_price))}}
+                                            </i>
+                                            <i class="pull-left text-center handmouse font-money">
+                                                {{scientificToNumber(item.made_count)}}
+                                            </i>
+                                            <i class="pull-left text-right ratio-wrap">
+                                                {{getDateFormate(item.made_time)}}
+
+                                            </i>
+                                        </p>
+                                    </transition-group>
+                                    <transition-group name="newList" tag="p" v-show="changeToMyTrade">
+                                        <p class="clearfix font-trading-des" v-for="item in consignationDataListMy"
+                                           @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_average_price),6),'',formatNumber(scientificToNumber(item.made_count),4)):inputSellFiled(formatNumber(scientificToNumber(item.made_average_price),6),'',formatNumber(scientificToNumber(item.made_count),4))" :key="item">
+                                            <i :class="'pull-left text-left'">
+                                                {{isCNY ? formatNumber(scientificToNumber(item.made_average_price)*Rate[tradeDataKey]*RateMoney,2) : scientificToNumber(item.made_average_price)}}
+                                            </i>
+                                            <i class="pull-left text-center handmouse font-money">
+                                                {{scientificToNumber(item.made_count)}}
+                                            </i>
+                                            <i class="pull-left text-right ratio-wrap">
+                                                {{getDateFormate(item.create_time)}}
+                                            </i>
+                                        </p>
+										<p><a>查看更多</a></p>
+                                    </transition-group>
+                                </div>
+                            </div>
+							<div :class="'no-data-msg3 text-center'+ (!MarketShowNoData ? ' dn' : '')">
+								<p class="icon-document-text text-center"></p>
+								<p class="font-hint text-center" data-i18n="assetManage.Nonewdelegate">暂无数据{{MarketShowNoData}}</p>
+							</div>
+                            <div class="topo-loading dn">
+                                <div class="loading-main">
+                                    <span></span><span></span><span></span><span></span><span></span></div>
+                            </div>
+                        </div>
+                        <!--最新成交 结束-->
+                    </div>
+                    <!--限价/市价交易  结束-->
+                </div>
+            </div>
+            <!--当前委托/历史委托   开始-->
+            <div class="personal-box chart-box" id="havaLoginPersonal">
+                <ul id="myTab1" class="nav nav-tabs text-center">
+                    <li class="active">
+                        <a href="#home1" data-toggle="tab" data-i18n="assetManage.currentcustody">当前委托</a>
+                    </li>
+                    <li><a href="#my24" data-toggle="tab" data-i18n="assetManage.24hTrades">历史委托</a></li>
+                </ul>
+                <div id="myTabContent1" class="tab-content text-center">
+                    <div class="tab-pane fade in active" id="home1" v-cloak>
+                        <div class="handle-btn">
+                            <a class="handle-hide-other" data-i18n="assetManage.table.hideOtherPair" @click="hideOtherTrand()">隐藏其他交易对</a>
+                            <a class="btn-revoke handmouse dn" id="allcancle" data-i18n="assetManage.table.CancelAll"
+                               @click="cancleAll">全部撤单</a>
+                        </div>
+                        <table class="table table-bordered table-condensed flip-content ">
+                            <thead>
+                            <tr>
+                                <th width="12%" class="text-center" data-i18n="assetManage.table.Date">时间</th>
+                                <th width="8%" data-i18n="assetManage.table.pair"> 交易对</th>
+                                <th width="8%" data-i18n="assetManage.table.type"> 交易类型</th>
+                                <th width="13%" data-i18n="assetManage.table.price"> 委托价</th>
+                                <th width="10%" data-i18n="assetManage.table.amount"> 委托量</th>
+                                <th width="13%" data-i18n="assetManage.table.total"> 委托总额</th>
+                                <th width="8%" data-i18n="assetManage.table.completed"> 已成交</th>
+                                <th width="13%" data-i18n="assetManage.table.averagePrice"> 成交均价</th>
+                                <th width="8%" data-i18n="assetManage.table.open"> 未成交</th>
+                                <th width="7%" data-i18n="assetManage.table.do">操作</th>
+                            </tr>
+                            </thead>
+                        </table>
+                        <div class="marketRowBox home1-my24">
+                            <table class="table table-bordered table-condensed flip-content ">
+                                <tbody class="animation-list marketRowBox">
+                                <tr v-for="(item,k,index) in consignationDataList" :data-biztypev="item.biz_type"
+                                    :class="'show-item-animation'" :style="'-webkit-animation-duration:'+(k*0.2+0.2)+'s'">
+                                    <td width="12%">{{getDateFormate(item.update_time,2)}}</td>
+                                    <td width="8%"> {{item.biz_type}}</td>
+                                    <td width="8%"
+                                        :class="(item.trade_type==1||item.trade_type==3)?'font-green':'font-red'"
+                                        :data-i18n="'assetManage.trade_type'+item.trade_type">
+                                        {{tradList[item.trade_type]}}
+                                    </td>
+                                    <td width="13%" class="two-line">
+                                        {{formatNumber(scientificToNumber(item.consignation_price),6) <= 0 ? '-' :
+                                        formatNumber(scientificToNumber(item.consignation_price),6)}}
+                                        <span v-show="formatNumber(scientificToNumber(item.consignation_price),6) > 0 ? true : false"> <span
+                                                style="margin-right: 2px">≈</span><i data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(scientificToNumber(item.consignation_price)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}
+												</span>
+                                        
+                                    </td>
+                                    <td width="10%">{{formatNumber(scientificToNumber(item.consignation_count),4)}}</td>
+                                    <td width="13%" class="two-line">
+                                        {{formatNumber(scientificToNumber(item.consignationTotalMoney),8)}}
+                                        <span v-show="formatNumber(scientificToNumber(item.consignation_price),6) > 0 ? true : false"> <span
+                                                style="margin-right: 2px">≈</span><i data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(scientificToNumber(item.consignationTotalMoney)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
+                                        
+                                    </td>
+                                    <td width="8%">{{formatNumber(scientificToNumber(item.made_count),4)}}</td>
+                                    <td width="13%" class="two-line">
+                                        {{formatNumber(scientificToNumber(item.made_average_price),6) <= 0 ? '-' :
+                                        formatNumber(scientificToNumber(item.made_average_price),6)}}
+                                        <span v-show="formatNumber(scientificToNumber(item.made_average_price),6) > 0 ? true : false">≈<i
+                                                data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(formatNumber(scientificToNumber(item.made_average_price),6)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
+                                    </td>
+                                    <td width="8%">{{formatNumber(scientificToNumber(item.unTradeCount),4)}}</td>
+                                    <td width="7%" class="text-center"><i class="btn-revoke handmouse"
+                                                                          @click="revokeOrder"
+                                                                          :data-id="item.consignation_no"
+                                                                          data-i18n="assetManage.table.Cancel">撤单</i>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-center searchAllDiv" v-if="consignationDataList.length>20">
+                           <a class="searchAll" href="../orderManage/orderManage.html" data-i18n="assetManage.table.all"></a>
+                        </div>
+                        <div class="no-data-msg3 text-center" v-show="show==true">
+                            <p class="icon-document-text text-center"></p>
+                            <p class="font-hint text-center" data-i18n="assetManage.Nonewdelegate">暂无数据</p>
+                        </div>
+                        <div class="topo-loading dn">
+                            <div class="loading-main"><span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="my24" v-cloak>
+                        <div class="handle-btn">
+                            <a href="../orderManage/orderManage.html" class="btn-revoke handmouse"
+                               data-i18n="assetManage.table.all">查看全部 </a>
+                        </div>
+                        <table class="table table-bordered table-condensed flip-content">
+                            <thead>
+                            <tr>
+                                <th width="12%" class="text-center" data-i18n="assetManage.table.Date">时间</th>
+                                <th width="8%" data-i18n="assetManage.table.pair"> 交易对</th>
+                                <th width="8%" data-i18n="assetManage.table.type"> 交易类型</th>
+                                <th width="13%" data-i18n="assetManage.table.price"> 委托价</th>
+                                <th width="10%" data-i18n="assetManage.table.amount"> 委托量</th>
+                                <th width="13%" data-i18n="assetManage.table.total"> 委托总额</th>
+                                <th width="8%" data-i18n="assetManage.table.completed"> 已成交</th>
+                                <th width="13%" data-i18n="assetManage.table.averagePrice"> 成交均价</th>
+                                <th width="8%" data-i18n="assetManage.table.open"> 未成交</th>
+                                <th width="7%" data-i18n="assetManage.table.status"> 状态</th>
+                            </tr>
+                            </thead>
+                        </table>
+                        <div class="marketRowBox home1-my24">
+                            <table class="table table-bordered table-condensed flip-content">
+                                <tbody class="animation-list  marketRowBox">
+                                <tr v-for="(item,k) in consignationDataList" :data-biztypev="item.biz_type"
+                                    :class="'show-item-animation'" :style="'-webkit-animation-duration:'+(k*0.2+0.2)+'s'">
+                                    <td width="12%">{{getDateFormate(item.create_time,2)}}</td>
+                                    <td width="8%">{{item.biz_type}}</td>
+                                    <td width="8%"
+                                        :class="(item.trade_type==1||item.trade_type==3)?'font-green':'font-red'"
+                                        :data-i18n="'assetManage.trade_type'+item.trade_type">
+                                        {{tradList[item.trade_type]}}
+                                    </td>
+                                    <td width="13%" class="two-line">
+                                        {{item.trade_type>2 ? '-' : formatNumber(scientificToNumber(item.consignation_price),6)}}
+                                        <span v-show="item.trade_type >2 ? false : true"><span
+                                                style="margin-right: 2px">≈</span><i
+                                                data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(formatNumber(scientificToNumber(item.consignation_price),6)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
+
+                                    </td>
+                                    <td width="10%">
+                                        {{item.trade_type==3?"-":formatNumber(scientificToNumber(item.consignation_count),4)}}
+                                    </td>
+                                    <td width="13%" class="two-line">
+                                        {{item.trade_type==4?"-":formatNumber(scientificToNumber(item.consignationTotalMoney),8)}}
+                                        <span v-show="item.trade_type==4?false : true"><span style="margin-right: 2px">≈</span><i
+                                                data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(formatNumber(scientificToNumber(item.consignationTotalMoney),6)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
+                                    </td>
+                                    <td width="8%">{{formatNumber(scientificToNumber(item.made_count),4)}}</td>
+                                    <td width="13%" class="two-line">
+                                        {{formatNumber(scientificToNumber(item.made_average_price),6) >0 ?
+                                        formatNumber(scientificToNumber(item.made_average_price),6):'-'}}
+                                        <span v-show="formatNumber(scientificToNumber(item.made_average_price),6) >0 ? true:false"><span
+                                                style="margin-right: 2px">≈</span><i
+                                                data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(formatNumber(scientificToNumber(item.made_average_price),6)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
+                                    </td>
+                                    <td v-if="item.trade_type==3" width="8%">-</td>
+                                    <td v-else width="8%">{{formatNumber(scientificToNumber(item.unTradeCount),4)}}</td>
+                                    <td width="7%" class="text-center" :data-i18n="'assetManage.consignationStatus'+item.consignation_status">{{item.consignation_status}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="no-data-msg3 text-center" v-show="show==true">
+                            <p class="icon-document-text text-center"></p>
+                            <p class="font-hint text-center" data-i18n="assetManage.Nonewdelegate">暂无数据</p>
+                        </div>
+                        <div class="topo-loading" v-show="show==false">
+                            <div class="loading-main"><span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--当前委托/历史委托   结束-->
+        </div>
+    </div>
+    <div class="bottom-box dn posi-fix" id="footerNav"></div>
+    <div class="bgloading"></div>
+    <div class="loading" id="loading">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+    <div class="errorMsg dn" data-i18n="errorMsg"></div>
+</div>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/powerange.min.js"></script>
+<script type="text/javascript" src="../../js/vue.min.js"></script>
+<script src="../../js/jquery.mousewheel.js"></script>
+<script src="../../js/kline.js"></script>
+<!-- 多语言切换开始-->
+<script src="../../js/jquery.cookie.js"></script>
+<script src="../../js/i18next-1.6.3.min.js"></script>
+<script src="../../js/changeLang.js"></script>
+<script src="../../js/comm.js"></script>
+<script type="text/javascript" src="../../js/tradingCenter/trading.js"></script>
+<!-- 多语言切换结束-->
+
+<script type="text/javascript">
+    var widths = isMobile() == 1 ? 852 : ($(".klineStyle").width() / 100) * $('body').width();
+    var kline = new Kline({
+        element: "#kline",
+        width: 852,
+        height: 432,
+        theme: 'light', // light/dark
+        language: 'zh-cn', // zh-cn/en-us/zh-tw
+        ranges: ["line", "1m", "5m", "15m", "30m", "1h", "1d", "1w"],
+        symbol: "coin5/coin4",
+        symbolName: "COIN5_COIN4",
+        type: "poll", // poll/socket
+        url: "/api/market/nologin/klineNew",
+        limit: 1000,
+        intervalTime: 5000,
+        debug: false,
+        showTrade: false,
+        onResize: function (width, height) {
+            
+        },
+        onRangeChange: function (range) {
+            this.intervalTime = range;
+            if (range == 1000) {
+                this.intervalTime = 60000;
+            }
+            first = true;
+            newArray = [];
+            refreshFlag = 0;
+            this.resend();
+        }
+    });
+	window.addEventListener("resize",function(){
+		resizebody();
+		setKlineWidths();
+	});
+    kline.draw();
+    if ($.cookie('newlang') == 'scn') {
+        chart_switch_language('zh-cn');
+    } else if ($.cookie('newlang') == 'en') {
+        chart_switch_language('en-us');
+    } else if ($.cookie('newlang') == 'tcn') {
+        chart_switch_language('zh-tw');
+    }
+    $("#chart_language_setting_div").hide();
+</script>
+</body>
+</html>
+<!--
+买入文字绿色类名：font-green<i data-i18n="assetManage.moneyType"></i>
+卖出文字红色类名：font-red
+-->

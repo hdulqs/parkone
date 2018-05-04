@@ -1,0 +1,31 @@
+{
+  "title": "Nostro titolo",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "alert": "Fare clic su OK per chiudere.",
+  "announcement": {
+    "announcementCenterDes": "公告中心",
+    "announcementDetailDes": "公告详情"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  },
+  "content":{
+    "title":"莱特币（LTC）钱包维护公告",
+    "details":{
+      "tip1":"尊敬的用户：",
+      "tip2":" 由于最近平台注册用户激增，造成莱特币（LTC）钱包记录太多，为提升用户体验，我们将关闭莱特币（LTC）充值提现功能，进行钱包维护。钱包维护完成后，平台将第一时间发布公告，通知广大用户。",
+      "tip3":"给用户带来的不便深表歉意，敬请谅解。若您有任何疑问，请提交工单。",
+      "tip6":"祝您交易愉快！"
+    },
+    "team":"CoinToBe团队",
+    "time":"2017年12月20日",
+    "group":"CoinToBe社群",
+    "Telegram":"https://t.me/cointobe_chinese"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "activelang": "English",
+  "authenticationFail": {
+    "htmlTitle": "国际站",
+    "title": "Profile Verification",
+    "des": "Profile verification failed.Cause of failure: scanned photos cannot be used in profile...",
+    "again": "Verify again",
+    "foot1": "Terms of Service",
+    "foot2": "Fees",
+    "foot3": "Support Center",
+    "contact": "Contact：support@xyz.com",
+    "head1": "Funds",
+    "head2": "Trading",
+    "head3": "Announcements",
+    "head4": "Account",
+    "head5": "User Center"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

@@ -1,0 +1,151 @@
+.range-bar {
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 100%;
+}
+.range-bar:before {
+	content: "";
+	display: block;
+	width: 8px; height: 8px;
+	position: absolute; z-index: 0;
+	left: 0px; top: -3px;
+	background-color: #e0e0e0;
+  	border-radius: 100%;
+}
+.range-bar:after {
+	content: "";
+	display: block;
+	width: 8px; height: 8px;
+	position: absolute; z-index: 0;
+	right: 0px; top: -3px;
+	background-color: #e0e0e0;
+  	border-radius: 100%;
+}
+.actives.range-bar:before{
+	background-color: #13b5b1;
+}
+.range-quantity {
+  border-radius: 15px;
+  display: block;
+  height: 100%;
+  width: 0;
+  background-color: #13b5b1;
+}
+
+.range-handle {
+  background-color: #e0e0e0;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 10px;
+  left: 0;
+  top: -4px;
+  position: absolute; z-index: 8;
+  width: 10px;
+  transform: scale(0.1);
+}
+.actives .range-handle,
+.range-bar:hover .range-handle {
+	background-color: #13b5b1;
+	animation: resets 0.3s 0s linear forwards;
+}
+@keyframes resets{
+    0%,100% { transform: scale(1);}
+}
+
+
+.range-handVal {
+  background: none;
+  cursor: pointer;
+  height: 20px; line-height: 20px;
+  display: inline-block;
+  padding-right:10px;
+  font-size:12px;
+  position: absolute;
+  width: auto;
+  border-radius: 0px;
+  color: #181819;
+  text-align: left;
+  top: -9px;
+  right: -32px;
+  padding-right:0px;
+}
+
+.range-min,
+.range-max {
+  color: #181819;
+  font-size: 12px;
+  height: 20px;
+  position: absolute;
+  text-align: center;
+  top: -7px;
+  width: 24px;
+}
+
+.range-min {
+  left: -22px;
+}
+
+.range-max {
+  right: -32px; display: none;
+}
+
+/**
+ * Vertical slider style.
+ */
+
+.vertical {
+  height: 100%;
+  width: 4px;
+}
+
+.vertical .range-quantity {
+  bottom: 0;
+  height: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.vertical .range-handle {
+  bottom: 0;
+  left: -13px;
+  top: auto;
+}
+
+.vertical .range-min,
+.vertical .range-max {
+  left: -10px;
+  right: auto;
+  top: auto;
+}
+
+.vertical .range-min {
+  bottom: -30px;
+}
+
+.vertical .range-max {
+  top: -30px;
+}
+
+/**
+ * Style for disabling text selection on handle move.
+ */
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/**
+ * Style for handle cursor on disabled slider.
+ */
+
+.range-disabled {
+  cursor: default;
+}

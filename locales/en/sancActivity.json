@@ -1,0 +1,129 @@
+{
+	"sanActive":{
+		"biztype":" SANC",
+		"randomSend":"(random)",
+		"login":"Login",
+		"recharge":"recharge"
+	},
+	"part1":{
+		"slogan": "../../images/font2-s.png",
+		"font1": "Time：01/xx/2018 xx:00 - 01/xx/2018 xx:00 (HKT)；",
+		"font2": "Details：You could get daily SANC rewards by following these steps."
+	},
+	"part2":{
+		"title": "Log in to get rewards",
+		"font1": "Keep logging in every day could guarantee you to get SANC.",
+		"font2": "Congratulations, you’ve got ",
+		"font3": ". It will distribute to your account within 1-3 business days.",
+		"button": "Login Now"
+	},
+	"part3":{
+		"title": "Deposit to get more",
+		"tip": "You've got a gift package!",
+		"hint1": "Keep logging in every day could guarantee you to get SANC.",
+		"hint2": "Congratulations, you’ve got ",
+		"hint3": " . It will distribute to your account within 1-3 business days.",
+		"chai":"open",
+		"tip2":"Depositing now to get SANC",
+		"recharge":"Recharge Now"
+	},
+	"part4":{
+		"title": "Trade Ranking",
+		"font1": "Rules: Depositing BTC, ETH or SANC or trading with SANC ",
+		"font2":"to join ranking ",
+		"font3":"Rewards details",
+		"chart1Title":{
+			"btc":"BTC Deposit Ranking",
+			"eth":"ETH Deposit Ranking",
+			"sancRecharge":"SANC Deposit Ranking",
+			"sancDeal":"SANC Trading Ranking"
+		},
+		"table1":{
+			"tr1td1":"Rank",
+			"tr1td2":"Account",
+			"tr1td3":"Trading Volume"
+		},
+		"chart2Title":{
+			"rechargeDetail":"Deposit rewards details",
+			"dealDetail":"Trading rewards details"
+		},
+		"ranking":"Ranking",
+		"reward":"Rewards",
+		"category1":"1st",
+		"category2":"2nd",
+		"category3":"3rd",
+		"category4":"4th-10th",
+		"category5":"11th-30th",
+		"detail":{
+			"title":{
+				"title1":"BTC Deposit rewards details",
+				"title2":"ETH Deposit rewards details",
+				"title3":"SANC Deposit rewards details"
+			},
+			"reward1":"10000CTB",
+			"reward2":"8000CTB",
+			"reward3":"5000CTB",
+			"reward4":"3000CTB/p",
+			"reward5":"2000CTB/p"
+		},
+		"detail2":{
+			"title":"BTC Deposit rewards details",
+			"reward1":"10000SANC",
+			"reward2":"8000SANC",
+			"reward3":"5000SANC",
+			"reward4":"3000SANC/p",
+			"reward5":"2000SANC/p"
+		},
+		"font4":"* Real-time ranking, rewards are distributed based on ranking by the deadline of the campaign.",
+		"button": "Login Now"
+	},
+	"part5":{
+		"title": "My Rewards",
+		"table1":{
+			"title": "SANC Rewards Details",
+			"tr1td1":"Date",
+			"tr1td2":"Type",
+			"tr1td3":"Coin",
+			"tr1td4":"Amount"
+		},
+		"table2":{
+			"title": "My Ranking",
+			"tr1td1":"CTB Trading Volume",
+			"tr1td2":"Total Depositing/Trading Volume",
+			"tr1td3":"My Ranking",
+			"tr1td4":"My Rewards"
+		},
+		"font2":"join ranking",
+		"font3":"Rewards Details",
+		"font4":"*Real-time ranking, rewards are distributed based on ranking by the deadline of the campaign.",
+		"button": "Login Now",
+		"tip1": "After logging in, you could check your rewards.",
+		"tip2": "Don't have an account?",
+		"tip3": " Sign Up"
+	},
+	"part6":{
+		"title": "Trade Ranking",
+		"rules": {
+			"rule1":"1. This promotion starts from 2018-1-26 2:30 AM (UTC), and it will be closed until further notice. ",
+			"rule2":"2. Login every day to get random SanC reward distributed by CoinToBe. ",
+			"rule3":"3. Depositing any coin at any amount will get random SanC reward distributed by CoinToBe.",
+			"rule4":"4. Rewards will be distrituted within one to three business days after the promotion. You could check it in the assets of your account.",
+			"rule5":"5. Accounts will be banned in this promotion if any cheating is found."
+		},
+		"tip1": "Risk Reminder",
+		"tip2": "Investing in digital assets comes with high risks due to huge price fluctuations. Before investing, please have a full understanding of all the risks of investing in digital assets and be prudent of your own investment decisions.",
+		"tip3": "*CoinToBe reserves the right of final interpretation.If you have further question, please let us know by",
+		"tip4": " clicking help or going to the support."
+	},
+	"part7":{
+		"cue":"../../images/cue-en.png",
+		"tip1":"Coming Soon"
+	},
+	"sancWindow":{
+		"title":"SANC Rewards for All",
+		"tip1":"Congratulations, you’ve got ",
+		"tip2":" . It will distribute to your account within 1-3 business days.",
+		"tip3":"Tips: SANC reward for daily login.",
+		"button":"Click to Join"
+	}
+}

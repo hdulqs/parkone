@@ -1,0 +1,105 @@
+<!DOCTYPE html   class="html-register">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title data-i18n="common:htmlTitle"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telphone=no,email=no">
+    <!--css文件引入开始-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/account/workOrder.css">
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.js"></script>
+    <![endif]-->
+    <!--css文件引入结束-->
+</head>
+<body class="my-message">
+    <div  id="loaded" class="dn loaded">
+        <div class="page">
+            <div class="top-box" id="headerNav"></div>
+			<div class="notice-wrap" id="topNotice"></div>
+            <div class="warp-box">
+                 <div class="content-box">
+                    <ul class="clearfix nav-box">
+                        <li class="pull-left"><i data-i18n="workOrder.title"></i></li>
+                    </ul>
+                    <div class="work-order">
+                          <div class="form-group">
+                            <label>*<span data-i18n="workOrder.emailAddress" class="font-title"></span></label>
+                            <input type="text" id="userEmail" name="userEmail" data-filedId="21f2f87515e64422a1a1b7545cec3ded" class="form-control input-width" data-i18n="[placeholder]workOrder.mail">
+                          </div>
+                        <p class="warning-para opt-dn userEmail-warn"><i class="icon-exclamation-circle"></i><span data-i18n="workOrder.warning1"></span></p>                         
+                          <div class="form-group">
+                            <label>*<span data-i18n="workOrder.ticketTitle" class="font-title"></span></label>
+                            <input type="text" id="ticketTitle" name="ticketTitle" class="form-control input-width" data-i18n="[placeholder]workOrder.userId">
+                          </div>
+                        <p class="warning-para opt-dn ticketTitle-warn"><i class="icon-exclamation-circle"></i><span data-i18n="workOrder.warning2"></span></p>  
+                         <div class="form-group">
+                            <label><span data-i18n="workOrder.questionDetail"></span></label>
+                            <textarea class="form-control textarea-width" name="ticketContent" id="ticketContent" cols="30" rows="10" data-i18n="[placeholder]workOrder.problem"></textarea>
+                          </div>
+                        <p class="warning-para opt-dn"></p>
+                        <div class="form-group">
+                            <label><span data-i18n="workOrder.questionType"></span></label>
+                            <select class="form-control input-width" id="ticketTypeName" name="ticketTypeName" data-filedId="a56df9b2316240e4835ee956ff486329">
+                                <option value="510643059313744" data-i18n="workOrder.select0"></option>
+                                <option value="510643059296031" data-i18n="workOrder.select1"></option>
+                                <option value="510643059300227" data-i18n="workOrder.select2"></option>
+                                <option value="510643059305697" data-i18n="workOrder.select3"></option>
+                                <option value="510643059309135" data-i18n="workOrder.select4"></option>
+                                <option value="510643059313744" data-i18n="workOrder.select5"></option>
+                            </select>
+                          </div> 
+                        <p class="warning-para opt-dn"></p>
+                        <div class="form-group">
+                            <label data-i18n="workOrder.des1"></label>
+                            <input type="text" id="hashAddress" name="hashAddress" data-filedId="535aaa4487d247949940f3955039e740" class="form-control input-width">
+                         </div>
+                       	<p class="warning-para opt-dn"></p>
+                       	<div class="form-group fileUpload">
+                            <form method="post" enctype="multipart/form-data" class="upload-file" data-imgFile="imgBehindURL">
+                              <label for="fileVal"><i data-i18n="workOrder.attachment"></i><span class="handmouse" data-i18n="workOrder.uploadText">上传</span></label>
+                              <input type="file" name="file" id="fileVal">
+                            </form>
+                            <input type="hidden" id="imgURL">
+                        </div>
+                        <div class="upload-success-box dn">                      	
+                        	<p></p>
+                        	<a class="closeUp"></a>
+                        </div>
+                        <div class="form-group">
+                            <div class="btn" id="btn-submit" data-i18n="workOrder.submitText"></div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-box dn posi-fix" id="footerNav">
+    </div>
+    <div class="dn notNone" data-i18n="workOrder.notNone"></div>
+    <div class="dn success" data-i18n="workOrder.success"></div>
+    <div class="dn uploadTypeError" data-i18n="workOrder.uploadTypeError"></div>
+    <div class="dn uploadSizeError" data-i18n="workOrder.uploadSizeError"></div>
+    <div class="loading" id="loading" >
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+    <div class="fff-mask"></div>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../js/jquery.input.js"></script>
+<script src="../../js/comm.js"></script>
+<script src="../../js/jquery.form.min.js"></script>
+<script src="../../js/md5.js"></script>
+<script src="../../js/account/workOrder.js"></script>
+<!-- 多语言切换开始-->
+<script  src="../../js/jquery.cookie.js"></script>
+<script src="../../js/i18next-1.6.3.min.js"></script>
+<script  src="../../js/changeLang.js"></script>
+<!-- 多语言切换结束-->
+</body>
+</html>

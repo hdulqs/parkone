@@ -1,0 +1,30 @@
+{
+  "activelang": "中文繁体",
+  "authenticationProgress": {
+	"pageTitle":"身份認證",
+	"fieldInfor": "認證信息",
+	"fieldUserName": "真實姓名",
+	"fieldType": "證件類型",
+	"fieldNumber": "證件號碼",
+	"success": {
+            "title": "您已完成身份驗證",
+            "des": "您已完成身份驗證",
+            "btnLink": ""
+        },
+        "fail": {
+            "title": "",
+            "des": "您的身份認證審核失敗，失敗原因：證件照片不能使用掃描照片...",
+            "btnLink": "重新認證"
+        },
+        "waiting": {
+            "title": "",
+            "des": "您的身份認證已提交，正在審核中...",
+            "btnLink": "進入個人中心"
+        }
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

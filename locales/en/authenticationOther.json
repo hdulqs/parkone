@@ -1,0 +1,43 @@
+﻿{
+  "activelang": "English",
+  "authenticationOther":{
+    "htmlTitle": "國際站",
+    "title": "Profile Verification",
+    "baseInfor": "1",
+    "selectType": "Select Country：",
+    "continent": "China",
+    "otherArea": "Others",
+    "msg1": "Please make sure that your identity is valid. We will protect your personal information. Profile verification will only support international passports.",
+    "firstName": "First Name：",
+    "lastName": "Last Name：",
+    "sex": "Gender：",
+    "male": "Male",
+    "female": "Female",
+    "countryRegion": "Country/Region：",
+    "checkType": "Select Type：",
+    "selPassport": "Passport",
+    "uploadFileBtn":"File",
+    "selCart": "Valid Identity Card",
+    "selDriving": "Driving License",
+    "IDnumber": "ID number：",
+    "cardBefore": "Identity Card Front Side",
+    "msg2": "Please make sure that the photo is complete and clearly visible, in JPG or PNG format. Less than 5M.",
+    "demo1": "Example",
+    "cardAfter": "Identity Card Back Side",
+    "passportBefore": "Passport cover",
+    "passportAfter": "Passport personal information",
+    "msg3": "Please make sure that the photo is complete and clearly visible, in JPG or PNG format. ID card must be in the valid period.",
+    "demo2": "Example",
+    "handCard" : "Picture of yourself holding Photo ID and the hand written note",
+    "msg5": "Please provide a picture of yourself holding Photo ID and the hand written note. Please make sure that the photo is in JPG or PNG format and the file size not exceed 5M.",
+    "msg6": "Both the face and note must be perfectly readable and in sharp focus. The handwritten paper should read 'CoinToBe' next to your face and should include the current date using the format shown below (Month dd, yyyy).",
+    "toComplete": "Complete",
+    "msg4": "Once your profile has been submitted,the system will verify it within ** hours.There will be a delay for holidays and festivals.Please be patient to wait for the verification results.",
+    "submitCheck": "Submit"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

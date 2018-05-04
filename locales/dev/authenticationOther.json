@@ -1,0 +1,37 @@
+{
+  "activelang": "English",
+  "authenticationOther":{
+    "htmlTitle": "國際站",
+    "title": "Profile Verification",
+    "baseInfor": "1 Base information",
+    "selectType": "Select Country：",
+    "continent": "China",
+    "otherArea": "Others",
+    "msg1": "Please make sure that your real identity is used. We will protect your personal information.",
+    "firstName": "First Name：",
+    "lastName": "Last Name：",
+    "sex": "Gender：",
+    "male": "male",
+    "female": "female",
+    "countryRegion": "Country/Region：",
+    "checkType": "Select Type：",
+    "selPassport": "Passport",
+    "selCart": "Valid Identity Card",
+    "selDriving": "Driving License",
+    "IDnumber": "ID number：",
+    "cardBefore": "Identity Card Front Side",
+    "msg2": "Please make sure that the photo is complete and clearly visible, in JPG format. Less than 5M.",
+    "demo1": "Example",
+    "cardAfter": "Identity Card Back Side",
+    "msg3": "Please make sure that the photo is complete and clearly visible, in JPG format. ID card must be in the valid period.",
+    "demo2": "Example",
+    "toComplete": "4 Complete",
+    "msg4": "Once your profile has been submitted,the system will verify it within ** hours.There will be a delay for holidays and festivals.Please be patient to wait for the verification results.",
+    "submitCheck": "Submit"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

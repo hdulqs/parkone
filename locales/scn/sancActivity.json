@@ -1,0 +1,129 @@
+{
+	"sanActive":{
+		"biztype":"SANC",
+		"randomSend":"(随机赠送)",
+		"login":"登录",
+		"recharge":"充值"
+	},
+	"part1":{
+		"slogan": "../../images/font1-s.png",
+		"font1": "活动时间：2018年1月xx日xx:00-1月xx日xx:00（HKT）；",
+		"font2": "活动内容： 活动期间，用户每天可获得平台赠送的SANC，详情如下。"
+	},
+	"part2":{
+		"title": "登录享豪礼",
+		"font1": "每日登录100%领SANC",
+		"font2": "恭喜你获得",
+		"font3": "，1-3个工作日发放至个人资产，请注意查看哦~",
+		"button": "立即登录"
+	},
+	"part3":{
+		"title": "充值赚更多",
+		"tip": "您有一个礼包待领取！",
+		"hint1": "每日首次充值100%领SANC",
+		"hint2": "恭喜你获得",
+		"hint3":"，1-3个工作日发放至个人资产，请注意查看哦~",
+		"chai":"拆",
+		"tip2":"充值即可领取SANC",
+		"recharge":"立即充值"
+	},
+	"part4":{
+		"title": "交易荣耀榜",
+		"font1": "活动期间内，用户充值BTC、ETH和SANC,交易（买入、卖出）SANC，",
+		"font2":"即可参与活动。",
+		"font3":"奖励明细",
+		"chart1Title":{
+			"btc":"BTC充值榜单",
+			"eth":"ETH充值榜单",
+			"sancRecharge":"SANC充值榜单",
+			"sancDeal":"SANC交易榜单"
+		},
+		"table1":{
+			"tr1td1":"名次",
+			"tr1td2":"用户账号",
+			"tr1td3":"累计交易量"
+		},
+		"chart2Title":{
+			"rechargeDetail":"充值奖励明细",
+			"dealDetail":"交易奖励明细"
+		},
+		"ranking":"排名",
+		"reward":"奖励",
+		"category1":"第一名",
+		"category2":"第二名",
+		"category3":"第三名",
+		"category4":"第四至十名",
+		"category5":"第十一至三十名",
+		"detail":{
+			"title":{
+				"title1":"BTC充值奖励明细",
+				"title2":"ETH充值奖励明细",
+				"title3":"SANC充值奖励明细"
+			},
+			"reward1":"10000CTB",
+			"reward2":"8000CTB",
+			"reward3":"5000CTB",
+			"reward4":"3000CTB/人",
+			"reward5":"2000CTB/人"
+		},
+		"detail2":{
+			"title":"BTC交易奖励明细",
+			"reward1":"10000SANC",
+			"reward2":"8000SANC",
+			"reward3":"5000SANC",
+			"reward4":"3000SANC/人",
+			"reward5":"2000SANC/人"
+		},
+		"font4":"*排名实时更新，以最终活动结束后确定名次发放奖品",
+		"button": "立即交易"
+	},
+	"part5":{
+		"title": "我的奖励专区",
+		"table1":{
+			"title": "SANC奖励明细",
+			"tr1td1":"日期",
+			"tr1td2":"类型",
+			"tr1td3":"奖励币种",
+			"tr1td4":"奖励数量"
+		},
+		"table2":{
+			"title": "我的排名",
+			"tr1td1":"CTB交易数量",
+			"tr1td2":"累计充值/交易量",
+			"tr1td3":"我的排名",
+			"tr1td4":"应得奖励"
+		},
+		"font2":"即可参与活动。",
+		"font3":"奖励明细",
+		"font4":"*排名实时更新，以最终活动结束后确定名次发放奖品",
+		"button": "立即登录",
+		"tip1": "您还未登录，请登录后查看您的奖励！",
+		"tip2": "还没有账号？",
+		"tip3": " 去注册"
+	},
+	"part6":{
+		"title": "活动规则",
+		"rules": {
+			"rule1":"1、活动开始时间：2018年1月26日10:30（HKT），活动结束时间另行通知；",
+			"rule2":"2、活动期间，用户每日首次登录账户即可获得平台随机赠送的SANC；",
+			"rule3":"3、活动期间，用户每日首次充值任意币种任意金额，即可获得平台随机赠送的SANC；",
+			"rule4":"4、活动奖励将在成功参与活动后，1-3个工作日发放至个人资产，请注意查看；",
+			"rule5":"5、任何作弊行为一经发现，将取消活动参与资格。"
+		},
+		"tip1": "风险提示",
+		"tip2": "数字货币交易具有极高的风险，CoinToBe精选优质数字资产，但对于币种投资不承担任何审查、担保、赔偿的责任，如果您不能接受请不要交易，谢谢。",
+		"tip3": "*本活动最终解释权归CoinToBe所有，如有任何疑问，请",
+		"tip4": "提交工单"
+	},
+	"part7":{
+		"cue":"../../images/cue-s.png",
+		"tip1":"敬请期待"
+	},
+	"sancWindow":{
+		"title":"小主来了有好礼哦",
+		"tip1":"恭喜你获得",
+		"tip2":",1-3个工作日发放至个人资产，请注意查看哦～",
+		"tip3":"偷偷告诉你，每天登录都可以领一次！",
+		"button":"查看活动"
+	}
+}

@@ -1,0 +1,13 @@
+{
+  "activelang": "中文简体",
+  "bodyHtml": {
+	"title":"抱歉，您訪問的頁面無法找到",
+	"des":"網頁可能已經被移動、刪除，或是您不小心輸錯了網址。",
+	"backIndex":"返回首頁"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

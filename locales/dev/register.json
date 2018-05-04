@@ -1,0 +1,18 @@
+{
+  "title": "Sign up COINTOBE",
+  "emailplh": "Email address",
+  "pwdplh": "Your Password",
+  "cfmpwdplh": "Confirm Password",
+  "error": {
+    "cue1": "The email address is required.",
+    "cue2": "Invalid email address.",
+    "cue3": "The Password field is required.",
+    "cue4": "Passwords must be at least 8 characters with 1 capital letter and 1 number.",
+    "cue5": "The two passwords don't match!"
+  },
+  "button": "Create Account",
+  "tip1": "I agree to",
+  "tip2": "the Terms & Conditions",
+  "tip3": "Already have an account?",
+  "tip4": "Log In"
+}

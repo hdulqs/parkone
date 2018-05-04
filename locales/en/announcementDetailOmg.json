@@ -1,0 +1,39 @@
+﻿{
+  "title": "Nostro titolo",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "announcement": {
+    "announcementCenterDes": "Bulletin",
+    "announcementDetailDes": "Details"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  },
+  "content":{
+    "title":"OmiseGO (OMG) Launch Announcement",
+    "details":{
+      "tip1":"Dear all,",
+      "tip2":"CoinToBe launches OmiseGO (OMG). OMG/BTC, OMG/ETH trading pairs will be available.",
+      "tip3":"Deposit and Withdrawal Time: 2017/12/29 22:00(HKT)",
+      "tip4":"Trading Time: 2017/12/30 14:00(HKT)",
+      "tip5":"Fees: ",
+      "tip5l":"https://www.cointobe.com/account/rateStandard.html",
+      "tip6":"Introduction: OmiseGO is a public Ethereum-based financial technology for use in mainstream digital wallets, that enables real-time, peer-to-peer value exchange and payment services agnostically across jurisdictions and organizational silos, and across both fiat money and decentralized currencies. Designed to enable financial inclusion and disrupt existing institutions, access will be made available to everyone via the OmiseGO network and digital wallet framework.",
+      "tip7":"OMG Official Website: ",
+      "tip7l":"https://omisego.network/",
+      "tip8":"Whitepaper: ",
+      "tip8l":"https://cdn.omise.co/omg/whitepaper.pdf",
+      "tip9":"The Ethereum Blockchain Explorer: ",
+      "tip9l":"https://etherscan.io/token/OmiseGo",
+      "tip10":"Risk Reminder: Investing in digital assets comes with high risks due to huge price fluctuations. Before investing, please have a full understanding of all the risks of investing in digital assets and be prudent of your own investment decisions."
+    },
+    "team":"CoinToBe Media",
+    "time":"December 29, 2017",
+    "Telegram":"https://t.me/cointobe_english"
+  } 
+}

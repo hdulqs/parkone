@@ -1,0 +1,56 @@
+{
+  "activelang": "中文简体",
+  "personalCenter":{
+    "htmlTitle": "国际站",
+    "account": "账号",
+    "safeLever": "安全等级",
+    "loginTime": "上次登录",
+    "msg11": "您当前的安全等级为",
+    "msg12": "为了您的账号和资金安全，建议您开启二次验证",
+    "msg21": "您当前的安全等级为",
+    "msg22": "为了您的账号和资金安全，建议您设置资金密码",
+    "msg31": "您当前的安全等级为",
+    "msg32": "您还没有进行身份认证，为了 您的账号和资金安全，建议您进行身份认证",
+    "msg41": "恭喜您，您当前的安全等级为",
+    "msg42": "可以放心的进行交易",
+    "blindGoogle": "绑定谷歌验证",
+    "openTwoFactor": "开启二次验证",
+    "setFundPasswrd": "设置资金密码",
+    "goTrading": "去交易中心",
+    "profileVer": "身份认证",
+    "safeCtrl": "安全设置",
+    "loginPsw": "登录密码",
+    "loginPswText1": "登录密码",
+    "loginPswText2": "登录时使用",
+    "editBtn": "修改",
+    "moneyPsw": "资金密码",
+    "moneyPswText1": "资金密码",
+    "moneyPswText2": "提现时使用",
+    "setBtn": "设置",
+    "twoFactor": "二次验证",
+    "googleAuthe": "谷歌验证",
+    "googleAutheText1": "提现，修改密码，及安全设置时用以验证",
+    "googleAutheText2": "谷歌二次验证",
+    "blindBtn": "绑定",
+    "loginPsw2": "手机验证",
+    "loginPsw2Text1": "提现，修改密码，及安全设置时用以收取",
+    "loginPsw2Text2": "验证短信",
+    "unhitch": "解绑",
+    "accountStatusVal0": "未认证",
+    "accountStatusVal1": "审核中",
+    "accountStatusVal2": "已认证",
+    "accountStatusVal3": "未认证",
+    "LeverVal1": "低",
+    "LeverVal2": "中",
+    "LeverVal3": "高"
+  },
+  
+  "error": {
+  	"disUnbind":"您是使用手机号注册，暂不支持解绑，如需更改手机号，请提交工单。"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

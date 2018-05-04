@@ -1,0 +1,67 @@
+
+.term-service .ul-select{
+    background: #020d2b;
+}
+.term-service .font-title{
+    font-size: 22px;
+    color: #13b2b1;
+    margin-bottom: 20px;
+}
+.term-service .font1{
+    font-size: 14px;
+    margin-top: 14px;
+    color: #666;
+    line-height: 20px;
+}
+.term-service .font2{
+    font-size: 14px;
+    margin-top: .29rem;
+    line-height: 21px;
+    color: #666;
+}
+.term-service .font3{
+    color: #13b2b1;
+    font-size: 16px;
+    margin-top: 26px;
+    margin-bottom: 10px;
+}
+.term-service .content-box{
+    width: 100%;
+    background:#fff;
+    margin: 0 auto;
+    padding: 35px 5% 48px;
+}
+.term-service .top-box {
+    position:inherit;
+}
+.term-service .btn{
+    display: block;
+    width: 1.8rem;
+    margin: .53rem auto .6rem auto;
+    background: #13b2b1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: .18rem;
+    color: #fff;
+}
+.term-service .btn:hover{
+    color:#fff;
+}
+
+.term-service .font2{
+    margin-top: 6px;
+}
+html{
+    font-size: 100px;
+}
+.warp-box {
+    padding-bottom: 22px;
+}
+.term-service .font4{
+    color: #333;
+    margin-top: 8px;
+}
+.page {
+    padding-bottom: 0;
+}

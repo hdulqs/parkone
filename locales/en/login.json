@@ -1,0 +1,22 @@
+{
+  "title": "Log In CoinToBe",
+  "emailplh": "Email/Phone Number",
+  "pwdplh": "Your Password",
+  "error": {
+    "cue1": "The email address is required.",
+    "cue2": "Invalid email address.",
+    "cue3": "The password is required.",
+    "cue4": "Passwords must be at least 8-20 characters with 1 capital letter and 1 number",
+    "cue5": "Invalid email address",
+    "cue6": "Incorrect password",
+    "cue7": "Fit the puzzle to unlock"
+  },
+  "button": "Log In",
+  "tip1": "Forgot your password?",
+  "tip2": "Don't have an account?",
+  "tip3": "Sign Up",
+  "tip4": "I agree to",
+  "tip5": "Term of Service and Privacy Policy",
+  "timeBefore": "Your account has been locked. After ",
+  "timeAfter": ", it will automatically unlock."
+}

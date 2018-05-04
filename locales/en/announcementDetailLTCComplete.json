@@ -1,0 +1,31 @@
+{
+  "title": "Nostro titolo",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "alert": "Fare clic su OK per chiudere.",
+  "announcement": {
+    "announcementCenterDes": "Bulletin",
+    "announcementDetailDes": "Details"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  },
+  "content":{
+    "title":"Maintenance Completion of LTC Wallet Announcement",
+    "details":{
+      "tip1":"Dear all,",
+      "tip2":"The maintenance of LTC Wallet has completed. ",
+      "tip3":"LTC withdrawal function is open now.We apologize for the incovenience. If you have any question, please let us know by submitting tickets. ",
+      "tip6":"Hope you enjoy your trading on cointobe.com!"
+    },
+    "team":"Best regards,",
+    "time":"December 21, 2017",
+    "group":"CoinToBe Media",
+    "Telegram":"https://t.me/cointobe_english"
+  }
+}

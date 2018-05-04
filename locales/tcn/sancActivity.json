@@ -1,0 +1,129 @@
+{
+	"sanActive":{
+		"biztype":"SANC",
+		"randomSend":"(隨機贈送)",
+		"login":"登錄",
+		"recharge":"充值"
+	},
+	"part1":{
+		"slogan": "../../images/font1-sstn.png",
+		"font1": "活動時間：2018年1月xx日xx:00-1月xx日xx:00（HKT）；",
+		"font2": "活動內容： 活動期間，用戶每天可獲得平臺贈送的SANC，詳情如下。"
+	},
+	"part2":{
+		"title": "登錄享豪禮",
+		"font1": "每日登錄100%領SANC",
+		"font2": "恭喜妳獲得",
+		"font3": "，1-3個工作日發放至個人資產，請註意查看哦~",
+		"button": "立即登錄"
+	},
+	"part3":{
+		"title": "充值賺更多",
+		"tip": "您有壹個禮包待領取！",
+		"hint1": "每日首次充值100%領SANC",
+		"hint2": "恭喜妳獲得",
+		"hint3":"，1-3個工作日發放至個人資產，請註意查看哦~",
+		"chai":"拆",
+		"tip2":"充值即可領取SANC",
+		"recharge":"立即充值"
+	},
+	"part4":{
+		"title": "交易榮耀榜",
+		"font1": "活動期間內，用戶充值BTC、ETH和SANC,交易（買入、賣出）SANC，",
+		"font2":"即可參與活動。",
+		"font3":"獎勵明細",
+		"chart1Title":{
+			"btc":"BTC充值榜單",
+			"eth":"ETH充值榜單",
+			"sancRecharge":"SANC充值榜單",
+			"sancDeal":"SANC交易榜單"
+		},
+		"table1":{
+			"tr1td1":"名次",
+			"tr1td2":"用戶賬號",
+			"tr1td3":"累計交易量"
+		},
+		"chart2Title":{
+			"rechargeDetail":"充值獎勵明細",
+			"dealDetail":"交易獎勵明細"
+		},
+		"ranking":"排名",
+		"reward":"獎勵",
+		"category1":"第壹名",
+		"category2":"第二名",
+		"category3":"第三名",
+		"category4":"第四至十名",
+		"category5":"第十壹至三十名",
+		"detail":{
+			"title":{
+				"title1":"BTC充值獎勵明細",
+				"title2":"ETH充值獎勵明細",
+				"title3":"SANC充值獎勵明細"
+			},
+			"reward1":"10000CTB",
+			"reward2":"8000CTB",
+			"reward3":"5000CTB",
+			"reward4":"3000CTB/人",
+			"reward5":"2000CTB/人"
+		},
+		"detail2":{
+			"title":"BTC交易獎勵明細",
+			"reward1":"10000SANC",
+			"reward2":"8000SANC",
+			"reward3":"5000SANC",
+			"reward4":"3000SANC/人",
+			"reward5":"2000SANC/人"
+		},
+		"font4":"*排名實時更新，以最終活動結束後確定名次發放獎品",
+		"button": "立即交易"
+	},
+	"part5":{
+		"title": "我的獎勵專區",
+		"table1":{
+			"title": "SANC獎勵明細",
+			"tr1td1":"日期",
+			"tr1td2":"類型",
+			"tr1td3":"獎勵幣種",
+			"tr1td4":"獎勵數量"
+		},
+		"table2":{
+			"title": "我的排名",
+			"tr1td1":"CTB交易數量",
+			"tr1td2":"累計充值/交易量",
+			"tr1td3":"我的排名",
+			"tr1td4":"應得獎勵"
+		},
+		"font2":"即可參與活動。",
+		"font3":"獎勵明細",
+		"font4":"*排名實時更新，以最終活動結束後確定名次發放獎品",
+		"button": "立即登錄",
+		"tip1": "您還未登錄，請登錄後查看您的獎勵！",
+		"tip2": "還沒有賬號？",
+		"tip3": " 去註冊"
+	},
+	"part6":{
+		"title": "活動規則",
+		"rules": {
+			"rule1":"1、活動開始時間：2018年1月26日10:30（HKT），活動結束時間另行通知；",
+			"rule2":"2、活動期間，用戶每日首次登錄賬戶即可獲得平臺隨機贈送的SANC；",
+			"rule3":"3、活動期間，用戶每日首次充值任意幣種任意金額，即可獲得平臺隨機贈送的SANC；",
+			"rule4":"4、活動獎勵將在成功參與活動後，1-3個工作日發放至個人資產，請註意查看；",
+			"rule5":"5、任何作弊行為壹經發現，將取消活動參與資格。"
+		},
+		"tip1": "風險提示",
+		"tip2": "數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。",
+		"tip3": "*本活動最終解釋權歸CoinToBe所有，如有任何疑問，請",
+		"tip4": "提交工單"
+	},
+	"part7":{
+		"cue":"../../images/cue-tcn.png",
+		"tip1":"敬請期待"
+	},
+	"sancWindow":{
+		"title":"小主來了有好禮哦",
+		"tip1":"恭喜妳獲得",
+		"tip2":",1-3個工作日發放至個人資產，請註意查看哦～",
+		"tip3":"偷偷告訴妳，每天登錄都可以領壹次！",
+		"button":"查看活動"
+	}
+}

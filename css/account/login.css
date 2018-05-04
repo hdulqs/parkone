@@ -1,0 +1,308 @@
+body {
+    background: url(../../images/bg-register.jpg) fixed no-repeat;
+    background-size:cover; min-width: 1200px; min-height: 720px;
+}
+.warp-box {
+	min-height: 528px;
+}
+
+@-moz-document url-prefix() {
+	.page {min-height: 590px;}
+	.warp-box {
+		position: absolute; 
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%,-50%,0);
+	}
+}
+.bg-register {
+	height: 528px;
+	overflow: auto;
+}
+.page {padding:0px;}
+
+.register .top-box {
+    background: rgba(0, 0, 0,0.08);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.register .content-wrap{
+    margin: 0 auto;
+    width: 510px;
+    min-width:350px;
+    z-index: 99;
+}
+.register .bg-white{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    padding: 30px 0px 40px;
+}
+.register .font1{
+    font-size:18px;
+    color: #13B5B1;
+    margin:0 0 25px 0;
+}
+
+.register .input-info{
+    border: 1px solid #CCCCCC;
+    width: 66%;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    padding: 0 20px;
+    display: block;
+}
+.register .input-info.no-martop{
+    margin-top:0px;
+}
+.register .btn-submit{
+    width: 80%;
+    margin-left: 10%;
+    height: 39px;
+    line-height: 39px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    background: #ccc;
+}
+.register #btn-check{
+    position:relative;
+}
+.register #btn-check .icon-checkbox-unchecked{
+    position:absolute;display:block;width:14px;height:14px;left:0px;top:50%;margin-top:-7px;
+}
+.register #btn-check i {
+    float:left;
+    color:#666;font-weight:100;
+}
+.register #btn-check .handmouse{
+    color:#13b5b1;
+}
+
+.register .font3{
+    color: #2A8AE5;
+    display: inline-block;
+    margin-left: 5px;
+}
+.register .font4{
+    width: 66%;
+    margin: 10px 17% 8px 17%;
+    font-size: 12px;
+}
+.register .font5{
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 24px;
+}
+.register .icon-checkbox-unchecked{
+    color: #ccc;
+    margin-right: 6px;
+}
+.register .font6{
+    display: inline-block;
+    margin-left:2px;
+    color: #13b5b1;
+}
+.register .icon-checkbox-checked{
+    color: #13b5b1;
+    margin-right: 7px;
+}
+.register .input-warning{
+    -webkit-box-shadow: 0px 0px 2px #ccc;
+    -moz-box-shadow: 0px 0px 2px #ccc;
+    -ms-box-shadow: 0px 0px 2px #ccc;
+    -o-box-shadow: 0px 0px 2px #ccc;
+    box-shadow: 0px 0px 2px #ccc;
+}
+.register .font-warning{
+    width: 66%;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    font-size: 12px;
+    color: #e70353;
+    position: relative;
+    margin-bottom: 6px;
+    min-height: 18px;
+    height: auto;
+    position:relative;
+    padding-left:13px;
+}
+.register .font-warning a{
+    color: #2A8AE5;
+}
+.icon-exclamation-circle{
+    font-size: 12px;
+    margin-right: 2px;
+    vertical-align: -1px;
+    position:absolute;
+    top:4px;
+    left:0;
+}
+.register .btn-able{
+    background: #020d2b!important;
+    color: #fff!important;
+    -webkit-box-shadow: 0px 1px 2px #010207;
+    -moz-box-shadow: 0px 1px 2px #010207 ;
+    box-shadow: 0px 1px 2px #010207 ;
+}
+.register .form-inline-input {
+    width: 80%;
+    margin-left: 10%;
+}
+.register .code-box {
+    position: relative;
+}
+.register .form-inline-input input,.register  .code-box {
+    padding: 0 10px;
+    width: 300px;
+    height: 40px;
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+    background: rgba(0, 0, 0, 0.16);
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+}
+.register .code-box .code-input {
+    display: none;
+}
+.register .form-inline-input input,.register  .code-box {
+    padding: 0 10px;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+    background: rgba(0, 0, 0, 0.16);
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+}
+.register .code-box p {
+    width: 0;
+    background-color: #FFFF99;
+    overflow: hidden;
+    text-indent: -20px;
+    transition: background 1s ease-in;
+}
+.register .code-box p,.register  .code-box span {
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+}
+.register .code-box span {
+    width: 30px;
+    background-color: #fff;
+    font-family: "宋体";
+    font-size: 16px;
+    cursor: pointer;
+}
+.register .code-box p,.register  .code-box span {
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+    background: #020d2b;
+}
+
+/*
+验证码样式结束*/
+/*按钮样式开始*/
+.register .btn {
+    width: 66%;
+    margin: 0 auto;
+    height: 39px;
+    line-height: 27px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    background: #ccc;
+    position: relative;
+    outline: none;
+    letter-spacing: .2em;
+    cursor: default;
+    overflow: hidden;
+    user-select: none;
+    display: block;}
+.register .ripple {position:absolute;background:rgba(0,0,0,.15);border-radius:100%;transform:scale(0);pointer-events:none;}
+.register .ripple.show {animation:ripple .75s ease-out;}
+/*按钮样式结束*/
+
+.register .nav1,
+.register .links-node{
+    color: #13b5b1;
+}
+.register .links-node:hover,
+.register .nav1:hover { border-bottom:1px solid #13b5b1;}
+.font-logo{
+    width: 140px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    margin-bottom: 0px;
+    margin-bottom: 14px;
+}
+#captcha{
+    margin-bottom: 8px;
+}
+.font-and{
+    color: #666;
+}
+.login .font5{
+    padding:0 30px;
+}
+.login .top-box {
+    background: rgba(0, 0, 0,0.08);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.font-lock{
+    font-size: 12px;
+    color:#13b5b1;
+}
+.font-star{
+    vertical-align:-2px;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+@media screen and (max-height: 770px){
+    @-moz-document url-prefix() {
+		.warp-box {
+			position: relative; 
+			top: auto;
+			left: auto;
+			transform: translate3d(0,0,0);
+		}
+	}
+}
+#serviceError .icon-exclamation-circle{
+    margin-top: -6px;
+}

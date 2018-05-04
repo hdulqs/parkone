@@ -1,0 +1,41 @@
+﻿{
+    "activelang": "English",
+    "pageTitle": "Support Center",
+    "langBodyData": [
+        {
+	    "id":1,
+            "title": "Getting Started",
+	    "ques": ["How to create an account on cointobe.com?","Forgot your password?","Can’t receive e-mail?"]
+        },
+        {
+	    "id":2,
+            "title": "Verification and Security",
+            "ques": ["How do I verify my account?","How to setup SMS authentication?","How to setup Google Authentication?","How to change funds password? "]
+        },
+        {
+	    "id":3,
+            "title": "Trading",
+            "ques": ["How do I trade? ","Forgot your login password?","Can’t receive e-mail?"]
+        },
+        {
+	    "id":4,
+            "title": "Funds",
+            "ques": ["How do I deposit my coins?","How do I withdraw my coins?"]
+        },
+        {
+	    "id":5,
+            "title": "Digital Asset Introduction",
+            "ques": ["About Bitcoin","About Litecoin（Litecoin）","About Ethereum (ETH)"]
+        }
+    ],
+     "others": {
+	    "title": "Frequently Asked Questions",
+	    "ques": ["Why is my withdrawal “Awaiting Approval?” ","If I fill in the wrong deposit address?","When will the withdrawal arrive?","Will there be two identical deposit and withdrawal addresses?"],
+	    "ans": ["1、You can check the block confirmation status. On the transaction platform, you can confirm whether the currency has been sent or not, if not sent please check on the platform. Inquiry address:<br>Bitcoin block Browser：https://blockchain.info/<br>Litecoin block browser：http://explorer.litecoin.net/<br>Ethereum block browser：https://etherscan.io/<br> 2、If the block has been confirmed, please create a support ticket to contact us.","On the deposit and withdrawal page, we have warned that if you send to a wrong address, your funds will be lost forever. So please confirm your address is correct. ","If the withdrawal is not arrived, please create a support ticket and fill in information including e-mail address, withdrawal address or hash address.","Every account address is unique, please carefully check before you trade, and then confirm deposit or withdraw."]
+    },
+    "lang": {
+        "english": "English",
+        "simplifiedchinese": "中文简体",
+        "traditionalchinese": "中文繁体"
+    }
+}

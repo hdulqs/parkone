@@ -1,0 +1,11 @@
+{
+  "title": "Reset Your Password",
+  "emailplh": "Email address",
+  "error": {
+    "cue1": "The email address is required.",
+    "cue2": "Invalid email address.",
+    "cue3": "Sign Up",
+    "cue4": "Invalid email address,"
+  },
+  "button": "Confirm"
+}

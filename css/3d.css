@@ -1,0 +1,20 @@
+
+.image-container {
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+.image-container img {
+   position: absolute;
+   top:50%;
+   left:50%;
+}
+
+.nav-pills {
+   margin: 20px 0 15px 0;
+}
+
+.nav-pills li {
+   cursor: pointer;
+}

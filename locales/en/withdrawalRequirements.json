@@ -1,0 +1,9 @@
+﻿{
+  "title": "To deposit, you must meet the following requirements.",
+  "withdrawal1": "1、Enable the Two-Factor Authentication",
+  "withdrawal2": "2、Funds Password",
+  "withdrawal3": "3、Profile Verification",
+  "button1":  "To Setup",
+  "button2":  "To Verify",
+  "button3":  "Withdraw"
+}

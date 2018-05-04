@@ -1,0 +1,229 @@
+label {
+  font-weight: 500;
+  margin: 0 auto; }
+
+.list-inline {
+  margin-left: 0px; }
+
+.content-wrap {
+  margin: 0 auto; }
+  .content-wrap .font-caption {
+    position: relative;
+    font-size: 18px;
+    color: #333333;
+    padding-left: 14px;
+    height: 22px;
+    line-height: 22px; }
+  .content-wrap .left-icon {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: inline-block;
+    width: 6px;
+    height: 20px;
+    background: #13b5b1;
+    margin-right: 15px; }
+
+.process-wrap {
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 8px #e9eaea;
+  -ms-box-shadow: 0px 0px 8px #e9eaea;
+  -o-box-shadow: 0px 0px 8px #e9eaea;
+  box-shadow: 0px 0px 8px #e9eaea;
+  border-radius: 5px;
+  padding: 40px 0px 60px 50px;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 10px; }
+  .process-wrap .font-title {
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    line-height: 22px;
+    margin: 2px 0px; }
+    .process-wrap .font-title i {
+      display: block;
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      text-align: center;
+      border-radius: 100%;
+      background: #ccc;
+      float: left;
+      font-size: 14px;
+      color: #fff;
+      margin-right: 30px; }
+    .process-wrap .font-title, .process-wrap .font-title span {
+      font-size: 16px;
+      color: #333333; }
+  .process-wrap .font-label {
+    width: auto;
+    min-width: 95px; }
+    .process-wrap .font-label span {
+      font-size: 14px;
+      color: #333;
+      font-family: 'Microsoft yahei',Arial; }
+  .process-wrap .type-wrap {
+    height: auto;
+    overflow: hidden; }
+    .process-wrap .type-wrap span {
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer; }
+  .process-wrap .font1-active {
+    background: #13B5B1; }
+  .process-wrap .step1-wrap,
+  .process-wrap .step2-wrap,
+  .process-wrap .step3-wrap {
+    border-left: 1px solid #ccc;
+    padding-left: 38px;
+    padding-bottom: 45px;
+    margin-left: 10px; }
+    .process-wrap .step1-wrap form,
+    .process-wrap .step2-wrap form,
+    .process-wrap .step3-wrap form {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      width: auto;
+      height: 22px;
+      line-height: 22px;
+      margin-top: 10px;
+      cursor: pointer; }
+      .process-wrap .step1-wrap form:hover span,
+      .process-wrap .step2-wrap form:hover span,
+      .process-wrap .step3-wrap form:hover span {
+        border-bottom: 1px solid #13b5b1; }
+    .process-wrap .step1-wrap input[type=file],
+    .process-wrap .step2-wrap input[type=file],
+    .process-wrap .step3-wrap input[type=file] {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      opacity: 0;
+      z-index: 10;
+      cursor: pointer; }
+      .process-wrap .step1-wrap input[type=file]:hover,
+      .process-wrap .step2-wrap input[type=file]:hover,
+      .process-wrap .step3-wrap input[type=file]:hover {
+        cursor: pointer; }
+    .process-wrap .step1-wrap .upload-text,
+    .process-wrap .step2-wrap .upload-text,
+    .process-wrap .step3-wrap .upload-text {
+      color: #13b5b1;
+      font-size: 14px;
+      position: relative;
+      z-index: 1; }
+      .process-wrap .step1-wrap .upload-text:hover,
+      .process-wrap .step2-wrap .upload-text:hover,
+      .process-wrap .step3-wrap .upload-text:hover {
+        border-bottom: 1px solid #13b5b1; }
+    .process-wrap .step1-wrap .list-inline,
+    .process-wrap .step2-wrap .list-inline,
+    .process-wrap .step3-wrap .list-inline {
+      width: 90%;
+      margin-top: 10px; }
+  .process-wrap .input-wrap {
+    height: auto;
+    overflow: hidden;
+    margin-top: 16px; }
+    .process-wrap .input-wrap input[type=text], .process-wrap .input-wrap select {
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 310px;
+      height: 39px;
+      line-height: 39px;
+      padding: 0 12px; }
+  .process-wrap .radio-wrap, .process-wrap .radio-wrap2 {
+    position: relative; }
+    .process-wrap .radio-wrap label, .process-wrap .radio-wrap2 label {
+      position: relative; }
+    .process-wrap .radio-wrap .font-label, .process-wrap .radio-wrap2 .font-label {
+      padding-left: 0px;
+      margin-right: 0px; }
+    .process-wrap .radio-wrap input[type=radio], .process-wrap .radio-wrap2 input[type=radio] {
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      margin-top: -6px; }
+  .process-wrap .step-radio-local {
+    padding: 4px 0px; }
+    .process-wrap .step-radio-local .radio-wrap {
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      margin-right: 50px; }
+  .process-wrap .step-radio-sex, .process-wrap .step-radio-type {
+    height: 29px;
+    line-height: 29px;
+    margin-top: 10px; }
+    .process-wrap .step-radio-sex label, .process-wrap .step-radio-type label {
+      margin-right: 50px; }
+  .process-wrap .step4-wrap {
+    padding-left: 50px;
+    width: 80%;
+    margin-top: 10px; }
+  .process-wrap .sex {
+    font-size: 13px; }
+  .process-wrap .font-hint {
+    width: 770px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #999; }
+  .process-wrap .font2 {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 5px 0px;
+    color: #999;
+    width: 77%; }
+    .process-wrap .font2.msg-warning {
+      padding-top: 0px; }
+  .process-wrap .imgFrontUrl,
+  .process-wrap .imgBehindURL,
+  .process-wrap .imgHandhelpCURL {
+    width: 300px;
+    height: 170px;
+    line-height: 170px;
+    overflow: hidden;
+    float: left;
+    text-align: center;
+    border: 1px #ccc dashed;
+    border-radius: 5px;
+    position: relative; }
+    .process-wrap .imgFrontUrl img,
+    .process-wrap .imgBehindURL img,
+    .process-wrap .imgHandhelpCURL img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%; }
+      .process-wrap .imgFrontUrl img.img-upload,
+      .process-wrap .imgBehindURL img.img-upload,
+      .process-wrap .imgHandhelpCURL img.img-upload {
+        width: 44px;
+        height: 36px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -22px;
+        margin-top: -18px; }
+  .process-wrap .btn-submit {
+    display: inline-block;
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    background: #ccc;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 0px 13px;
+    cursor: pointer; }
+
+.Underline {
+  margin-bottom: 10px;
+  cursor: pointer; }
+  .Underline .handmouse {
+    display: none; }

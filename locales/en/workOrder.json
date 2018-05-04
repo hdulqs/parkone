@@ -1,0 +1,36 @@
+﻿{
+  "activelang": "English",
+  "workOrder":{
+    "title": "Ticket",
+    "emailAddress": "Email Address",
+    "questionDetail": "Description",
+    "questionType": "Type",
+    "des1": "If any problem occurrs during your deposit or withdrawal process, you need to submit the corresponding Hash address.",
+    "attachment": "Attachment",
+    "uploadText": "Upload",
+    "submitText": "Sumbit",
+    "success": "Your ticket has been submitted successfully. We will deal with your problem and resolve it as soon as possible. Please check your email afterewards.",
+    "notNone": "This field cannot be empty",
+    "select0": "Select",
+    "select1": "Sign Up",
+    "select2": "Log In",
+    "select3": "Trading & Funds",
+    "select4": "Announcements",
+    "select5": "Others",
+		"ticketTitle": "CoinToBe Login Account:",
+    "warning1": "The email address is required.",
+    "warning2": "Title is required.",
+    "warning3": "Invalid email address.",
+    "warning4": "Please enter a title no more than 100 characters.",
+    "uploadTypeError": "The file that you are going to upload is in unrecognized file format.",
+    "uploadSizeError": "The file that you are going to upload exceeds the attachment limit 20M.",
+    "mail":"Please enter your email address. Our customer service staff will respond it ASAP.",
+    "userId":"Please enter your CoinToBe account email address.",
+    "problem":"Please enter the details of your request. For example, BTC withdrawal starts on Jan 22th 2018 16:03:30 and it doesn’t arrive."
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Sign Up CoinToBe",
+  "emailplh": "Email Address",
+  "pwdplh": "Your Password",
+  "cfmpwdplh": "Confirm Password",
+  "inputCode": "SMS Code",
+  "inputGetCode": "Send SMS",
+  "error": {
+    "cue1": "The email address is required and and can't be empty.",
+    "cue2": "Invalid email address.",
+    "cue3": "The password is required and and can't be empty.",
+    "cue4": "Passwords must be at least 8-20 characters with 1 capital letter and 1 number.",
+    "cue5": "The two passwords don't match!",
+    "cue6": "The confirm password is required and can't be empty.",
+    "cue7": "Invalid email address.",
+    "cue8": "Fit the puzzle to unlock",
+    "cue9": "Phone number is required and can't be empty."
+  },
+  "button": "Create Account",
+  "tip1": "I agree to",
+  "tip2": "the Terms of Service",
+  "tip3": "Already have an account?",
+  "tip4": "Log In",
+  "tip5":"Privacy Policy",
+  "tip6":"Email",
+  "tip7":"Phone Number"
+}

@@ -1,0 +1,16 @@
+{
+  "activelang": "中文簡體",
+  "unbindGoogleVerification":{
+    "title": "解除谷歌驗證",
+    "inputLoginPsw": "登錄密碼",
+    "inputGoogleCode": "谷歌驗證碼",
+    "warning1": "登錄密碼不能為空",
+    "warning2": "谷歌驗證碼不能為空",
+    "submitCheck": "確定"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文簡體",
+    "traditionalchinese": "中文繁體"
+  }
+}

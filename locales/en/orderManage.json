@@ -1,0 +1,42 @@
+{
+  "title": "Nostro titolo",
+  "selectall":"All",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "revoke":"Cancel",
+  "undone":"Canceled",
+  "dui":{
+    "xbuy1":"Buy",
+    "xbuy2":"Sell",
+    "xbuy3":"Buy",
+    "xbuy4":"Sell"
+  },
+  "orderManage":{
+    "allstatus":"Status",
+    "Pending":"Open Orders",
+    "Deleted":"Order History",
+    "navFilled":"Trade History",
+    "Filled":"Filled",
+    "Date":"Date",
+    "Pair":"Pair",
+    "Type":"Type",
+    "Price":"Price",
+    "Amount":"Amount",
+    "Total":"Total",
+    "Completed":"Completed",
+    "AveragePrice":"Average",
+    "open":"Open",
+    "Status":"Status",
+    "titleMsg":"Pair：",
+    "Fee":"Fee"
+  },
+
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

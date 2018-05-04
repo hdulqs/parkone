@@ -1,0 +1,110 @@
+.content-box {
+  margin: 0px auto 10px; }
+
+.nav-box li {
+  height: 22px;
+  line-height: 22px; }
+.nav-box .pull-left {
+  font-size: 18px;
+  border-left: 6px solid #13B5B1;
+  padding-left: 15px; }
+  .nav-box .pull-left i {
+    float: left;
+    margin-right: 10px; }
+  .nav-box .pull-left .message-number {
+    margin-right: 2px; }
+  .nav-box .pull-left span {
+    float: left;
+    font-size: 14px;
+    color: #e70353; }
+.nav-box .pull-right {
+  font-size: 14px;
+  color: #13b5b1;
+  margin-right: 30px; }
+
+.font-tip {
+  font-size: 14px;
+  color: #E70353;
+  display: inline-block;
+  margin-left: 15px; }
+
+.list-wrap {
+  margin-top: 5px; }
+
+.list {
+  background: #fff;
+  width: 100%;
+  border: 1px solid #e9eaea;
+  border-radius: 5px;
+  padding: 15px 20px 20px;
+  margin: 10px 0px;
+  position: relative; }
+  .list p {
+    padding: 5px 0px 0px 30px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    line-height: 22px;
+    position: relative;
+    font-size: 16px;
+    color: #333333; }
+    .list p:nth-child(2) {
+      padding-right: 100px; }
+  .list img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    z-index: 1; }
+  .list .font1 {
+    display: inline-block;
+    color: #666666;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .list .font-point {
+    width: 7px;
+    height: 7px;
+    background: #E70353;
+    overflow: hidden;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    position: absolute;
+    text-indent: 2000px;
+    left: 18px;
+    top: 5px;
+    z-index: 2; }
+  .list .delete-msg {
+    display: inline-block;
+    width: auto;
+    color: #13b5b1;
+    font-size: 14px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 22px;
+    line-height: 22px; }
+
+.img-icon {
+  width: .17rem;
+  height: auto;
+  vertical-align: -.02rem;
+  margin-right: .05rem; }
+
+.font-date {
+  font-size: .12rem;
+  color: #999; }
+
+.btn-remove {
+  color: #13B5B1; }
+html{
+  font-size: 100px;
+}
+.list:hover{
+  -webkit-box-shadow: 0px 0px 18px rgba(0,0,0,.2);
+  -moz-box-shadow: 0px 0px 18px rgba(0,0,0,.2);
+  box-shadow: 0px 0px 18px rgba(0,0,0,.2);
+}

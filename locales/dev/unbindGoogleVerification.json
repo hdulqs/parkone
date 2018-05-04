@@ -1,0 +1,16 @@
+{
+  "activelang": "English",
+  "unbindGoogleVerification":{
+    "title": "Remove Google verification",
+    "inputLoginPsw": "Login Password",
+    "inputGoogleCode": "Funds Password",
+    "warning1": "The login password is required.",
+    "warning2": "The Google verification code is required.",
+    "submitCheck": "Confirm"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

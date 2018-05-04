@@ -1,0 +1,410 @@
+html {
+    font-size: 12px;
+}
+
+html, body {
+    background: #050d2a !important;
+}
+
+
+
+.upgrade-activity .ly-plate {
+    position: relative;
+    display: block;
+    max-width: 70%;
+    height: auto;
+    margin: 3rem auto;
+}
+
+
+
+.upgrade-activity .ly-plate div.lottery-star {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    outline: none;
+}
+
+.upgrade-activity .ly-plate div.lottery-star #lotteryBtn {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    height: 78.57%;
+    width: auto;
+    left: 21.42%;
+}
+
+.upgrade-activity .rotate-txt {
+    cursor: pointer;
+    position: relative;
+    top: 40%;
+    color: #fff;
+}
+
+.upgrade-activity .rotate-start {
+    font-size: 1.167rem;
+    text-align: center;
+}
+
+.upgrade-activity .rotate-plus {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.upgrade-activity .box-title {
+    position: absolute;
+    width: 100%;
+    margin: 0rem 3rem;
+}
+
+.upgrade-activity .link {
+    box-shadow: 0.11rem 0.11rem 0.11rem 0rem rgba(229, 54, 235, 0.5),
+    -0.11rem -0.11rem 0.11rem 0rem rgba(229, 54, 235, 0.5),
+    0.11rem 0.11rem 0.11rem 0rem #3F1971 inset,
+    -0.11rem -0.11rem 0.11rem 0rem #3F1971 inset;
+    display: inline-block;
+    border-radius: 0.333rem;
+    border: solid 0.083rem #d0d1d2;
+    padding: 0.2rem 1.25rem;
+    font-size: 1.333rem;
+    line-height: 1.667rem;
+    margin-right: 1rem;
+    color: #ffffff;
+}
+
+.upgrade-activity .disablelink {
+    display: inline-block;
+    border-radius: 0.333rem;
+    border: solid 0.083rem #666666;
+    padding: 0.2rem 1.25rem;
+    font-size: 1.333rem;
+    line-height: 1.667rem;
+
+    color: #666666;
+}
+
+.upgrade-activity .timage {
+    width: 28.083rem;
+    height: 2.917rem;
+    margin-left: 3rem;
+}
+
+.upgrade-activity .mbox {
+    margin-top: 8%;
+}
+
+.upgrade-activity .mbox-body {
+    background-image: url(/images/upgrade/between.png);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    padding: 2% 3%;
+}
+.upgrade-activity .mbox-bodyjp {
+    background-image: url(/images/upgrade/betweenjp.png);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    padding: 2% 3%;
+}
+
+.upgrade-activity .mbox-content {
+    /*box-shadow: 0.25rem 0.25rem 0.25rem 0rem rgba(229, 54, 235, 0.5),*/
+    /*-0.25rem -0.25rem 0.25rem 0rem rgba(229, 54, 235, 0.5),*/
+    /*0.25rem 0.25rem 0.25rem 0rem #3F1971 inset,*/
+    /*-0.25rem -0.25rem 0.25rem 0rem #3F1971 inset;*/
+    /*border-radius: 0.833rem;*/
+    /*border: solid 0.25rem rgba(255, 255, 255, 0.5);*/
+
+}
+
+.upgrade-activity .table-view {
+    background-color: rgba(56, 31, 93, 0.3);
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+
+.upgrade-activity .table-striped > thead > tr {
+    background-color: rgba(180, 180, 180, 0.07);
+}
+
+.upgrade-activity .table-striped>tbody>tr:nth-of-type(odd){
+    background-color: rgba(56, 31, 93, 0.3);
+}
+
+.upgrade-activity .table-striped > tbody > tr:nth-of-type(even) {
+    background-color: rgba(180, 180, 180, 0.07);
+}
+
+.upgrade-activity .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > th {
+    font-size: 1.167rem;
+}
+
+.upgrade-activity .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    border-top: 0px;
+    padding-left: 10%;
+    line-height: 2.033rem;
+}
+
+.upgrade-activity .rule-list {
+    margin-top: 4%;
+    margin-bottom: 3%;
+    margin-left: 12.7%;
+    margin-right: 12.7%;
+    color: #fff;
+    font-size: 1.167rem;
+}
+
+.upgrade-activity .rule-list > li {
+    line-height: 1.667rem;
+    margin-bottom: 3%;
+}
+
+.upgrade-activity .trading-total > .table-view {
+    background-color: rgba(56, 31, 93, 0.3);
+    width: 90%;
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+.upgrade-activity .trading-total > .table-view > .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: transparent;
+}
+
+.upgrade-activity .trading-total > .table-view > .table-striped > tbody > tr:nth-of-type(even) {
+    background-color: rgba(180, 180, 180, 0.07);
+}
+
+.upgrade-activity .linktrading {
+    box-shadow: 0.11rem 0.11rem 0.11rem 0rem rgba(229, 54, 235, 0.5),
+    -0.11rem -0.11rem 0.11rem 0rem rgba(229, 54, 235, 0.5),
+    0.11rem 0.11rem 0.11rem 0rem #3F1971 inset,
+    -0.11rem -0.11rem 0.11rem 0rem #3F1971 inset;
+    display: inline-block;
+    border-radius: 0.333rem;
+    border: solid 0.083rem #d0d1d2;
+    padding: 0.23rem 1.25rem;
+    font-size: 1.333rem;
+    line-height: 1.967rem;
+    vertical-align: middle;
+    font-weight: normal;
+    color: #ffffff;
+}
+.upgrade-activity .link:hover,.link:focus,.link:active {
+    font-weight: bold;
+}
+
+
+.upgrade-activity .linktrading:hover,.linktrading:focus,.linktrading:active {
+    font-weight: bold;
+}
+
+.upgrade-activity .loginbtn:hover,.linktrading:focus,.linktrading:active {
+    font-weight: bold;
+}
+
+.upgrade-activity .jpview {
+    margin: 1.008rem 2.583rem;
+}
+
+.upgrade-activity .myrecords {
+    font-size: 1.167rem;padding-left: 2.3rem;line-height: 3.333rem;letter-spacing: 0.067rem;
+}
+
+.upgrade-activity  .loginbtn {
+    padding: 1rem 3.5rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.017rem;
+    color: #ffffff;
+    background-color: #631c87;
+    border-radius: 0.333rem;
+    text-align: center;
+}
+
+.upgrade-activity  .loginview {
+    position: absolute;
+    z-index: 100;
+    top:53%;
+    width: 100%;
+    text-align: center;
+}
+
+.upgrade-activity .table>thead>tr>th {
+    border-bottom: 0px;
+}
+
+.upgrade-activity .layui-layer-content {
+    background-color: #2b1741;
+    box-shadow: 0rem 0.25rem 0.583rem 0rem rgba(52, 18, 67, 0.44);
+    border-radius: 0.333rem;
+    padding: 2rem 8rem;
+    font-size: 1.417rem;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding: 0.5rem 0.5rem;
+}
+
+.upgrade-activity .scollTxt {
+    color:#fff;
+    width: auto;
+    clear: both;
+    list-style-type:none;
+    width:3000px;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.scollTxt > li {
+    margin-left: 1rem;
+    float:left;
+}
+
+.upgrade-activity .top_detail {
+    padding-left: 9%;color: #c4c4c4;width: 90%;margin: 1.667rem auto;margin-bottom: 0px;
+}
+
+.upgrade-activity .roadview{
+    margin: 0px 10px;
+}
+
+.upgrade-activity .flex-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+.upgrade-activity .fbox {
+    flex-grow:1;
+}
+
+.upgrade-activity  #recordsView {
+    margin: 1rem auto;
+    width: 90%;
+    margin-left: 0px;
+    position: relative;
+    min-height: 39rem;
+    max-height: 39rem;
+    overflow-y: auto;
+}
+
+.upgrade-activity .htitle {
+    font-size: 1.5rem;line-height: 2.75rem;letter-spacing: 0rem;text-align: center;color: #c4c4c4;margin: 1% auto; width: 90%;
+}
+
+.upgrade-activity .htitlevol {
+    font-size: 2rem;color: #ffffff;
+}
+
+@media screen and (max-width: 420px) {
+    html {
+        font-size: 10px;
+    }
+
+    .upgrade-activity .htitle {
+        font-size: 1.2rem;
+    }
+
+    .upgrade-activity .htitlevol {
+        font-size: 1.4rem;
+    }
+
+    .mbox-content trading-total
+
+
+    .upgrade-activity .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+        padding-left: 1rem;
+    }
+
+    .trading-total .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+        padding-left: 9%;
+    }
+
+    #dataTbodyPrizes > tr > td{
+        padding-left: 1rem;
+    }
+
+    #myrecords thead > tr > th {
+        padding-left: 1rem;
+    }
+
+    .upgrade-activity .myrecords {
+        padding-left: 1rem;
+    }
+
+    .upgrade-activity .linktrading {
+        font-size: 1rem;
+    }
+
+    .upgrade-activity .link {
+        margin-right: 1rem;
+        font-size: 1rem;
+    }
+
+    .upgrade-activity .disablelink {
+        font-size: 1rem;
+    }
+
+    .upgrade-activity .layui-layer-content {
+        padding: 0.8rem 3.2rem;
+    }
+
+    .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+        padding: 0.1rem 0.1rem;
+    }
+    .upgrade-activity .trading-total > .table-view {
+        width: 97%;
+    }
+    .moblie-nav-list ul li a {
+        font-size: 1.4rem;
+    }
+    .left_a,.right_a{
+        font-size: 1.4rem;
+    }
+    .upgrade-activity .top_detail {
+        padding-left: 5%;
+        padding-right: 0.2rem;
+    }
+
+    .upgrade-activity #recordsView {
+        width: 100%;
+        min-height: 30rem;
+    }
+
+    .moblie-nav-list .btn-reserve {
+        font-size: 1.4rem;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .upgrade-activity .mbox-body {
+        background-image: url(/images/mupgrade/between.png);
+    }
+
+    .upgrade-activity .mbox-bodyjp {
+        background-image: url(/images/mupgrade/betweenjp.png);
+    }
+
+}
+
+#maincontent {
+    width: 100%;
+    overflow: hidden;
+    float: left;
+}
+
+#ul1 {
+    list-style-type: none;
+    width: 300000px;
+}
+
+#ul1 li {
+    color:#fff;
+    float: left;
+    margin-left: 3rem;
+}
+

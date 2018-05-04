@@ -1,0 +1,30 @@
+﻿{
+  "activelang": "English",
+  "authenticationProgress": {
+	"pageTitle":"Profile Verification",
+	"fieldInfor": "Verification Information",
+	"fieldUserName": "Name",
+	"fieldType": "ID Type",
+	"fieldNumber": "ID Number",
+	"success": {
+            "title": "Profile verification completed",
+            "des": "Profile verification completed",
+            "btnLink": ""
+        },
+        "fail": {
+            "title": "",
+            "des": "Profile verification failed.Cause of failure: scanned photos cannot be used in profile...",
+            "btnLink": "Verify again"
+        },
+        "waiting": {
+            "title": "",
+            "des": "Profile has been submitted and under verification...",
+            "btnLink": "Enter Account"
+        }
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

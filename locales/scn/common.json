@@ -1,0 +1,60 @@
+{
+  "htmlTitle": "CoinToBe - 安全、专业、便捷的数字资产交易平台",
+  "header": {
+    "nav1": "交易中心",
+    "nav2": "资产",
+    "nav3": "订单",
+    "nav4": "公告",
+    "nav5": "个人中心",
+    "nav6": "登录",
+    "nav7": "注册",
+    "nav8": "我的消息",
+    "nav9": "退出",
+    "nav10":"帮助",
+    "nav11":"联系客服",
+    "nav12":"语言切换"
+  },
+  "footer": {
+    "nav1": "服务条款",
+    "nav2": "费率标准",
+    "nav3": "帮助中心",
+    "nav4": "隐私政策",
+    "nav5": "关于我们",
+    "contact": "联系我们：",
+    "connectStatus": "已连接",
+    "telegram":"官方中文群：",
+    "telegram1":"官方英文群：",
+    "work":"客服",
+    "toTop":"返回顶部",
+    "WechatService":"微信客服",
+    "WechatNews":"微信服务号",
+    "Subscriptions":"微信订阅号",
+    "cointobTele":"CoinToBe电报",
+    "coinList":"上币申请",
+    "Block123":"区块链导航",
+    "links":"友情链接",
+    "Cointime":"金色财经",
+    "8btc":"巴比特",
+    "CHAINNEWS":"链闻",
+    "jinniuFinance":"金牛财经",
+    "vipchain":"区块链数据",
+    "masterdax":"MasterDAX"
+  },
+  "twoVerification":{
+    "title1":"谷歌验证",
+    "title2":"手机验证",
+    "title3":"二次验证",
+    "placeholder1":"谷歌验证码",
+    "placeholder2":"手机验证码",
+    "btnSendCode":"发送验证码",
+    "btnAgainSendCode":"再次发送",
+    "btnSubmit":"确定",
+    "cue1":"验证码不能为空",
+    "cue2":"验证码错误"
+  },
+  "commonMsg":{
+    "noData":"暂无数据",
+    "alertTitle":"提示",
+    "alertBtn":"我知道了"
+  }
+}

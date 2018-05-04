@@ -1,0 +1,43 @@
+﻿{
+  "title": "Nostro titolo",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "alert" : "Fare clic su OK per chiudere.",
+  "announcementCenter": {
+    "announcement":"Bulletin"
+  },
+
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  },
+  "group":{
+    "title":"CoinToBe Official Launch Announcement",
+    "content":"Dear all,CoinToBe today announces official launch of digital asset exchange. With our dedication to providing a secure and efficient digital assets exchange platform, we will offer you quality assets and leading global digital asset exchange."
+  },
+  "group1":{
+    "title":"LTC Wallet Maintenance Announcement",
+    "content":"Dear all,We would like to let you know that records in LTC wallet are overloaded since registeration...",
+    "time":"December 20, 2017"
+  },
+  "group2":{
+    "title":"Maintenance Completion of LTC Wallet Announcement",
+    "content":"Dear all,The maintenance of LTC Wallet has completed. LTC withdrawal function is open now...",
+    "time":"December 21, 2017"
+  },
+  "group3":{
+    "title":"SanChain (SANC) Launch Announcement",
+    "content":"Dear all,CoinToBe launches SanChain (SANC). SANC/BTC, SANC/ETH trading pairs will be available...",
+    "time":"December 29, 2017"
+  },
+  "group4":{
+    "title":"OmiseGO (OMG) Launch Announcement",
+    "content":"Dear all,CoinToBe launches OmiseGO (OMG). OMG/BTC, OMG/ETH trading pairs will be available...",
+    "time":"December 29, 2017"
+  },
+  "time":"December 6, 2017"
+}

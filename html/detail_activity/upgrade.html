@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title data-i18n="common:htmlTitle"></title>
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--<meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5,minimum-scale=0.5, user-scalable=no">-->
+    <!--<meta name="viewport" content="initial-scale=0.3333333333333333,maximum-scale=0.3333333333333333, minimum-scale=0.3333333333333333,user-scalable=no">-->
+    <script>
+        // var desW = 750;
+        // var phoneWidth = parseInt(window.screen.width);
+        // var phoneScale = phoneWidth/desW;
+        // var ua = navigator.userAgent;
+        // if(ua.indexOf("Coolpad") != -1){
+        //     document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">');
+        // }else if (/Android (\d+\.\d+)/.test(ua)){
+        //     var version = parseFloat(RegExp.$1);
+        //     if(version>2.3){
+        //         document.write('<meta name="viewport" content="width='+desW+', minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+'" target-densitydpi="device-dpi">');
+        //     }else{
+        //         document.write('<meta name="viewport" content="width='+desW+'" target-densitydpi="device-dpi">');
+        //     }
+        // } else {
+        //     document.write('<meta name="viewport" content="width='+desW+', user-scalable=no" target-densitydpi="device-dpi">');
+        // }
+        var browserRedirect = function (isLoad) {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                return 1;
+            } else {
+                return 2;
+            }
+        }
+        var isPC = browserRedirect(0);
+        var deviceId = "";
+        if (isPC == 1) deviceId = "ms";
+        if (isPC == 2) deviceId = "pc";
+    </script>
+    <!--css文件引入开始-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/index/indexMobile.css"/>
+    <!--[if IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.js"></script>
+    <!end if-->
+    <link rel="stylesheet" href="../../css/detail_activity/upgrade.css">
+    <!--css文件引入结束-->
+</head>
+<body class="upgrade-activity">
+<nav class="moblie-nav-list">
+    <div class="icon">
+        <img src="../../images/user_header.png" alt=""><br>
+        <div id="H5_user_message">
+        </div>
+    </div>
+    <ul>
+        <li class="not_login">
+            <a href="../personalCenter/personalCenter.html" data-i18n="mobile:left_list.nav1">个人中心</a>
+        </li>
+        <li class="not_login">
+            <a href="../asset/assetManage.html" data-i18n="mobile:left_list.nav2">资产</a>
+        </li>
+        <li class="not_login">
+            <a href="../orderManage/orderManage.html" data-i18n="mobile:left_list.nav3">订单</a>
+        </li>
+        <li>
+            <a href="../tradingCenter/trading.html" data-i18n="mobile:left_list.nav4">交易中心</a>
+        </li>
+        <li>
+            <a href="../announcement/announcementCenter.html" data-i18n="mobile:left_list.nav5">公告</a>
+        </li>
+        <li>
+            <a href="../account/helpCenter.html" data-i18n="mobile:left_list.nav6">帮助</a>
+        </li>
+        <li>
+            <a href="../account/rateStandard.html" data-i18n="mobile:left_list.nav7">费率标准</a>
+        </li>
+        <li>
+            <a href="../account/aboutUs.html" data-i18n="mobile:left_list.nav8">关于我们</a>
+        </li>
+    </ul>
+    <a href="javascript:;" class="btn-reserve not_login" data-i18n="mobile:left_list.nav10">退出登录</a>
+</nav>
+
+<div id="loaded" class="loaded">
+    <div class="page" id="J_wrap">
+        <div class="top-box" id="headerNav"></div>
+        <!-- 遮罩层 -->
+        <div id="cover"></div>
+        <!--移动端导航栏-->
+        <header id="moblieNav">
+            <div class="header-wrap">
+                <div class="moblie-header">
+                    <img src="../../images/fold_app_gjx.png" class="fl" id="J_nav">
+                    <img src="../../images/logo_app_gjx.png">
+                    <div class="fr" id="J_login">
+                        <a class="left_a" id="loginBtn" href="../account/login.html" data-i18n="common:header.nav6"
+                           style="display: inline-block;">登录</a>
+                        <span>|</span>
+                        <a class="right_a" id="registerBtn" href="../account/register.html"
+                           data-i18n="common:header.nav7" style="display: inline-block;">注册</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <img src="/images/banner_upgrade.png" id="bannerupgrade" class="img-responsive">
+        <div style="position: relative;">
+            <img src="/images/nbg.png" style="position:absolute;z-index:1;" class="img-responsive">
+            <div style="z-index:99;position:relative;">
+                <div>
+                    &nbsp;
+                </div>
+                <div style="margin:1px auto;width:95%;max-width: 1200px;">
+                    <div class="mbox">
+                        <img src="/images/mupgrade/boxtitle.png" class="mbackimg" width="100%" style="display: none;">
+                        <img src="/images/upgrade/boxtitle.png" class="backimg" width="100%">
+                        <div class="mbox-body">
+                            <!--<div class="flex-container">-->
+                                <!--<div class="fbox">-->
+                                    <!--<div class="ly-plate">-->
+                                        <!--<img src="/images/disc.png" alt="" class="img-responsive">-->
+                                        <!--<div class="lottery-star">-->
+                                            <!--<img src="/images/disabledhand.png" id="lotteryBtn">-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="fbox">-->
+                                    <!--<div class="table-view"-->
+                                         <!--style="margin: 3rem auto;width: 90%;position: relative;min-height: 25rem; max-height: 33rem;overflow-y: auto;"-->
+                                         <!--id="recordsView">-->
+                                        <!--<h3 class="myrecords">-->
+                                            <!--我的获奖记录：-->
+                                            <!--<div class="pull-right">-->
+
+                                                <!--<a href="javascript:void(0)" class="link"-->
+                                                   <!--style="display: none;">去充值</a>&nbsp;&nbsp;-->
+                                                <!--<a href="../tradingCenter/trading.html" style="display: none;"-->
+                                                   <!--class="link">去交易</a>-->
+                                            <!--</div>-->
+
+                                        <!--</h3>-->
+                                        <!--<div class="loginview">-->
+                                            <!--<a href="../account/login.html" class="loginbtn">立即登录</a>-->
+                                        <!--</div>-->
+
+                                        <!--<table class="table table-striped table-fixed-head" style="opacity: 0.1;"-->
+                                               <!--id="myrecords">-->
+
+                                            <!--<thead>-->
+                                            <!--<tr>-->
+                                                <!--<th>日 期</th>-->
+                                                <!--<th>类 型</th>-->
+                                                <!--<th>奖 品</th>-->
+                                            <!--</tr>-->
+                                            <!--</thead>-->
+                                            <!--<tbody id="dataTbodyPrizes">-->
+
+                                            <!--</tbody>-->
+                                        <!--</table>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <div class="mbox-content">
+                                <div class="row roadview">
+                                    <div class="col-md-6" style="text-align: center;">
+                                        <div class="ly-plate">
+                                            <img src="/images/disc.png" alt="" class="img-responsive">
+                                            <div class="lottery-star">
+                                                <img src="/images/disabledhand.png" id="lotteryBtn">
+                                            </div>
+                                        </div>
+                                        <span style="color:#A9ACAB;">*每日抽奖机会将在当天24点清零，请您及时使用。</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="table-view"
+                                             id="recordsView">
+                                            <h3 class="myrecords">
+                                                我的获奖记录：
+                                                <div class="pull-right">
+
+                                                    <a href="../asset/assetManage.html" class="link"
+                                                       style="display: none;">去充值</a>&nbsp;&nbsp;
+                                                    <a href="../tradingCenter/trading.html" style="display: none;"
+                                                       class="link">去交易</a>
+                                                </div>
+
+                                            </h3>
+                                            <div class="loginview">
+                                                <a href="../account/login.html" class="loginbtn">立即登录</a>
+                                            </div>
+
+                                            <table class="table table-striped table-fixed-head" style="opacity: 0.1;"
+                                                   id="myrecords">
+
+                                                <thead>
+                                                <tr>
+                                                    <th>日 期</th>
+                                                    <th>类 型</th>
+                                                    <th>奖 品</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="dataTbodyPrizes">
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                        <div id="maincontent">
+                                            <ul id="ul1">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="/images/mupgrade/box_bottom.png" class="mbackimg" width="100%" style="display: none;">
+                        <img src="/images/upgrade/box_bottom.png" class="backimg" width="100%" style="display: block;">
+                    </div>
+                    <div class="mbox">
+                        <img src="/images/mupgrade/upgradetop.png" class="mbackimg" width="100%" style="display: none;">
+                        <img src="/images/upgrade/upgradetop.png" class="backimg" width="100%">
+                        <div class="mbox-body">
+                            <div class="mbox-content trading-total">
+                                <h3 class="htitle">
+                                    我的总交易量：<span class="htitlevol" id="myVolume">
+                                </span>&nbsp;&nbsp;
+                                    <a href="../account/login.html" class="linktrading">去登录</a>
+                                </h3>
+                                <div class="table-view" style="margin: 1px auto;">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>排 名</th>
+                                            <th>UID</th>
+                                            <th>折合BTC交易量</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="dataTbody">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="top_detail">
+                                    注：活动期间总交易量会折合成BTC进行排行，每天更新一次。
+                                </div>
+                            </div>
+                        </div>
+                        <img src="/images/mupgrade/box_bottom.png" class="mbackimg" width="100%" style="display: none;">
+                        <img src="/images/upgrade/box_bottom.png" class="backimg" width="100%" style="display: block;">
+                    </div>
+                    <div class="mbox">
+                        <img src="/images/mupgrade/upgradejp.png" class="mbackimg" width="100%" style="display: none;">
+                        <img src="/images/upgrade/upgradejp.png" class="backimg" width="100%">
+                        <div class="mbox-bodyjp">
+                            <div class="row" style="margin: 0px 1%;">
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                                    <img src="/images/upgrade/one.png" class="img-responsive ">
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                                    <img src="/images/upgrade/two.png" class="img-responsive ">
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                                    <img src="/images/upgrade/three.png" class="img-responsive ">
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                                    <img src="/images/upgrade/four.png" class="img-responsive ">
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                                     <img src="/images/upgrade/five.png" class="img-responsive ">
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                                    <img src="/images/upgrade/six.png" class="img-responsive ">
+                                </div>
+                            </div>
+                        </div>
+                        <img src="/images/mupgrade/box_bottomjp.png" class="mbackimg" width="100%" style="display: none;">
+                        <img src="/images/upgrade/box_bottomjp.png" class="backimg" width="100%"
+                             style="display: block;">
+                    </div>
+                    <div class="mbox">
+                        <img src="/images/mupgrade/upgraderule.png" class="mbackimg" width="100%" style="display: none;">
+                        <img src="/images/upgrade/upgraderule.png" class="backimg" width="100%">
+                        <div class="mbox-body">
+                            <div class="mbox-content">
+                                <ul class="rule-list">
+                                    <li>1、活动时间：2018年3月28日14:00(HKT)，活动结束时间另行通知；</li>
+                                    <li>2、活动期间，每日首次充值任意数量的任意币种即可抽奖一次；</li>
+                                    <li>3、活动期间，每日首次交易任意数量的任意币种即可抽奖一次；</li>
+                                    <li>4、活动期间，按照交易（买入+卖出）总额排行，前十名用户即可获得相应奖励；</li>
+                                    <li>5、参与活动获得的数字货币会在1-3个工作日发送至个人账户；</li>
+                                    <li>6、参与活动获得的实物奖品，将在活动结束后一周内发出；</li>
+                                    <li>7、本活动最终解释权归CoinToBe所有。任何作弊行为一经发现，将取消活动参与资格。</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img src="/images/mupgrade/box_bottom.png" class="mbackimg" width="100%" style="display: none;">
+                        <img src="/images/upgrade/box_bottom.png" class="backimg" width="100%" style="display: block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-box" id="footerNav"></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.smoove.min.js"></script>
+
+<script src="../../js/jquery.cookie.js"></script>
+<script src="../../js/activityhtml/mediaframework.js"></script>
+<script src="../../js/comm.js"></script>
+<script src="../../js/i18next-1.6.3.min.js"></script>
+<script src="../../js/changeLang.js"></script>
+
+<script src="../../js/jquery.easing.min.js"></script>
+<script src="../../js/jqueryrotate.min.js"></script>
+<script src="../../js/detail_activity/upgrade.js"></script>
+</body>
+</html>

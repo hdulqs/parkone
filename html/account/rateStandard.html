@@ -1,0 +1,154 @@
+<!DOCTYPE html class="html-register">
+<html>
+<head>
+    <title data-i18n="common:htmlTitle"></title>
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--css文件引入开始-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../css/account/termService.css">
+    <link rel="stylesheet" href="../../css/account/rateStandard.css">
+    <!--css文件引入结束-->
+</head>
+<body class="rateStandard term-service">
+<div  id="loaded" class="dn loaded">
+    <div class="page">
+        <div class="top-box" id="headerNav"></div>
+        <div class="clearfix"></div>
+        <div class="head-banner">
+            <div class="ad">
+                <p class="title" data-i18n="title">费率标准</p>
+                <img src="../../images/help-img.jpg">
+            </div>
+        </div>
+		<div class="warp-box">
+			<div class="content-box">				
+	            <p class="font-title" data-i18n="item1Title">1、充币费率</p>
+	            <p class="font-des" data-i18n="item1Des">免费</p>
+	            <p class="font-title" data-i18n="item2Title">2、提币限额及手续费</p>
+	            <table class="text-center">
+	                <tr>
+	                    <td data-i18n="item2Tr1Td1">币种</td>
+	                    <td data-i18n="item2Tr1Td2">提币限额</td>
+	                    <td data-i18n="item2Tr1Td3">手续费</td>
+	                </tr>
+	                <tr>
+	                    <td data-i18n="item2Tr2Td1">BTC</td>
+	                    <td data-i18n="item2Tr2Td2">最少0.05个BTC，单日最高20个BTC</td>
+	                    <td data-i18n="item2Tr2Td3">0.002  BTC/次</td>
+	                </tr>
+	                <tr>
+	                    <td data-i18n="item2Tr3Td1">ETH</td>
+	                    <td data-i18n="item2Tr3Td2">最少0.1个ETH，单日最高200个ETH</td>
+	                    <td data-i18n="item2Tr3Td3">0.01  ETH/次</td>
+	                </tr>
+	                <tr>
+	                    <td data-i18n="item2Tr4Td1">LTC</td>
+	                    <td data-i18n="item2Tr4Td2">最少0.1个LTC，单日最高2000个LTC</td>
+	                    <td data-i18n="item2Tr4Td3">0.03  LTC/次</td>
+	                </tr>
+					<tr>
+						<td data-i18n="item2Tr5Td1">SANC</td>
+						<td data-i18n="item2Tr5Td2">最少10个SANC，单日最高不限</td>
+						<td data-i18n="item2Tr5Td3">3  SANC/次</td>
+					</tr>
+					<tr>
+						<td data-i18n="item2Tr6Td1">OMG</td>
+						<td data-i18n="item2Tr6Td2">最少1个OMG，单日最高2500个OMG</td>
+						<td data-i18n="item2Tr6Td3">0.3  OMG/次</td>
+					</tr>
+					<tr>
+						<td data-i18n="item2Tr7Td1">db</td>
+						<td data-i18n="item2Tr7Td2">最少2个db，单日最高30000个db</td>
+						<td data-i18n="item2Tr7Td3">1 OMG/次</td>
+					</tr>
+	            </table>
+	            <p class="font-title" data-i18n="item3Title">3、交易手续费</p>
+	            <p class="font-des" data-i18n="item3Des">该费用是由CoinToBe平台向交易用户收取的服务费用，所有币种的交易服务费均按统一标准收取，买方收取0.2%，卖方收取0.2%。</p>
+			</div>
+        </div>
+    </div>
+	<div class="bottom-box dn posi-fix" id="footerNav">
+	<input type="hidden" value="" data-i18n="[value]body" id="bodyLangData" />
+</div>
+<div class="loading"  id="loading" >
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/comm.js"></script>
+<script src="../../js/vue.min.js"></script>
+<!-- 多语言切换开始-->
+<script src="../../js/jquery.cookie.js"></script>
+<script src="../../js/i18next-1.6.3.min.js"></script>
+<script src="../../js/changeLang.js"></script>
+<!-- 多语言切换结束-->
+
+<script>
+$(function(){
+	var lan = $.cookie('newlang');
+	var isR = false;
+	var source = "../../locales/"+lan+"/helpCenter.json";
+	readJsonFile(source,updateQes);
+});
+
+//读取文案json
+function readJsonFile(source,callback){  
+    var xhr = new XMLHttpRequest;  
+    xhr.open("GET", source);  
+    xhr.onreadystatechange = function() {  
+        if (xhr.readyState == XMLHttpRequest.DONE) {  
+            var doc = xhr.responseText;
+			
+            var json = JSON.parse(doc);
+			callback(json);
+			return;
+        }  
+    }  
+   xhr.send();  
+}
+function updateQes(d){
+	
+	var langBodyDataA = new Array();
+	var langBodyDataB = new Array();
+	var others = new Array();
+	$.each(d['langBodyData'],function(k,v){
+		if(k%2 == 0){
+			langBodyDataA.push(v);
+		}else{
+			langBodyDataB.push(v);
+		};
+	});
+	console.log(d);
+	$.each(d['others']['ans'],function(k,v){
+		d['others']['ans'][k] = v.replace("####","");
+	});
+	console.log(d);
+	helpContent.langBodyDataA=langBodyDataA;
+	helpContent.langBodyDataB=langBodyDataB;
+	helpContent.others =d.others;
+	
+}
+var helpContent = new Vue({
+		el: "#helpContent",
+		data:{
+			langBodyDataA:{},
+			langBodyDataB:{},
+			others:{},
+			htmleSpi:"<br>",
+			step:1,
+		}
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+.help-center .top-box,.rateStandard .top-box{
+    float: left;
+}
+.help-center .content-box{ margin-top:20px;}
+
+.help-main {
+    width: 100%; height: auto; overflow: hidden;
+ /*   margin-top:50px;*/
+    background: #fff;
+    padding:0px 35px 80px 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    padding-top: 20px;
+}
+.help-main.help-detail {
+    padding-top:0px; margin-top:0px; width: 100%; min-width: 100%;
+}
+.help-main .list-r,.help-main .list-l { width: 50%; float:left; height: auto; overflow: hidden;}
+.help-main .left-box {float:left; width:56%;}
+.help-main .right-box {float: right;width: 39%;}
+.help-main .item {width: 100%;
+    padding:40px 25px 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -o-box-sizing:border-box;
+}
+.help-main .list-r .item:first-child,.help-main .list-l  .item:first-child{padding-top:0px;}
+.help-main .title {font-size:16px; display: block; height: 38px; line-height: 38px; text-align: left; font-weight: 600;}
+.help-main .i-list {width: 100%; height: auto;min-height: 154px; overflow: hidden; border-bottom:1px solid #d2d2d2; padding-bottom:40px;}
+.help-main .i-list a {display: block;
+    width: 100%;
+    line-height: 28px;
+    text-align: left;
+    font-size: 14px;
+    color: #727171;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.help-main .b {padding-top:70px;}
+.help-main h3 {color: #333; font-size: 16px; text-align: center; display: block; text-align: left; height: 38px; line-height: 38px;font-weight: 600;}
+.help-main  h2 { color: #13b5b1; font-size: 18px; height: 38px; line-height: 38px; margin-top:10px; font-weight: bold;}
+.help-main .right-box p {color: #999; line-height: 20px; width: 100%; height: auto; overflow: hidden; text-align: left;}
+.help-main .ques-title { font-size: 14px; margin-bottom: 3px;}
+.help-main .ans {font-size: 12px;line-height: 19px;}
+.help-main .others-ques { width: 100%; height: auto; text-align:center; overflow: hidden; margin-top:58px; padding-bottom:20px; }
+.help-main .others-ques p { margin: 0 auto; font-size: 14px; width: 90%; text-align: center; height: auto; overflow: hidden;}
+.help-main .others-ques a { margin: 0 auto;
+    margin-top: 0px;
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+    width: auto;
+    padding: 0px 20px;
+    height: 28px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #13b5b1;
+    border: 1px solid #13b5b1;
+    border-radius: 4px;}
+.help-main .spaceLine { width: 100%; height: 80px;}
+html{
+    font-size: 100px;
+}
+.tip-box{
+    margin-bottom: 8px;
+}
+.help-main .others-ques p{
+    color: #333;
+}
+
+.help-main .i-list a:hover{
+    color:#13b5b1;
+}
+
+.help-main .ques-title a:hover{
+    color:#13b5b1;    
+}

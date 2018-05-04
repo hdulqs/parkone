@@ -1,0 +1,96 @@
+.send-email .icon-check_circle{
+    font-size: .4rem;
+    color: #13b2b1;
+    margin-right: .25rem;
+}
+.send-email .content-box{
+    width: 8.6rem;
+    height: auto;
+    margin: 0 auto;
+   /* position: absolute;
+    left: 50%;
+    top:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);*/
+    margin-top: 40px;
+}
+.send-email .bg-content{
+    width: 100%;
+    height: auto;
+    padding: .57rem 0 .35rem 0;
+    background: #fff;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    -webkit-box-shadow: 0px 0px 20px #ccc ;
+    -moz-box-shadow: 0px 0px 20px #ccc ;
+    box-shadow: 0px 0px 20px #ccc ;
+}
+.send-email .font1{
+    font-size: 20px;
+}
+.send-email .pull-left{
+    width: 6%;
+    margin-top: 5px;
+}
+.send-email .pull-right{
+    width: 91.5%;
+    font-size: 16px;
+    line-height: .285rem;
+}
+.send-email .font2{
+    color: #13b2b1;
+    display: inline-block;
+    margin-left: .05rem;
+}
+.send-email .icon-mail-envelope-closed{
+    font-size: .8rem;
+    position: relative;
+    top:7px;
+    left:42px;
+}
+.send-email .top-box .ul-select{
+    background: #020d2b;
+}
+.send-email .warp-box .clearfix{
+    padding: 26px 76px 30px 76px;
+}
+.send-email .font3{
+    margin-top: .4rem;
+    font-size: 16px;
+    color: #666;
+}
+.send-email .font4{
+    display: inline-block;
+    margin-left: -.02rem;
+    color: #13b2b1;
+    background: no-repeat;
+    vertical-align: initial;
+}
+.send-email #font-time{
+    color: #999;
+}
+.send-email .send-again{
+    color: #999;
+}
+.send-email  .icon-checkmark{
+    font-size: .55rem;
+    color: #13b2b1;
+    vertical-align: middle;
+    margin-right: .05rem;
+}
+.send-email  .font2-wrap{
+    font-size: .18rem;
+}
+html{
+    font-size: 100px;
+}
+.send-email  .bottom-box .time-box {
+    padding: 17px 0;
+}
+.send-email  .bottom-box .time-box li {
+    width: auto;
+}

@@ -1,0 +1,99 @@
+.content-box {
+	width:100%; height:auto;overflow: hidden;
+  margin: 0px auto 10px;
+}
+.warp-box { height:870px;}
+.nav-box li {
+  height: 18px;
+  line-height: 18px; }
+.nav-box .pull-left {
+  font-size: 16px;
+  border-left: 4px solid #13B5B1;
+  padding-left: 10px; }
+  .nav-box .pull-left i {
+    float: left;
+    margin-right: 10px; }
+  .nav-box .pull-left .message-number {
+    margin-right: 2px; }
+  .nav-box .pull-left span {
+    float: left;
+    font-size: 14px;
+    color: #e70353; }
+.nav-box .pull-right {
+  font-size: 14px;
+  color: #13b5b1;
+  margin-right: 30px; }
+
+
+.work-order{
+  background:#fff;
+  margin-top:20px;
+  padding:35px 35px 40px;
+  color:#333;
+}
+
+.work-order label{
+  font-size: 14px;
+  margin-bottom:12px;
+  font-weight: 400;
+}
+
+.work-order .fileUpload span{
+  font-size:14px;
+  margin-left:10px;
+  color:#13b5b1;
+}
+
+.work-order .fileUpload #fileVal{
+  display: none;
+}
+.work-order .fileUpload{margin-bottom:15px;}
+.work-order .btn{
+  width:310px;
+  height:40px;
+  color:#fff;
+  font-size:16px;
+  background:#ccc;
+  line-height: 26px;
+}
+.work-order .input-width{
+  width:618px;
+  height:38px;
+}
+.work-order .textarea-width{
+  width:618px;
+  height:170px;
+}
+
+.work-order .text-width{width:618px;}
+
+.work-order .select-bg{background: #f7f7f7;}
+html{
+  font-size: 100px;
+}
+.work-order .fileUpload label {margin-bottom:5px;}
+.work-order .fileUpload{ margin-bottom: 5px;}
+.upload-success-box {
+margin-bottom:18px;
+	padding:0px 8px;
+	width:310px; height: 33px; line-height: 33px; background: #eeeeee;
+	border-radius: 5px; text-align: left; position: relative;
+}
+.upload-success-box a { position: absolute;display: block;width: 14px;height: 14px; right: 8px; top: 50%; margin-top:-7px;
+	background:url(../../images/close.png) no-repeat center center;
+}
+.upload-success-box p {
+	width:270px; height: 33px; line-height: 33px; color: #666; font-size: 12px; overflow: hidden;
+}
+.font-title{
+  vertical-align: 3px;
+  display: inline-block;
+  margin-left: 3px;
+}
+.form-group {
+  margin-bottom: 6px;
+}
+.warning-para i {
+  left: 1px;
+  top: 8px;
+}

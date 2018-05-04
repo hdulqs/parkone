@@ -1,0 +1,61 @@
+<!DOCTYPE html   class="html-register">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title data-i18n="common:htmlTitle"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telphone=no,email=no">
+    <!--css文件引入开始-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/personalCenter/myMessage.css">
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.js"></script>
+    <![endif]-->
+    <!--css文件引入结束-->
+</head>
+<body class="my-message">
+    <div  id="loaded" class="dn loaded">
+        <div class="page">
+            <div class="top-box" id="headerNav"></div>
+			<div class="notice-wrap" id="topNotice"></div>
+            <div class="warp-box">
+                <div class="content-box">
+                    <ul class="clearfix nav-box">
+                        <li class="pull-left"><i data-i18n="myMessage.title">我的消息</i><span class="font-tip"><i class="message-number">0</i><i data-i18n="myMessage.noReadyNum">条未读</i></span></li>
+                        <li class="pull-right clear-all-message" data-i18n="myMessage.clearAll">清空所有通知</li>
+                        <li class="pull-right ready-all-message" data-i18n="myMessage.readyAll">全部设为已读</li>
+                    </ul>
+                    <div class="list-wrap" id="userMessageList">
+                    </div>
+                </div>
+                <div class="pagination-wrap text-right" id="pages">
+                    <ul class="pagination pagination-sm">
+                    </ul>
+                </div>
+                <div class="trading no-data-msg text-center dn">
+                    <p class="icon-document-text text-center"></p>
+                    <p class="font-hint text-center" data-i18n="common:commonMsg.noData">暂无数据</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-box dn posi-fix" id="footerNav">
+    </div>
+    <div class="loading"  id="loading" >
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../js/comm.js"></script>
+<script src="../../js/personalCenter/myMessage.js"></script>
+<!-- 多语言切换开始-->
+<script  src="../../js/jquery.cookie.js"></script>
+<script src="../../js/i18next-1.6.3.min.js"></script>
+<script  src="../../js/changeLang.js"></script>
+<!-- 多语言切换结束-->
+</body>
+</html>

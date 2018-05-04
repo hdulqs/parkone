@@ -1,0 +1,28 @@
+﻿{
+  "title": "About CoinToBe",
+  "contactUs":{
+    "title":"Contact Us",
+    "tip1":"Support",
+    "tip2":"support@cointobe.com",
+    "tip3":"QQ",
+    "tip4":"Group 1：165564500",
+    "tip5":"Business",
+    "tip6":"bd@cointobe.com",
+    "tip7":"Telegram",
+    "tip8":"Official_Chinese：",
+    "tip9":"Official_English："
+  },
+  "focusUs":"Follow US",
+  "item1":{
+    "title": "CoinToBe - Secure, Professional and Efficient. ",
+    "content":"CoinToBe is a secure, professional and efficient trading platform for digital assets. We have a highly experienced team that is committed to providing you with smooth trading experience and the latest trading information."
+  },
+  "item2":{
+    "title1": "Secure and Professional",
+    "content1":"CoinToBe Exchange is safeguarded by cutting-edge technologies such as SSL protocol, multi-layered cryptography and offline storage，coupled two-factor authentication, your assets and all transactions are seamlessly protected.",
+    "title2": "Extensive Currency Support",
+    "content2":"We are proud to provide our users with both established and emerging cryptocurrencies. At CoinToBe.com, you are exposed to an ever-growing selection of trading and investing opportunities in a great diversity of digital tokens and cryptocurrencies.",
+    "title3": "User Experience First",
+    "content3":"CoinToBe established an industry-leading services framework that is accessible on all devices and in multiple languages. Our exchange is dedicated to offering the best customer service by ensuring convenient and lightning fast trade execution."
+  }
+}

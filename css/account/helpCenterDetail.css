@@ -1,0 +1,128 @@
+
+.help-center-detail{
+    background: #f7f8f8;
+}
+.help-center-detail .help-main{
+    background: #fff;
+    padding: 10px 60px 70px 60px;
+    margin-bottom: 60px;
+    margin-top: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 4px #eee;
+    -moz-box-shadow: 0px 0px 4px #eee;
+    box-shadow: 0px 0px 4px #eee;
+}
+.help-center-detail .content-box {
+    margin-top: 0px;
+}
+html{
+    font-size: 100px;
+}
+.main-box h2{
+    font-size: 16px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.font-time{
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #999;
+}
+.ans {
+	 line-height: 24px;
+}
+.ans p.font-aspect1{
+    margin-bottom: 8px;
+}
+.ans p.font-aspect2{
+   font-size: 12px;
+   margin-bottom: 8px;
+}
+.ans span { line-height: 36px;}
+.btn-submit{
+    color:#13b5b1;
+}
+.yes-box,.no-box{
+    font-size: 12px;
+    padding: 2px 15px!important;
+    border: 1px solid #333;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-left: 0;
+}
+.font-tip{
+    font-size: 12px;
+    margin-top: 7px;
+}
+.img-yes{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(../../images/icon12.png) no-repeat center;
+    background-size: contain;
+    vertical-align: bottom;
+    margin-right: 3px;
+}
+.img-yes-active{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(../../images/icon15.png) no-repeat center;
+    background-size: contain;
+    vertical-align: bottom;
+    margin-right: 3px;
+}
+.img-no{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(../../images/icon13.png) no-repeat center;
+    background-size: contain;
+    vertical-align: bottom;
+    margin-right: 3px;
+}
+.img-no-active{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(../../images/icon14.png) no-repeat center;
+    background-size: contain;
+    vertical-align: bottom;
+    margin-right: 3px;
+}
+.tip-box{
+    margin-top: 107px;
+}
+.yes-box{
+    margin-right: 7px;
+}
+.others-ques{
+    margin-top: 18px;
+}
+.font-color{
+    color:#f00;
+}
+
+
+.nav-box .nav-line{
+    font-size: 16px;
+    border-left: 6px solid #13B5B1;
+    padding-left: 15px;
+}
+
+.nav-font{
+    font-size: 16px;
+    color:#333;
+}
+
+.nav-font1{
+    font-size: 14px;
+    color:#999;
+}

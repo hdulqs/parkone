@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    font-family: 'Microsoft yahei';
+}
+.page{padding-bottom:0;}
+.clear{
+    clear: both;
+}
+
+.about img{
+    width:auto;
+}
+
+.about{
+    padding:40px 10px 60px;
+    font-size: 14px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 5px #eff0f0;
+}
+.aboutTop{
+    padding:0 60px;
+}
+.about h4{
+    font-size: 22px;
+    color:#333;
+    text-align: center;
+    font-family: 'Microsoft yahei';
+ }
+ .about p{
+    font-size: 14px;
+    color:#666;
+    text-align: center;
+    margin-top: 25px;
+    line-height: 25px;
+ }
+
+ .aboutCenter{
+    text-align: center;
+    padding: 40px 0;
+ }
+
+ .aboutCenter dl{
+    vertical-align: top;
+    width: 288px;
+    margin: 0 18px;
+    border: 1px solid #e5e5e5;
+    display: inline-block;
+    padding-bottom:25px;
+    transition:all 0.3s;
+}
+.aboutCenter dl:first-child {margin-left:0px;}
+.aboutCenter dl:last-child {margin-right:0px;}
+.aboutCenter dl dt{
+    height: 130px;
+    font-size: 18px;
+    color: #333;
+}
+
+.aboutCenter dl dt span{
+    display: block;
+    height: 90px;
+    background-position: center 25px;
+    background-repeat: no-repeat;
+}
+
+.aboutIcon1{
+    background-image: url(../../images/about_03h.png);
+}
+.aboutIcon2{
+    background-image: url(../../images/about_05h.png);
+}
+.aboutIcon3{
+    background-image: url(../../images/about_07h.png);
+}
+
+.aboutCenter dl dd{
+    margin: 0;
+    font-size: 14px;
+    padding: 0px 12px 0;
+    line-height: 25px;
+    text-align: left;
+}
+
+.aboutCenter dl dd a{
+    cursor:pointer;
+
+}
+
+.aboutCenter dl:hover dd,.aboutCenter dl:hover dt{
+    color: #fff;
+}
+
+.aboutCenter dl:hover{
+    background:#13b5b1;
+}
+
+.aboutCenter dl:hover .aboutIcon1{
+    background-image: url(../../images/about_03.png);
+}
+.aboutCenter dl:hover .aboutIcon2{
+    background-image: url(../../images/about_05.png);
+}
+.aboutCenter dl:hover .aboutIcon3{
+    background-image: url(../../images/about_07.png);
+}
+
+.aboutCenter dl i{
+    font-weight: 100;
+}
+
+.contactUs{
+    padding:0 20px;
+}
+
+.contactUs dl {
+    color: #333;
+    width: 515px;
+    padding:40px 0 0 50px;
+    min-height: 40px;
+    float: left;
+    margin:5px 5px 0 0 ;
+}
+
+.contactUs dl dt{
+    width: 50px;
+    float: left;
+}
+
+.contactUs dl dd{
+    width: 300px;
+    line-height: 21px;
+    font-size: 18px;
+    float: left;
+}
+
+.contactUs dl dd span{
+    display: block;
+    font-size: 14px;
+    padding: 5px 0 0;
+    white-space: nowrap;
+}
+
+.focusUs{
+    clear: both;
+    padding: 40px 0 0;
+}
+
+.contactUs ul{
+    clear: both;
+    padding: 40px 0 0;
+    text-align: center;
+}
+
+.contactUs ul li{
+    margin: 0 35px;
+    position: relative;
+    display: inline-block;
+    cursor:pointer;
+}
+
+.contactUs ul li a{
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.focusUSbg1{
+    background-image: url(../../images/abouts1.jpg) ;
+}
+.focusUSbg2{
+    background-image: url(../../images/abouts2.jpg);
+}
+.focusUSbg3{
+    background-image: url(../../images/abouts3.jpg);
+}
+.focusUSbg4{
+    background-image: url(../../images/abouts4.jpg);
+}
+
+.contactUs ul li:hover a{
+    background-position: top center;
+    color:#13b5b1;
+}
+
+.contactUs dl dd a:hover{
+    color:#13b5b1;
+}
+
+.contactUs ul li:hover span{
+    display: block;
+}
+
+.contactUs ul li span{
+    display: none;
+    position: absolute;
+    top: -140px;
+    left: 50%;
+    margin-left: -65px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 8px #ccc;
+}
+
+.contactUs ul li span img{
+    width: 105px;
+}
+
+  
+.distance{
+    padding-top:10px;
+}

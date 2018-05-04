@@ -1,0 +1,43 @@
+{
+  "activelang": "中文简体",
+  "authenticationOther":{
+    "htmlTitle": "国际站",
+    "title": "身份认证",
+    "baseInfor": "1",
+    "selectType": "选择类型：",
+    "continent": "中国大陆地区",
+    "otherArea": "其他国家和地区",
+    "msg1": "请确保您使用本人的真实身份进行验证，我们会保护您的个人信息安全。仅用于港澳台和国际用户的护照验证，仅支持英文版的护照资料验证。",
+    "firstName": "姓氏：",
+    "lastName": "名字：",
+    "sex": "性别：",
+    "male": "男",
+    "female": "女",
+    "countryRegion": "国家及地区：",
+    "checkType": "证件类型：",
+    "selPassport": "护照",
+    "selCart": "身份证",
+    "selDriving": "驾驶证",
+    "IDnumber": "证件ID：",
+    "cardBefore": "身份证正面照片",
+    "msg2": "请确保照片的内容完整并清晰可见，只支持JPG、PNG格式的图片文件，大小不超过5M。",
+    "demo1": "示例",
+    "uploadFileBtn":"点击上传",
+    "cardAfter": "身份证背面照片",
+    "passportBefore": "护照封面",
+    "passportAfter": "护照个人信息",
+    "msg3": "请确保照片的内容完整并清晰可见，只支持JPG、PNG格式的图片文件，大小不超过5M。",
+    "demo2": "示例",
+    "handCard" : "手持本人身份证正面照和个人签字",
+    "msg5": "请您上传一张手持身份证正面照和个人签字的照片，仅支持JPG、PNG格式，大小不超过5M。",
+    "msg6": "请确保照片和个人签字的内容清晰可见，个人签字的内容包含“CoinToBe”和当前日期。",
+    "toComplete": "完成",
+    "msg4": "提交审核后，系统将会24小时内完成审核，节假日会审核会有延迟，请您耐心等待审核结果",
+    "submitCheck": "提交审核"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

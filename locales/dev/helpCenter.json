@@ -1,0 +1,17 @@
+{
+  "activelang": "English",
+  "myMessage":{
+    "htmlTitle": "國際站",
+    "title": "My message",
+    "noReadyNum": "messages unread",
+    "clearAll": "Delete all messages",
+    "readyAll": "Mark all as read",
+    "safe": "Security",
+    "deleteBtn": "Delete"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

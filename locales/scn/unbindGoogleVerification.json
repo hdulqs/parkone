@@ -1,0 +1,16 @@
+{
+  "activelang": "中文简体",
+  "unbindGoogleVerification":{
+    "title": "解除谷歌验证",
+    "inputLoginPsw": "登录密码",
+    "inputGoogleCode": "谷歌验证码",
+    "warning1": "登录密码不能为空",
+    "warning2": "谷歌验证码不能为空",
+    "submitCheck": "确定"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

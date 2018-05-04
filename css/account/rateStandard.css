@@ -1,0 +1,60 @@
+
+.rateStandard .warp-box{
+	padding-bottom:22px;
+    color: #727171;
+}
+.term-service .content-box{
+    width: 100%;
+    background:#fff;
+    margin: 0 auto;
+    padding: 18px 5% 48px;
+}
+.rateStandard .font-title{
+    margin-top: 20px;
+    font-size: .15rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+.rateStandard .font-des{
+    font-size: 14px;
+    width: 96%;
+    margin-left: 2%;
+    color: #666;
+}
+.rateStandard table{
+    width: 96%;
+    font-size: .14rem;
+    color: #7d7a7a;
+    border: .9px solid #a0a0a0;
+    margin-top: 18px;
+    margin-left: 2%;
+    margin-bottom: 22px;
+}
+.rateStandard table tr:first-child td{
+    font-size: .14rem;
+    color: #333;
+}
+.rateStandard table tr{
+    height: .44rem;
+    line-height: .44rem;
+}
+.rateStandard table tr td:first-child{
+    width: 20%;
+    border-right:  .9px solid #a0a0a0;
+}
+.rateStandard table tr td:nth-child(2) {
+    width: 60%;
+    border-right: .9px solid #a0a0a0;
+}
+.rateStandard table tr td:last-child{
+
+}
+.rateStandard table tr td{
+    border-bottom:   .9px solid #a0a0a0;
+}
+html{
+    font-size: 100px;
+}
+.rateStandard .page {
+    padding-bottom: 0;
+}

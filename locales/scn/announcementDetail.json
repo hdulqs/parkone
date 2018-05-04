@@ -1,0 +1,32 @@
+{
+  "title": "Nostro titolo",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "alert": "Fare clic su OK per chiudere.",
+  "announcement": {
+    "announcementCenterDes": "公告中心",
+    "announcementDetailDes": "公告详情"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  },
+  "content":{
+    "title":"CoinToBe上线公告",
+    "details":{
+      "tip1":"尊敬的用户：",
+      "tip2":" CoinToBe平台于今日正式上线。CoinToBe致力于为用户提供安全、便捷的区块链资产兑换服务，聚合全球优质区块链资产，打造世界级的区块链资产交易平台。",
+      "tip3":"为庆祝CoinToBe上线，感谢您的支持与认可，让您更加充分体验我们的交易服务，平台将于12月6日10：00推出“cointobe火热上线，BTC ETH百万豪礼限量抢”活动，即新用户使用手机号或邮箱注册成功以及首次充币并交易任意币种任意数量后，都可获得由平台随机赠送的BTC或ETH，本活动持续期间，全站交易免手续费。",
+      "tip4":"12月6日10:00（HKT）开放BTC、ETH、LTC充值提现业务，12月8日10:00（HKT）开放ETH/BTC、LTC/BTC、LTC/ETH交易。",
+      "tip5":"十二月伊始，我们顺势起航，选择CoinToBe，惊喜远超期待！",
+      "tip6":"祝您交易愉快！"
+    },
+    "team":"CoinToBe社群",
+    "time":"2017年12月6日",
+    "Telegram":"https://t.me/cointobe_chinese"
+  }
+}

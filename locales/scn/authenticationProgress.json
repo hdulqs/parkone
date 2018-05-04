@@ -1,0 +1,30 @@
+{
+  "activelang": "中文简体",
+  "authenticationProgress": {
+	"pageTitle":"身份认证",
+	"fieldInfor": "认证信息",
+	"fieldUserName": "真实姓名",
+	"fieldType": "证件类型",
+	"fieldNumber": "证件号码",
+	"success": {
+            "title": "您已完成身份验证",
+            "des": "您已完成身份验证",
+            "btnLink": ""
+        },
+        "fail": {
+            "title": "",
+            "des": "您的身份认证审核失败，失败原因：证件照片不能使用扫描照片...",
+            "btnLink": "重新认证"
+        },
+        "waiting": {
+            "title": "",
+            "des": "您的身份认证已提交，正在审核中...",
+            "btnLink": "进入个人中心"
+        }
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

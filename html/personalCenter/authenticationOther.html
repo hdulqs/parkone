@@ -1,0 +1,186 @@
+<!DOCTYPE html   class="html-register">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title data-i18n="common:htmlTitle"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- 兼容适配 -->
+    <meta name="format-detection" content="telphone=no,email=no">
+    <!--css文件引入开始-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/personalCenter/authenticationOther.css">
+    <!--css文件引入结束-->
+    <!-- 兼容适配 end -->
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.js"></script>
+    <![endif]-->
+</head>
+<body class="authentication-other authentication-mainland">
+    <div  id="loaded" class="dn loaded">
+        <div class="page">
+            <div class="top-box" id="headerNav"></div>
+			<div class="notice-wrap" id="topNotice"></div>
+			<div class="warp-box">
+            <div class="content-wrap">
+                <p class="font-caption"><i class="left-icon"></i><i data-i18n="authenticationOther.title">身份认证</i></p>
+                <div class="process-wrap">
+                    <div class="font-title"><i class="font1 text-center font1-active btn-active" data-i18n="authenticationOther.baseInfor">1</i><span data-i18n="authenticationOther.selectType">选择类型：</span></div>
+                    <div class="step1-wrap">
+                        <div class="type-wrap step-radio-local">
+                            <div class="radio-wrap">
+                                    <i class="btn-radio handmouse btn-radio-checked mainland" onclick="changeRadio(this)"></i>
+									<input id="mainland" type="radio" class="dn" name="area" value="0" checked="on" data-val="chinaArea">
+									<span onclick="changeRadio(document.querySelector('.mainland'))" data-i18n="authenticationOther.continent">中国大陆地区</span>
+                            </div>
+                            <div class="radio-wrap">
+                                    <i class="btn-radio handmouse other" onclick="changeRadio(this)"></i>
+									<input id="other"  type="radio" class="dn"  name="area" value="1" data-val="otherArea">
+									<span onclick="changeRadio(document.querySelector('.other'))" data-i18n="authenticationOther.otherArea">其他国家和地区</span>
+                            </div>
+                        </div>
+                        <p class="font-hint" data-i18n="authenticationOther.msg1">请确保您使用本人的真实身份进行验证，我们会保护您的个人信息安全。仅用于港澳台和国际用户的护照验证，仅支持英文版的护照资料验证。</p>
+                        <div class="input-wrap">
+                            <label for="" class="font-label"><span data-i18n="authenticationOther.firstName">姓氏：</span></label><input type="text" class="input-text" id="firstName">
+                        </div>
+                        <div class="input-wrap">
+                            <label for="" class="font-label"><span data-i18n="authenticationOther.lastName">名字：</span></label><input type="text" class="input-text" id="lastName">
+                        </div>
+                        <div class="radio-wrap2 step-radio-sex">
+                            <label for="" class="font-label" data-i18n="authenticationOther.sex">性别：</label>
+							<label>
+                                <i class="btn-radio handmouse male btn-radio-checked" onclick="changeRadio(this)"></i>
+								<input id="male" class="dn" type="radio" name="sex" checked="checked" value="1" />
+                                <span class="sex" onclick="changeRadio(document.querySelector('.male'))" data-i18n="authenticationOther.male">男</span>
+							</label>
+							<label>
+                                <i class="btn-radio handmouse female " onclick="changeRadio(this)"></i>
+								<input id="female" class="dn"  type="radio" name="sex" value="2"/>
+								<span class="sex" onclick="changeRadio(document.querySelector('.female'))" data-i18n="authenticationOther.female">女</span>
+							</label>
+                        </div>
+                        <div class="input-wrap otherArea-item dn" id="phone">
+                            <label for="" class="font-label" data-i18n="authenticationOther.countryRegion">国家及地区：</label>
+							<select class="select-address" id="country">
+                                <option value="" selected="on">--</option>
+								<option :value="item.country" v-for="item in items">{{ item.country }}</option>
+							</select>
+                        </div>
+                        <div class="radio-wrap2 step-radio-type">
+                            <label for="" class="font-label" data-i18n="authenticationOther.checkType">证件类型：</label>
+							<label class="otherArea-item dn">
+                                <i class="btn-radio handmouse passport" onclick="changeRadio(this)"></i>
+								<input type="radio" id="passport"  class="dn"  name="checkType" value="2" data-val="selPassport" id="selPassport">
+								<span class="sex" onclick="changeRadio(document.querySelector('.passport'))" data-i18n="authenticationOther.selPassport">护照</span>
+							</label>
+							<label class="chinaArea-item otherArea-item">
+                                <i class="btn-radio handmouse btn-radio-checked id" onclick="changeRadio(this)"></i>
+								<input type="radio" id="id" class="dn" name="checkType" checked="on" value="1" data-val="selCart" id="selCart">
+								<span class="sex" onclick="changeRadio(document.querySelector('.id'))" data-i18n="authenticationOther.selCart">身份证</span>
+							</label>
+							<label class="otherArea-item dn">
+                                <i class="btn-radio handmouse driver-license" onclick="changeRadio(this)"></i>
+								<input type="radio" id="driver-license"  class="dn"  name="checkType" value="3" data-val="selDriving" id="selDriving">
+								<span class="sex" onclick="changeRadio(document.querySelector('.driver-license'))" data-i18n="authenticationOther.selDriving">驾驶证</span>
+							</label>
+                        </div>
+                        <div class="input-wrap">
+                            <label for="" class="font-label" data-i18n="authenticationOther.IDnumber">证件ID：</label><input type="text" class="input-text" id="IDnumber">
+                        </div>
+                    </div>
+                    <p class="font-title"><i class="font1 text-center">2</i>
+                        <span data-i18n="authenticationOther.cardBefore" id="font-idcard1"></span>
+                        <span class="dn" data-i18n="authenticationOther.passportBefore" id="font-passport1"></span>
+                    </p>
+                    <div class="step2-wrap">
+						<form method="post" enctype="multipart/form-data" data-imgFile="imgFrontUrl" class="upload-file">
+                            <input type="file" id="zmFile" name="file" class="handmouse">
+                            <span class="upload-text" data-i18n="authenticationOther.uploadFileBtn">点击上传</span>
+						</form>
+						<input type="hidden" id="imgFrontUrl">
+                        <p class="font2 upload-warning" data-i18n="authenticationOther.msg2"></p>
+                        <ul class="list-inline">
+                            <li class="imglist imgFrontUrl">
+                                <img src="../../images/defalut-img.png" class="img-upload">
+                            </li>
+                            <li style="padding: 0 43px;"  data-i18n="authenticationOther.demo1">示例</li>
+                            <li>
+                                <img src="../../images/bg4.png" class="img-upload" id="img1">
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="font-title"><i class="font1 text-center">3</i>
+                        <span data-i18n="authenticationOther.cardAfter" id="font-idcard2"></span>
+                        <span class="dn"  data-i18n="authenticationOther.passportAfter" id="font-passport2"></span>
+                    </p>
+                    <div class="step3-wrap">
+						<form method="post" enctype="multipart/form-data" data-imgFile="imgBehindURL" class="upload-file">
+                            <input type="file" id="bmFile" name="file" class="handmouse">
+                            <span class="upload-text"  data-i18n="authenticationOther.uploadFileBtn">点击上传</span>
+						</form>
+						<input type="hidden" id="imgBehindURL">
+                        <p class="font2 upload-warning" data-i18n="authenticationOther.msg3">请确保照片的内容完整并清晰可见，只支持JPG格式的图片文件，大小不超过5M。</p>
+                        <ul class="list-inline">
+                            <li class="imglist imgBehindURL">
+                                <img src="../../images/defalut-img.png" class="img-upload">
+                            </li>
+                            <li style="padding: 0 43px;" data-i18n="authenticationOther.demo2">示例</li>
+                            <li>
+                                <img src="../../images/bg5.png" class="img-upload" id="img2">
+                            </li>
+                        </ul>
+                    </div>
+					<p class="font-title"><i class="font1 text-center">4</i>
+                        <span data-i18n="authenticationOther.handCard" id="font-idcard3"></span>
+                        <span class="dn" data-i18n="authenticationOther.passportAfter" id="font-passport3"></span>
+                    </p>
+                    <div class="step3-wrap">
+						<form method="post" enctype="multipart/form-data" data-imgFile="imgHandhelpCURL" class="upload-file">
+                            <input type="file" id="haFile" name="file" class="handmouse">
+                            <span class="upload-text"  data-i18n="authenticationOther.uploadFileBtn">点击上传</span>
+						</form>
+						<input type="hidden" id="imgHandhelpCURL">
+                        <p class="font2 upload-warning" data-i18n="authenticationOther.msg5"></p>
+                        <p class="font2 msg-warning" data-i18n="authenticationOther.msg6"></p>
+                        <ul class="list-inline">
+                            <li class="imglist imgHandhelpCURL">
+                                <img src="../../images/defalut-img.png" class="img-upload">
+                            </li>
+                            <li style="padding: 0 43px;" data-i18n="authenticationOther.demo2">示例</li>
+                            <li>
+                                <img src="../../images/bg6.png" class="img-upload" id="img3">
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="font-title"><i class="font1 text-center">5</i><span data-i18n="authenticationOther.toComplete">完成</span></p>
+                    <div class="step4-wrap">
+                        <p class="font2" data-i18n="authenticationOther.msg4">提交审核后，系统将会24小时内完成审核，节假日会审核会有延迟，请您耐心等待审核结果</p>
+                        <a class="btn-submit text-center links-node dis-block" data-i18n="authenticationOther.submitCheck"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="bottom-box dn posi-fix" id="footerNav">
+    </div>
+    <div class="loading"  id="loading">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+	<div class="fff-mask"></div>
+<script  type="text/javascript" src="../../js/vue.min.js"></script>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../js/comm.js"></script>
+<script src="../../js/jquery.form.min.js"></script>
+<script type='text/javascript' src='../../js/personalCenter/authenticationOther.js'></script>
+<!-- 多语言切换开始-->
+<script  src="../../js/jquery.cookie.js"></script>
+<script src="../../js/i18next-1.6.3.min.js"></script>
+<script  src="../../js/changeLang.js"></script>
+<!-- 多语言切换结束-->
+</body>
+</html>

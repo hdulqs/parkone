@@ -1,0 +1,31 @@
+{
+  "title": "Nostro titolo",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "alert": "Fare clic su OK per chiudere.",
+  "announcement": {
+    "announcementCenterDes": "公告中心",
+    "announcementDetailDes": "公告詳情"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文簡體",
+    "traditionalchinese": "中文繁體"
+  },
+  "content":{
+    "title":"萊特幣（LTC）錢包維護完成公告",
+    "details":{
+      "tip1":"尊敬的用戶：",
+      "tip2":" 萊特幣（LTC）錢包維護已完成，萊特幣（LTC）充值提現功能已開放。 ",
+      "tip3":"給您帶來的不便敬請諒解。若您有任何疑問，請提交工單。",
+      "tip6":"祝您交易愉快！"
+    },
+    "team":"CoinToBe團隊",
+    "time":"2017年12月21日",
+    "group":"CoinToBe社群",
+    "Telegram":"https://t.me/cointobe_chinese"
+  }
+}

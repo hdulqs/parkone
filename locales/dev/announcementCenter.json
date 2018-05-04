@@ -1,0 +1,19 @@
+{
+  "title": "Nostro titolo",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "alert" : "Fare clic su OK per chiudere.",
+  "announcementCenter": {
+
+    "announcement":"announcements"
+  },
+
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

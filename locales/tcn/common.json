@@ -1,0 +1,60 @@
+{
+  "htmlTitle": "CoinToBe - 安全、專業、便捷的數字資產交易平臺",
+  "header": {
+    "nav1": "交易中心",
+    "nav2": "資產",
+    "nav3": "訂單",
+    "nav4": "公告",
+    "nav5": "個人中心",
+    "nav6": "登陸",
+    "nav7": "註冊",
+    "nav8": "我的消息",
+    "nav9": "退出",
+    "nav10":"幫助",
+    "nav11":"聯繫客服",
+    "nav12":"語言切換"
+  },
+  "footer": {
+    "nav1": "服務條款",
+    "nav2": "費率標準",
+    "nav3": "幫助中心",
+    "nav4": "隱私政策",
+    "nav5": "關於我們",
+    "contact": "聯系我們：",
+    "connectStatus": "已連接",
+    "telegram":"官方中文群：",
+    "telegram1":"官方英文群：",
+    "work":"客服",
+    "toTop":"返回頂部",
+    "WechatService":"微信客服",
+    "WechatNews":"微信服務號",
+    "Subscriptions":"微信訂閱號",
+    "cointobTele":"CoinToBe電報",
+    "coinList":"上幣申請",
+    "Block123":"區塊鏈導航",
+    "links":"友情鏈接",
+    "Cointime":"金色財經",
+    "8btc":"巴比特",
+    "CHAINNEWS":"鏈聞",
+    "jinniuFinance":"金牛財經",
+    "vipchain":"區塊鏈數據",
+    "masterdax":"MasterDAX"
+  },
+  "twoVerification":{
+    "title1":"谷歌驗證",
+    "title2":"手機驗證",
+    "title3":"二次驗證",
+    "placeholder1":"谷歌驗證碼",
+    "placeholder2":"手機驗證碼",
+    "btnSendCode":"發送驗證碼",
+    "btnAgainSendCode":"再次發送",
+    "btnSubmit":"確定",
+    "cue1":"驗證碼不能為空",
+    "cue2":"驗證碼錯誤"
+  },
+  "commonMsg":{
+    "noData":"暫無數據",
+    "alertTitle":"提示",
+    "alertBtn":"我知道了"
+  }
+}

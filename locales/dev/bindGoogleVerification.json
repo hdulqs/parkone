@@ -1,0 +1,28 @@
+{
+  "activelang": "English",
+  "bindGoogleVerification":{
+    "htmlTitle": "國際站",
+    "title": "Enable Google Authentication",
+    "title1": "1.Download and install:",
+    "appDown1": "App Download",
+    "appDown2": "App Download",
+    "title2": "2. Add COINTOBE Account to Google Authenticator:",
+    "openMsg": "Scan QR-code",
+    "inputMsg": "manually input",
+    "title3": "3. Enable Google Verification Code:",
+    "inputPsw": "Login password",
+    "warningLoginPwd": "The login password is required.",
+    "warningLoginPwdE": "Invalid login password",
+    "inputGoogleCode": "Google verification code",
+    "warningGoogleCode": "The google verification code is required.",
+    "warningGoogleCodeE": "Invalid Google verification code",
+    "submitCheck": "Submit",
+    "account":"Account",
+    "secretKey":"Secret Key"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

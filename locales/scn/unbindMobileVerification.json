@@ -1,0 +1,21 @@
+{
+  "activelang": "中文简体",
+  "bindMobileVerification":{
+    "title": "解除手机验证",
+    "inputLoginPsw": "登录密码",
+    "warning1": "密码有误",
+    "warning3": "密码不能为空",
+    "inputMobile": "手机号",
+    "warning2": "无效的手机号",
+    "warning4": "手机号不能为空",
+    "warning5": "验证码不能为空",
+    "inputCode": "验证码",
+    "inputGetCode": "获取验证码",
+    "submitCheck": "确定"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Nostro titolo",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "alert": "Fare clic su OK per chiudere.",
+  "announcement": {
+    "announcementCenterDes": "公告中心",
+    "announcementDetailDes": "公告詳情"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文簡體",
+    "traditionalchinese": "中文繁體"
+  },
+  "content":{
+    "title":"CoinToBe上線OmiseGo（OMG）",
+    "details":{
+      "tip1":"尊敬的用戶：",
+      "tip2":"CoinToBe上線OmiseGo（OMG），並開通OMG/BTC、OMG/ETH交易市場。",
+      "tip3":"開放充提時間：2017/12/29 22:00(HKT)",
+      "tip4":"開放交易時間：2017/12/30 14:00(HKT)",
+      "tip5":"費率說明：",
+      "tip5l":"https://www.cointobe.com/account/rateStandard.html",
+      "tip6":"幣種簡介：OmiseGO是壹種基於以太坊的公共金融技術，可用於主流數字錢包，實現跨管轄區和組織孤島，以及法定貨幣和分散貨幣的實時，點對點價值交換和支付服務。旨在實現金融包容和破壞現有機構的設計，將通過OmiseGO網絡和數字錢包框架向每個人提供訪問。",
+      "tip7":"OMG官網： ",
+      "tipl":"https://omisego.network/",
+      "tip8":"白皮書：  ",
+      "tip8l":"https://cdn.omise.co/omg/whitepaper.pdf",
+      "tip9":"區塊瀏覽器：",
+      "tip9l":"https://etherscan.io/token/OmiseGo",
+      "tip10":"風險提示：數字貨幣交易具有極高的風險，CoinToBe精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
+    },
+    "team":"CoinToBe社群",
+    "time":"2017年12月29日",
+    "Telegram":"https://t.me/cointobe_chinese"
+  }
+}

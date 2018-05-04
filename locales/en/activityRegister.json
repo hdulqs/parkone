@@ -1,0 +1,63 @@
+{
+  "title": "Sign Up CoinToBe",
+  "emailplh": "Email Address",
+  "pwdplh": "Your Password",
+  "cfmpwdplh": "Confirm Password",
+  "inputCode": "SMS Code",
+  "inputGetCode": "Send SMS",
+  "error": {
+    "cue1": "The email address is required and and can't be empty.",
+    "cue2": "Invalid email address.",
+    "cue3": "The password is required and and can't be empty.",
+    "cue4": "Passwords must be at least 8-20 characters with 1 capital letter and 1 number.",
+    "cue5": "The two passwords don't match!",
+    "cue6": "The confirm password is required and can't be empty.",
+    "cue7": "Invalid email address.",
+    "cue8": "Fit the puzzle to unlock",
+    "cue9": "Phone number is required and can't be empty."
+  },
+  "button": "Get BTC immediately",
+  "tip1": "I agree to",
+  "tip2": "the Terms of Service",
+  "tip3": "Already have an account?",
+  "tip4": "Log In",
+  "tip5":"Privacy Policy",
+  "tip6":"Email",
+  "tip7":"Phone Number",
+  "modules1":{
+    "title":"Bitcoin Booms: A One of a Kind Legend",
+    "subtitle":"After its mysterious launch in 2009, Bitcoin has once surged more than 5 million times and rose nearly twenty times from 16 to 17.",
+    "btcjs":"2012-2017 Bitcoin Price Chart"
+  },
+  "modules2":{
+    "title":"More and more successful enterprises included Bitcoin as one of their payment methods.",
+    "subtitle":"BitCoin is acknowledged by more than 100 thousand companies."
+  },
+  "modules3":{
+    "title":"What is CoinToBe?",
+    "content":"CoinToBe is a virtual currency exchange where our global clients trade wide variety of cryptocurrencies and digital tokens.  With our international operating team, experienced engineers and professional risk management specialists, CoinToBe is the go-to platform for traders.  We are setting feet in the industry in more than 50 countries, striving to provide our users with secure, professional and convenient service.",
+    "contentNext":"Locating its main operation center in Japan, CoinToBe offers a great variety of services including funding, exchange, investment banking and B20.  Well-established as it is, CoinToBe is strategically invested by ValueBank, a top-notch corporate in the industry.",
+    "li1":"Digital Currency Fund",
+    "li2":"Digital Wallet",
+    "li3":"Block Chain Investment Banking",
+    "li4":"B20 Global Community"
+  },
+  "modules4":{
+    "title":"Why CoinToBe?",
+    "li1B":"Fund Security",
+    "li1C":"Enables hot and cold wallet, safe and multi-signature to secure your fund",
+    "li2B":"Professional Risk Management",
+    "li2C":"Upholds stringent ICO process and strict identity verification, at par with financial institutions",
+    "li3B":"Easy Trading",
+    "li3C":"Simple operation and real-time transactions.  Lightning withdraw and deposit speed",
+    "li4B":"Comprehensive Service",
+    "li4C":"24×7 multi-lingual real-time service"
+  },
+  "modules5":{
+    "btc1":"BTC Bitcoin",
+    "btc2":"Last Price",
+    "btc3":"High 24 Hr. ",
+    "btc4":"Low 24 Hr. ",
+    "button":"Register for Free BTC"
+  }
+}

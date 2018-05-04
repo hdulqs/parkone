@@ -1,0 +1,21 @@
+﻿{
+  "activelang": "English",
+  "bindMobileVerification":{
+    "title": "Disable SMS authentication",
+    "inputLoginPsw": "Login password",
+    "warning1": "Invalid login password",
+    "warning3": "The login password is required and can't be empty.",
+    "inputMobile": "Phone number",
+    "warning2": "Invalid phone number",
+    "warning4": "The phone number is required and can't be empty..",
+    "warning5": "The verification code is required and can't be empty.",
+    "inputCode": "SMS Code",
+    "inputGetCode": "Send SMS",
+    "submitCheck": "Confirm"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

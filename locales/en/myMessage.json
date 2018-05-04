@@ -1,0 +1,21 @@
+﻿{
+  "activelang": "English",
+  "myMessage":{
+    "htmlTitle": "國際站",
+    "title": "My messages",
+    "noReadyNum": "Unread Messages",
+    "clearAll": "Delete all messages",
+    "readyAll": "Mark all as read",
+    "safe": "Security",
+    "deleteBtn": "Delete",
+    "titleType1": "Security",
+    "titleType2": "Notifications",
+    "titleType3": "Deposit and Withdrawal",
+    "titleType4": "Verification"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

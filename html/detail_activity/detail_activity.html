@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate"/>
+	<title data-i18n="common:htmlTitle"></title>
+	<link rel="stylesheet" href="../../css/common/common.css">
+	<link rel="stylesheet" href="../../css/account/register.css">
+	<link rel="stylesheet" href="../../css/detail_activity/detail_activity.css">
+	<link rel="stylesheet" href="../../css/detail_activity/detail_json.css">
+	<script>
+		var desW = 750;
+		var phoneWidth = parseInt(window.screen.width);
+		var phoneScale = phoneWidth/desW;
+		var ua = navigator.userAgent;
+		if(ua.indexOf("Coolpad") != -1){
+			document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">');
+		}else if (/Android (\d+\.\d+)/.test(ua)){
+			var version = parseFloat(RegExp.$1);
+			if(version>2.3){
+				document.write('<meta name="viewport" content="width='+desW+', minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+'" target-densitydpi="device-dpi">');
+			}else{
+				document.write('<meta name="viewport" content="width='+desW+'" target-densitydpi="device-dpi">');
+			}
+		} else {
+			document.write('<meta name="viewport" content="width='+desW+', user-scalable=no" target-densitydpi="device-dpi">');
+		}
+		var browserRedirect = function(isLoad) {
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+			var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+			var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+			var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+			var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+			var bIsAndroid = sUserAgent.match(/android/i) == "android";
+			var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+			var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+			if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+			    return 1;
+			} else {
+				return 2;
+			}
+		}
+		var isPC = browserRedirect(0);
+		var deviceId = "";
+		if(isPC == 1) deviceId = "ms";
+		if(isPC == 2) deviceId = "pc";
+	</script>
+	<!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.js"></script>
+    <![endif]-->
+</head>
+<body class="ms">
+	<div class="loading_circle" id="loadingH5"><div class="loading-i"></div></div>
+	<div class="top-box" id="headerNav"></div>
+	<header style="margin:0;padding:0;">
+		<!-- 倒计时
+		<div class="count_down">
+		    <span class="distance">距离活动开始还剩：</span>
+		    <div id="fnTimeCountDown" data-end="2017/12/06 10:00:00">
+		        <span class="day">00</span> 天
+		        <span class="hour">00</span> 时
+		        <span class="mini">00</span> 分
+		        <span class="sec">00</span> 秒
+		        <span class="hm">00</span>
+		    </div>
+		</div> -->
+		<img src="../../images/banner_gjx.png" alt="" data-pc='../../images/banner_gjx.png' data-ms='../../images/banner_app_gjx.png'>
+	</header>
+	<div class="container-box">
+		<article id="btc-eth" v-cloak>
+			<!-- 抢BTC -->
+			<img src="../../images/font1_gjx.png" alt="" class="img_regist" data-pc="../../images/font1_gjx.png" data-ms='../../images/font1_app_gjx.png'>
+			<div class="grab_BTC">
+				<!-- 活动首页 -->
+					<div class="in_grab" v-show="step0">
+						<div id="leafContainer">
+						</div>
+						<!--<div class="residue_BTC">
+							<span class="frame_word">剩余：</span>
+							<span>
+								<ul>
+									<li class="have_frame">{{left}}</li>
+									<li class="nothave_frame">.</li>
+									<li class="have_frame_right" v-for="item in right">{{item}}</li>
+								</ul>
+							</span>
+							<span class="frame_BTC">BTC</span>
+						</div>-->
+						<img src="../../images/bg1_gjx.png" alt="" data-pc='../../images/bg1_gjx.png' data-ms='../../images/bg1_app_gjx.png'>
+						<div class="button_grab begin_activity disabled_button" @click="doThis">注册抢BTC</div>
+						<!-- 模态窗口 -->
+						<div class="bgloading">
+						    
+						</div>
+						<div class="loading"  id="loading" >
+						    <div class="double-bounce1"></div>
+						    <div class="double-bounce2"></div>
+						</div>
+					</div>
+					<!-- 活动第一步 -->
+					<div class="in_grab_first" v-show="step1">
+						<h3>恭喜您抢到&nbsp;&nbsp;<span>{{BTCAmount}}</span>&nbsp;&nbsp;BTC</h3>
+						<!-- 引register -->
+						<div class="form-box">
+						     <form>
+						        <div class="input-info" id="phone">
+						            <input type="text" id="mail1" class="input-info no-martop" placeholder="输入手机号"   data-i18n="[placeholder]tip7" v-model="phone">
+						        </div>
+						        <p class="font-warning"></p>
+								<div id="codeCheck"></div>
+								<input type="button"  @click="soonGet"  value="立即领取" class="immediately_get">
+						    </form>
+						</div>	
+					</div>
+				<!-- 活动第二步 -->
+				<div class="in_grab_second opacitys" v-show="step2">
+					<h3>领取抢到的&nbsp;&nbsp;<span>{{BTCAmount}}</span>&nbsp;&nbsp;BTC</h3>
+					<form>
+						<div  class="input-info" id="phone">
+							<input type="text" class="input-info no-martop" v-model="phone" id="mail1" data-i18n="[placeholder]tip7"  disabled="disabled">
+							<img src="../../images/right_03.png" alt="" class="right_icon">
+	
+						</div>
+						<p class="font-warning"></p>
+						<div class="code-wrap">
+							<input  type="text" class="input-info" id="code" v-model="smsCode" data-i18n="[placeholder]bindMobileVerification.inputCode" placeholder="短信验证码">
+							<input type="button" class="btn-gain" id="GetBTCSms" data-i18n="[value]bindMobileVerification.inputGetCode" value="获取验证码">
+						</div>
+	
+						<div id="codeCheck2"></div>
+	
+						<input type="button" value="领取BTC" @click="lingBTC" class="immediately_get">
+	
+					</form>
+								
+				</div>
+				<div class="in_grab_second opacitys" v-show="step22">
+					<h3>领取抢到的&nbsp;&nbsp;<span>{{BTCAmount}}</span>&nbsp;&nbsp;BTC</h3>
+					<form>
+						<div  class="input-info" id="phone">
+							<input type="text" class="input-info no-martop" v-model="phone" id="mail1"  disabled="disabled">
+							<img src="../../images/right_03.png" alt="" class="right_icon">
+	
+						</div>
+						<p class="font-warning"></p>
+						<div class="code-wrap">
+							<input  type="password" class="input-info loginInputBox" id="code2" v-model="password" placeholder="请输入登录密码">
+						</div>
+						<div id="codeCheck5"></div>
+	
+						<input type="button" value="登录" @click="login" class="immediately_get">
+	
+					</form>
+								
+				</div>
+				<!-- 活动第三步 -->
+				<div class="in_grab_thirdly opacitys" v-show="step3">
+					<p>您已领取&nbsp;&nbsp;<span>{{BTCAmount}}</span>&nbsp;&nbsp;BTC</p>
+					<span>温馨提示：登陆密码已发送至您的手机，请尽快修改您的登录密码。</span>
+				</div>
+				<!-- 滚动信息 -->
+				
+			<div class="message_grab"  id="btc">
+					<div class="message_Carousel">
+						<ul class="roll_list">
+							<li  v-for="item in btcList">
+								<span v-if="item.stress==1" class="active_message"><img src="../../images/icon6_gjx.png" alt="">{{item.message}}</span>
+								<span v-else>{{item.message}}</span>
+	
+							</li>
+						</ul>
+					</div>
+				</div>
+	
+				<!-- 向下动态箭头 -->
+				<div class="triangles">
+					<div class="triangle1"></div>
+					<div class="triangle2" id="go_down1"></div>
+					<div class="triangle3" id="go_down2"></div>
+				</div>
+			</div>
+			
+			<!-- 领取ETH -->
+			<img class="words_ETH" src="../../images/font2_gjx.png" alt="" class="img_trading" data-pc="../../images/font2_gjx.png" data-ms="../../images/font2_app_gjx.png">
+			<div class="get_ETH">
+				<div class="in_get"  v-show="step00">
+					<div id="leafContainer2">
+					</div>
+					<img src="../../images/bg2_gjx.png" alt="" data-pc='../../images/bg2_gjx.png' data-ms='../../images/bg2_app_gjx.png'>
+					<div class="button_get begin_activity" @click='lingETH'>交易领ETH</div>
+				</div>
+				<!-- 活动第一步 -->
+				<div class="in_grab_first h318" id="next1"  v-show="step4">
+					<!-- 引register -->
+					<div class="form-box">
+					     <form>
+					        <div  class="input-info" id="phone">
+					            <input  type="text" id="mail1" class="input-info no-martop" placeholder="输入手机号"  v-model="phone1"  data-i18n="[placeholder]tip7">
+	
+					        </div>
+					        <p class="font-warning"></p>
+	
+							 <div id="codeCheck1"></div>
+							 <input type="button" value="立即领取" @click="SOONlingETH" class="immediately_get">
+	
+	
+						 </form>
+					</div>
+				</div>
+				
+				<!-- 活动第二步 -->
+				<div class="in_grab_second opacitys" id="next2"  v-show="step5">
+					<form>
+						<div  class="input-info" id="phone">
+							<input type="text" id="mail11" class="input-info no-martop" v-model="phone1"  data-i18n="[placeholder]tip7"  disabled="disabled">
+							<img src="../../images/right_03.png" alt="" class="right_icon">
+	
+						</div>
+						<p class="font-warning"></p>
+						<div class="code-wrap">
+							<input  type="text" class="input-info" id="code1" v-model="smsCode1" data-i18n="[placeholder]bindMobileVerification.inputCode" placeholder="短信验证码">
+							<input type="button" class="btn-gain" id="GetETHSms" data-i18n="[value]bindMobileVerification.inputGetCode" value="获取验证码">
+						</div>
+	
+						<div id="codeCheck3"></div>
+	
+						<input type="button" value="领取ETH" @click="lingETHSe" class="immediately_get">
+	
+					</form>
+					
+				</div>
+				<div class="in_grab_second opacitys" v-show="step52">
+					<form>
+						<div  class="input-info" id="phone">
+							<input type="text" class="input-info no-martop" v-model="phone1" id="mail1"  disabled="disabled">
+							<img src="../../images/right_03.png" alt="" class="right_icon">
+	
+						</div>
+						<p class="font-warning"></p>
+						<div class="code-wrap">
+							<input  type="password" class="input-info loginInputBox" id="code2" v-model="password2" placeholder="请输入登录密码" style="color: #fff">
+						</div>
+						<div id="codeCheck6"></div>
+	
+						<input type="button" value="登录" @click="login1" class="immediately_get">
+	
+					</form>
+								
+				</div>
+				<!-- 活动第三步 -->
+				<div class="in_grab_thirdly opacitys" id="next3"  v-show="step6">
+					<div class="people_left">
+						<img src="../../images/people.png" alt="" data-pc='../../images/people.png' data-ms='../../images/people_gjx.png'>
+						<div class="left_arrows" v-if="ETHAmount==0">
+							充币交易，就可领取ETH
+						</div>
+						<div class="left_arrows left_arrows_two" style="visibility: hidden;">
+							全站免交易手续费
+						</div>
+	
+					</div>
+					<div class="people_right">
+						<h2>您已领取：<b>{{ETHAmount}}</b>ETH</h2>
+						<p style="margin-left: -32px">已累计为您节省交易手续费：</p>
+						<span class="zx_save" v-for="(item,index) in spareMoney">{{item.actual_asset}} {{item.currency_name}}{{index!=spareMoney.length-1?'+':''}}</span>
+						<div><a href="../asset/assetManage.html"><button>去充币</button></a> <a href="../tradingCenter/trading.html"><button>去交易</button></a></div>
+					</div>
+				</div>
+				<!-- 充币后 -->
+				<!-- <div class="charge_money" id="next4"  v-show="step7">
+					<div class="people_left">
+						<img src="../../images/people.png" alt="">
+						<div class="left_arrows">
+							交易即可领取ETH
+						</div>
+					</div>
+					<div class="people_right">
+						<h2>您已领取：<b>{{ETHAmount}}</b>ETH</h2>
+						<span>已累计为您节省交易手续费：{{spareMoney}}BTC</span>
+						<div><a href="#"><button>去交易</button></a></div>
+					</div>
+				</div> -->
+				<!-- 交易后 -->
+				<!-- <div class="deal">
+					<h1>您已领取：&nbsp;&nbsp;<span>0.000231</span>&nbsp;&nbsp;ETC</h1>
+					<p>已累计为您节省交易手续费：</p>
+				</div> -->
+
+
+				
+				<!-- 滚动信息 -->
+				 <div class="message_get">
+					<div class="message_Carousel" id="eth">
+						<ul class="roll_list1">
+							<li  v-for="item in ethList">
+								<span v-if="item.stress==1" class="active_message"><img src="../../images/icon6_gjx.png" alt="">{{item.message}}</span>
+								<span v-else>{{item.message}}</span>
+	
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</article>
+		
+	</div>
+	<section>
+		<div class="active-rule">		
+			<p>活动规则</p>
+			<div class="rule_message">
+				1、活动时间：2017年12月6日 10:00 (HKT)开始，活动结束时间另行通知；<br>
+				2、2017年12月6日10:00（HKT）开放BTC、ETH、LTC充值提现业务，12月8日10:00（HKT）开放ETH/BTC、LTC/BTC、LTC/ETH交易；<br>
+				3、活动期间，用户注册成功后，将会获得随机数量的BTC，获得的BTC会在三个工作日内发送至个人账户；<br>
+				4、活动期间，首次充值任意数量任意币种并交易成功后，将会获得随机数量的ETH，获得的ETH会在三个工作日内发放至个人账户；<br>
+				5、活动期间，全站所有交易对的买卖都免交易手续费；<br>
+				6、本活动最终解释权归CoinToBe所有。<br>
+
+				声明：如监测到个别账号存在恶意注册、交易等行为，CoinToBe团队将针对上述行为，取消其领取的奖励和本次活动的参与资格。
+			</div>
+			<br><br><br>
+		</div>
+	</section>
+	<div class="bottom-box dn" id="footerNav"></div>
+	
+	<script src="../../js/jquery-1.11.0.min.js"></script>
+	<script src="../../js/vue.min.js"></script>
+	<script src="../../js/yundun.js"></script>
+	<script src="../../js/comm.js"></script>
+	<script type="text/javascript" src="../../js/jquery.cookie.js"></script>
+	<script src="../../js/i18next-1.6.3.min.js"></script>
+	<script src="../../js/changeLang.js"></script>
+	<script src="../../js/detail_activity/time.js"></script>	
+	<script src="../../js/detail_activity/detail_activity.js"></script>
+	<script src="../../js/detail_activity/detail_json.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			setTimeout(function(){
+				if(deviceId == "ms") $.cookie('newlang',"scn");
+			},0)
+    		//$('#fnTimeCountDown').fnTimeCountDown('2017/12/06 10:00:00');
+		})
+	</script>
+</body>
+</html>

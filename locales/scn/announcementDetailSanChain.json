@@ -1,0 +1,42 @@
+{
+  "title": "Nostro titolo",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "alert": "Fare clic su OK per chiudere.",
+  "announcement": {
+    "announcementCenterDes": "公告中心",
+    "announcementDetailDes": "公告详情"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  },
+  "content":{
+    "title":"CoinToBe上线SanChain（SANC）",
+    "details":{
+      "tip1":"尊敬的用户：",
+      "tip2":"CoinToBe上线SanChain（SANC），并开通SANC/BTC、SANC/ETH交易市场。",
+      "tip3":"开放充提时间：2017/12/29 22:00(HKT)",
+      "tip4":"开放交易时间：2017/12/30 14:00(HKT)",
+      "tip5":"费率说明：",
+      "tip5l":"https://www.cointobe.com/account/rateStandard.html",
+      "tip6":"币种简介：SanChain旨在构建全新的区块链生态系统，成为互联网价值的一部分，实现高性能数字资产交易，并与行业有机结合。SAN生态系统使用SAN作为燃料，通过底层技术架构的SAN内生燃料驱动各类DAPP应用和开发，实现分散化应用，让区块链与商业世界真正结合在一起。随着网络公开源代码的推出，开发商可以建立并发布新的项目，以促进区块链技术在更多的行业应用。项目不仅独立运作，而且合作共同，形成了强大的向心力，目前SAN系统得到了迅速的发展。",
+      "tip7":"SANC官网：",
+      "tip7l":"https://sanchain.org/home",
+      "tip8":"白皮书：",
+      "tip8l":"https://s3-us-west-1.amazonaws.com/sanchain/SanCHAIN+Whitepaper.pdf",
+      "tip9":"钱包下载： ",
+      "tip9l":"https://wallet.sanchain.org",
+      "tip10":"区块浏览器：",
+      "tip10l":"http://info.sanchain.org/home",
+      "tip11":"风险提示：数字货币交易具有极高的风险，CoinToBe精选优质数字资产，但对于币种投资不承担任何审查、担保、赔偿的责任，如果您不能接受请不要交易，谢谢。"
+    },
+    "team":"CoinToBe社群",
+    "time":"2017年12月29日",
+    "Telegram":"https://t.me/cointobe_chinese"
+  }
+}

@@ -1,0 +1,31 @@
+﻿{
+  "title": "Nostro titolo",
+  "button": {
+    "french": "tradotte in francese",
+    "italian": "tradotte in italiano",
+    "english": "tradotte in inglese"
+  },
+  "announcement": {
+    "announcementCenterDes": "Bulletin",
+    "announcementDetailDes": "Details"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  },
+  "content":{
+    "title":"CoinToBe Official Launch Announcement",
+    "details":{
+      "tip1":"Dear all,",
+      "tip2":"CoinToBe today announces the official launch of our digital assets exchange. We are dedicated to ensuring the security and efficiency of our platform.",
+      "tip3":"In order to thank you for your support, at 10:00 December 6th, 2017 (HKT), CointToBe will start “Official launch with BTC and ETH rewards”. BTC or ETH rewards are given to users randomly. New users can win rewards by two ways: 1. Sign up to cointobe.com with your phone number or email address; 2. Deposit and first trade on CoinToBe in any amount and any cryptocurrency. There are no trading fees on CoinToBe Exchange during this promotion.",
+      "tip4":"Users can start depositing and withdrawing BTC, ETH and LTC at 10:00 December 6th, 2017 (HKT). Trading pairs: ETH/BTC, LTC/BTC and LTC/ETH will be available at 10:00 December 7th. Stay tuned!",
+      "tip5":"This December, CoinToBe wishes to start a new journey of surprise together with you.",
+      "tip6":"Hope you enjoy your trading on cointobe.com!"
+    },
+    "team":"CoinToBe Media",
+    "time":"December 6, 2017",
+    "Telegram":"https://t.me/cointobe_english"
+  } 
+}

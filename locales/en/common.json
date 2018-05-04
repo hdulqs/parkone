@@ -1,0 +1,60 @@
+{
+  "htmlTitle": "CoinToBe - The International Digital Assets Platform.",
+  "header": {
+    "nav1": "Exchange",
+    "nav2": "Funds",
+    "nav3": "Orders",
+    "nav4": "Bulletin",
+    "nav5": "Account",
+    "nav6": "Log In",
+    "nav7": "Sign Up",
+    "nav8": "Messages",
+    "nav9": "Logout",
+    "nav10":"Support",
+    "nav11":"Ticket",
+    "nav12":"Language"
+  },
+  "footer": {
+    "nav1": "Terms of Service",
+    "nav2": "Fees",
+    "nav3": "Support Center",
+    "nav4":"Privacy Policy",
+    "nav5": "About Us",
+    "contact": "Contact Us:",
+    "connectStatus": "Connected",
+    "telegram":"Official_Chinese：",
+    "telegram1":"Official_English：",
+    "work":"Ticket",
+    "toTop":"Back to Top",
+    "WechatService":"Support",
+    "WechatNews":"Service",
+    "Subscriptions":"Subscriptions",
+    "cointobTele":"CoinToBe Telegram",
+    "coinList":"Coin Listing",
+    "Block123":"Block123",
+    "links":"links",
+    "Cointime":"Cointime",
+    "8btc":"8btc",
+    "CHAINNEWS":"CHAINNEWS",
+    "jinniuFinance":"Jinniu Finance",
+    "vipchain":"VIPCHAIN",
+    "masterdax":"MasterDAX"
+  },
+  "twoVerification":{
+    "title1":"Google Authenticator",
+    "title2":"SMS Authentication",
+    "title3":"Two-Factor Authentication",
+    "placeholder1":"Google authentication code",
+    "placeholder2":"SMS authentication code",
+    "btnSendCode":"Send Code",
+    "btnAgainSendCode":"Send Again",
+    "btnSubmit":"Submit",
+    "cue1":"The authentication code is required.",
+    "cue2":"The authentication code errors"
+  },
+  "commonMsg":{
+    "noData":"No data",
+    "alertTitle":"Notice",
+    "alertBtn":"Ok"
+  }
+}

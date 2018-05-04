@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title data-i18n="common:htmlTitle"></title>
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate"/>
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="CoinToBe ，交易所，币币交易平台，数字货币，数字货币交易所，币币兑换，BTC，ETH，LTC，CTB，SANC，USDT" />
+    <meta name="description" content="CoinToBe ，交易所，币币交易平台，数字货币，数字货币交易所，币币兑换，BTC，ETH，LTC，CTB，SANC，USDT" />
+	<!--css文件引入开始-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/index/index.css">
+    <link rel="stylesheet" href="../../css/index/swiper.min.css">
+    <style>
+        .swiper-pagination-bullet{
+            color: #8791a2;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: #ffffff;
+        }
+        .swiper_buttons1{
+            padding-left: 200px;
+        }
+        .swiper_buttons2{
+            padding-right: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部导航 -->
+    <div class="top-box" id="headerNav"></div>
+
+    <!-- 广告轮播 -->
+    <div id="advertising">
+        <div id="ad-carousel" class="carousel slide">
+            <div class ="swiper-container2">
+                <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide">
+                        <a href="../detail_activity/sancActivity.html">
+                            <img src="../../images/banner_5_5.jpg" alt="" class="banner-picture">
+                        </a>
+                    </div> -->
+                    <div class="swiper-slide">
+                        <a href="../announcement/announcementCenterDetail.html?id=25">
+                            <img src="../../images/0.jpg" alt="" class="banner-picture">
+                        </a>
+                    </div>
+					<div class="swiper-slide">
+                        <a href="../account/coinstandard.html">
+                            <img src="../../images/baner_shangbi.jpg" alt="" class="banner-picture">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="../announcement/announcementCenterDetail.html?id=20">
+                            <img src="../../images/banner-hacks.jpg" alt="" class="banner-picture">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../images/gonggao_banner1.jpg" alt="" class="banner-picture">
+                        <div class="container">
+                            <div class="carousel-caption introduce">
+                                <a href="../announcement/announcementCenterDetail.html?id=14">
+                                    <button data-i18n="atOnce" class="now_see" style="background:#96f6f1; color: #08174e;">立即参与</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="swiper-slide">
+                        <img src="../../images/banner.jpg" alt="" class="banner-picture">
+                        <div class="container">
+                            <div class="carousel-caption introduce">
+                                <a href="../detail_activity/detail_activity.html">
+                                    <button data-i18n="atOnce">立即参与</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="swiper-slide">
+                        <a href="../announcement/announcementCenterDetail.html?id=4">
+                            <img src="../../images/banner_2_2.jpg" alt="" class="banner-picture">
+                            <div class="container">
+                                <div class="carousel-caption introduce">
+                                    <a href="../announcement/announcementCenterDetail.html?id=4">
+                                        <button data-i18n="atOnce" class="now_see">立即查看</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="../announcement/announcementCenterDetail.html?id=5">
+                            <img src="../../images/banner_3_3.jpg" alt="" class="banner-picture">
+                            <div class="container">
+                                <div class="carousel-caption introduce">
+                                    <a href="../announcement/announcementCenterDetail.html?id=5">
+                                        <button data-i18n="atOnce" class="now_see2">立即查看</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+                
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev swiper-button-white swiper_buttons1"></div>
+                <div class="swiper-button-next swiper-button-white swiper_buttons2"></div>
+                
+                <!-- 如果需要滚动条 -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+        <img class="arrow_down" src="../../images/arrow1.png" alt="" id="go_down">
+    </div>
+    
+    <!-- 动态数据 -->
+    <div class="dynamic_data" id="dynamic_data" v-cloak >
+        
+      <div class="swiper-container1">
+        <ul class="swiper-wrapper" >
+            <li v-for="(item,index) in AllNewst['BTC']" >
+                <p ><span class="top_span" :style="item.increase<0?'color:#E70353':'color:#13b5b1'">{{getFloat(item.new,6)}}</span>
+                <img class="icon" :src="item.increase>=0?'../../images/icon-index2.png':'../../images/icon-index1.png'" alt=""></p>
+                <p class="font-margin"><span  v-show="scientificToNumber(item.new)>0" class="font-rate font-margin">≈</span><span v-show="scientificToNumber(item.new)>0" class="font-rate" data-i18n="moneyTypeF">￥</span><span v-show="scientificToNumber(item.new)>0" class="font-rate">{{getFloat(scientificToNumber(item.new)*Rate[market]*RateMoney,2)}}</span></p>
+                <span class="font-b">{{item.pair}}</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 信息介绍 -->
+    <div class="container-fluid" id="message_intro">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row block">
+                    <p data-i18n="group.title1">「安全专业」</p>
+                    <span data-i18n="group.content1">CoinToBe采用全球领先的加密技术，整体受SSL保护、多层加密、离线存储，等同于银行保险柜。所有关键操作均需多重身份验证，全方位保护用户资产安全。</span>
+                </div>
+                <div class="row block">
+                    <p data-i18n="group.title2">「丰富的币种」</p>
+                    <span data-i18n="group.content2">CoinToBe集合数字资产中的优质币种，提供种类丰富的数字货币，包括BTC、ETH、LTC等，后期将有更多优质币种上线。</span>
+                </div>
+                <div class="row block">
+                    <p data-i18n="group.title3">「用户体验至上」</p>
+                    <span data-i18n="group.contetn3">CoinToBe支持全球多种主流语言，覆盖Web端、iOS、Android、H5等多种平台，打造行业领先的用户服务体系，致力于为用户提供便捷流畅的交易服务体验。</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 手机 -->
+    <div id="phone_img">
+        <div id="phone_hand">
+            <div class="width50 block" id="width50_three" data-rotate-y="180deg" data-move-z="-100px" data-move-x="500px">
+                <h3 data-i18n="group1.title">随时在线，畅快交易</h3>
+                <span data-i18n="group1.content">我们还将提供移动工具，让您可以随时随地查看行情、买卖数字资产</span><br>
+                <button data-i18n="group1.button">敬请期待</button>
+            </div>
+        </div>
+        <img data-i18n="[src]mobile.src" alt="" id="mobile" class="block" data-move-x="-150%">
+    </div>
+    
+    <!-- 底部 -->
+    <footer>
+        <img src="../../images/map.png" alt=""></div>
+        <div class="goTop_div"><a href="javascript:;" title="返回顶部"><img src="../../images/arrow2.png" alt="" id="go_top"></a></div>
+        <div>
+            <div>
+                <div>
+                    <img src="../../images/bottom-logo.png" alt="" id="logo_bottom">
+                    <h3 data-i18n="tip2">安全、专业、便捷的数字资产交易平台</h3>
+                    <div id="indexFooter"></div>
+                    <span style="font-size: 14px;"><a href="Mailto:support@cointobe.com" data-i18n="tip3">客服：support@cointobe.com</a></span>
+                    <span style="font-size: 14px;" class="right_span"><a href="Mailto:BD@cointobe.com" data-i18n="tip4">合作：BD@cointobe.com</a></span>
+                </div>
+            </div> 
+        </div>
+        <div id="footerModal"></div>
+    </footer>
+
+    <!-[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.js"></script>
+    <![endif]–>
+    <script type='text/javascript' src='../../js/vue.min.js'></script>
+    <script src="../../js/jquery.min.js"></script>
+	<script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../../js/comm.js"></script>
+	<script  src="../../js/jquery.cookie.js"></script>
+	<script src="../../js/i18next-1.6.3.min.js"></script>
+	<script  src="../../js/changeLang.js"></script>
+	<!-- 多语言切换结束-->
+    <script src="../../js/jquery.smoove.min.js"></script>
+    <script src="../../js/index/index.js"></script>
+    <script src="../../js/index/swiper.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        setTimeout(function(){
+            console.log("coinTob")
+              if(deviceId == "ms"){
+                $.cookie('newlang',"scn");
+                $("#headerNav .nav-item.ctrl-select.ctrl-select1,#headerNav .logo,#headerNav .change-lan.ul-select-wrap").remove();
+                $("#announcementCenter").parent().remove();
+                $("#headerNav").attr("id","");
+            }
+           
+        },0)
+    })
+    var ua = navigator.userAgent;
+    var browserRedirect = function(isLoad) {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            return 1;
+        } else {
+            return 2;
+        }
+    }
+    var isPC = browserRedirect(0);
+    var deviceId = "";
+    if(isPC == 1) deviceId = "ms";
+    if(isPC == 2) deviceId = "pc";
+    if(browserRedirect() == 1){
+        window.location.href='../index/indexMobile.html'+location.search;       
+    }
+    function swiperBox(){
+        /*swper*/
+        var ls = TransactionPair.AllNewst['BTC'].length>6
+        if(ls){
+            var swiper = new Swiper('.swiper-container1', {
+                loop:true,
+                autoplay : 1000,
+                autoplayDisableOnInteraction : false,
+                slidesPerView: 7,
+                initialSlide:0
+            })
+
+            $('.swiper-container1').mouseenter(function () {
+               swiper.stopAutoplay();
+            })
+            $('.swiper-container1').mouseleave(function () {
+               swiper.startAutoplay();
+            })
+        }
+        else{
+            
+            $(".swiper-container1 .swiper-wrapper").removeClass("swiper-wrapper")
+            $(".swiper-container1 .swiper-slide").removeClass("swiper-slide")
+            $(".swiper-container1").removeClass("swiper-container1")
+        }
+    }
+
+    var mySwiper = new Swiper('.swiper-container2', {
+        direction: 'horizontal',
+        loop: true,
+        speed: 2000,
+        autoplay: 2000,
+        //切换效果，淡入淡出
+        effect : 'fade',
+        //手动滑动之后自动滑动
+        autoplayDisableOnInteraction : false,
+        // 如果需要分页器
+        pagination: '.swiper-pagination',  
+        paginationClickable: true,
+        //如果需要前进后退按钮
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        // 如果需要滚动条
+        scrollbar: '.swiper-scrollbar',
+    });
+</script>
+</body>
+</html>

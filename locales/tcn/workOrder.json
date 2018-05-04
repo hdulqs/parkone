@@ -1,0 +1,34 @@
+{
+  "activelang": "中文繁体",
+  "workOrder": {
+    "title": "聯繫客服",
+    "emailAddress": "電子郵件地址：",
+    "questionDetail": "問題描述：",
+    "questionType": "問題類型：",
+    "des1": "如遇到區塊鏈資產充值或提現問題，需提交出現問題的交易Hash地址：",
+    "attachment": "附件",
+    "uploadText": "上傳",
+    "submitText": "提交",
+    "success": "提交成功，我們會盡快處理您的問題，結果會以郵件形式發送到您的郵箱，請註意查收。",
+    "notNone": "該字段不能為空",
+    "select0": "請選擇",
+    "select1": "註冊",
+    "select2": "登錄",
+    "select3": "交易&資產",
+    "select4": "活動",
+    "select5": "其他問題",
+    "ticketTitle": "CoinToBe 賬號：",
+    "warning1": "郵箱不能為空",
+    "warning2": "標題不能為空",
+    "uploadTypeError": "您上傳的文件格式不支持。",
+    "uploadSizeError": "您上傳的文件大小超過限制20M。",
+    "mail":"請輸入您常用的郵箱地址，客服會通過此郵箱同您聯系。",
+    "userId":"請輸入您的cointobe登錄賬號",
+    "problem":"請詳細描述您的問題，如：2018-1-22 16:03:30 BTC申請提幣，長時間未到賬。"
+  },
+  "lang": {
+    "english": "English",
+    "simplifiedchinese": "中文简体",
+    "traditionalchinese": "中文繁体"
+  }
+}

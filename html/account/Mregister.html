@@ -1,0 +1,110 @@
+<!DOCTYPE html class="html-register">
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--css文件引入开始-->
+    <!--[if IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.js"></script>
+    <!end if-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/account/Mregister.css">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/phone.css">
+    <!--css文件引入结束-->
+</head>
+<body>
+    <div id="app">
+        <div class="contenter">
+            <img src="../../images/mobileRegister.png">
+            <div class="content">
+                <div class="tab">
+                    <!--<span data-role="email" class="col-sm-3">邮箱注册</span>-->
+                    <span data-role="phone" class="col-sm-3 active">手机注册</span>
+                </div>
+                <!--<div class="Zone" id="emailZone">
+                    <div class="publicZone">
+                        <div>
+                            <input type="text" id="email" class="form-control" placeholder="邮箱地址">
+                            <p class="errmsg"></p>
+                        </div>
+                        <div>
+                            <input type="password" id="Emailpassword" class="form-control" placeholder="密码">
+                            <p class="errmsg"></p>
+                        </div>
+                        <div>
+                             <input type="password"  id="EmailSecpassword" class="form-control" placeholder="确认密码"> 
+                             <p class="errmsg"></p>
+                        </div>
+                        <div>
+                            <div id="emailcodeCheck" data-codeVal=""></div>
+                        </div>
+                    </div>
+                    <p  class="font4">
+                        <span class="icon-checkbox-checked" id="Emailebtn-check"></span> 
+                        <i>我已阅读并同意CoinToBe</i>
+                        <a href="../account/termService.html" target="_self" class="links-node font3  handmouse">服务条款</a> <i class="font-and">&</i> <a href="../account/privacyStatement.html" class="nav1">隐私声明</a>
+                    </p>
+                    <div class="btn" id="Emailebtn-submit1">提交</div>
+                </div>-->
+                <div class="Zone" id="phoneZone">
+                    <div class="publicZone">
+                        <div id="phone" class="input-info">
+                            <div class="select-box handmouse" @click="toggle();">
+                                <div class="flag-box">
+                                    <i :class="selectCountry" class="iti-flag"></i>
+                                </div> 
+                                <span class="icon-sort-down"></span>
+                            </div>
+                            <div class="phone-box handmouse" v-show="isShow" v-cloak>
+                                <ul>
+                                    <li class="country"  v-for="item in items" @click="toggle();getCountry(item.className,item.phone)" >
+                                        <div class="flag-box">
+                                            <i :class=" item.className" class="iti-flag"></i>
+                                        </div>
+                                        <i class="country-name">{{ item.country }}</i>
+                                        <i class="dial-code">+{{ item.phone }}</i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input type="text" id="phoneNumber" class="input-info no-martop" placeholder="手机号">
+                        </div>
+                        <p class="errmsg phoneN"></p>
+                        <div>
+                            <input id="code" type="text" class="Codecontrol col-sm-9" placeholder="验证码"  autocomplete="off">
+                            <input type="button" class="code1 Codecontrol col-sm-3" value="获取验证码" onclick="getUnbindMobile(this)">
+                            <p class="errmsg" id="codeErrorMsg"></p>
+                        </div>
+                        <div>
+                             <input type="password" id="phonePassword" class="form-control" placeholder="密码"> 
+                             <p class="errmsg" id="phonePasswordErrorMsg"></p>
+                        </div>
+                        <div>
+                            <div id="phonecodeCheck" data-codeVal=""></div>
+                        </div>
+                    </div>
+                    <p  class="font4">
+                        <span class="icon-checkbox-checked" id="phonebtn-check"></span> 
+                        <i>我已阅读并同意CoinToBe</i>
+                        <a href="../account/termService.html" target="_self" class="links-node font3  handmouse">服务条款</a> <i class="font-and">&</i> <a href="../account/privacyStatement.html" class="nav1">隐私声明</a>
+                    </p>
+                    <div class="btn" id="phonebtn-submit1">提交</div>
+                </div>
+                <div  class="haveAccount">我已有账号？<a href="login.html">登录</a></div>
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery.min.js"></script>
+<script  type="text/javascript" src="../../js/vue.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/yundun.js"></script>
+<script type="text/javascript" src="../../js/account/Mregister.js"></script>
+</body>
+</html>

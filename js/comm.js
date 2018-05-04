@@ -164,7 +164,7 @@ function loadNav(){
                     '</a>'+
                     '<ul class="ul-select" id="ul-language">'+
                         '<li id="scn" class="dn"><a><img src="../../images/china.png" class="img-language">中文(简体)</a></li>'+
-                        '<li id="tcn"><a><img src="../../images/china.png" class="img-language">中文(繁体)</a></li>'+
+                        // '<li id="tcn"><a><img src="../../images/china.png" class="img-language">中文(繁体)</a></li>'+
                         '<li id="en"><a><img src="../../images/uk.png" class="img-language">English</a></li>'+
                     '</ul>'+
                 '</div>'+

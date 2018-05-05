@@ -1,5 +1,5 @@
 {
-  "title": "登錄CoinToBe",
+  "title": "登錄PARK.ONE",
   "emailplh": "郵箱/手機號",
   "pwdplh": "密碼",
   "error": {
@@ -15,7 +15,7 @@
   "tip1": "忘記密碼？",
   "tip2": "還沒有賬號？",
   "tip3": "註冊",
-  "tip4": "我已閱讀並同意X.TOP",
+  "tip4": "我已閱讀並同意PARK.ONE",
   "tip5": "服務條款",
   "timeBefore": "您的賬戶已被鎖定，還剩 ",
   "timeAfter": " 自動解鎖"

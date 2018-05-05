@@ -139,10 +139,10 @@ function loadNav(){
         H5_or_PC='index.html';
     }
     var headerHtml = '<ul class="clearfix nav-box">'+
-            '<li class="nav-item logo"><a class="nav-logo" href="../index/'+H5_or_PC+'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.04 17.15"><defs><style>.cls-1{fill:#fff;}</style></defs><title>资源 1</title><g id="图层_2" data-name="图层 2"><g id="图层_1-2" data-name="图层 1"><path class="cls-1" d="M4.43,7.85,7.85,4.43a1,1,0,0,1,1.4,0l6.4,6.4.87-.87a2,2,0,0,0,0-2.8L10,.58a2,2,0,0,0-2.8,0L.58,7.15a2,2,0,0,0,0,2.8l6.57,6.57a2,2,0,0,0,2.8,0l.87-.87-6.4-6.4A1,1,0,0,1,4.43,7.85Z"/><path class="cls-1" d="M37.85,7.2,31.28.64a2,2,0,0,0-2.8,0L23.54,5.58a1,1,0,0,1-1.4,0l-5-5a2,2,0,0,0-2.8,0l-.87.87,6,6,.45.45a1,1,0,0,1,0,1.4l-3.42,3.42a1,1,0,0,1-1.4,0l-2.39-2.39a2,2,0,0,0-2.8,0L9,11.15l5.37,5.37a2,2,0,0,0,2.8,0l5-5a1,1,0,0,1,1.4,0l4.1,4.14h0l.87.87.06.05.09.08,0,0a2,2,0,0,0,2.62-.16l.88-.88h0L37.85,10A2,2,0,0,0,37.85,7.2ZM34,9.31,30.6,12.71a1,1,0,0,1-1.4,0L25.79,9.27a1,1,0,0,1,0-1.4l3.39-3.39a1,1,0,0,1,1.4,0L34,7.91A1,1,0,0,1,34,9.31Z"/><path class="cls-1" d="M44.26,8.78c0-4.25,2.71-6.86,6.39-6.86a5.59,5.59,0,0,1,4,1.61l-.92,1a4.15,4.15,0,0,0-3-1.27c-2.85,0-4.72,2.1-4.72,5.5s1.79,5.58,4.66,5.58a4.58,4.58,0,0,0,3.45-1.52l.92.94a5.77,5.77,0,0,1-4.44,1.9C46.93,15.64,44.26,13.07,44.26,8.78Z"/><path class="cls-1" d="M56.76,10.53a5,5,0,1,1,9.9,0,5,5,0,1,1-9.9,0Zm8.22,0c0-2.34-1.35-3.91-3.29-3.91s-3.27,1.57-3.27,3.91,1.33,3.87,3.27,3.87S65,12.85,65,10.53Z"/><path class="cls-1" d="M69.23,2.53a1,1,0,0,1,1.18-1,1.06,1.06,0,0,1,1.17,1,1.08,1.08,0,0,1-1.17,1A1.06,1.06,0,0,1,69.23,2.53Zm.36,3.1H71.2V15.4H69.59Z"/><path class="cls-1" d="M74.94,5.63h1.31l.16,1.43h.06A5.4,5.4,0,0,1,80.1,5.37c2.25,0,3.29,1.32,3.29,3.82V15.4H81.75v-6c0-1.88-.64-2.72-2.13-2.72-1.14,0-2,.54-3.07,1.59V15.4H74.94Z"/><path class="cls-1" d="M89.66,3.42H85.22V2.15H95.79V3.42H91.33v12H89.66Z"/><path class="cls-1" d="M96,10.53a5,5,0,1,1,9.9,0,5,5,0,1,1-9.9,0Zm8.22,0c0-2.34-1.35-3.91-3.29-3.91S97.7,8.2,97.7,10.53,99,14.41,101,14.41,104.25,12.85,104.25,10.53Z"/><path class="cls-1" d="M109,2.15h4.22c3,0,5,.94,5,3.24A2.92,2.92,0,0,1,116,8.27v.07c1.79.31,3,1.38,3,3.19,0,2.59-2.25,3.87-5.52,3.87H109Zm3.88,5.68c2.63,0,3.68-.87,3.68-2.26,0-1.63-1.21-2.23-3.58-2.23h-2.33V7.84Zm.4,6.37c2.59,0,4.16-.85,4.16-2.73,0-1.7-1.51-2.48-4.16-2.48h-2.63v5.21Z"/><path class="cls-1" d="M121,10.53a4.89,4.89,0,0,1,4.8-5.16c2.69,0,4.24,1.76,4.24,4.58a3.9,3.9,0,0,1-.08.89h-7.35a3.54,3.54,0,0,0,3.68,3.62,5.07,5.07,0,0,0,2.73-.8l.6,1a6.72,6.72,0,0,1-3.52,1A4.87,4.87,0,0,1,121,10.53Zm7.61-.76c0-2.1-1-3.2-2.79-3.2a3.3,3.3,0,0,0-3.23,3.2Z"/></g></g></svg></a></li>'+
+            '<li class="nav-item logo"><a class="nav-logo" href="../index/'+H5_or_PC+'"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="135px" height="30px" viewBox="0 0 135 30" enable-background="new 0 0 135 30" xml:space="preserve">  <image id="image0" width="135" height="30" x="0" y="0"xlink:href="data:image/png;base64,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"/></svg></a></li>'+
             '<li class="nav-item nav-item1"><a id="trading" href="../tradingCenter/trading.html" class="nav" data-i18n="common:header.nav1">交易中心</a></li>'+
             '<li class="nav-item"><a id="announcementCenter" href="../announcement/announcementCenter.html" class="nav" data-i18n="common:header.nav4">公告</a></li>'+
-            '<li class="nav-item"><a id="helpCenter" href="../account/workOrder.html" class="nav" data-i18n="common:header.nav11">联系客服</a></li>'+
+            // '<li class="nav-item"><a id="helpCenter" href="../account/workOrder.html" class="nav" data-i18n="common:header.nav11">联系客服</a></li>'+
             '<div class="nav-right">'+
             '<li class="nav-item nav-item2" id="assetBtn"><a id="assetManage" href="../asset/assetManage.html" class="nav" data-i18n="common:header.nav2">资产</a></li>'+
             '<li class="nav-item" id="orderBtn"><a id="orderManage" href="../orderManage/orderManage.html" class="nav" data-i18n="common:header.nav3">订单</a></li>'+
@@ -164,7 +164,7 @@ function loadNav(){
                     '</a>'+
                     '<ul class="ul-select" id="ul-language">'+
                         '<li id="scn" class="dn"><a><img src="../../images/china.png" class="img-language">中文(简体)</a></li>'+
-                        '<li id="tcn"><a><img src="../../images/china.png" class="img-language">中文(繁体)</a></li>'+
+                        // '<li id="tcn"><a><img src="../../images/china.png" class="img-language">中文(繁体)</a></li>'+
                         '<li id="en"><a><img src="../../images/uk.png" class="img-language">English</a></li>'+
                     '</ul>'+
                 '</div>'+
@@ -190,7 +190,7 @@ function loadNav(){
                     '<li class="foo-nav"><a href="../account/privacyStatement.html" data-i18n="common:footer.nav4">隐私声明</a></li>'+
                     '<li class="foo-nav"><a href="../account/rateStandard.html" data-i18n="common:footer.nav2">费率声明</a></li>'+
                     '<li class="foo-nav"><a href="../account/helpCenter.html" data-i18n="common:footer.nav3">帮助中心</a></li>'+
-                    '<li class="foo-nav"><a href="../account/coinstandard.html" data-i18n="common:footer.coinList">上幣申請</a></li>'+
+                    // '<li class="foo-nav"><a href="../account/coinstandard.html" data-i18n="common:footer.coinList">上幣申請</a></li>'+
                     '<li class="foo-nav foo-nav-right">'+
                         '<a href="Mailto:support@cointobe.com" target="_blank"><i class="icon-email"></i></a>'+
                         '<a href="javascript:void(0)" class="tele"><i class="icon-telegram"></i></a>'+
@@ -202,14 +202,14 @@ function loadNav(){
                     '</li>'+
                 '</ul>'+
                 '<ul class="clearfix time-box">'+
-                '            <li class="pull-left">©️2017 CoinToBe.com All Rights Reserved</li>'+
+                '            <li class="pull-left">©️2017 Park.one All Rights Reserved</li>'+
                 '            <li class="pull-right"><i class="icon-connect"></i><i data-i18n="common:footer.connectStatus"> 已连接</i></li>'+
                 '            <li class="pull-right time-block"><i class="icon-time"></i><i id="time" class="time"></i><i>HKT</i></li>'+
                 '        </ul>'+
-                '<div class="right-fixed">'+
-                    '<a href="../account/workOrder.html"><i><img src="../../images/about_work.png"></i><span data-i18n="common:footer.work">提交工单</span></a>'+
-                    '<a href="javascript:void(0)" class="returnTop"><i><img src="../../images/returnTop.png"></i></a>'+
-                '</div>'+
+                // '<div class="right-fixed">'+
+                //     '<a href="../account/workOrder.html"><i><img src="../../images/about_work.png"></i><span data-i18n="common:footer.work">提交工单</span></a>'+
+                //     '<a href="javascript:void(0)" class="returnTop"><i><img src="../../images/returnTop.png"></i></a>'+
+                // '</div>'+
                 '<div class="footerMoadl">'+
                             '<div class="popBox">'+
                                 '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>'+
@@ -326,7 +326,7 @@ function loadNav(){
 function activeJump(){
 	$(".footer-active").remove();
 	sessionStorage.setItem("isShowFooterActive",3);
-	window.location.href = 'https://www.cointobe.com/detail_activity/sancActivity.html';
+	window.location.href = 'https://www.park.one/detail_activity/sancActivity.html';
 }
 function closeFooterActive(){
 	sessionStorage.setItem("isShowFooterActive",3);

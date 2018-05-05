@@ -203,9 +203,9 @@ body div.error-msg, .error-msg, body div p.error-msg {
     .top-box .logo img, .top-box .logo svg {
       position: absolute;
       left: 0px;
-      top: 50%;
+      top: 40%;
       margin-top: -9px;
-      height: 18px;
+   
       line-height: 18px; }
   .top-box .nav:hover, .top-box .nav.active-nav {
     color: #13b5b1;

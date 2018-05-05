@@ -1,5 +1,5 @@
 {
-  "title": "註冊CoinToBe",
+  "title": "註冊PARK.ONE",
   "emailplh": "郵箱地址",
   "pwdplh": "密碼",
   "cfmpwdplh": "確認密碼",
@@ -17,7 +17,7 @@
     "cue9" :"手機號不能為空"
   },
   "button": "提交",
-  "tip1": "我已閱讀並同意CoinToBe",
+  "tip1": "我已閱讀並同意PARK.ONE",
   "tip2": "服務條款",
   "tip3": "已有賬號？",
   "tip4": "登錄",

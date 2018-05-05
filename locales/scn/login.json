@@ -1,5 +1,5 @@
 {
-  "title": "登录CoinToBe",
+  "title": "登录PARK.ONE",
   "emailplh": "邮箱/手机号",
   "pwdplh": "密码",
   "error": {
@@ -15,7 +15,7 @@
   "tip1": "忘记密码？",
   "tip2": "还没有账号？",
   "tip3": "注册",
-  "tip4": "我已阅读并同意X.TOP",
+  "tip4": "我已阅读并同意PARK.ONE",
   "tip5": "服务条款",
   "timeBefore": "您的账户已被锁定，还剩 ",
   "timeAfter": " 自动解锁"

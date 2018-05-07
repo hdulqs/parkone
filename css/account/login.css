@@ -29,7 +29,7 @@ body {
 }
 .register .content-wrap{
     margin: 0 auto;
-    width: 510px;
+    width: 450px;
     min-width:350px;
     z-index: 99;
 }
@@ -51,7 +51,7 @@ body {
 
 .register .input-info{
     border: 1px solid #CCCCCC;
-    width: 66%;
+    width: 78%;
     margin: 0 auto;
     margin-top: 0px;
     margin-bottom: 0px;

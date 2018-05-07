@@ -183,8 +183,8 @@ function loadNav(){
 						'</li>'+
 						'<li class="annClose"></li>'+
 					'</ul>';
-        var footerHtml ='<ul class="clearfix yqlj-box"><li class="pull-left yqljli" data-i18n="common:footer.links">友情链接：</li><li class="pull-left yqljli"><a href="http://valuebank.com" target="_blank">ValueBank</a></li><li class="pull-left yqljli"><a href="http://www.b20.io/" target="_blank">B20</a></li><li class="pull-left yqljli"><a href="https://www.coinwall.io/" target="_blank">CoinWall</a></li><li class="pull-left yqljli"><a href="http://www.jinse.com/" target="_blank" data-i18n="common:footer.Cointime">金色财经</a></li><li class="pull-left yqljli"><a href="http://www.8btc.com/" target="_blank" data-i18n="common:footer.8btc">巴比特</a></li><li class="pull-left yqljli"><a href="https://www.kcash.com/index-cn.html" target="_blank">KCASH</a></li><li class="pull-left yqljli"><a href="https://www.chainnews.com/" target="_blank" data-i18n="common:footer.CHAINNEWS">链闻</a></li><li class="pull-left yqljli"><a href="https://www.block123.com/" target="_blank" data-i18n="common:footer.Block123">区块链导航</a></li><li class="pull-left yqljli"><a href="https://www.yaofache.com/" target="_blank">要发车</a></li><li class="pull-left yqljli"><a href="http://www.jinniu.cn/" target="_blank" data-i18n="common:footer.jinniuFinance">要发车</a></li><li class="pull-left yqljli"><a href="http://www.chain.vip/" data-i18n="common:footer.vipchain" target="_blank">要发车</a></li><li class="pull-left yqljli"><a href="https://www.masterdax.com/" target="_blank" data-i18n="common:footer.masterdax"></a></li></ul>'+ 
-                    '<ul>'+
+        // var footerHtml ='<ul class="clearfix yqlj-box"><li class="pull-left yqljli" data-i18n="common:footer.links">友情链接：</li><li class="pull-left yqljli"><a href="http://valuebank.com" target="_blank">ValueBank</a></li><li class="pull-left yqljli"><a href="http://www.b20.io/" target="_blank">B20</a></li><li class="pull-left yqljli"><a href="https://www.coinwall.io/" target="_blank">CoinWall</a></li><li class="pull-left yqljli"><a href="http://www.jinse.com/" target="_blank" data-i18n="common:footer.Cointime">金色财经</a></li><li class="pull-left yqljli"><a href="http://www.8btc.com/" target="_blank" data-i18n="common:footer.8btc">巴比特</a></li><li class="pull-left yqljli"><a href="https://www.kcash.com/index-cn.html" target="_blank">KCASH</a></li><li class="pull-left yqljli"><a href="https://www.chainnews.com/" target="_blank" data-i18n="common:footer.CHAINNEWS">链闻</a></li><li class="pull-left yqljli"><a href="https://www.block123.com/" target="_blank" data-i18n="common:footer.Block123">区块链导航</a></li><li class="pull-left yqljli"><a href="https://www.yaofache.com/" target="_blank">要发车</a></li><li class="pull-left yqljli"><a href="http://www.jinniu.cn/" target="_blank" data-i18n="common:footer.jinniuFinance">要发车</a></li><li class="pull-left yqljli"><a href="http://www.chain.vip/" data-i18n="common:footer.vipchain" target="_blank">要发车</a></li><li class="pull-left yqljli"><a href="https://www.masterdax.com/" target="_blank" data-i18n="common:footer.masterdax"></a></li></ul>'+ 
+        var footerHtml ='<ul>'+
                     '<li class="foo-nav foo-first"><a href="../account/aboutUs.html" data-i18n="common:footer.nav5">关于我们</a></li>'+'<li class="foo-nav"><a href="../account/termService.html" data-i18n="common:footer.nav1">服务条款</a></li>'+
 
                     '<li class="foo-nav"><a href="../account/privacyStatement.html" data-i18n="common:footer.nav4">隐私声明</a></li>'+
@@ -192,13 +192,10 @@ function loadNav(){
                     '<li class="foo-nav"><a href="../account/helpCenter.html" data-i18n="common:footer.nav3">帮助中心</a></li>'+
                     // '<li class="foo-nav"><a href="../account/coinstandard.html" data-i18n="common:footer.coinList">上幣申請</a></li>'+
                     '<li class="foo-nav foo-nav-right">'+
-                        '<a href="Mailto:support@cointobe.com" target="_blank"><i class="icon-email"></i></a>'+
-                        '<a href="javascript:void(0)" class="tele"><i class="icon-telegram"></i></a>'+
-                        '<a href="https://twitter.com/super_cointobe" target="_blank"><i class="icon-twitter"></i><span><img src="../../images/twitter-qr.png" alt="" /></span></a>'+
-                        '<a href="https://www.facebook.com/tobe.coin.1" target="_blank"><i class="icon-facebook"></i><span><img src="../../images/facebook-qr.png" alt="" /></span></a>'+
-                        '<a href="javascript:void(0)"><i class="icon-weixin"></i><span class="ewmto"><font><img src="../../images/weixin-dy.jpg" alt=""/><i data-i18n="common:footer.Subscriptions">微信订阅号</i></font><font><img src="../../images/weixin-qr2.png" alt="" /><i data-i18n="common:footer.WechatService">微信客服</i></font></span></a>'+
-                        '<a href="https://jq.qq.com/?_wv=1027&k=5NmGsPO" target="_blank"><i class="icon-qq"></i><span><img src="../../images/qq-qr.png" alt="" /></span></a>'+
-                        '<a href="http://weibo.com/cointobe" target="_blank"><i class="icon-sina"></i><span><img src="../../images/weibo-qr.png" alt="" /></span></a>'+
+                        '<a href="https://twitter.com/parkonenice" target="_blank"><i class="icon-twitter"></i></a>'+
+                        '<a href="https://www.facebook.com/Parkoneexchange/?modal=admin_todo_tour" target="_blank"><i class="icon-facebook"></i></a>'+
+                        '<a href="javascript:void(0)"><i class="icon-weixin"></i><span class="ewmto"><font><img src="../../images/weixin-dy.jpg" alt=""/><i data-i18n="common:footer.Subscriptions">微信订阅号</i></font></span></a>'+
+                        '<a href="https://m.weibo.cn/u/6536442461" target="_blank"><i class="icon-sina"></i></a>'+
                     '</li>'+
                 '</ul>'+
                 '<ul class="clearfix time-box">'+
@@ -229,12 +226,10 @@ function loadNav(){
                         '</div>';
     var indexFooterHtml= '<ul>'+
                             '<li class="foo-nav foo-nav-right">'+
-                                '<a href="javascript:void(0)" class="tele"><i class="icon-telegram"></i></a>'+
-                                '<a href="https://twitter.com/super_cointobe" target="_blank"><i class="icon-twitter"></i><span><img src="../../images/twitter-qr.png" alt="" /></span></a>'+
-                                '<a href="https://www.facebook.com/tobe.coin.1" target="_blank"><i class="icon-facebook"></i><span><img src="../../images/facebook-qr.png" alt="" /></span></a>'+
+                                '<a href="https://twitter.com/parkonenice" target="_blank"><i class="icon-twitter"></i></a>'+
+                                '<a href="https://www.facebook.com/Parkoneexchange/?modal=admin_todo_tour" target="_blank"><i class="icon-facebook"></i></a>'+
                                 '<a href="javascript:void(0)"><i class="icon-weixin"></i><span class="ewmto"><font><img src="../../images/weixin-dy.jpg" alt=""/><i data-i18n="common:footer.Subscriptions">微信订阅号</i></font><font><img src="../../images/weixin-qr1.png" alt=""/><i data-i18n="common:footer.WechatNews">微信服务号</i></font><font><img src="../../images/weixin-qr2.png" alt="" /><i data-i18n="common:footer.WechatService">微信客服</i></font></span></a>'+
-                                '<a href="https://jq.qq.com/?_wv=1027&k=5NmGsPO" target="_blank"><i class="icon-qq"></i><span><img src="../../images/qq-qr.png" alt="" /></span></a>'+
-                                '<a href="http://weibo.com/cointobe" target="_blank"><i class="icon-sina"></i><span><img src="../../images/weibo-qr.png" alt="" /></span></a>'+
+                                '<a href="https://m.weibo.cn/u/6536442461" target="_blank"><i class="icon-sina"></i><span><img src="../../images/weibo-qr.png" alt="" /></span></a>'+
                             '</li>'+
                         '</ul>';
     var indexFooterModal = '<div class="footerMoadl" style="background:rgba(0,0,0,0)" >'+

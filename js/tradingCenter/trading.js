@@ -1041,10 +1041,11 @@ $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
 			bizType = sessionStorage.getItem('sessionInd')
 		}
 		
-		callServieOther("listOrderLog","/api/trade/consignation/history",{
+		callServieOther("listOrderLog","/api/trade/getBuySellOrder",{
 			pageNo:0,
 			pageSize:20,
-			bizType:bizType
+            bizType:bizType,
+            consignationStatus:0
 		},{"isLoading":true,"elm":"#my24 .topo-loading"});
     }else if (e.currentTarget.hash == "#home1"){
 		consignationList.consignationDataList = {};

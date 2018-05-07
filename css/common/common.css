@@ -151,7 +151,7 @@ body div.error-msg, .error-msg, body div p.error-msg {
   height: auto;
   position: relative;
   z-index: 100;
-  background: #020d2b; }
+  background: #1b202e; }
   .top-box ul {
     margin: 0 auto;
     display: block;
@@ -209,7 +209,7 @@ body div.error-msg, .error-msg, body div p.error-msg {
       line-height: 18px; }
   .top-box .nav:hover, .top-box .nav.active-nav {
     color: #13b5b1;
-    background: #122045; }
+    background: #121725; }
   .top-box .ctrl-select1 > div > a {
     font-size: 16px; }
   .top-box .ctrl-select1 .ul-select {
@@ -254,11 +254,12 @@ body div.error-msg, .error-msg, body div p.error-msg {
       border-bottom: 1px solid #242627;
       background: none; }
       .top-box .ctrl-select .ul-select li a {
-        background: #020d2b;
+        background: #1b202e;
         height: 40px;
         line-height: 40px; }
         .top-box .ctrl-select .ul-select li a:hover {
-          background: #122045; }
+          background: #121725;
+         }
       .top-box .ctrl-select .ul-select li:last-child {
         border-bottom: none;
         height: 40px;
@@ -418,7 +419,7 @@ body div.error-msg, .error-msg, body div p.error-msg {
 .bottom-box {
   width: 100%;
   height: auto;
-  background: #020d2b;
+  background: #1b202e;
   position: relative;
   z-index: 100; }
   .bottom-box.posi-fix {
@@ -528,9 +529,7 @@ body div.error-msg, .error-msg, body div p.error-msg {
   .bottom-box ul .foo-nav-right a span.ewmto {
     background: #fff;
     padding: 10px;
-    width: 370px;
     height: 140px;
-    left: -180px;
     top: -160px;
     color: #333; }
   .bottom-box ul .foo-nav-right a span.qr-height {
@@ -1369,4 +1368,4 @@ a {
   padding: 10px 0px; }
 
 .yqlj-box {
-  border-bottom: 1px solid #1c2641; }
+  border-bottom: 1px solid #1b2233; }

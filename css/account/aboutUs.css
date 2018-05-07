@@ -61,9 +61,10 @@
 
 .aboutCenter dl dt span{
     display: block;
-    height: 90px;
-    background-position: center 25px;
+    height: 103px;
+    background-position: center 20px;
     background-repeat: no-repeat;
+    background-size: 30%;
 }
 
 .aboutIcon1{

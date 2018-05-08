@@ -291,10 +291,10 @@ var buyAndSell = new Vue({
             sessionStorage.setItem("sessionTit", B);
         },
         marketActive: function (B) {
-            this.tradeDataKey = B;
-			listOrderLog.tradeDataKey = B;
-			consignationList.tradeDataKey = B;
-            sessionStorage.setItem("sessionCont", B)
+            // this.tradeDataKey = B;
+			// listOrderLog.tradeDataKey = B;
+			// consignationList.tradeDataKey = B;
+            // sessionStorage.setItem("sessionCont", B)
         },
 
         //市场————添加最近浏览

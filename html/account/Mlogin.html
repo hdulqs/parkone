@@ -23,11 +23,11 @@
 <body>
     <div id="app">
         <div class="contenter">
-            <img src="../../images/mobileRegister.jpg">
+            <img src="../../images/mobileLogin.jpg">
             <div class="content">
                 <div class="tab">
                     <!--<span data-role="email" class="col-sm-3">邮箱注册</span>-->
-                    <span data-role="phone" class="col-sm-3 active">手机注册</span>
+                    <span data-role="phone" class="col-sm-3 active">登录</span>
                 </div>
                 <!--<div class="Zone" id="emailZone">
                     <div class="publicZone">
@@ -57,7 +57,7 @@
                 <div class="Zone" id="phoneZone">
                     <div class="publicZone">
                         <div id="phone" class="input-info">
-                            <div class="select-box handmouse" @click="toggle();">
+                            <!-- <div class="select-box handmouse" @click="toggle();">
                                 <div class="flag-box">
                                     <i :class="selectCountry" class="iti-flag"></i>
                                 </div> 
@@ -73,15 +73,15 @@
                                         <i class="dial-code">+{{ item.phone }}</i>
                                     </li>
                                 </ul>
-                            </div>
-                            <input type="text" id="phoneNumber" class="input-info no-martop" placeholder="手机号">
+                            </div> -->
+                            <input type="text" id="phoneNumber" class="input-info no-martop" style="margin:0;" placeholder="手机号">
                         </div>
                         <p class="errmsg phoneN"></p>
-                        <div>
+                        <!-- <div>
                             <input id="code" type="text" class="Codecontrol col-sm-9" placeholder="验证码"  autocomplete="off">
                             <input type="button" class="code1 Codecontrol col-sm-3" value="获取验证码" onclick="getUnbindMobile(this)">
                             <p class="errmsg" id="codeErrorMsg"></p>
-                        </div>
+                        </div> -->
                         <div>
                              <input type="password" id="phonePassword" class="form-control" placeholder="密码"> 
                              <p class="errmsg" id="phonePasswordErrorMsg"></p>
@@ -97,7 +97,7 @@
                     </p>
                     <div class="btn" id="phonebtn-submit1">提交</div>
                 </div>
-                <div  class="haveAccount">我已有账号？<a href="login.html">登录</a></div>
+                <div  class="haveAccount">我还未有账号？<a href="Mregister.html">注册</a></div>
             </div>
         </div>
     </div>
@@ -105,6 +105,6 @@
 <script  type="text/javascript" src="../../js/vue.min.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/yundun.js"></script>
-<script type="text/javascript" src="../../js/account/Mregister.js"></script>
+<script type="text/javascript" src="../../js/account/MLogin.js"></script>
 </body>
 </html>

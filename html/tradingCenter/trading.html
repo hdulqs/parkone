@@ -494,7 +494,12 @@
                                            @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_average_price),6),'',formatNumber(scientificToNumber(item.made_count),4)):inputSellFiled(formatNumber(scientificToNumber(item.made_average_price),6),'',formatNumber(scientificToNumber(item.made_count),4))"
                                            :key="item">
                                             <i :class="'pull-left text-left'">
-                                                {{(isCNY ? formatNumber(scientificToNumber(item.made_average_price)*Rate[tradeDataKey]*RateMoney,2) : scientificToNumber(item.made_average_price))}}
+                                                {{(isCNY ? formatNumber(scientificToNumber(item.
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    )*Rate[tradeDataKey]*RateMoney,2) : scientificToNumber(item.made_average_price))}}
                                             </i>
                                             <i class="pull-left text-center handmouse font-money">
                                                 {{scientificToNumber(item.made_count)}}

@@ -173,7 +173,7 @@ body div.error-msg, .error-msg, body div p.error-msg {
     padding-left: 42px; }
   .top-box .ctrl-select1 .nav:hover {
     background: #020d2b;
-    color: #13b5b1; }
+    color: #1b202e; }
   .top-box .nav-right {
     float: right; }
   .top-box a {
@@ -203,9 +203,9 @@ body div.error-msg, .error-msg, body div p.error-msg {
     .top-box .logo img, .top-box .logo svg {
       position: absolute;
       left: 0px;
-      top: 40%;
-      margin-top: -9px;
-   
+      top: 50%;
+      margin-top: -16px;
+      height: 30px;
       line-height: 18px; }
   .top-box .nav:hover, .top-box .nav.active-nav {
     color: #13b5b1;
@@ -258,8 +258,7 @@ body div.error-msg, .error-msg, body div p.error-msg {
         height: 40px;
         line-height: 40px; }
         .top-box .ctrl-select .ul-select li a:hover {
-          background: #121725;
-         }
+          background: #121725; }
       .top-box .ctrl-select .ul-select li:last-child {
         border-bottom: none;
         height: 40px;
@@ -318,7 +317,7 @@ body div.error-msg, .error-msg, body div p.error-msg {
     .top-box .ctrl-select a:hover, .top-box .ctrl-select span:hover {
       color: #fff; }
     .top-box .ctrl-select a.active-nav, .top-box .ctrl-select span.active-nav {
-      background: #122045; }
+      background: #1b202e; }
   .top-box .ctrl-select .icon-country {
     display: block;
     width: 30px;
@@ -493,7 +492,7 @@ body div.error-msg, .error-msg, body div p.error-msg {
       margin: 0 5px;
       color: #fff; }
   .bottom-box .time-box {
-    border-top: 1px solid #1c2641;
+    border-top: 1px solid #1b2233;
     padding: 17px 0; }
   .bottom-box .time-block {
     margin-right: 20px !important; }
@@ -529,7 +528,9 @@ body div.error-msg, .error-msg, body div p.error-msg {
   .bottom-box ul .foo-nav-right a span.ewmto {
     background: #fff;
     padding: 10px;
+    width: 370px;
     height: 140px;
+    left: -180px;
     top: -160px;
     color: #333; }
   .bottom-box ul .foo-nav-right a span.qr-height {
@@ -1368,4 +1369,4 @@ a {
   padding: 10px 0px; }
 
 .yqlj-box {
-  border-bottom: 1px solid #1b2233; }
+  border-bottom: 1px solid #1c2641; }

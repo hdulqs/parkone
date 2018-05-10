@@ -503,7 +503,7 @@ footer .img_map{
     100% {transform:rotateZ(360deg);}
 }
 .moblie-footer .logo {
-    width: 80px;
+    width: 160px;
     height: 100px;
     background:url(../../images/bottom-logo.png) 50% 50% no-repeat;
     background-size: 70%;

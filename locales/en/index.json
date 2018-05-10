@@ -1,7 +1,7 @@
 ﻿{
 	"land": "Log In",
 	"register": "Sign Up",
-	"tip1":"WELCOME TO COINTOBE",
+	"tip1":"WELCOME TO PARK.ONE",
 	"tip2":"Secure, Professional and Efficient.",
 	"tip3":"Support：support@cointobe.com",
 	"tip4":"Business：bd@cointobe.com",
@@ -12,15 +12,15 @@
 	},
 	"group":{
 		"title1":"Secure and Professional",
-		"content1":"CoinToBe Exchange is safeguarded by cutting-edge technologies such as SSL protocol, multi-layered cryptography and offline storage，coupled two-factor authentication, your assets and all transactions are seamlessly protected.",
+		"content1":"PARK.ONE Exchange is safeguarded by cutting-edge technologies such as SSL protocol, multi-layered cryptography and offline storage，coupled two-factor authentication, your assets and all transactions are seamlessly protected.",
 		"title2":"Extensive Digital Currency Support",
 		"content2":"We are proud to provide our users with both established and emerging cryptocurrencies. At CoinToBe.com, you are exposed to an ever-growing selection of trading and investing opportunities in a great diversity of digital tokens and cryptocurrencies.",
 		"title3":"User Experience First",
-		"contetn3":"CoinToBe established an industry-leading services framework that is accessible on all devices and in multiple languages. Our exchange is dedicated to offering the best customer service by ensuring convenient and lightning fast trade execution."
+		"contetn3":"PARK.ONE established an industry-leading services framework that is accessible on all devices and in multiple languages. Our exchange is dedicated to offering the best customer service by ensuring convenient and lightning fast trade execution."
 	},
 	"group1":{
 		"title":"Stay connected and trade on the go.",
-		"content":"CoinToBe releases mobile apps for you to access markets and trading.",
+		"content":"PARK.ONE releases mobile apps for you to access markets and trading.",
 		"button":"Coming Soon"
 	},
 	"moneyType":"USD",

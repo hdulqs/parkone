@@ -17,7 +17,7 @@
     "select3": "Trading & Funds",
     "select4": "Announcements",
     "select5": "Others",
-		"ticketTitle": "CoinToBe Login Account:",
+		"ticketTitle": "PARKONE Login Account:",
     "warning1": "The email address is required.",
     "warning2": "Title is required.",
     "warning3": "Invalid email address.",
@@ -25,7 +25,7 @@
     "uploadTypeError": "The file that you are going to upload is in unrecognized file format.",
     "uploadSizeError": "The file that you are going to upload exceeds the attachment limit 20M.",
     "mail":"Please enter your email address. Our customer service staff will respond it ASAP.",
-    "userId":"Please enter your CoinToBe account email address.",
+    "userId":"Please enter your PARKONE account email address.",
     "problem":"Please enter the details of your request. For example, BTC withdrawal starts on Jan 22th 2018 16:03:30 and it doesn’t arrive."
   },
   "lang": {

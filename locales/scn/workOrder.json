@@ -17,7 +17,7 @@
     "select3": "交易&资产",
     "select4": "活动",
     "select5": "其他问题",
-    "ticketTitle": "CoinToBe 账号：",
+    "ticketTitle": "PARKONE 账号：",
     "warning1": "邮箱不能为空",
     "warning2": "标题不能为空",
     "warning3": "您输入的邮箱格式不正确",
@@ -25,7 +25,7 @@
     "uploadTypeError": "您上传的文件格式不支持。",
     "uploadSizeError": "您上传的文件大小过限制20M。",
     "mail":"请输入您常用的邮箱地址，客服会通过此邮箱同您联系。",
-    "userId":"请输入您的cointobe登录账号",
+    "userId":"请输入您的PARKONE登录账号",
     "problem":"请详细描述您的问题，如：2018-1-22 16:03:30 BTC申请提币，长时间未到账。"
   },
   "lang": {

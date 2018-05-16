@@ -199,7 +199,7 @@ function loadNav(){
                     '</li>'+
                 '</ul>'+
                 '<ul class="clearfix time-box">'+
-                '            <li class="pull-left">©️2017 Park.one All Rights Reserved</li>'+
+                '            <li class="pull-left">©️2018 Park.one All Rights Reserved</li>'+
                 '            <li class="pull-right"><i class="icon-connect"></i><i data-i18n="common:footer.connectStatus"> 已连接</i></li>'+
                 '            <li class="pull-right time-block"><i class="icon-time"></i><i id="time" class="time"></i><i>HKT</i></li>'+
                 '        </ul>'+
@@ -213,7 +213,7 @@ function loadNav(){
                                 '<div class="popTitle"></div>'+
                                 '<div class="popContent text-center">'+
                                     '<div class="popFirend">'+
-                                        '<h4><img src="../../images/telegram.png" alt=""><i data-i18n="common:footer.cointobTele">CoinToBe电报</i></h4>'+
+                                        '<h4><img src="../../images/telegram.png" alt=""><i data-i18n="common:footer.cointobTele">PARK.ONE电报</i></h4>'+
                                         '<p>'+
                                             '<span data-i18n="common:footer.telegram">官网中文群：</span><a href="https://t.me/cointobe_chinese" target="_blank">https://t.me/cointobe_chinese</a>'+
                                         '</p>'+
@@ -238,7 +238,7 @@ function loadNav(){
                                 '<div class="popTitle"></div>'+
                                 '<div class="popContent text-center">'+
                                     '<div class="popFirend">'+
-                                        '<h4><img src="../../images/telegram.png" alt="">CoinToBe电报</h4>'+
+                                        '<h4><img src="../../images/telegram.png" alt="">PARK.ONE电报</h4>'+
                                         '<p>'+
                                             '<span data-i18n="common:footer.telegram">官网中文群：</span><a href="https://t.me/cointobe_chinese" target="_blank">https://t.me/cointobe_chinese</a>'+
                                         '</p>'+

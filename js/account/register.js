@@ -370,10 +370,12 @@ function getOs()
 
 /*验证手机*/
 function validatemail1(obj) {
+    var re2 =/^1\d{10}$/;
     var mail=$(obj).val();
-    if(mail==""){
+    if(mail==""||!re2.test(mail)){
         isNotThrough1[0] = true;
-        $("#warning-mail1").html('<i class="icon-exclamation-circle"></i><i data-i18n="error.cue9"></i>');
+        var err_str=(!re2.test(mail)&&mail!="")?'<i class="icon-exclamation-circle"></i><i data-i18n="error.cue10"></i>':'<i class="icon-exclamation-circle"></i><i data-i18n="error.cue9"></i>'
+        $("#warning-mail1").html(err_str);
         $(obj).addClass("input-warning");
     }else{
         isNotThrough1[0] = false;
@@ -468,9 +470,12 @@ function validatCode11KeyUp(obj) {
 
 /*获取手机验证码*/
 function getUnbindMobile(obj) {
-    if($("#mail1").val()==""){
+    var re2 =/^1\d{10}$/;
+    var mail=$("#mail1").val();
+    if(mail==""||!re2.test(mail)){
         isNotThrough1[0] = true;
-        $("#warning-mail1").html('<i class="icon-exclamation-circle"></i><i data-i18n="error.cue9"></i>');
+        var err_str=(!re2.test(mail)&&mail!="")?'<i class="icon-exclamation-circle"></i><i data-i18n="error.cue10"></i>':'<i class="icon-exclamation-circle"></i><i data-i18n="error.cue9"></i>'
+        $("#warning-mail1").html(err_str);
         $("#mail1").addClass("input-warning");
     }else{
     	time(obj);
@@ -482,7 +487,6 @@ function getUnbindMobile(obj) {
     }
     initLang();
 }
-
 
 function getBindMobileCallBack(r) {
     if(r.success){

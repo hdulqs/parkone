@@ -30,7 +30,7 @@
     "demo2": "Example",
     "handCard" : "Picture of yourself holding Photo ID and the hand written note",
     "msg5": "Please provide a picture of yourself holding Photo ID and the hand written note. Please make sure that the photo is in JPG or PNG format and the file size not exceed 5M.",
-    "msg6": "Both the face and note must be perfectly readable and in sharp focus. The handwritten paper should read 'CoinToBe' next to your face and should include the current date using the format shown below (Month dd, yyyy).",
+    "msg6": "Both the face and note must be perfectly readable and in sharp focus. The handwritten paper should read 'PARK.ONE' next to your face and should include the current date using the format shown below (Month dd, yyyy).",
     "toComplete": "Complete",
     "msg4": "Once your profile has been submitted,the system will verify it within ** hours.There will be a delay for holidays and festivals.Please be patient to wait for the verification results.",
     "submitCheck": "Submit"

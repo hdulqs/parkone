@@ -10,7 +10,7 @@
                 "2017-12-01"
             ],
             "ques": [
-                "如何成為CoinToBe會員？",
+                "如何成為PARK.ONE會員？",
                 "登錄密碼忘了怎麽辦？",
                 "註冊郵箱收不到郵件怎麽辦？"
             ],
@@ -78,8 +78,8 @@
                 "如何查看個人資產？"
             ],
             "ans": [
-                "<p class='font-aspect1'>第壹步：登錄CoinToBe平臺賬號，進入資產頁面，選擇要充值的幣種，點擊幣種後面的充幣按鈕；</p><p class='font-aspect1'>第二步：手動復制充幣地址到錢包或打開錢包掃壹掃，即可完成充幣；</p><p class='font-aspect1'>第三步：登錄CoinToBe平臺，可以在個人中心-資產的歷史記錄中，查看您的充幣是否已到賬。</p><p class='font-aspect1 font-color'>溫馨提示:因CoinToBe是幣幣交易平臺，故不支持任何國家法定貨幣充值</p>",
-                "<p class='font-aspect1'>以imToken為例,但支持其他平臺和錢包:</p><p class='font-aspect1'>A：以imToken為例,但支持其他平臺和錢包:</p><p class='font-aspect2'>第壹步：打開imToken錢包，新建自己的錢包地址，並把生成的錢包地址復制下來備用；</p><p class='font-aspect2'>第二步：登錄CoinToBe平臺，在個人中心點擊選擇需要提現的幣種，點擊提幣；</p><p class='font-aspect2'>第三步：選擇提幣地址，如果第壹次發起提幣操作，需要添加新地址；</p><p class='font-aspect2'>第四步：將錢包的地址復制到提幣地址，之後依次填寫正確的信息；</p><p class='font-aspect2'>第五步：依次填寫信息後，點擊確定按鈕，進行二次驗證後，發起提幣申請； </p><p class='font-aspect2'>第六步：查看imToken，查看所提幣種是否已經到賬。</p><p class='font-aspect1 font-color'>溫馨提示：進行提幣操作需開啟二次驗證和身份認證並設置資金密碼</p>",
+                "<p class='font-aspect1'>第壹步：登錄PARK.ONE平臺賬號，進入資產頁面，選擇要充值的幣種，點擊幣種後面的充幣按鈕；</p><p class='font-aspect1'>第二步：手動復制充幣地址到錢包或打開錢包掃壹掃，即可完成充幣；</p><p class='font-aspect1'>第三步：登錄PARK.ONE平臺，可以在個人中心-資產的歷史記錄中，查看您的充幣是否已到賬。</p><p class='font-aspect1 font-color'>溫馨提示:因PARK.ONE是幣幣交易平臺，故不支持任何國家法定貨幣充值</p>",
+                "<p class='font-aspect1'>以imToken為例,但支持其他平臺和錢包:</p><p class='font-aspect1'>A：以imToken為例,但支持其他平臺和錢包:</p><p class='font-aspect2'>第壹步：打開imToken錢包，新建自己的錢包地址，並把生成的錢包地址復制下來備用；</p><p class='font-aspect2'>第二步：登錄PARK.ONE平臺，在個人中心點擊選擇需要提現的幣種，點擊提幣；</p><p class='font-aspect2'>第三步：選擇提幣地址，如果第壹次發起提幣操作，需要添加新地址；</p><p class='font-aspect2'>第四步：將錢包的地址復制到提幣地址，之後依次填寫正確的信息；</p><p class='font-aspect2'>第五步：依次填寫信息後，點擊確定按鈕，進行二次驗證後，發起提幣申請； </p><p class='font-aspect2'>第六步：查看imToken，查看所提幣種是否已經到賬。</p><p class='font-aspect1 font-color'>溫馨提示：進行提幣操作需開啟二次驗證和身份認證並設置資金密碼</p>",
                 "<p class='font-aspect1'>第壹步：登錄賬號，點擊首頁“資產”選項；</p><p class='font-aspect1'>第二步：總資產估值=可用估值+凍結估值；</p><p class='font-aspect1'>第三步：凍結估值為委托中或提幣中的資產，撤單後對應的資產將會解凍。</p>"
             ]
         },

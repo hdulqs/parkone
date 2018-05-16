@@ -78,8 +78,8 @@
                 "如何查看个人资产？"
             ],
             "ans": [
-                "<p class='font-aspect1'>第一步：登录CoinToBe平台账号，进入资产页面，选择要充值的币种，点击币种后面的充币按钮；</p><p class='font-aspect1'>第二步：手动复制充币地址到钱包或打开钱包扫一扫，即可完成充币；</p><p class='font-aspect1'>第三步：登录CoinToBe平台，可以在个人中心-资产的历史记录中，查看您的充币是否已到账。</p><p class='font-aspect1 font-color'>温馨提示:因CoinToBe是币币交易平台，故不支持任何国家法定货币充值</p>",
-                "<p class='font-aspect1'>以imToken为例,但支持其他平台和钱包:</p><p class='font-aspect1'>A：以imToken为例,但支持其他平台和钱包:</p><p class='font-aspect2'>第一步：打开imToken钱包，新建自己的钱包地址，并把生成的钱包地址复制下来备用；</p><p class='font-aspect2'>第二步：登录CoinToBe平台，在个人中心点击选择需要提现的币种，点击提币；</p><p class='font-aspect2'>第三步：选择提币地址，如果第一次发起提币操作，需要添加新地址；</p><p class='font-aspect2'>第四步：将钱包的地址复制到提币地址，之后依次填写正确的信息；</p><p class='font-aspect2'>第五步：依次填写信息后，点击确定按钮，进行二次验证后，发起提币申请； </p><p class='font-aspect2'>第六步：查看imToken，查看所提币种是否已经到账。</p><p class='font-aspect1 font-color'>温馨提示：进行提币操作需开启二次验证和身份认证并设置资金密码</p>",
+                "<p class='font-aspect1'>第一步：登录PARK.ONE平台账号，进入资产页面，选择要充值的币种，点击币种后面的充币按钮；</p><p class='font-aspect1'>第二步：手动复制充币地址到钱包或打开钱包扫一扫，即可完成充币；</p><p class='font-aspect1'>第三步：登录PARK.ONE平台，可以在个人中心-资产的历史记录中，查看您的充币是否已到账。</p><p class='font-aspect1 font-color'>温馨提示:因PARK.ONE是币币交易平台，故不支持任何国家法定货币充值</p>",
+                "<p class='font-aspect1'>以imToken为例,但支持其他平台和钱包:</p><p class='font-aspect1'>A：以imToken为例,但支持其他平台和钱包:</p><p class='font-aspect2'>第一步：打开imToken钱包，新建自己的钱包地址，并把生成的钱包地址复制下来备用；</p><p class='font-aspect2'>第二步：登录PARK.ONE平台，在个人中心点击选择需要提现的币种，点击提币；</p><p class='font-aspect2'>第三步：选择提币地址，如果第一次发起提币操作，需要添加新地址；</p><p class='font-aspect2'>第四步：将钱包的地址复制到提币地址，之后依次填写正确的信息；</p><p class='font-aspect2'>第五步：依次填写信息后，点击确定按钮，进行二次验证后，发起提币申请； </p><p class='font-aspect2'>第六步：查看imToken，查看所提币种是否已经到账。</p><p class='font-aspect1 font-color'>温馨提示：进行提币操作需开启二次验证和身份认证并设置资金密码</p>",
                 "<p class='font-aspect1'>第一步：登录账号，点击首页“资产”选项；</p><p class='font-aspect1'>第二步：总资产估值=可用估值+冻结估值；</p><p class='font-aspect1'>第三步：冻结估值为委托中或提币中的资产，撤单后对应的资产将会解冻。</p>"
             ]
         },

@@ -513,11 +513,11 @@ body div.error-msg, .error-msg, body div p.error-msg {
     vertical-align: -2px;
     margin-right: 8px; }
   .bottom-box ul .foo-nav-right a span {
-    width: 120px;
+    width: 135px;
     height: 120px;
     position: absolute;
     top: -140px;
-    left: -150%;
+    left: -175%;
     padding: 10px;
     background: #fff;
     box-shadow: 0 0 8px #666;

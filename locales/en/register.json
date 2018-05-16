@@ -14,7 +14,8 @@
     "cue6": "The confirm password is required and can't be empty.",
     "cue7": "Invalid email address.",
     "cue8": "Fit the puzzle to unlock",
-    "cue9": "Phone number is required and can't be empty."
+    "cue9": "Phone number is required and can't be empty.",
+    "cue10":"your mobile phone number is incorrect"
   },
   "button": "Create Account",
   "tip1": "I agree to",

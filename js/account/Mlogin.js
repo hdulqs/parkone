@@ -6,8 +6,8 @@ var passUrl = [
 	"verificationSuccessful",
 	"modifyLoginPassword",
 	"resetPassword",
-  "Mregister",
-  "activityRegister",
+    "Mregister",
+    "activityRegister",
 	"authenticationProgress",
 	"getBackPassword",
 	"sendEmail"

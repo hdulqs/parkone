@@ -215,7 +215,7 @@
                                     <form class="pull-left buying-box xianjia-buy">
                                         <div class="bi-difference">
                                             <p class="pull-left"><span data-i18n="assetManage.available1">可用</span>{{market}}<i>：{{formatNumber(assetList[market],6)
-                                                == 0 ? '' : formatNumber(assetList[market],6)}}</i></p><a
+                                                == 0 ? '0' : formatNumber(assetList[market],6)}}</i></p><a
                                                 :href="'../asset/assetManage.html?currencyname='+market"
                                                 class="btn-recharge" data-i18n="assetManage.deposit">充币</a>
                                         </div>
@@ -241,8 +241,10 @@
                                             <i class="font-type">{{buyAndCoin}}</i>
                                             <div class="input-prompt"
                                                  @click="setMaxTradNum('.xianjia-buy .inputnum-wrap','buyVolume')">
-                                                <span class="ip-text"></span><span class="ip-value dn">{{formatNumber(assetList[market]/newList.new,4)}}</span><span
-                                                    class="ip-unit dn"></span>
+                                                <span class="ip-text"></span>
+                                                <span class="ip-value dn" v-if="buyPrice!=0">{{formatNumber(assetList[market]/buyPrice,4)}}</span>
+                                                <span class="ip-value dn" v-else>0</span>
+                                                <span class="ip-unit dn"></span>
                                             </div>
                                         </div>
                                         <div class="clearfix fontnum-wrap">
@@ -281,7 +283,7 @@
                                     <form class="pull-right offtake-box xianjia-sell">
                                         <div class="bi-difference">
                                             <p class="pull-left"><span data-i18n="assetManage.available1">可用</span>{{buyAndCoin}}<i>：{{formatNumber(assetList[buyAndCoin],6)
-                                                == 0 ? '' :formatNumber(assetList[buyAndCoin],6)}}</i></p><a
+                                                == 0 ? '0' :formatNumber(assetList[buyAndCoin],6)}}</i></p><a
                                                 :href="'../asset/assetManage.html?currencyname='+buyAndCoin"
                                                 class="btn-recharge" data-i18n="assetManage.deposit">充币</a>
                                         </div>
@@ -350,7 +352,7 @@
                                     <form class="pull-left buying-box shijia-buy">
                                         <div class="bi-difference"><p class="pull-left"><span
                                                 data-i18n="assetManage.available1">可用</span>{{market}}<i>：{{formatNumber(assetList[market],6)
-                                            == 0 ? '' : formatNumber(assetList[market],6)}}</i></p><a
+                                            == 0 ? '0' : formatNumber(assetList[market],6)}}</i></p><a
                                                 :href="'../asset/assetManage.html?currencyname='+market"
                                                 class="btn-recharge" data-i18n="assetManage.deposit">充币</a></div>
                                         <p class="label-title" data-i18n="assetManage.Price">价格</p>
@@ -407,7 +409,7 @@
                                     <form class="pull-right offtake-box shijia-sell">
                                         <div class="bi-difference">
                                             <p class="pull-left"><span data-i18n="assetManage.available1">可用</span>{{buyAndCoin}}<i>：{{formatNumber(assetList[buyAndCoin],6)
-                                                == 0 ? '' : formatNumber(assetList[buyAndCoin],6)}}</i></p><a
+                                                == 0 ? '0' : formatNumber(assetList[buyAndCoin],6)}}</i></p><a
                                                 class="btn-recharge"
                                                 :href="'../asset/assetManage.html?currencyname='+buyAndCoin"
                                                 data-i18n="assetManage.deposit">充币</a>
@@ -507,8 +509,8 @@
                                     </transition-group>
                                     <transition-group name="newList" tag="p" v-show="changeToMyTrade">
                                         <p class="clearfix font-trading-des" v-for="item in consignationDataListMy"
-                                           @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_price),6),'',formatNumber(scientificToNumber(item.made_count),4)):inputSellFiled(formatNumber(scientificToNumber(item.made_price),6),'',formatNumber(scientificToNumber(item.made_count),4))" :key="item">
-                                            <i :class="'pull-left text-left'">
+                                           @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_price),6),'',formatNumber(scientificToNumber(item.made_count),4)):inputSellFiled(formatNumber(scientificToNumber(item.made_price),6),'',formatNumber(scientificToNumber(item.made_count),4))" :key="item">                                  
+                                           <i :class="'pull-left text-left'">
                                                 {{isCNY ? formatNumber(scientificToNumber(item.made_price)*Rate[tradeDataKey]*RateMoney,2) : scientificToNumber(item.made_price)}}
                                             </i>
                                             <i class="pull-left text-center handmouse font-money">

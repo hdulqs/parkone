@@ -40,7 +40,7 @@
 							<div class="col-sm-4">
 								<p><span title="" data-i18n="assetManage.FreezingValuation"></span><i class="font-ask"></i></p>
 								<p>{{formatNumber(totalDataList.freezingBTC>0 ? scientificToNumber(totalDataList.freezingBTC) : 0,8)}}</p>
-								<p><span data-i18n="assetManage.moneyType"></span>{{getFloat((totalDataList.freezingUSD>0 ? scientificToNumber(totalDataList.freezingUSD) : 0.00)*RateMoney)}}</p>
+								<p><span data-i18n="assetManage.moneyType"></span>{{getFloat(getFloat((totalDataList.totalUSD>0 ? scientificToNumber(totalDataList.totalUSD) : 0.00)*RateMoney,2)-getFloat((totalDataList.availableUSD>0 ? scientificToNumber(totalDataList.availableUSD) : 0.00)*RateMoney,2),2)}}</p>
 							</div>
 	                    </div>
 	                </div>

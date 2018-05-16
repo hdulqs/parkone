@@ -95,8 +95,7 @@
             "ques": [
                 "About Bitcoin(BTC)？",
                 "About Litecoin(LTC)?",
-                "About Ethereum (ETH)？",
-                "About Ethereum Classic（ETC）"
+                "About Ethereum (ETH)？"
             ],
             "ans": [
                 "<p class='font-aspect1'>Bitcoin is a most widely used cryptocurrency in the world, invented in January, 3rd, 2009. It’s a digital cryptocurrency adopting peer-to-peer system, with 21million bitcoins in total. Bitcoin network release certain number of bitcoins every ten minutes, and the limit of 21 million bitcoins will be reached c.2140. Bitcoin rose as high as 20,000 times, which is called “digital gold” by investors. So far, the total market capitalization of Bitcoin has exceeded 20.1 billion yuan. Bitcoin, has the features including decentralization, global transaction, anonymous circulation and low transaction fee which is favored by technical enthusiasts.</p>",

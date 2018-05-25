@@ -25,5 +25,5 @@
   "item2Tr7Td2": "Daily maximum withdrawal amount 100000 db, with a minimum amount of 100 db.",
   "item2Tr7Td3": "50  db",
   "item3Title": "3、Trading",
-  "item3Des": "All trades on PARK.ONE will have commission. Trading fees for coins will charge on a standard:the taker 0.2%,the maker 0.2%. Later according  to operation demands , maker and taker , as well as user history tansaction levels, PARK.ONE will set different ratios."
+  "item3Des": "All trades on PARK.ONE will have commission. Trading fees for coins will charge on a standard:the taker 1‰,the maker 1‰. Later according  to operation demands , maker and taker , as well as user history tansaction levels, PARK.ONE will set different ratios."
 }

@@ -39,7 +39,7 @@
     "accountStatusVal0": "未认证",
     "accountStatusVal1": "审核中",
     "accountStatusVal2": "已认证",
-    "accountStatusVal3": "未认证",
+    "accountStatusVal3": "认证失败",
     "LeverVal1": "低",
     "LeverVal2": "中",
     "LeverVal3": "高"

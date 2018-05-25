@@ -39,7 +39,7 @@
     "accountStatusVal0": "Unverified",
     "accountStatusVal1": "Verifying",
     "accountStatusVal2": "Verified",
-	"accountStatusVal3": "Unverified",	
+	  "accountStatusVal3": "Verify fail",	
     "LeverVal1": " Low",
     "LeverVal2": " Medium",
     "LeverVal3": " High"

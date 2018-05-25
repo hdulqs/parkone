@@ -19,9 +19,9 @@
 			"id":28,
 			"title":"關於PARK.ONE官網升級維護公告",
 			"callName":"尊敬的用護：",
-			"desText":"PARK.ONE官網將於2018年3月23日20:00進行系統升級，預計12小時。屆時PARK.ONE官網（ www.pake.one ）將暫停服務...",
+			"desText":"PARK.ONE官網將於2018年3月23日20:00進行系統升級，預計12小時。屆時PARK.ONE官網（ www.park.one ）將暫停服務...",
 			"contentText":[
-				"PARK.ONE官網將於2018年3月23日20:00進行系統升級，預計12小時。屆時PARK.ONE官網（<a target='_blank' href='http://www.pake.one'>www.pake.one</a> ）將暫停服務。",
+				"PARK.ONE官網將於2018年3月23日20:00進行系統升級，預計12小時。屆時PARK.ONE官網（<a target='_blank' href='http://www.park.one'>www.park.one</a> ）將暫停服務。",
 				"本次維護涉及撮合引擎升級和錢包優化，維護完成後，錢包充幣和提幣恢復正常使用。如您有掛單，將會撤銷，資產會退回您的賬戶。",
 				"給您帶來的不便敬請諒解，操作過程中若有任何疑問，可提交工單，工作人員會盡快處理，祝您交易愉快！",
 				"風險提示：數字貨幣交易具有極高的風險，PARK.ONE精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
@@ -46,7 +46,7 @@
 			"callName":"尊敬的用護：",
 			"desText":"為提高您的交易體驗，PARK.ONE官網將於2018年3月10日21:00進行系統升級，預計3小時...",
 			"contentText":[
-				"為提高您的交易體驗，PARK.ONE官網將於2018年3月10日21:00進行系統升級，預計3小時。屆時，PARK.ONE官網（ <a target='_blank' href='http://www.pake.one'>www.pake.one</a> ）將暫停服務。",
+				"為提高您的交易體驗，PARK.ONE官網將於2018年3月10日21:00進行系統升級，預計3小時。屆時，PARK.ONE官網（ <a target='_blank' href='http://www.park.one'>www.park.one</a> ）將暫停服務。",
 				"<span style='color:#E70353;'>系統升級後，除BTC之外的幣種將會變更充幣地址，為了您的資金安全，請不要再向之前的充幣地址進行充幣。</span>新的充幣地址，請進入【資產】-【充幣】重新獲取充幣地址。",
 				"給您帶來的不便敬請諒解，操作過程中若有任何疑問，可提交工單，工作人員會盡快處理，祝您交易愉快！",
 				"風險提示：數字貨幣交易具有極高的風險，PARK.ONE精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
@@ -84,9 +84,9 @@
 			"id":23,
 			"title":"關於PARK.ONE官網維護的公告",
 			"callName":"尊敬的用護：",
-			"desText":"PARK.ONE官網將於2018年2月6日21:00—23:00（HKT）進行系統維護。屆時，PARK.ONE官網（ www.pake.one ）將...",
+			"desText":"PARK.ONE官網將於2018年2月6日21:00—23:00（HKT）進行系統維護。屆時，PARK.ONE官網（ www.park.one ）將...",
 			"contentText":[
-				"PARK.ONE官網將於2018年2月6日21:00—23:00（HKT）進行系統維護。屆時，PARK.ONE官網（<a target='_blank' href='www.pake.one'>www.pake.one</a> ）將暫停服務。給您帶來的不便，敬請諒解。",
+				"PARK.ONE官網將於2018年2月6日21:00—23:00（HKT）進行系統維護。屆時，PARK.ONE官網（<a target='_blank' href='www.park.one'>www.park.one</a> ）將暫停服務。給您帶來的不便，敬請諒解。",
 				"風險提示：數字貨幣交易具有極高的風險，PARK.ONE精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
 			],
 			"annTime":"2018年02月06日"
@@ -109,7 +109,7 @@
 			"callName":"尊敬的用護：",
 			"desText":"為提升用戶體驗，PARK.ONE官網將於2018年2月1日21:00—22:00（HKT）進行系統維護...",
 			"contentText":[
-				"為提升用戶體驗，PARK.ONE官網將於2018年2月1日21:00—22:00（HKT）進行系統維護。屆時，PARK.ONE官網（<a target='_blank' href='www.pake.one'>www.pake.one</a> ）將暫停服務。給您帶來的不便，敬請諒解。",
+				"為提升用戶體驗，PARK.ONE官網將於2018年2月1日21:00—22:00（HKT）進行系統維護。屆時，PARK.ONE官網（<a target='_blank' href='www.park.one'>www.park.one</a> ）將暫停服務。給您帶來的不便，敬請諒解。",
 				"風險提示：數字貨幣交易具有極高的風險，PARK.ONE精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
 			],
 			"annTime":"2018年02月01日"
@@ -169,7 +169,7 @@
 			"callName":"尊敬的用戶：",
 			"desText":"為進壹步提升用戶體驗，PARK.ONE官網將於2018年1月25日21:00—24:00(HKT)進行系統維護...",
 			"contentText":[
-				"為進壹步提升用戶體驗，PARK.ONE官網將於2018年1月25日21:00—24:00(HKT)進行系統維護。屆時，PARK.ONE官網（ <a target='_blank'  href='https://www.pake.one/'>www.pake.one </a>）將暫停服務。給您帶來的不便，敬請諒解。",
+				"為進壹步提升用戶體驗，PARK.ONE官網將於2018年1月25日21:00—24:00(HKT)進行系統維護。屆時，PARK.ONE官網（ <a target='_blank'  href='https://www.park.one/'>www.park.one </a>）將暫停服務。給您帶來的不便，敬請諒解。",
 				"風險提示：數字貨幣交易具有極高的風險，PARK.ONE精選優質數字資產，但對於幣種投資不承擔任何審查、擔保、賠償的責任，如果您不能接受請不要交易，謝謝。"
 			],
 			"annTime":"2018年01月25日"
@@ -204,9 +204,9 @@
 			"desText":"PARK.ONE上線dininb（db），並開通db/BTC、db/ETH交易市場...",
 			"contentText":[
 				"PARK.ONE上線dininb（db），並開通db/BTC、db/ETH交易市場。",
-				"開放充提時間：2018/01/19 14:18(HKT)    <a target='_blank' href='https://www.pake.one/asset/assetManage.html'>去充幣</a>",
-				"開放交易時間：2018/01/19 14:18(HKT)    <a target='_blank' href='https://www.pake.one/tradingCenter/trading.html'>去交易</a>",
-				"費率說明：<a target='_blank' href='https://www.pake.one/account/rateStandard.html'>https://www.pake.one/account/rateStandard.html</a>",
+				"開放充提時間：2018/01/19 14:18(HKT)    <a target='_blank' href='https://www.park.one/asset/assetManage.html'>去充幣</a>",
+				"開放交易時間：2018/01/19 14:18(HKT)    <a target='_blank' href='https://www.park.one/tradingCenter/trading.html'>去交易</a>",
+				"費率說明：<a target='_blank' href='https://www.park.one/account/rateStandard.html'>https://www.park.one/account/rateStandard.html</a>",
 				"幣種簡介：豆幣（英文名：dininb）旨在打造壹個基於區塊鏈投資策略服務交易平臺，為潛在投資者和價值策略輸出者提供雙贏的解決方案：價值策略輸出者可以獲得新的受眾和額外收入來源，而潛在投資者則可以習得經驗。",
 				"dininb官網：<a target='_blank' href='http://www.dininb.io/'>http://www.dininb.io/</a>",
 				"白皮書：<a target='_blank' href='http://www.db.ink/public/file/DININB+White+paper+V20180119.pdf'>http://www.db.ink/public/file/DININB+White+paper+V20180119.pdf</a>",
@@ -227,7 +227,7 @@
 				"團隊預留：預留9700萬ETZ作為後續開發，市場運營，開發者獎勵資金。",
 				"通貨膨脹：每年新增大約1200萬ETZ，通脹率約6.5%，逐年下降。",
 				"PARK.ONE將於分叉成功快照後分發ETZ。充提及交易開通時間將另行通知。",
-				"馬上充值ETH，等待糖果ETZ的降臨！ &nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.pake.one/asset/assetManage.html'>去充幣</a>",
+				"馬上充值ETH，等待糖果ETZ的降臨！ &nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.park.one/asset/assetManage.html'>去充幣</a>",
 				"以太零介紹：",
 				"以太零(EtherZero，簡稱ETZ)是由壹群專業的DAPP開發者發起的，為滿足DAPP開發而發起的新壹代智能合約開發平臺，是壹個基於以太坊底層框架的硬分叉項目。以太零舍棄了以太坊傳統的gas手續費系統，使得每個交易包括智能合約的交易都實現了0交易費用。",
 				"以太零技術運營團隊：",
@@ -289,9 +289,9 @@
 			"desText":"PARK.ONE上線SanChain（SANC），並開通SANC/BTC、SANC/ETH交易市場...",
 			"contentText":[
 				"PARK.ONE上線SanChain（SANC），並開通SANC/BTC、SANC/ETH交易市場。",
-				"開放充提時間：2017/12/29 22:00(HKT)&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.pake.one/asset/assetManage.html'>去充幣</a>",
-				"開放交易時間：2017/12/30 14:00(HKT)&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.pake.one/tradingCenter/trading.html'>去交易</a>",
-				"費率說明：<a target='_blank' href='https://www.pake.one/account/rateStandard.html'>https://www.pake.one/account/rateStandard.html</a>",
+				"開放充提時間：2017/12/29 22:00(HKT)&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.park.one/asset/assetManage.html'>去充幣</a>",
+				"開放交易時間：2017/12/30 14:00(HKT)&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.park.one/tradingCenter/trading.html'>去交易</a>",
+				"費率說明：<a target='_blank' href='https://www.park.one/account/rateStandard.html'>https://www.park.one/account/rateStandard.html</a>",
 				"幣種簡介：SanChain旨在構建全新的區塊鏈生態系統，成為互聯網價值的壹部分，實現高性能數字資產交易，並與行業有機結合。SAN生態系統使用SAN作為燃料，通過底層技術架構的SAN內生燃料驅動各類DAPP應用和開發，實現分散化應用，讓區塊鏈與商業世界真正結合在壹起。隨著網絡公開源代碼的推出，開發商可以建立並發布新的項目，以促進區塊鏈技術在更多的行業應用。項目不僅獨立運作，而且合作共同，形成了強大的向心力，目前SAN系統得到了迅速的發展。",
 				"SANC官網：<a target='_blank' href='https://sanchain.org/home'>https://sanchain.org/home</a>",
 				"白皮書：<a target='_blank' href='https://s3-us-west-1.amazonaws.com/sanchain/SanCHAIN+Whitepaper.pdf'>https://s3-us-west-1.amazonaws.com/sanchain/SanCHAIN+Whitepaper.pdf</a>",
@@ -308,9 +308,9 @@
 			"desText":"PARK.ONE上線OmiseGo（OMG），並開通OMG/BTC、OMG/ETH交易市場...",
 			"contentText":[
 				"PARK.ONE上線OmiseGo（OMG），並開通OMG/BTC、OMG/ETH交易市場。",
-				"開放充提時間：2017/12/29 22:00(HKT)&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.pake.one/asset/assetManage.html'>去充幣</a>",
-				"開放交易時間：2017/12/30 14:00(HKT)&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.pake.one/tradingCenter/trading.html'>去交易</a>",
-				"費率說明：<a target='_blank' href='https://www.pake.one/account/rateStandard.html'>https://www.pake.one/account/rateStandard.html</a>",
+				"開放充提時間：2017/12/29 22:00(HKT)&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.park.one/asset/assetManage.html'>去充幣</a>",
+				"開放交易時間：2017/12/30 14:00(HKT)&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' href='https://www.park.one/tradingCenter/trading.html'>去交易</a>",
+				"費率說明：<a target='_blank' href='https://www.park.one/account/rateStandard.html'>https://www.park.one/account/rateStandard.html</a>",
 				"幣種簡介：OmiseGO是壹種基於以太坊的公共金融技術，可用於主流數字錢包，實現跨管轄區和組織孤島，以及法定貨幣和分散貨幣的實時，點對點價值交換和支付服務。旨在實現金融包容和破壞現有機構的設計，將通過OmiseGO網絡和數字錢包框架向每個人提供訪問。",
 				"OMG官網： <a target='_blank' href='https://omisego.network/'>https://omisego.network/</a>",
 				"白皮書：  <a target='_blank' href='https://cdn.omise.co/omg/whitepaper.pdf'>https://cdn.omise.co/omg/whitepaper.pdf</a>",

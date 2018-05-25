@@ -201,8 +201,9 @@ function registerCallBack(d){
         $.cookie("checkUserMail",mail);
         window.location.href = "../account/sendEmail.html";
     }else{
-    	initYunD();
-        $("#serviceError span").html(d.error.detail);
+        initYunD();
+        alert(d.error.detail);
+       // $("#serviceError span").html(d.error.detail);
         $("#serviceError").removeClass("opt-dn");
         $("#btn-submit").removeClass("btn-active");
         $("input").val("");
@@ -533,7 +534,8 @@ function register2CallBack(d){
         $.cookie("checkUserMail",mail);
         window.location.href = "../account/login.html";
     }else{
-    	initYunD1();
+        initYunD1();
+        alert(d.error.detail);
         $("#btn-submit1").removeClass("btn-active");
         if(d.error.code == 1017){
             $("#warning-secondpassword1").html('<i class="icon-exclamation-circle"></i><i>'+d.error.detail+'</i>');

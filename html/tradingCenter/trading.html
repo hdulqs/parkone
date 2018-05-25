@@ -69,7 +69,7 @@
                                 <span data-i18n="assetManage.lastprice">最新价</span>
                                 <span v-show="isCNY" class="i-color">（<i>{{ChangeMoenyType}}</i>）
                                 </span>
-                                <i v-show="!isCNY">（{{tradeDataKey}}）</i>
+                                <i v-show="!isCNY&&!recent">（{{tradeDataKey}}）</i>
                             </span>
                             <span :class="['rowR',{asce:currentOpen&&currentType==3},{desc:!currentOpen&&currentType==3}]"
                                   data-i18n="assetManage.change" @click="hSort()">24h涨跌</span>
@@ -93,7 +93,7 @@
                                :class="marketCheck[item.key]==inde ? 'market-rowBg':''">
                                 <span class="rowL"><!--  <b :class="'img-coin biT'+TransactionPairList[item.pair]"></b> -->{{item.pair}}</span>
                                 <span v-show="!isCNY" class="rowC">{{getFloat(scientificToNumber(item.new),6)}}</span>
-                                <span v-show="isCNY" class="rowC">{{getFloat(scientificToNumber(item.new)*Rate[tradeDataKey]*RateMoney,2)}}</span>
+                                <span v-show="isCNY" class="rowC">{{getFloat(scientificToNumber(item.new)*Rate[item.pair.split("/")[1]]*RateMoney,2)}}</span>
                                 <span v-if="item.increase>0" class="rowR font-green">+{{getFloat(scientificToNumber(item.increase*100),2)}}%</span>
                                 <span v-else-if="item.increase==0" class="rowR font-green">{{getFloat(scientificToNumber(item.increase*100),2)}}%</span>
                                 <span v-else class="rowR font-red1">{{getFloat(scientificToNumber(item.increase*100),2)}}%</span>
@@ -131,7 +131,7 @@
                                        class="clearfix font-trading-des" v-for="(item,index) in SellTop10List"
                                        @click="inputSellFiled(item.money,index,item.sumCount)">
 										<i class="pull-left text-left font-red rowl-1"><span data-i18n="assetManage.sell">卖</span>{{SellTop10List.length-index}}</i>
-										<i class="pull-left text-center handmouse font-money rowl-2">{{isCNY ? getFloat(scientificToNumber(item.money)*Rate[tradeDataKey]*RateMoney,2) : item.money}}</i>
+										<i class="pull-left text-center handmouse font-money rowl-2">{{isCNY ? getFloat(scientificToNumber(item.money)*Rate[market]*RateMoney,2) : item.money}}</i>
 										<i class="pull-right text-right ratio-wrap rowl-3">
 											<i class="bg-ratio" :style="'padding-left:'+item.count/totalS*140+'px'"></i>
 											<i class="font-num">{{formatNumber(item.count,4)}}</i>
@@ -139,7 +139,7 @@
                                     </p>
                                 </div>
                                 <p class="text-center new-price">
-                                    <i :class="newList.increase>0?'font-green':'font-red1'">{{isCNY ? getFloat(scientificToNumber(newList.new*Rate[tradeDataKey]*RateMoney),2):scientificToNumber(newList.new)}}</i><i
+                                    <i :class="newList.increase>0?'font-green':'font-red1'">{{isCNY ? getFloat(scientificToNumber(newList.new*Rate[market]*RateMoney),2):scientificToNumber(newList.new)}}</i><i
                                         :class="newList.increase>0?'font-green icons-arrow-up':'font-red1 icons-arrow-down'"></i>
                                 </p>
                                 <!--买-->
@@ -151,7 +151,7 @@
                                             <span data-i18n="assetManage.buy">买</span>
                                             {{index+1}}
                                         </i>
-                                        <i class="pull-left text-center handmouse font-money rowl-2">{{isCNY ? getFloat(scientificToNumber(item.money)*Rate[tradeDataKey]*RateMoney,2) : item.money}}</i>
+                                        <i class="pull-left text-center handmouse font-money rowl-2">{{isCNY ? getFloat(scientificToNumber(item.money)*Rate[market]*RateMoney,2) : item.money}}</i>
                                         <i class="pull-left text-right ratio-wrap rowl-3">
                                             <i class="bg-ratio" :style="'padding-left:'+item.count/totalM*140+'px'"></i>
                                             <i class="font-num">{{formatNumber(item.count,4)}}</i>
@@ -496,7 +496,7 @@
                                            @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_price),6),'',formatNumber(scientificToNumber(item.made_count),4)):inputSellFiled(formatNumber(scientificToNumber(item.made_price),6),'',formatNumber(scientificToNumber(item.made_count),4))"
                                            :key="item">
                                             <i :class="'pull-left text-left'">
-                                                {{(isCNY ? formatNumber(scientificToNumber(item.made_price)*Rate[tradeDataKey]*RateMoney,2) : scientificToNumber(item.made_price))}}
+                                                {{(isCNY ? formatNumber(scientificToNumber(item.made_price)*Rate[market]*RateMoney,2) : scientificToNumber(item.made_price))}}
                                             </i>
                                             <i class="pull-left text-center handmouse font-money">
                                                 {{scientificToNumber(item.made_count)}}
@@ -511,7 +511,7 @@
                                         <p class="clearfix font-trading-des" v-for="item in consignationDataListMy"
                                            @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_price),6),'',formatNumber(scientificToNumber(item.made_count),4)):inputSellFiled(formatNumber(scientificToNumber(item.made_price),6),'',formatNumber(scientificToNumber(item.made_count),4))" :key="item">                                  
                                            <i :class="'pull-left text-left'">
-                                                {{isCNY ? formatNumber(scientificToNumber(item.made_price)*Rate[tradeDataKey]*RateMoney,2) : scientificToNumber(item.made_price)}}
+                                                {{isCNY ? formatNumber(scientificToNumber(item.made_price)*Rate[market]*RateMoney,2) : scientificToNumber(item.made_price)}}
                                             </i>
                                             <i class="pull-left text-center handmouse font-money">
                                                 {{scientificToNumber(item.made_count)}}

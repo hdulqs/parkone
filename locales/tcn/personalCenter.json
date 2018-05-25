@@ -39,7 +39,7 @@
     "accountStatusVal0": "未認證",
     "accountStatusVal1": "審核中",
     "accountStatusVal2": "已認證",
-    "accountStatusVal3": "未認證",
+    "accountStatusVal3": "認證失敗",
     "LeverVal1": "低",
     "LeverVal2": "中",
     "LeverVal3": "高"

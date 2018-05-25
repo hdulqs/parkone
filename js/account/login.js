@@ -123,6 +123,8 @@ function loginCallBack(r) {
             str=r.error.detail;
             var str1=str.indexOf(":");
             num1=str1-2;
+
+            
             num2=str1+6;
             var str2=str.substring(num1,num2);
             var time=str2.substring(0,2)*3600+str2.substring(3,5)*60+str2.substring(6)*1;

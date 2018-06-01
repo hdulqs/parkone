@@ -643,7 +643,6 @@ function callServie(serviceName,urlPath,param,loadParam) {
                         var googleStatus = deviceType == 1 ? $.cookie("googleStatus") : localStorage.googleStatus;
                         var mobileStatus = deviceType == 1 ? $.cookie("mobileStatus") : localStorage.mobileStatus;
 						var lastVerfiyType = deviceType == 1 ? $.cookie("lastVerfiyType") : localStorage.lastVerfiyType;
-                        debugger;
                         if(twoValid == 1){ /*开启了二次验证*/
                             if (googleStatus == 1 && mobileStatus == 0) {
                     

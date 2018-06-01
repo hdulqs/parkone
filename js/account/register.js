@@ -536,6 +536,7 @@ function register2CallBack(d){
     }else{
         initYunD1();
         alert(d.error.detail);
+        isNotThrough1[3]=true;
         $("#btn-submit1").removeClass("btn-active");
         if(d.error.code == 1017){
             $("#warning-secondpassword1").html('<i class="icon-exclamation-circle"></i><i>'+d.error.detail+'</i>');

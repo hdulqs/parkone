@@ -22,7 +22,6 @@ function userInfor(){
 }
 function userInforCallBack (d){
 	if(d.success){
-		if(d.data.isAuth == 3) d.data.isAuth = 0;
 		var btnIsBind = ['blindBtn','unhitch'];
 		var btnStyle = ['','btn-unbundling'];
 		var mobileUrl = ['../personalCenter/bindMobileVerification.html','../personalCenter/unbindMobileVerification.html'];

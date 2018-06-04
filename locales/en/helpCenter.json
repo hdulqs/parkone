@@ -25,7 +25,7 @@
         {
 	    "id":5,
             "title": "Digital Asset Introduction",
-            "ques": ["About Bitcoin","About Litecoin（Litecoin）","About Ethereum (ETH)"]
+            "ques": ["About Bitcoin (BTC)","About Litecoin (LTC)","About Ethereum (ETH)","About Kyber Network (KNC)"]
         }
     ],
      "others": {

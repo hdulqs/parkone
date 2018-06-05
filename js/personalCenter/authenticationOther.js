@@ -41,9 +41,10 @@ $(document).ready(function(){
 					initImg = $(".uploadFileIng").attr("data-imgFile");
 					$(".uploadFileIng").removeClass("uploadFileIng");
 					$("#"+initImg).val(data.data);
-					var url=location.origin;
-					var url1=data.data.replace("http://www.cointobe.com","");
-					var resurl=url+url1;
+					// var url=location.origin;
+					// var url1=data.data.replace("http://www.cointobe.com","");
+					// var resurl=url+url1;
+					var resurl=data.data;
 					$("."+initImg).html('<img width="300" src="'+resurl+'">');
 					$("#loading,.fff-mask").hide();
 					checkInputStatus();

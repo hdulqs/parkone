@@ -120,7 +120,7 @@ function initYunD1(){
 	initNECaptcha({
             captchaId: 'ef66943670784abc95366cd936c20f9d',
             element: '#codeCheck1',
-            width: 338,
+            width: 370,
             mode: "float",
             onReady: function (instance) {
                 $("#codeCheck1 .yidun_refresh").attr("title","");

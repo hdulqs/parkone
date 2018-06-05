@@ -72,7 +72,7 @@ function initYunD(){
 	    captchaId: 'ef66943670784abc95366cd936c20f9d',
 	    element: '#captcha',
 	    mode: "float",
-	    width: 338,
+	    width: 370,
 	    onReady: function (instance) {
 	        // 验证码一切准备就绪，此时可正常使用验证码的相关功能
 	       $("#captcha .yidun_refresh").attr("title","");

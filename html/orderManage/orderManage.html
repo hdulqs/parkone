@@ -38,7 +38,7 @@
                         <ul class="list-inline">
                             <!--<li><p data-i18n="orderManage.allstatus"  @click="setData(0),statusIndex=0" :class="statusIndex==0?statusIndexClassActive:statusIndexClass">{{statusIndex}}全部状态</p></li>-->
                             <li><p data-i18n="orderManage.Pending" @click="setData(1,1),statusIndex=1,cur=1" :class="statusIndex==1?statusIndexClassActive:statusIndexClass">委托中</p></li>
-                            <li><p  data-i18n="orderManage.Deleted" @click="setData(5,1),statusIndex=2,cur=1" :class="statusIndex==2?statusIndexClassActive:statusIndexClass">已撤销</p></li>
+                            <li><p  data-i18n="orderManage.Deleted" @click="setData(0,1),statusIndex=2,cur=1" :class="statusIndex==2?statusIndexClassActive:statusIndexClass">已撤销</p></li>
                             <li><p  data-i18n="orderManage.navFilled" @click="setDataEnd(1),statusIndex=3,cur=1" :class="statusIndex==3?statusIndexClassActive:statusIndexClass">已成交</p></li>
                         </ul>
                     </div>

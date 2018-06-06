@@ -161,6 +161,8 @@ function serviceNameCallBack(serviceName,r){
 
 }
 $("#Emailebtn-submit1").on("click",function(){
+    alert("即将上线，敬请期待");
+    return;
     callServie("register",'/api/user/nologin/register',{
         "username":$("#email").val(),
         "password":$("#Emailpassword").val(),
@@ -198,6 +200,8 @@ $("#code").on("blur",function(){
     }
 })
 $("#phonebtn-submit1").on("click",function(){
+    alert("即将上线，敬请期待");
+    return;
     if($("#phonePasswordErrorMsg").html()!=""||$("#codeErrorMsg").html()!=""){
         return;
     }

@@ -196,7 +196,7 @@ function loadNav(){
                         '<a href="https://www.facebook.com/Parkoneexchange/?modal=admin_todo_tour" target="_blank"><i class="icon-facebook"></i></a>'+
                         '<a href="javascript:void(0)"><i class="icon-weixin"></i><span class="ewmto"><font><img src="../../images/weixin-dy.jpg" alt=""/><i data-i18n="common:footer.Subscriptions">微信订阅号</i></font></span></a>'+
                         '<a href="https://m.weibo.cn/u/6536442461" target="_blank"><i class="icon-sina"></i></a>'+
-                        '<a href="javascript:void(0)"><img style="width:17px;margin-top:1.5px" src="../../images/kefuicon.png" alt=""/><span class="ewmto"><font><img src="../../images/kefu.jpg" alt=""/><i data-i18n="common:footer.WechatService">微信订阅号</i></font></span></a>'+
+                        '<a style="line-height:0" href="javascript:void(0)"><img style="width:17px;margin-top:6.5px;" src="../../images/kefuicon.png" alt=""/><span class="ewmto"><font><img src="../../images/kefu.jpg" alt=""/><i data-i18n="common:footer.WechatService">微信订阅号</i></font></span></a>'+
                     '</li>'+
                 '</ul>'+
                 '<ul class="clearfix time-box">'+
@@ -231,7 +231,7 @@ function loadNav(){
                                 '<a href="https://www.facebook.com/Parkoneexchange/?modal=admin_todo_tour" target="_blank"><i class="icon-facebook"></i></a>'+
                                 '<a href="javascript:void(0)"><i class="icon-weixin"></i><span class="ewmto"><font><img src="../../images/weixin-dy.jpg" alt=""/><i data-i18n="common:footer.Subscriptions">微信订阅号</i></font><font><img src="../../images/weixin-qr1.png" alt=""/><i data-i18n="common:footer.WechatNews">微信服务号</i></font><font><img src="../../images/weixin-qr2.png" alt="" /><i data-i18n="common:footer.WechatService">微信客服</i></font></span></a>'+
                                 '<a href="https://m.weibo.cn/u/6536442461" target="_blank"><i class="icon-sina"></i><span><img src="../../images/weibo-qr.png" alt="" /></span></a>'+
-                                '<a href="javascript:void(0)"><img style="width:17px;margin-top:1.5px;" src="../../images/kefuicon.png" alt=""/><span class="ewmto"><font><img src="../../images/kefu.jpg" alt=""/><i data-i18n="common:footer.WechatService">微信订阅号</i></font></span></a>'+
+                                '<a style="line-height:0" href="javascript:void(0)"><img style="width:17px;margin-top:6.5px;" src="../../images/kefuicon.png" alt=""/><span class="ewmto"><font><img src="../../images/kefu.jpg" alt=""/><i data-i18n="common:footer.WechatService">微信订阅号</i></font></span></a>'+
                             '</li>'+
                         '</ul>';
     var indexFooterModal = '<div class="footerMoadl" style="background:rgba(0,0,0,0)" >'+

@@ -19,8 +19,11 @@ $(document).ready(function(){
 	initYunD();
     initYunD1();
     $("#btn-submit").click(function(){
-        alert("即将上线，敬请期待");
-        return;
+        if(location.hostname=="www.park.one"){
+            alert("即将上线，敬请期待");
+            return;
+        }
+        
         var mail = $("#mail").val();
         var fPsw = $("#firstpassword").val();
         var sPsw = $("#secondpassword").val();
@@ -60,8 +63,10 @@ $(document).ready(function(){
         }
     })
     $("#btn-submit1").click(function(){
-        alert("即将上线，敬请期待");
-        return;
+        if(location.hostname=="www.park.one"){
+            alert("即将上线，敬请期待");
+            return;
+        }
         var mail = $("#mail1").val();
         var fPsw = $("#firstpassword1").val();
         var code = $("#code").val();

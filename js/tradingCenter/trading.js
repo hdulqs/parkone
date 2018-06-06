@@ -1350,14 +1350,18 @@ function marketPriceBuyConsignationCallBack(r) {
         alert(r.error.detail);
         return;
     }
+    if(r.data.madeCount==0){
+        alert("已成交数量为0");
+        return;
+    }
     buyAndSell.shijiabuy = "";
     var lang = $.cookie('newlang');
     if (typeof(lang) == "undefined") {
-        msg("Success");
+        msg("Success Count"+r.data.madeCount);
     } else if (lang == "scn" || lang == "tcn") {
-        msg("委托成功");
+        msg("委托成功"+r.data.madeCount+"个");
     } else if (lang == "en") {
-        msg("Success");
+        msg("Success Count"+r.data.madeCount);
     }
     getBuyAndSellDataList();
     callServie("AssetMsg", "/api/account/asset");
@@ -1372,13 +1376,17 @@ function marketPriceSellConsignationCallBack(r) {
         alert(r.error.detail);
         return;
     }
+    if(r.data.madeCount==0){
+        alert("已成交数量为0");
+        return;
+    }
     var lang = $.cookie('newlang');
     if (typeof(lang) == "undefined") {
-        msg("Success");
+        msg("Success Count"+r.data.madeCount);
     } else if (lang == "scn" || lang == "tcn") {
-        msg("委托成功");
+        msg("委托成功"+r.data.madeCount+"个");
     } else if (lang == "en") {
-        msg("Success");
+        msg("Success Count"+r.data.madeCount);
     }
     buyAndSell.shijiasell = "";
     getBuyAndSellDataList();

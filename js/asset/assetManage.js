@@ -24,8 +24,7 @@ var assetHAT = new Vue({
 		isCheckGM:false//提币时校验页面填写是否正确
 		,idcl:""
 		,RateMoney:Number($.cookie('baserate'+$.cookie("newlang")))>0 ? Number($.cookie('baserate'+$.cookie("newlang"))) : 1
-		,tir:{
-			//提币汇率
+		,tir:{	//提币汇率
 			"BTC":[0.05,20,0.002],
 			"ETH":[0.1,200,0.01],
 			"LTC":[0.1,2000,0.03],
@@ -190,8 +189,7 @@ var assetHAT = new Vue({
         }
         ,tibiSubmitForm:function(){
         	$(".di.tixian-dialog .font-hint").addClass("dn");
-			var isC = checkInputVal();
-			
+			var isC = checkInputVal(this.tir);
 			var submitOk = true;
 			var where = {};
 			where.currencyType = this.showCurrencyType;
@@ -432,7 +430,6 @@ function assetCallBack(d){
 		$.each(d.data,function(k,v){
 			d.data[k].chongAddress = '';
 			assetHAT.chongbiAddress[v.currencyName] = '';
-			assetHAT.tir[v.currencyName] = [v.limitVal, v.maxVal,v.poundage];
 		});
 	}else{
 		$(".no-data-msg1").show();
@@ -443,7 +440,7 @@ function assetCallBack(d){
 	},0);
 }
 //提交“提现”
-function withdrawCallBack(d){
+function withdrawCalwithdrawCallBack(d){
 	if(d.success){
 		window.location.reload();
 	}else{
@@ -464,12 +461,12 @@ function jsCopy(){
 } 
 
 //校验提币值
-function checkInputVal(){
+function checkInputVal(obj){
 	var _thisV = Number(assetHAT.tibiInputNumber);
 	var allV = $(".di.tixian-dialog .allAmount").html();
 		allV = Number(allV);
 		if(isNaN(allV)) allV = 0;
-	var _baseD = assetHAT.tir[assetHAT.showCurrencyName];
+	var _baseD = obj[assetHAT.showCurrencyName];
 	$(".di.tixian-dialog .fh-warn1 span").html("");
 	if(isNaN(_thisV) || _thisV == ""){
 		$(".di.tixian-dialog .fh-warn1 i").attr("data-i18n","assetManage.warning11");

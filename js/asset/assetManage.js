@@ -24,14 +24,13 @@ var assetHAT = new Vue({
 		isCheckGM:false//提币时校验页面填写是否正确
 		,idcl:""
 		,RateMoney:Number($.cookie('baserate'+$.cookie("newlang")))>0 ? Number($.cookie('baserate'+$.cookie("newlang"))) : 1
-		,tir:[]/*{
+		,tir:{
 			//提币汇率
 			"BTC":[0.05,20,0.002],
 			"ETH":[0.1,200,0.01],
 			"LTC":[0.1,2000,0.03],
-			"SANC":[10,0,3],
-			"OMG":[1,2500,0.3]
-		}*/
+			"KNC":[0.5,2000,0.3]
+		}
 		,msgSuccess: ["",'DepositSuccess','WithdrawalSuccess','loginReward','tradeReward','freeReward']
 		,msgSuccessOthers: ['','PendingDeposit','WithdrawalRequest']
 		,msgAmount: ['','DepositAmount','WithdrawalAmount','DepositAmount','DepositAmount','DepositAmount']
@@ -339,7 +338,7 @@ function checkWithdrawCallBack(d){
 		var thisWith = $(".status-checkRole").attr("data-with");
 		$(".status-checkRole").removeClass("status-checkRole");
 		addressList();
-		//poundage();
+		poundage();
 		$(".rowWithdrawal"+thisWith).removeClass("dn").addClass("di");	
 	}
 }
@@ -373,7 +372,7 @@ function deleteAddressCallBack(d){
 	
 }
 //手续费
-function poundage(currencyName){
+function poundage(){
 	callServieOther("poundage","/api/account/asset/poundage",{
 		"currencyName":assetHAT.showCurrencyName
 	})

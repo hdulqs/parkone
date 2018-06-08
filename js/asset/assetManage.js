@@ -189,7 +189,7 @@ var assetHAT = new Vue({
         }
         ,tibiSubmitForm:function(){
         	$(".di.tixian-dialog .font-hint").addClass("dn");
-			var isC = checkInputVal(this.tir);
+			var isC = checkInputVal();
 			var submitOk = true;
 			var where = {};
 			where.currencyType = this.showCurrencyType;
@@ -461,12 +461,12 @@ function jsCopy(){
 } 
 
 //校验提币值
-function checkInputVal(obj){
+function checkInputVal(){
 	var _thisV = Number(assetHAT.tibiInputNumber);
 	var allV = $(".di.tixian-dialog .allAmount").html();
 		allV = Number(allV);
 		if(isNaN(allV)) allV = 0;
-	var _baseD = obj[assetHAT.showCurrencyName];
+	var _baseD = assetHAT.tir[assetHAT.showCurrencyName];
 	$(".di.tixian-dialog .fh-warn1 span").html("");
 	if(isNaN(_thisV) || _thisV == ""){
 		$(".di.tixian-dialog .fh-warn1 i").attr("data-i18n","assetManage.warning11");

@@ -440,7 +440,7 @@ function assetCallBack(d){
 	},0);
 }
 //提交“提现”
-function withdrawCalwithdrawCallBack(d){
+function withdrawCallBack(d){
 	if(d.success){
 		window.location.reload();
 	}else{
@@ -448,9 +448,9 @@ function withdrawCalwithdrawCallBack(d){
 		$("#btn-mobileValidate").modal('hide');
 		$("#btn-googleValidate").modal('hide');
 		alert(d.error.detail);
-		setTimeout(function(){
-			window.location.reload();
-		},3000)
+		// setTimeout(function(){
+		// 	window.location.reload();
+		// },3000)
 	}
 	return false;
 }

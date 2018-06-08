@@ -53,7 +53,7 @@
     "warning4": "Please enter withdrawal amount",
     "warning5": "Exceed the maximum withdrawal amount",
     "warning6": "Withdrawal amount must above",
-    "warning7": "Maximum daily withdrawal amount",
+    "warning7": "Maximum once withdrawal amount",
     "warning8": "Withdrawal amount accurate to four decimal places.",
     "warning10": "Tags and withdrawal address are required.",
     "warning11": "Withdrawal amount  must be numbers.",

@@ -130,7 +130,8 @@
 											<p class="pull-right" style="width: 0;height: 0;overflow: hidden;"><span data-i18n="assetManage.willget">：</span><span class="theAccount">{{formatNumber(scientificToNumber(tibiInputNumber > 0 && Number(tibiInputNumber)-Number(tibiInputPoundage) >0 ? tibiInputNumber-tibiInputPoundage : 0),item.currencyType == 4 ? 6 : 8)}}</span></p>
 										</div>
 										<div class="address-wrap ">
-											<input data-i18n="[placeholder]assetManage.password" @keyup="checkKeyup('input-pwd','fh-warn2')" placeholder="请输入资金密码" type="password" class="input-pwd">
+											<input type='text' style='display:none'>
+											<input data-i18n="[placeholder]assetManage.password" @keyup="checkKeyup('input-pwd','fh-warn2')" placeholder="请输入资金密码" type="password" class="input-pwd" autocomplete="new-password">
 										</div>
 										<p class="font-hint fh-warn2 dn"><i data-i18n="assetManage.warning12"></i><span></span></p>
 										<p class="btn-withdraw text-center" @click="tibiSubmitForm()" :data-currencyName="item.currencyName" data-i18n="assetManage.WithdrawalBtn">提币</p>

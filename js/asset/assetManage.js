@@ -448,9 +448,9 @@ function withdrawCallBack(d){
 		$("#btn-mobileValidate").modal('hide');
 		$("#btn-googleValidate").modal('hide');
 		alert(d.error.detail);
-		// setTimeout(function(){
-		// 	window.location.reload();
-		// },3000)
+		setTimeout(function(){
+			window.location.reload();
+		},3000)
 	}
 	return false;
 }

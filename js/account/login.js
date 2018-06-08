@@ -135,6 +135,9 @@ function loginCallBack(r) {
         }else{
             alert(r.error.detail);
         }      
+
+
+        
     } else {
         $.cookie("twoValid", r.data.twoValid, {expires: 30, path: '/'});
         $.cookie("googleStatus", r.data.googleStatus, {expires: 30, path: '/'});

@@ -445,12 +445,13 @@ function withdrawCallBack(d){
 		window.location.reload();
 	}else{
 		$("#twoTypeValidate").modal('hide');
-		$("#btn-mobileValidate").modal('hide');
-		$("#btn-googleValidate").modal('hide');
+		$("#mobileValidate").modal('hide');
+		$("#googleValidate").modal('hide');
 		alert(d.error.detail);
-		setTimeout(function(){
-			window.location.reload();
-		},3000)
+		$(".bgloading").hide();
+		// setTimeout(function(){
+		// 	window.location.reload();
+		// },3000)
 	}
 	return false;
 }
@@ -524,7 +525,7 @@ function googleCodeValid() {
       initLang();
   }else {
 	loadbgloading();
-	$("#bgloading").show();
+	$(".bgloading").show();
   	if(isCheckGM){
     	subTBApi(1,gooleCode);
     }else{
@@ -590,8 +591,6 @@ function sendValidSms(obj) {
 }
 /*手机二次验证码校验*/
 function mobileCodeVerify2() {
-	loadbgloading();
-	$("#bgloading").show();
     var TwoMobileCode=$("#TwoMobileCode").val();
       if(TwoMobileCode==""){
             $(".warning-mobilecode").html('<i class="icon-exclamation-circle"></i><i data-i18n="common:twoVerification.cue1">验证码不能为空</i>');

@@ -508,7 +508,9 @@ function loadbgloading() {
         '                <div class="double-bounce2"></div>'+
         '            </div>'+
         '        </div>';
-    $(".page").before(bgloadingHtml);
+    if($("#bgloading").length<0){
+        $(".page").before(bgloadingHtml);
+    }  
 }
 function callServieaSync(serviceName,urlPath,param,loadParam) {
     var loadParam = loadParam||{};

@@ -403,7 +403,8 @@ function loadTwoVerifyGoogle(){
         '                                    </h4>'+
         '                                </div>'+
         '                                <div class="modal-body">'+
-        '                                    <input type="text"   data-i18n="[placeholder]common:twoVerification.placeholder1"  placeholder="谷歌验证码" class="input-code googleCode" id="gooleCode" onkeyup="googleVerify(this)">'+
+        '                                   <input type="text" style="display:none">'+
+        '                                    <input type="text"   data-i18n="[placeholder]common:twoVerification.placeholder1"  placeholder="谷歌验证码" class="input-code googleCode" id="gooleCode" autocomplete="off" onkeyup="googleVerify(this)">'+
         '                                    <p  class="warning warning-googlecode"></p>'+
         '                                </div>'+
         '                                <div class="modal-footer">'+

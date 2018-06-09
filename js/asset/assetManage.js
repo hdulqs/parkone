@@ -25,10 +25,10 @@ var assetHAT = new Vue({
 		,idcl:""
 		,RateMoney:Number($.cookie('baserate'+$.cookie("newlang")))>0 ? Number($.cookie('baserate'+$.cookie("newlang"))) : 1
 		,tir:{	//提币汇率
-			"BTC":[0.05,20,0.002],
-			"ETH":[0.1,200,0.01],
-			"LTC":[0.1,2000,0.03],
-			"KNC":[0.5,2000,0.3]
+			"BTC":[0.05,20,0.001],
+			"ETH":[0.1,200,0.003],
+			"LTC":[0.1,2000,0.003],
+			"KNC":[1,10000,1]
 		}
 		,msgSuccess: ["",'DepositSuccess','WithdrawalSuccess','loginReward','tradeReward','freeReward']
 		,msgSuccessOthers: ['','PendingDeposit','WithdrawalRequest']

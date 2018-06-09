@@ -62,7 +62,7 @@ $("#phonePassword").on("blur",function(){
 })
 
 $("#phonebtn-submit1").on("click",function(){
-    if($("#phonePasswordErrorMsg").html()!=""||$("#codeErrorMsg").html()!=""){
+    if($("#phonePasswordErrorMsg").html()!=""){
         return;
     }
     if(validate==""){

@@ -19,10 +19,10 @@ $(document).ready(function(){
 	initYunD();
     initYunD1();
     $("#btn-submit").click(function(){
-        if(location.hostname=="www.park.one"){
-            alert("即将上线，敬请期待");
-            return;
-        }
+        // if(location.hostname=="www.park.one"){
+        //     alert("即将上线，敬请期待");
+        //     return;
+        // }
         
         var mail = $("#mail").val();
         var fPsw = $("#firstpassword").val();

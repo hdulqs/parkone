@@ -161,10 +161,10 @@ function serviceNameCallBack(serviceName,r){
 
 }
 $("#Emailebtn-submit1").on("click",function(){
-    if(location.hostname=="www.park.one"){
-        alert("即将上线，敬请期待");
-        return;
-    }
+    // if(location.hostname=="www.park.one"){
+    //     alert("即将上线，敬请期待");
+    //     return;
+    // }
     callServie("register",'/api/user/nologin/register',{
         "username":$("#email").val(),
         "password":$("#Emailpassword").val(),

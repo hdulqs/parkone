@@ -89,6 +89,62 @@
         .announcements ul li a{
             color: #93A4DA;
         }
+        .dynamicData{
+            height: 275px;
+            width: 100%;
+            background: rgb(39,43,65);
+        }
+        .canvas_box{
+            width:   325px;
+            height: 100px; 
+            position: absolute;
+            top: 71px;
+            left: -32px;
+        }
+        .dynamicDataBox{
+            padding-top: 30px;
+            width: 1010px;
+            margin: 0 auto;
+        }
+        .dynamicDataBox ul{
+            padding: 0;
+            margin: 0;
+        }
+        .dynamicDataBox ul li{
+            width:285px;
+            height: 195px;
+            margin-right:75px;
+            background:rgba(14,21,47,1);
+            border-radius:12px; 
+            float: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .coin_name{
+            width:48px;
+            height:20px;
+            font-size:14px;
+            color:rgba(82,94,128,1);
+            line-height:20px;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .coin_num{
+            width:123px;
+            height:37px;
+            font-size:26px;
+            color:rgba(232,238,254,1);
+            line-height:37px;
+            margin-left: 20px;
+        }
+        .times_coin_num{
+            height:20px;
+            font-size:14px;
+            color:rgba(147,164,218,1);
+            line-height:20px;
+            margin-left: 20px;
+        }
+
         .message_intro{
             width: 100%;
             height: 400px;
@@ -184,7 +240,56 @@
     </div> -->
     
     <!-- 动态数据 -->
-    <div class="dynamic_data" id="dynamic_data" v-cloak >
+    <div class="dynamicData" id="dynamic_data" v-cloak  >
+        <div class="dynamicDataBox">
+            <ul >
+                <li v-for="(item,index) in AllNewst['BTC']" v-if="index==0">
+                    <div :style="item.increase<0?'color:#E70353':'color:#13b5b1'" class="coin_name">{{getFloat(item.new,6)}}<img class="icon" :src="item.increase>=0?'../../images/icon-index2.png':'../../images/icon-index1.png'" alt=""></div>
+                    <div class="coin_num"><p class="font-margin"><span  v-show="scientificToNumber(item.new)>0" class="font-rate font-margin">≈</span><span v-show="scientificToNumber(item.new)>0" class="font-rate" data-i18n="moneyTypeF">￥</span><span v-show="scientificToNumber(item.new)>0" class="font-rate">{{getFloat(scientificToNumber(item.new)*Rate[market]*RateMoney,2)}}</span></div>
+                    <div class="times_coin_num">
+                        <span class="font-b">{{item.pair}}</span>
+                        <!-- <span>24H </span>
+                        <span style="color:#18BF80"> +7.2%</span>&nbsp&nbsp&nbsp
+                        <span >7D </span>
+                        <span style="color:#E85235"> -5%</span> -->
+                    </div>
+                    <div class="canvas_box">
+                        <canvas id="areaChart0" style="height: 80px;"></canvas>
+                    </div>
+                </li>
+                <li v-for="(item,index) in AllNewst['BTC']" v-if="index==1">
+                    <div :style="item.increase<0?'color:#E70353':'color:#13b5b1'" class="coin_name">{{getFloat(item.new,6)}}<img class="icon" :src="item.increase>=0?'../../images/icon-index2.png':'../../images/icon-index1.png'" alt=""></div>
+                    <div class="coin_num"><p class="font-margin"><span  v-show="scientificToNumber(item.new)>0" class="font-rate font-margin">≈</span><span v-show="scientificToNumber(item.new)>0" class="font-rate" data-i18n="moneyTypeF">￥</span><span v-show="scientificToNumber(item.new)>0" class="font-rate">{{getFloat(scientificToNumber(item.new)*Rate[market]*RateMoney,2)}}</span></div>
+                    <div class="times_coin_num">
+                        <span class="font-b">{{item.pair}}</span>
+                        <!-- <span>24H </span>
+                        <span style="color:#18BF80"> +7.2%</span>&nbsp&nbsp&nbsp
+                        <span >7D </span>
+                        <span style="color:#E85235"> -5%</span> -->
+                    </div>
+                    <div class="canvas_box">
+                        <canvas id="areaChart1" style="height: 80px;"></canvas>
+                    </div>
+                </li>
+                <li v-for="(item,index) in AllNewst['BTC']" v-if="index==2"  style="margin-right: 0">
+                    <div :style="item.increase<0?'color:#E70353':'color:#13b5b1'" class="coin_name">{{getFloat(item.new,6)}}<img class="icon" :src="item.increase>=0?'../../images/icon-index2.png':'../../images/icon-index1.png'" alt=""></div>
+                    <div class="coin_num"><p class="font-margin"><span  v-show="scientificToNumber(item.new)>0" class="font-rate font-margin">≈</span><span v-show="scientificToNumber(item.new)>0" class="font-rate" data-i18n="moneyTypeF">￥</span><span v-show="scientificToNumber(item.new)>0" class="font-rate">{{getFloat(scientificToNumber(item.new)*Rate[market]*RateMoney,2)}}</span></div>
+                    <div class="times_coin_num">
+                        <span class="font-b">{{item.pair}}</span>
+                        <!-- <span>24H </span>
+                        <span style="color:#18BF80"> +7.2%</span>&nbsp&nbsp&nbsp
+                        <span >7D </span>
+                        <span style="color:#E85235"> -5%</span> -->
+                    </div>
+                    <div class="canvas_box">
+                        <canvas id="areaChart2" style="height: 80px;"></canvas>
+                    </div>
+                </li>
+          </ul>
+        </div>
+      </div>
+
+    <!-- <div class="dynamic_data" id="dynamic_data" v-cloak >
         
       <div class="swiper-container1">
         <ul class="swiper-wrapper" >
@@ -196,17 +301,17 @@
             </li>
         </ul>
       </div>
-    </div>
+    </div> -->
     <!-- 信息介绍 -->
     <div class="message_intro">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
-            <!-- <ol class="carousel-indicators">
+            <ol class="carousel-indicators">
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            </ol> -->
+                <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li> -->
+            </ol>
             
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
@@ -217,14 +322,14 @@
                         <p data-i18n="dis1">安全稳定运营数字资产交易所超过四年,管理资产规模超过10亿美金， 服务数百万用户,专业分布式架构和防DDOS攻击系统.</p>
                     </div>
                 </div>
-                <!-- <div class="item photo_box">
+                 <div class="item photo_box">
                     <img src="../../images/1528516762(1).jpg" alt="...">
                     <div class="carousel-caption">
                         <h3>多年技术数字资产安全风控经验</h3>
-                        <p>安全稳定运营数字资产交易所超过四年,管理资产规模超过10亿美金， 服务数百万用户,专业分布式架构和防DDOS攻击系统.</p>
+                        <p style="margin-top: 20px;">安全稳定运营数字资产交易所超过四年,管理资产规模超过10亿美金， 服务数百万用户,专业分布式架构和防DDOS攻击系统.</p>
                     </div>
                 </div>
-                <div class="item  photo_box">
+                <!--<div class="item  photo_box">
                     <img src="../../images/1528516762(1).jpg" alt="...">
                     <div class="carousel-caption">
                         <h3>多年技术数字资产安全风控经验</h3>
@@ -292,6 +397,7 @@
 	<script  src="../../js/jquery.cookie.js"></script>
 	<script src="../../js/i18next-1.6.3.min.js"></script>
     <script  src="../../js/changeLang.js"></script>
+    <script src="../../js/Chart.js"></script>
 	<!-- 多语言切换结束-->
     <script src="../../js/jquery.smoove.min.js"></script>
     <script src="../../js/index/index.js"></script>
@@ -300,7 +406,6 @@
     <script type="text/javascript">
     $(function(){
         setTimeout(function(){
-            console.log("coinTob")
               if(deviceId == "ms"){
                 $.cookie('newlang',"scn");
                 $("#headerNav .nav-item.ctrl-select.ctrl-select1,#headerNav .logo,#headerNav .change-lan.ul-select-wrap").remove();
@@ -309,6 +414,9 @@
             }
            
         },0)
+    })
+    $('.carousel').carousel({
+        interval: 2000
     })
     var ua = navigator.userAgent;
     var browserRedirect = function(isLoad) {
@@ -337,6 +445,11 @@
     function swiperBox(){
         /*swper*/
         var ls = TransactionPair.AllNewst['BTC'].length>6
+        if(TransactionPair.AllNewst['BTC'].length>2){
+            setTimeout(function(){
+                initareaChart()
+            },2000)
+        }
         if(ls){
             var swiper = new Swiper('.swiper-container1', {
                 loop:true,
@@ -352,7 +465,7 @@
             $('.swiper-container1').mouseleave(function () {
                swiper.startAutoplay();
             })
-            initareaChart()
+            
         }
         else{
             
@@ -380,6 +493,148 @@
         // 如果需要滚动条
         scrollbar: '.swiper-scrollbar',
     });
+
+
+    var timeChartCanvas;
+    var data=[],data1=[],data3=[],data2=[];
+    var labels=[],labels1=[],labels2=[],labels3=[];
+    for (var n=0;n<100;n++){
+        if(n==0){
+            data[n]=0
+            data1[n]=0
+            data2[n]=0
+        }else{
+            data[n]=getRandom1(60, 80)
+            data1[n]=getRandom1(50, 70)
+            data2[n]=getRandom1(40, 60)
+        }
+        labels[n]=n
+        labels1[n]=n
+        labels2[n]=n
+    }
+    var areaChartData =[
+        {
+            labels: labels,
+            datasets: [
+                {
+                    label: "Digital Goods",
+                    fillColor: "rgba(60,141,188,0.9)",
+                    strokeColor: "rgba(60,141,188,0.8)",
+                    pointColor: "#3b8bba",
+                    pointStrokeColor: "rgba(60,141,188,1)",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(60,141,188,1)",
+                    data: data
+                }
+            ]
+        },
+        {
+            labels: labels1,
+            datasets: [
+                {
+                    label: "Digital Goods",
+                    fillColor: "rgba(60,141,188,0.9)",
+                    strokeColor: "rgba(60,141,188,0.8)",
+                    pointColor: "#3b8bba",
+                    pointStrokeColor: "rgba(60,141,188,1)",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(60,141,188,1)",
+                    data: data1
+                }
+            ]
+        },
+        {
+            labels: labels2,
+            datasets: [
+                {
+                    label: "Digital Goods",
+                    fillColor: "rgba(60,141,188,0.9)",
+                    strokeColor: "rgba(60,141,188,0.8)",
+                    pointColor: "#3b8bba",
+                    pointStrokeColor: "rgba(60,141,188,1)",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(60,141,188,1)",
+                    data: data2,
+                }
+            ]
+        }
+    ] ;
+    var areaChartOptions = {
+      //Boolean - If we should show the scale at all
+      showScale: true,
+      //Boolean - Whether grid lines are shown across the chart
+      scaleShowGridLines: false,
+      //String - Colour of the grid lines
+      scaleGridLineColor: "rgba(0,0,0,.05)",
+      //Number - Width of the grid lines
+      scaleGridLineWidth: 1,
+      //Boolean - Whether to show horizontal lines (except X axis)
+      scaleShowHorizontalLines: false,
+      //Boolean - Whether to show vertical lines (except Y axis)
+      scaleShowVerticalLines: false,
+      //Boolean - Whether the line is curved between points
+      bezierCurve: false,
+      //Number - Tension of the bezier curve between points
+      bezierCurveTension: 0.3,
+      //Boolean - Whether to show a dot for each point
+      pointDot: false,
+      //Number - Radius of each point dot in pixels
+      pointDotRadius: 4,
+      //Number - Pixel width of point dot stroke
+      pointDotStrokeWidth: 1,
+      //Number - amount extra to add to the radius to cater for hit detection outside the drawn point
+      pointHitDetectionRadius: 20,
+      //Boolean - Whether to show a stroke for datasets
+      datasetStroke: false,
+      //Number - Pixel width of dataset stroke
+      datasetStrokeWidth: 2,
+      //Boolean - Whether to fill the dataset with a color
+      datasetFill: true,
+      //Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+      maintainAspectRatio: true,
+      //Boolean - whether to make the chart responsive to window resizing
+      responsive: true,
+      animation : false, 
+      scaleLineWidth:1,
+      scaleSteps : 100,
+      scaleStartValue : 1,
+    };
+    //Create the line chart
+    
+    function initareaChart(){
+        var areaChartCanvas = $("#areaChart0").get(0).getContext("2d");
+        var areaChartCanvas1 = $("#areaChart1").get(0).getContext("2d");
+        var areaChartCanvas2 = $("#areaChart2").get(0).getContext("2d");
+        // This will get the first returned node in the jQuery collection.
+        var areaChart = new Chart(areaChartCanvas);
+        var areaChart1 = new Chart(areaChartCanvas1);
+        var areaChart2 = new Chart(areaChartCanvas2);
+        areaChart.Line(areaChartData[0],areaChartOptions);
+        areaChart1.Line(areaChartData[1], areaChartOptions);
+        areaChart2.Line(areaChartData[2], areaChartOptions);
+        setTimeout(function(){
+            if(timeChartCanvas){
+                window.clearTimeout(timeChartCanvas)
+            }
+            timeChartCanvas=setInterval(function(){
+                areaChartData[0].datasets[0].data[99]=getRandom1(60, 80)
+                areaChartData[1].datasets[0].data[99]=getRandom1(50, 70)
+                areaChartData[2].datasets[0].data[99]=getRandom1(40, 60)
+                for(var n=0;n<3;n++){
+                    areaChartData[n].datasets[0].data.splice(0,1)
+                    areaChartData[n].datasets[0].data[0]=0;
+                }
+                areaChart.Line(areaChartData[0],areaChartOptions);
+                areaChart1.Line(areaChartData[1], areaChartOptions);
+                areaChart2.Line(areaChartData[2], areaChartOptions);
+            },1000)
+        },2000)
+    }
+    function getRandom1(start, end) {
+        var length = end - start;
+        var num = parseInt(Math.random() * (length) + start);
+        return num;
+    }
 </script>
 </body>
 </html>

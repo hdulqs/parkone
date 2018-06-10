@@ -63,10 +63,10 @@ $(document).ready(function(){
         }
     })
     $("#btn-submit1").click(function(){
-        if(location.hostname=="www.park.one"){
-            alert("即将上线，敬请期待");
-            return;
-        }
+        // if(location.hostname=="www.park.one"){
+        //     alert("即将上线，敬请期待");
+        //     return;
+        // }
         var mail = $("#mail1").val();
         var fPsw = $("#firstpassword1").val();
         var code = $("#code").val();

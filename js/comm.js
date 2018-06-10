@@ -609,7 +609,7 @@ function callServie(serviceName,urlPath,param,loadParam) {
 	if(loadParam.isLoading){
 		$(loadParam.elm).removeClass("dn");
 	}
-    var lan = parmLng[$.cookie('newlang')];
+    var lan = parmLng[$.cookie('newlang')]?parmLng[$.cookie('newlang')]:'zh_CN';
 	var userToken = deviceType == 1 ? $.cookie("userToken") : localStorage.userToken;
 	var userFrom = sessionStorage.getItem("utm_source") ? sessionStorage.getItem("utm_source") : "";
 	var url=Path+urlPath+'?lang='+lan;

@@ -172,8 +172,8 @@
             width:   325px;
             height: 100px; 
             position: absolute;
-            top: 71px;
-            left: -32px;
+            top: 73px;
+            left: -31px;
         }
         .photo_box div h3{
             width:532px;
@@ -192,9 +192,10 @@
             margin-top: 90px;   
         }
         .photo_box img{
-            width: 321px!important;
-            height: 400px!important;
+            width: 400px!important;
+            height: 330px!important;
             float: right;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -316,7 +317,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active photo_box" >
-                    <img src="../../images/1528516762(1).jpg" alt="...">
+                    <img src="../../images/570817776669933797.png" alt="...">
                     <div class="carousel-caption">
                         <!-- <h3 data-i18n="dis1[0].title">多年技术数字资产安全风控经验</h3> -->
                         <p data-i18n="dis1">安全稳定运营数字资产交易所超过四年,管理资产规模超过10亿美金， 服务数百万用户,专业分布式架构和防DDOS攻击系统.</p>
@@ -495,8 +496,8 @@
     });
 
 
-    var timeChartCanvas;
-    var data=[],data1=[],data3=[],data2=[];
+    var timeChartCanvas;//定时器
+    var data=[],data1=[],data3=[],data2=[];//X轴数据
     var labels=[],labels1=[],labels2=[],labels3=[];
     for (var n=0;n<100;n++){
         if(n==0){
@@ -504,9 +505,9 @@
             data1[n]=0
             data2[n]=0
         }else{
-            data[n]=getRandom1(60, 80)
-            data1[n]=getRandom1(50, 70)
-            data2[n]=getRandom1(40, 60)
+            data[n]=getRandom1(70, 80)
+            data1[n]=getRandom1(60, 70)
+            data2[n]=getRandom1(50, 60)
         }
         labels[n]=n
         labels1[n]=n
@@ -518,7 +519,7 @@
             datasets: [
                 {
                     label: "Digital Goods",
-                    fillColor: "rgba(60,141,188,0.9)",
+                    fillColor: "rgba(66,64,109,0.3)",
                     strokeColor: "rgba(60,141,188,0.8)",
                     pointColor: "#3b8bba",
                     pointStrokeColor: "rgba(60,141,188,1)",
@@ -533,7 +534,7 @@
             datasets: [
                 {
                     label: "Digital Goods",
-                    fillColor: "rgba(60,141,188,0.9)",
+                    fillColor: "rgba(66,64,109,0.3)",
                     strokeColor: "rgba(60,141,188,0.8)",
                     pointColor: "#3b8bba",
                     pointStrokeColor: "rgba(60,141,188,1)",
@@ -548,7 +549,7 @@
             datasets: [
                 {
                     label: "Digital Goods",
-                    fillColor: "rgba(60,141,188,0.9)",
+                    fillColor: "rgba(66,64,109,0.3)",
                     strokeColor: "rgba(60,141,188,0.8)",
                     pointColor: "#3b8bba",
                     pointStrokeColor: "rgba(60,141,188,1)",
@@ -617,9 +618,9 @@
                 window.clearTimeout(timeChartCanvas)
             }
             timeChartCanvas=setInterval(function(){
-                areaChartData[0].datasets[0].data[99]=getRandom1(60, 80)
-                areaChartData[1].datasets[0].data[99]=getRandom1(50, 70)
-                areaChartData[2].datasets[0].data[99]=getRandom1(40, 60)
+                areaChartData[0].datasets[0].data[99]=getRandom1(70, 80)
+                areaChartData[1].datasets[0].data[99]=getRandom1(60, 70)
+                areaChartData[2].datasets[0].data[99]=getRandom1(50, 60)
                 for(var n=0;n<3;n++){
                     areaChartData[n].datasets[0].data.splice(0,1)
                     areaChartData[n].datasets[0].data[0]=0;

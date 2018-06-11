@@ -98,7 +98,7 @@ function loadNavA(){
 
   $(".btn-reserve").click(function(){
     //退出接口
-    callServieOther("logout","/api/user/logout/",{});
+    callServieOther("logout","/api/user/logout",{});
   });
 
 

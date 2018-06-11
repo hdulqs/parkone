@@ -120,8 +120,8 @@
 										</div>
 										<p class="font-hint fh-warn0 dn"><i data-i18n="assetManage.warning10"></i><span></span></p>
 										<div class="num-wrap">
-											<input v-if="item.currencyType == 4" type="text" v-model="tibiInputNumber" @keyup="checkInputVal" data-i18n="[placeholder]assetManage.WithdrawalNum" @keydown="checkFloat6" class="input-num withdrawalAmount" :data-typeName="item.currencyName" placeholder="提币数量">
-											<input v-if="item.currencyType != 4" type="text" v-model="tibiInputNumber" @keyup="checkInputVal" data-i18n="[placeholder]assetManage.WithdrawalNum" @keydown="checkFloat8" class="input-num withdrawalAmount" :data-typeName="item.currencyName" placeholder="提币数量">
+											<!-- <input v-if="item.currencyType == 4" type="text" v-model="tibiInputNumber" @keyup="checkInputVal" data-i18n="[placeholder]assetManage.WithdrawalNum" @keydown="checkFloat6" class="input-num withdrawalAmount" :data-typeName="item.currencyName" placeholder="提币数量"> -->
+											<input  type="text" v-model="tibiInputNumber" @keyup="checkInputVal" data-i18n="[placeholder]assetManage.WithdrawalNum" @keydown="checkFloat8" class="input-num withdrawalAmount" :data-typeName="item.currencyName" placeholder="提币数量">
 											<div class="balance-wrap"><span data-i18n="assetManage.avaliableNum">：</span><span class="allAmount">{{formatNumber(scientificToNumber(item.availableAmount),item.currencyType == 4 ? 6 : 8)}}</span><i class="btn-all" data-i18n="assetManage.allWithdrawal" @click="tiBiAll(formatNumber(scientificToNumber(item.availableAmount),item.currencyType == 4 ? 6 : 8))">全部</i></div>
 										</div>
 										<p class="font-hint fh-warn1 dn"><i data-i18n="assetManage.warning11"></i><span></span></p>

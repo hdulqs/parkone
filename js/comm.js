@@ -509,7 +509,7 @@ function loadbgloading() {
         '                <div class="double-bounce2"></div>'+
         '            </div>'+
         '        </div>';
-    if($("#bgloading").length<0){
+    if($("#bgloading").length==0){
         $(".page").before(bgloadingHtml);
     }  
 }

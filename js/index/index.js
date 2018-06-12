@@ -88,7 +88,7 @@ function theAllNewestCallBack(r){
     st=JSON.stringify(array);
     ob=JSON.parse(st);
     TransactionPair.AllNewst=json2//ob;
-   // swiperBox()
+   swiperBox()
 }
 setInterval(function(){
     getTheAllNewestData();
@@ -133,38 +133,38 @@ $("#footerModal").on('click','.footerMoadl .close',function(){
         interval: 2000
     })
 
-    // function swiperBox(){
-    //     /*swper*/
-    //     var ls = TransactionPair.AllNewst['BTC'].length>6
-    //     if(TransactionPair.AllNewst['BTC'].length>2){
-    //         setTimeout(function(){
-    //             initareaChart()
-    //         },2000)
-    //     }
-    //     if(ls){
-    //         var swiper = new Swiper('.swiper-container1', {
-    //             loop:true,
-    //             autoplay : 1000,
-    //             autoplayDisableOnInteraction : false,
-    //             slidesPerView: 7,
-    //             initialSlide:0
-    //         })
+    function swiperBox(){
+        /*swper*/
+        var ls = TransactionPair.AllNewst['BTC'].length>6
+        if(TransactionPair.AllNewst['BTC'].length>2){
+            setTimeout(function(){
+                initareaChart()
+            },2000)
+        }
+        // if(ls){
+        //     var swiper = new Swiper('.swiper-container1', {
+        //         loop:true,
+        //         autoplay : 1000,
+        //         autoplayDisableOnInteraction : false,
+        //         slidesPerView: 7,
+        //         initialSlide:0
+        //     })
 
-    //         $('.swiper-container1').mouseenter(function () {
-    //            swiper.stopAutoplay();
-    //         })
-    //         $('.swiper-container1').mouseleave(function () {
-    //            swiper.startAutoplay();
-    //         })
+        //     $('.swiper-container1').mouseenter(function () {
+        //        swiper.stopAutoplay();
+        //     })
+        //     $('.swiper-container1').mouseleave(function () {
+        //        swiper.startAutoplay();
+        //     })
             
-    //     }
-    //     else{
+        // }
+        // else{
             
-    //         $(".swiper-container1 .swiper-wrapper").removeClass("swiper-wrapper")
-    //         $(".swiper-container1 .swiper-slide").removeClass("swiper-slide")
-    //         $(".swiper-container1").removeClass("swiper-container1")
-    //     }
-    // }
+        //     $(".swiper-container1 .swiper-wrapper").removeClass("swiper-wrapper")
+        //     $(".swiper-container1 .swiper-slide").removeClass("swiper-slide")
+        //     $(".swiper-container1").removeClass("swiper-container1")
+        // }
+    }
 
     // var mySwiper = new Swiper('.swiper-container2', {
     //     direction: 'horizontal',
@@ -280,7 +280,7 @@ $("#footerModal").on('click','.footerMoadl .close',function(){
       //Number - Pixel width of dataset stroke
       datasetStrokeWidth: 2,
       //Boolean - Whether to fill the dataset with a color
-      datasetFill: true,
+      datasetFill: false,
       //Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
       maintainAspectRatio: true,
       //Boolean - whether to make the chart responsive to window resizing

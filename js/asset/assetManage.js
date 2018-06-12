@@ -448,7 +448,7 @@ function withdrawCallBack(d){
 		$("#mobileValidate").modal('hide');
 		$("#googleValidate").modal('hide');
 		alert(d.error.detail);
-		$(".bgloading").hide();
+		$(".loading").hide();
 		// setTimeout(function(){
 		// 	window.location.reload();
 		// },3000)
@@ -530,7 +530,7 @@ function googleCodeValid() {
       initLang();
   }else {
 	loadbgloading();
-	$(".bgloading").show();
+	$(".loading").show();
   	if(isCheckGM){
     	subTBApi(1,gooleCode);
     }else{
@@ -550,7 +550,7 @@ function googleCodeValid2() {
         initLang();
     }else {
 		loadbgloading();
-		$("#bgloading").show();
+		$("#loading").show();
     	if(isCheckGM){
     		subTBApi(1,TwoGoogleCode);
     	}else{
@@ -564,8 +564,6 @@ function googleCodeValid2() {
 
 /*手机二次验证码校验*/
 function mobileCodeVerify() {
-	loadbgloading();
-	$("#bgloading").show();
     var mobileCode=$("#mobileCode").val();
     if(mobileCode==""){
           $(".warning-mobilecode").html('<i class="icon-exclamation-circle"></i><i data-i18n="common:twoVerification.cue1"></i>');
@@ -574,7 +572,7 @@ function mobileCodeVerify() {
         initLang();
     }else {
 		loadbgloading();
-		$("#bgloading").show();
+		$("#loading").show();
     	if(isCheckGM){	
     		subTBApi(0,mobileCode);
     	}else{
@@ -604,7 +602,7 @@ function mobileCodeVerify2() {
           initLang();
       }else {
 		loadbgloading();
-		$("#bgloading").show();
+		$("#loading").show();
       	if(isCheckGM){
     		subTBApi(0,TwoMobileCode);
     	}else{

@@ -127,7 +127,7 @@
 										<p class="font-hint fh-warn1 dn"><i data-i18n="assetManage.warning11"></i><span></span></p>
 										<div class="fee-wrap clearfix">
 											<p class="pull-left"><span data-i18n="assetManage.fee">：</span><i class="withdrawalFee">{{tibiInputPoundage}}</i>{{item.currencyName}}</p>
-											<p class="pull-right" style="width: 0;height: 0;overflow: hidden;"><span data-i18n="assetManage.willget">：</span><span class="theAccount">{{formatNumber(scientificToNumber(tibiInputNumber > 0 && Number(tibiInputNumber)-Number(tibiInputPoundage) >0 ? tibiInputNumber-tibiInputPoundage : 0),item.currencyType == 4 ? 6 : 8)}}</span></p>
+											<p class="pull-right"><span data-i18n="assetManage.willget">：</span><span class="theAccount">{{formatNumber(scientificToNumber(tibiInputNumber > 0 && Number(tibiInputNumber)-Number(tibiInputPoundage) >0 ? tibiInputNumber-tibiInputPoundage : 0),item.currencyType == 4 ? 6 : 8)}}</span></p>
 										</div>
 										<div class="address-wrap ">
 											<input type='text' style='display:none'>

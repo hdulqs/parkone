@@ -17,187 +17,32 @@
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/common/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/index/index.css">
-    <link rel="stylesheet" href="../../css/index/swiper.min.css">
-    <style>
-        .swiper-pagination-bullet{
-            color: #8791a2;
+    <script>
+            var ua = navigator.userAgent;
+             var browserRedirect = function(isLoad) {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                return 1;
+            } else {
+                return 2;
+            }
         }
-        .swiper-pagination-bullet-active{
-            background-color: #ffffff;
+        var isPC = browserRedirect(0);
+        var deviceId = "";
+        if(isPC == 1) deviceId = "ms";
+        if(isPC == 2) deviceId = "pc";
+        if(browserRedirect() == 1){
+            window.location.href='../index/indexMobile.html'+location.search;       
         }
-        .swiper_buttons1{
-            padding-left: 200px;
-        }
-        .swiper_buttons2{
-            padding-right: 200px;
-        }
-        #banner{
-            width:100%;
-            height: 600px;
-        }
-        #banner .title{
-            width:100%;
-            min-width: 1140px;
-            /* height:60px; */
-            font-size:55px;
-            color:rgba(255,255,255,1);
-            line-height:55px;
-            position: absolute;
-            top: 250px;
-            text-align: center;
-        }
-        #banner .dis{
-            margin-top: 30px;
-            width:100%;
-            height:40px;
-            font-size:30px;
-            color:rgba(255,255,255,1);
-            line-height:55px;
-            position: absolute;
-            top: 330px;
-            text-align: center;
-            min-width: 1140px;
-        }   
-        #particles-js{
-            width: 100%;
-            height: 100%;
-            background: -webkit-radial-gradient(rgb(26,38,85),rgb(11,18,41)); /* Safari 5.1 - 6.0 */
-            background: -o-radial-gradient(rgb(26,38,85),rgb(11,18,41)); /* Opera 11.6 - 12.0 */
-            background: -moz-radial-gradient(rgb(26,38,85),rgb(11,18,41)); /* Firefox 3.6 - 15 */
-            background: radial-gradient(rgb(26,38,85),rgb(11,18,41)); /* 标准的语法（必须放在最后） */
-        }
-        .announcements{
-            width:100%;
-            height:60px;
-            background:rgba(6,11,28,0.2792);
-            position: absolute;
-            top: 540px;
-            z-index: 10;
-        }
-        .announcements ul{
-            padding: 0;
-            margin: 0;
-            width: 1140px;
-            margin: 0 auto;
-        }
-        .announcements ul li{
-            float: left;
-            height: 100%;
-            font-size: 14px;
-            line-height: 60px;
-        }
-        .announcements ul li a{
-            color: #93A4DA;
-        }
-        .dynamicData{
-            height: 275px;
-            width: 100%;
-            background: rgb(39,43,65);
-        }
-        .canvas_box{
-            width:   325px;
-            height: 100px; 
-            position: absolute;
-            top: 71px;
-            left: -32px;
-        }
-        .dynamicDataBox{
-            padding-top: 30px;
-            width: 1010px;
-            margin: 0 auto;
-        }
-        .dynamicDataBox ul{
-            padding: 0;
-            margin: 0;
-        }
-        .dynamicDataBox ul li{
-            width:285px;
-            height: 195px;
-            margin-right:75px;
-            background:rgba(14,21,47,1);
-            border-radius:12px; 
-            float: left;
-            position: relative;
-            overflow: hidden;
-        }
-        .coin_name{
-            width:48px;
-            height:20px;
-            font-size:14px;
-            color:rgba(82,94,128,1);
-            line-height:20px;
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-        .coin_num{
-            width:123px;
-            height:37px;
-            font-size:26px;
-            color:rgba(232,238,254,1);
-            line-height:37px;
-            margin-left: 20px;
-        }
-        .times_coin_num{
-            height:20px;
-            font-size:14px;
-            color:rgba(147,164,218,1);
-            line-height:20px;
-            margin-left: 20px;
-        }
-
-        .message_intro{
-            width: 100%;
-            height: 400px;
-            background:rgba(29,36,61,1);
-        }
-        #carousel-example-generic{
-            width: 1140px;
-            margin: 0 auto;
-            background:rgba(29,36,61,1);
-        }
-        .carousel .item{
-            background:rgba(29,36,61,1);
-        }
-        .photo_box{
-            height: 400px;
-        }
-        .photo_box div{
-            width: 540px;
-            height: 100%;
-            float: left;
-            left: 0;
-            bottom: 0;
-        }
-        .canvas_box{
-            width:   325px;
-            height: 100px; 
-            position: absolute;
-            top: 73px;
-            left: -31px;
-        }
-        .photo_box div h3{
-            width:532px;
-            height:55px;
-            font-size:38px;
-            color:rgba(196,206,236,1);
-            line-height:55px;   
-            margin-top: 80px;   
-        }
-        .photo_box div p{
-            width:553px;
-            /* height:50px; */
-            font-size:18px;
-            color:rgba(196,206,236,1);
-            line-height:25px;
-            margin-top: 90px;   
-        }
-        .photo_box img{
-            width: 400px!important;
-            height: 330px!important;
-            float: right;
-            margin-top: 40px;
-        }
-    </style>
+    </script>
 </head>
 
 <body>
@@ -393,7 +238,6 @@
     <script type='text/javascript' src='../../js/vue.min.js'></script>
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/index/swiper.min.js"></script>
 	<script src="../../js/comm.js"></script>
 	<script  src="../../js/jquery.cookie.js"></script>
 	<script src="../../js/i18next-1.6.3.min.js"></script>
@@ -404,238 +248,5 @@
     <script src="../../js/index/index.js"></script>
     <script src="../../js/particles.js"></script>
     <script src="../../js/app.js"></script>
-    <script type="text/javascript">
-    $(function(){
-        setTimeout(function(){
-              if(deviceId == "ms"){
-                $.cookie('newlang',"scn");
-                $("#headerNav .nav-item.ctrl-select.ctrl-select1,#headerNav .logo,#headerNav .change-lan.ul-select-wrap").remove();
-                $("#announcementCenter").parent().remove();
-                $("#headerNav").attr("id","");
-            }
-           
-        },0)
-    })
-    $('.carousel').carousel({
-        interval: 2000
-    })
-    var ua = navigator.userAgent;
-    var browserRedirect = function(isLoad) {
-        var sUserAgent = navigator.userAgent.toLowerCase();
-        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-        var bIsAndroid = sUserAgent.match(/android/i) == "android";
-        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-            return 1;
-        } else {
-            return 2;
-        }
-    }
-    var isPC = browserRedirect(0);
-    var deviceId = "";
-    if(isPC == 1) deviceId = "ms";
-    if(isPC == 2) deviceId = "pc";
-    if(browserRedirect() == 1){
-        window.location.href='../index/indexMobile.html'+location.search;       
-    }
-    function swiperBox(){
-        /*swper*/
-        var ls = TransactionPair.AllNewst['BTC'].length>6
-        if(TransactionPair.AllNewst['BTC'].length>2){
-            setTimeout(function(){
-                initareaChart()
-            },2000)
-        }
-        if(ls){
-            var swiper = new Swiper('.swiper-container1', {
-                loop:true,
-                autoplay : 1000,
-                autoplayDisableOnInteraction : false,
-                slidesPerView: 7,
-                initialSlide:0
-            })
-
-            $('.swiper-container1').mouseenter(function () {
-               swiper.stopAutoplay();
-            })
-            $('.swiper-container1').mouseleave(function () {
-               swiper.startAutoplay();
-            })
-            
-        }
-        else{
-            
-            $(".swiper-container1 .swiper-wrapper").removeClass("swiper-wrapper")
-            $(".swiper-container1 .swiper-slide").removeClass("swiper-slide")
-            $(".swiper-container1").removeClass("swiper-container1")
-        }
-    }
-
-    var mySwiper = new Swiper('.swiper-container2', {
-        direction: 'horizontal',
-        loop: true,
-        speed: 2000,
-        autoplay: 2000,
-        //切换效果，淡入淡出
-        effect : 'fade',
-        //手动滑动之后自动滑动
-        autoplayDisableOnInteraction : false,
-        // 如果需要分页器
-        pagination: '.swiper-pagination',  
-        paginationClickable: true,
-        //如果需要前进后退按钮
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        // 如果需要滚动条
-        scrollbar: '.swiper-scrollbar',
-    });
-
-
-    var timeChartCanvas;//定时器
-    var data=[],data1=[],data3=[],data2=[];//X轴数据
-    var labels=[],labels1=[],labels2=[],labels3=[];
-    for (var n=0;n<100;n++){
-        if(n==0){
-            data[n]=0
-            data1[n]=0
-            data2[n]=0
-        }else{
-            data[n]=getRandom1(70, 80)
-            data1[n]=getRandom1(60, 70)
-            data2[n]=getRandom1(50, 60)
-        }
-        labels[n]=n
-        labels1[n]=n
-        labels2[n]=n
-    }
-    var areaChartData =[
-        {
-            labels: labels,
-            datasets: [
-                {
-                    label: "Digital Goods",
-                    fillColor: "rgba(66,64,109,0.3)",
-                    strokeColor: "rgba(60,141,188,0.8)",
-                    pointColor: "#3b8bba",
-                    pointStrokeColor: "rgba(60,141,188,1)",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(60,141,188,1)",
-                    data: data
-                }
-            ]
-        },
-        {
-            labels: labels1,
-            datasets: [
-                {
-                    label: "Digital Goods",
-                    fillColor: "rgba(66,64,109,0.3)",
-                    strokeColor: "rgba(60,141,188,0.8)",
-                    pointColor: "#3b8bba",
-                    pointStrokeColor: "rgba(60,141,188,1)",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(60,141,188,1)",
-                    data: data1
-                }
-            ]
-        },
-        {
-            labels: labels2,
-            datasets: [
-                {
-                    label: "Digital Goods",
-                    fillColor: "rgba(66,64,109,0.3)",
-                    strokeColor: "rgba(60,141,188,0.8)",
-                    pointColor: "#3b8bba",
-                    pointStrokeColor: "rgba(60,141,188,1)",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(60,141,188,1)",
-                    data: data2,
-                }
-            ]
-        }
-    ] ;
-    var areaChartOptions = {
-      //Boolean - If we should show the scale at all
-      showScale: true,
-      //Boolean - Whether grid lines are shown across the chart
-      scaleShowGridLines: false,
-      //String - Colour of the grid lines
-      scaleGridLineColor: "rgba(0,0,0,.05)",
-      //Number - Width of the grid lines
-      scaleGridLineWidth: 1,
-      //Boolean - Whether to show horizontal lines (except X axis)
-      scaleShowHorizontalLines: false,
-      //Boolean - Whether to show vertical lines (except Y axis)
-      scaleShowVerticalLines: false,
-      //Boolean - Whether the line is curved between points
-      bezierCurve: false,
-      //Number - Tension of the bezier curve between points
-      bezierCurveTension: 0.3,
-      //Boolean - Whether to show a dot for each point
-      pointDot: false,
-      //Number - Radius of each point dot in pixels
-      pointDotRadius: 4,
-      //Number - Pixel width of point dot stroke
-      pointDotStrokeWidth: 1,
-      //Number - amount extra to add to the radius to cater for hit detection outside the drawn point
-      pointHitDetectionRadius: 20,
-      //Boolean - Whether to show a stroke for datasets
-      datasetStroke: false,
-      //Number - Pixel width of dataset stroke
-      datasetStrokeWidth: 2,
-      //Boolean - Whether to fill the dataset with a color
-      datasetFill: true,
-      //Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-      maintainAspectRatio: true,
-      //Boolean - whether to make the chart responsive to window resizing
-      responsive: true,
-      animation : false, 
-      scaleLineWidth:1,
-      scaleSteps : 100,
-      scaleStartValue : 1,
-    };
-    //Create the line chart
-    
-    function initareaChart(){
-        var areaChartCanvas = $("#areaChart0").get(0).getContext("2d");
-        var areaChartCanvas1 = $("#areaChart1").get(0).getContext("2d");
-        var areaChartCanvas2 = $("#areaChart2").get(0).getContext("2d");
-        // This will get the first returned node in the jQuery collection.
-        var areaChart = new Chart(areaChartCanvas);
-        var areaChart1 = new Chart(areaChartCanvas1);
-        var areaChart2 = new Chart(areaChartCanvas2);
-        areaChart.Line(areaChartData[0],areaChartOptions);
-        areaChart1.Line(areaChartData[1], areaChartOptions);
-        areaChart2.Line(areaChartData[2], areaChartOptions);
-        setTimeout(function(){
-            if(timeChartCanvas){
-                window.clearTimeout(timeChartCanvas)
-            }
-            timeChartCanvas=setInterval(function(){
-                areaChartData[0].datasets[0].data[99]=getRandom1(70, 80)
-                areaChartData[1].datasets[0].data[99]=getRandom1(60, 70)
-                areaChartData[2].datasets[0].data[99]=getRandom1(50, 60)
-                for(var n=0;n<3;n++){
-                    areaChartData[n].datasets[0].data.splice(0,1)
-                    areaChartData[n].datasets[0].data[0]=0;
-                }
-                areaChart.Line(areaChartData[0],areaChartOptions);
-                areaChart1.Line(areaChartData[1], areaChartOptions);
-                areaChart2.Line(areaChartData[2], areaChartOptions);
-            },1000)
-        },2000)
-    }
-    function getRandom1(start, end) {
-        var length = end - start;
-        var num = parseInt(Math.random() * (length) + start);
-        return num;
-    }
-</script>
 </body>
 </html>

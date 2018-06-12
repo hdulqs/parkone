@@ -496,10 +496,15 @@ function checkInputVal(){
 		$(".di.tixian-dialog .fh-warn1").removeClass("dn");
 		initLang();
 		return false;
-	}else if(_thisV <=Number(_baseD[0]) || _thisV <= 0){
+	}else if(_thisV < Number(_baseD[0]) || _thisV <= 0){
 		//最少提
 		$(".di.tixian-dialog .fh-warn1 i").attr("data-i18n","assetManage.warning6");
-		$(".di.tixian-dialog .fh-warn1 span").html(_baseD[0]);
+		if(_baseD[0]==_baseD[2]){
+			$(".di.tixian-dialog .fh-warn1 span").html(">"+_baseD[0]);
+		}else{
+			$(".di.tixian-dialog .fh-warn1 span").html(_baseD[0]);
+		}
+		
 		$(".di.tixian-dialog .fh-warn1").removeClass("dn");
 		initLang();
 		return false;

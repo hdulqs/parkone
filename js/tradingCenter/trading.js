@@ -43,7 +43,7 @@ var buyAndSell = new Vue({
             marketETH: false
         },
 		ChangeMoenyType : '',
-        isCNY: true,
+        isCNY: false,
         marketCheck: {
             BTC: 0,
             ETH: null
@@ -1532,7 +1532,7 @@ function sessionB(){
     //记录当前市场
     buyAndSell.tradeDataKey=sessionStorage.getItem("sessionCont") ? sessionStorage.getItem("sessionCont") : "BTC";
     //记录法币类型
-    buyAndSell.isCNY=sessionStorage.getItem("sessionIsCny") && sessionStorage.getItem("sessionIsCny")=='false' ? false : true;
+    buyAndSell.isCNY=sessionStorage.getItem("sessionIsCny") && (sessionStorage.getItem("sessionIsCny")=='false'||sessionStorage.getItem("sessionIsCny")=="null") ? false : true;
 };
 //重置限价、市价   交易验证提示内容
 function resetTransactionInput() {

@@ -280,7 +280,7 @@ $("#footerModal").on('click','.footerMoadl .close',function(){
       //Number - Pixel width of dataset stroke
       datasetStrokeWidth: 2,
       //Boolean - Whether to fill the dataset with a color
-      datasetFill: false,
+      datasetFill: true,
       //Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
       maintainAspectRatio: true,
       //Boolean - whether to make the chart responsive to window resizing

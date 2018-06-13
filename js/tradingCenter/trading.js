@@ -322,27 +322,8 @@ var buyAndSell = new Vue({
 			this.changeToMarketTrade = false;
 			this.MarketShowNoData = false;
 			this.LastMarket();	//最新成交————市场
-
+            getBuyAndSellDataList(true);
             this.assetList[this.buyAndCoin] = isNaN(this.assetList[this.buyAndCoin]) ? 0 : this.assetList[this.buyAndCoin];
-            if (this.buyAndCoin == "SANC" || this.buyAndCoin == "OMG") {
-                var nowTime = new Date().getTime();
-                var endTime = new Date("2017/12/30 14:00:00").getTime();
-                if (nowTime > endTime) {
-                    $(".black-shadow1").hide();
-                } else {
-                    $(".black-shadow1").show();
-                }
-            } else {
-                $(".black-shadow1").hide();
-            }
-            var daojishi = setInterval(function () {
-                var nowTime = new Date().getTime();
-                var endTime = new Date("2017/12/30 14:00:00").getTime();
-                if (nowTime > endTime) {
-                    $(".black-shadow1").hide();
-                    clearInterval(daojishi);
-                }
-            }, 1000)
             $("#kline").html("");
             refreshElement();
             setTimeout(function () {

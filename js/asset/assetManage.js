@@ -28,7 +28,8 @@ var assetHAT = new Vue({
 			"BTC":[0.05,20,0.001],
 			"ETH":[0.1,200,0.003],
 			"LTC":[0.1,2000,0.003],
-			"KNC":[100,10000,3]
+			"KNC":[100,10000,3],
+			"PARK":[10000,10000000,1000]
 		}
 		,msgSuccess: ["",'DepositSuccess','WithdrawalSuccess','loginReward','tradeReward','freeReward']
 		,msgSuccessOthers: ['','PendingDeposit','WithdrawalRequest']

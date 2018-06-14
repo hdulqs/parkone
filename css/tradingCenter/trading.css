@@ -518,7 +518,7 @@
 }
 
 .market-row .rowC {
-    width: 37%;
+    width: 40%;
     text-align: left;
 }
 
@@ -537,7 +537,7 @@
 .market-row .rowR {
     float: left;
     text-align: right;
-    width: 26%;
+    width: 23%;
     padding-right: 5px;
     font-weight: normal;
     font-size: 12px;

@@ -355,7 +355,7 @@
                                             == 0 ? '0' : formatNumber(assetList[market],6)}}</i></p><a
                                                 :href="'../asset/assetManage.html?currencyname='+market"
                                                 class="btn-recharge" data-i18n="assetManage.deposit">充币</a></div>
-                                        <p class="label-title" data-i18n="assetManage.Price">价格</p>
+                                        <p class="label-title" data-i18n="assetManage.buyPrice">价格</p>
                                         <div class="clearfix dealnum-wrap">
                                             <p class="dealnum-input">
                                                 <i class="gray-color" data-i18n="assetManage.bestPricebuy"></i>
@@ -378,22 +378,22 @@
                                         <div class="clearfix fontnum-wrap">
                                             <input type="text" class="js-check-click3 range"/>
                                         </div>
-                                        <p class="label-title lt-buy-num"><span data-i18n="assetManage.sellvolumemoney">交易额</span>：
-                                        </p>
-                                        <div class="clearfix dealnum-wrap">
+                                        <!-- <p class="label-title lt-buy-num"><span data-i18n="assetManage.sellvolumemoney">交易额</span>：
+                                        </p> -->
+                                        <!-- <div class="clearfix dealnum-wrap">
                                             <p class="dealnum-input input-check-warp">
                                                 <i>{{shijiabuy}}{{market}}</i>
                                                 <i v-show="isNaN(Rate[market])"><br></i>
-                                                <i class="gray-color" v-show="!isNaN(Rate[market])"><!-- ≈<span data-i18n="assetManage.moneyTypeF"></span>{{!isNaN(shijiabuy*Rate[market]*RateMoney)
+                                                <i class="gray-color" v-show="!isNaN(Rate[market])"> ≈<span data-i18n="assetManage.moneyTypeF"></span>{{!isNaN(shijiabuy*Rate[market]*RateMoney)
                                                     ?
                                                     formatNumber(scientificToNumber(shijiabuy*Rate[market]*RateMoney),2)
-                                                    : 0}} --></i>
+                                                    : 0}} </i>
                                             </p>
                                             <div class="input-prompt dn">
                                                 <span class="ip-text"></span><span class="ip-value dn"></span><span
                                                     class="ip-unit dn"></span>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="no-login" v-show="isLogin">
                                             <a href="../account/login.html"
                                                data-i18n="common:header.nav6"></a><span>or</span><a
@@ -414,7 +414,7 @@
                                                 :href="'../asset/assetManage.html?currencyname='+buyAndCoin"
                                                 data-i18n="assetManage.deposit">充币</a>
                                         </div>
-                                        <p class="label-title" data-i18n="assetManage.Price">价格</p>
+                                        <p class="label-title" data-i18n="assetManage.sellPrice">价格</p>
                                         <div class="clearfix dealnum-wrap">
                                             <p class="dealnum-input">
                                                 <i class="gray-color" data-i18n="assetManage.bestPricesell"></i>
@@ -438,22 +438,22 @@
                                         <div class="clearfix fontnum-wrap">
                                             <input type="text" class="js-check-click4 range"/>
                                         </div>
-                                        <p class="label-title lt-buy-num"><span data-i18n="assetManage.sellvoluAmount">交易量</span>：
-                                        </p>
-                                        <div class="clearfix dealnum-wrap">
+                                        <!-- <p class="label-title lt-buy-num"><span data-i18n="assetManage.sellvoluAmount">交易量</span>：
+                                        </p> -->
+                                        <!-- <div class="clearfix dealnum-wrap">
                                             <p class="dealnum-input input-check-warp">
                                                 <i>{{shijiasell}}{{buyAndCoin}}</i>
                                                 <i v-show="isNaN(Rate[market])"><br></i>
-                                                <i class="gray-color" v-show="!isNaN(Rate[market])"><!-- ≈<span data-i18n="assetManage.moneyTypeF"></span>{{!isNaN(shijiasell*Rate[market]*RateMoney)
+                                                <i class="gray-color" v-show="!isNaN(Rate[market])"> ≈<span data-i18n="assetManage.moneyTypeF"></span>{{!isNaN(shijiasell*Rate[market]*RateMoney)
                                                     ?
                                                     formatNumber(scientificToNumber(shijiasell*Rate[market]*RateMoney),2)
-                                                    : 0}} --></i>
+                                                    : 0}} </i>
                                             </p>
                                             <div class="input-prompt dn">
                                                 <span class="ip-text"></span><span class="ip-value dn"></span><span
                                                     class="ip-unit dn"></span>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="no-login" v-show="isLogin">
                                             <a href="../account/login.html"
                                                data-i18n="common:header.nav6"></a><span>or</span><a

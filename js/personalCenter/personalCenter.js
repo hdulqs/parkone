@@ -35,6 +35,10 @@ function userInforCallBack (d){
 				lever = 3;
 			}
 		};
+		if(d.data.failure_reason && d.data.failure_reason!=""){
+			$("#reason").show();
+			$("#failReason").html(d.data.failure_reason);
+		}
 		if(d.data.username){
 			$(".grade-wrap").removeClass("dn");
 			$("#dataUserAct").closest(".dn").removeClass("dn");

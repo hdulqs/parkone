@@ -37,7 +37,7 @@
             ],
             "ans": [
                 "<p class='font-aspect1'>大陆地区用户认证</p><p  class='font-aspect2'>第一步：登录账号，点击账号进入账户中心；</p><p  class='font-aspect2'>第二步：点击身份认证，选择类型中国大陆地区；</p><p  class='font-aspect2'>第三步：填写个人信息，上传证件照片，点击提交审核。</p><p class='font-aspect1'>港澳台及其他国家和地区</p><p  class='font-aspect2'>第一步：登录账号，点击头像进入个人中心；</p><p  class='font-aspect2'>第二步：点击身份认证，选择类型港澳台及其他国家和地区；</p><p  class='font-aspect2'>第三步：填写个人信息，上传证件照片，点击提交审核。</p>",
-                "<p  class='font-aspect1'>第一步：登录账户，进入个人中心；</p><p  class='font-aspect1'>第二部：点击绑定手机验证；</p><p  class='font-aspect1'>第三步：输入正确的登录密码，填写需要绑定的手机号，获取短信验证码即可。</p>",
+                "<p  class='font-aspect1'>第一步：登录账户，进入个人中心；</p><p  class='font-aspect1'>第二步：点击绑定手机验证；</p><p  class='font-aspect1'>第三步：输入正确的登录密码，填写需要绑定的手机号，获取短信验证码即可。</p>",
                 "<p class='font-aspect1'>第一步：手机应用商店搜索Authenticator，点击下载并安装；</p><p class='font-aspect1'>第二步：添加平台账号到谷歌身份验证器，扫描条形码或者手动输入账户和密钥；</p><p class='font-aspect1'>第三步：填写登录密码及谷歌验证码，点击确定即可。</p>",
                 "<p class='font-aspect1'>第一步：登录账户，进入个人中心；</p><p class='font-aspect1'>第二步：点击修改资金密码；</p><p class='font-aspect1'>第三步：输入旧资金密码进行验证，填写新资金密码，点击确定即可；</p><p class='font-aspect1'>第四步：设置资金密码成功后，系统将向您的注册邮箱发送邮件通知。</p><p class='font-aspect1 font-color'>温馨提示：为了您的资产安全，每次修改资金密码后，24小时内不允许提币</p>"
             ]

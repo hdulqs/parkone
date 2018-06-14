@@ -35,9 +35,9 @@ function userInforCallBack (d){
 				lever = 3;
 			}
 		};
-		if(d.data.failure_reason && d.data.failure_reason!=""){
+		if(d.data.failureReason && d.data.failureReason!=""){
 			$("#reason").show();
-			$("#failReason").html(d.data.failure_reason);
+			$("#failReason").html(d.data.failureReason);
 		}
 		if(d.data.username){
 			$(".grade-wrap").removeClass("dn");

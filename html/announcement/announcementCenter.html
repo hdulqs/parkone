@@ -97,9 +97,9 @@
 		var lan = $.cookie('newlang');
 		var isR = false;
 		var source = "../../locales/"+lan+"/announcementCenterDetail.json?v=2.0";
-		// $.get(source,function(data){
-		// 	callback(data);
-		// })
+		$.get(source,function(data){
+			callback(data);
+		})
 	}
 	function updateQes(d){
 		annContent.contentText = d['mContent'];

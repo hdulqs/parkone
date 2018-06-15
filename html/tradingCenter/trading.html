@@ -148,7 +148,7 @@
                                        v-for="(item,index) in BuyTop10List"
                                        @click="inputBuyFiled(item.money,index,item.sumCount)">
                                         <i class="pull-left text-left font-green rowl-1">
-                                            <span data-i18n="assetManage.buy">买</span>
+                                            <span data-i18n="assetManage.buy1">买</span>
                                             {{index+1}}
                                         </i>
                                         <i class="pull-left text-center handmouse font-money rowl-2">{{isCNY ? getFloat(scientificToNumber(item.money)*Rate[market]*RateMoney,2) : item.money}}</i>

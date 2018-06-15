@@ -31,7 +31,7 @@
                     <p class="font-title text-center">{{title}}</p>
                     <ul class="list-inline">
                         <li class="logo-wrap">
-                            <img src="../../images/Notice.png" class="img-logo">
+                            <img src="../../images/user_header.png" class="img-logo">
                         </li>
                         <li>
                             <p class="font-name">{{logoName}}</p>
@@ -67,7 +67,7 @@
 	var annContent = new Vue({
 		el: "#annContent",
 		data:{
-			logoName:"CoinToBe",
+			logoName:"PARKONE",
 			annTime:"",
 			title:"",
 			callName:"",
@@ -78,10 +78,10 @@
 		}
 	});
 	$(function(){
-		// readJsonFile(updateQes);
+		 readJsonFile(updateQes);
 		$("body").on("click","#ul-language li",function(){
 			setTimeout(function(){		
-				//readJsonFile(updateQes);
+				readJsonFile(updateQes);
 			},1);
 		});
 	    $("li.yes-box").click(function(){

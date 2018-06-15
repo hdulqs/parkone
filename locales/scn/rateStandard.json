@@ -27,6 +27,9 @@
   "item2Tr8Td1": "KNC",
   "item2Tr8Td2": "最少100个KNC，单笔最高10000个KNC",
   "item2Tr8Td3": "3  KNC/次",
+  "item2Tr9Td1": "park",
+  "item2Tr9Td2": "最少10000个park，单笔最高10000000个park",
+  "item2Tr9Td3": "1000 park/次",
   "item2Des": "由于虚拟币短期内价格波动可能较大，因此 PARK.ONE 保留随时修改提现手续费的权力，每周更新相关价格。",
   "item3Title": "3、交易手续费",
   "item3Des": "该费用是由PARK.ONE平台向交易用户收取的服务费用，所有币种的交易服务费均按统一标准收取，买方收取1‰，卖方收取1‰。后期会根据运营需要，根据Maker和Taker，及用户历史交易量级别，设置不同手续费比例。"

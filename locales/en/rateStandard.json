@@ -27,6 +27,9 @@
   "item2Tr8Td1": "KNC",
   "item2Tr8Td2": "Once maximum withdrawal amount 10000 KNC, with a minimum amount of 100 KNC.",
   "item2Tr8Td3": "3  KNC",
+  "item2Tr9Td1": "park",
+  "item2Tr9Td2": "Once maximum withdrawal amount 10000000  park, with a minimum amount of 10000 park.",
+  "item2Tr9Td3": "1000 park",
   "item2Des": "In the short time, the price fluctuation of the cryptocurrency may be large,so PARK.ONE reserves the right to modify the withdrawal fees at any time and update the relevant prices weekly.",
   "item3Title": "3、Trading",
   "item3Des": "All trades on PARK.ONE will have commission. Trading fees for coins will charge on a standard:the taker 1‰,the maker 1‰. Later according  to operation demands , maker and taker , as well as user history tansaction levels, PARK.ONE will set different ratios."

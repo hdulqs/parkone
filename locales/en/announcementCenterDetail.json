@@ -18,17 +18,17 @@
 			"list1":{
 					"id":1,
 					"title":"PARK.ONE is now in beta",
-					"callName":"Dear",
+					"callName":"Dear Users",
 					"desText":"PARK.ONE is now in beta. ",
 					"contentText":[
-						"PARK.ONE is now in beta. .",
+						"PARK.ONE is now in beta.",
 						" The open beta phase will end at 11:59 on June 24th. During this period, any problems and bugs in the registration, login, and transaction operations，please contact the official customer service ( WeChat: PARKONE-1)  for feedback. And we will greatly appreciate your valuable opinions and suggestions. PARK.ONE will timely optimize processing to bring you a better user experience.",
 						"Hope you enjoy your trading on park.one!"	
 					],
 					"annTime":"Jun 15, 2018"
 			}
 		},
-		"team":"Find us on",
-    "group":"Find us on",
+		"team":"PARKONE team",
+    "group":"PARKONE team",
     "Telegram":"https://t.me/PARKONEgovernment"
 }

@@ -85,22 +85,16 @@
 	background-image: url(../../images/icon-currency1.png);
 }
 .img-coin.biT2 {
-	background-image: url(../../images/icon-currency2.png);
+	background-image: url(../../images/icon-currency3.png);
 }
 .img-coin.biT3 {
-	background-image: url(../../images/icon-currency3.png);
+	background-image: url(../../images/icon-currency2.png);
 }
 .img-coin.biT4 {
 	background-image: url(../../images/icon-currency4.png);
 }
 .img-coin.biT5 {
 	background-image: url(../../images/icon-currency5.png);
-}
-.img-coin.biT7 {
-	background-image: url(../../images/icon-currency7.png);
-}
-.img-coin.biT8 {
-	background-image: url(../../images/icon-currency8.png);
 }
 
 .currency-wrap .first-row {

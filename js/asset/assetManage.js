@@ -1,5 +1,5 @@
 var idcl="";
-var isCheckGM = false;
+var isCheckGM = false;//提币时校验页面填写是否正确
 var userToken = $.cookie("userToken");
 //var tir = {
 //	//提币汇率
@@ -21,8 +21,7 @@ function AssetMsgCallBack(r){}
 var assetHAT = new Vue({
 	el: "#assetHAT",
 	data: {
-		isCheckGM:false//提币时校验页面填写是否正确
-		,idcl:""
+		idcl:""
 		,RateMoney:Number($.cookie('baserate'+$.cookie("newlang")))>0 ? Number($.cookie('baserate'+$.cookie("newlang"))) : 1
 		,tir:{	//提币汇率
 			"BTC":[0.05,20,0.001],
@@ -51,7 +50,8 @@ var assetHAT = new Vue({
         ,tibiInputAddress:"" //用戶提幣輸入地址
         ,tibiInputPoundage:"" //用戶提幣對應匯率
         ,chongbiAddress: {}
-        ,tixianAddress: {}
+		,tixianAddress: {}
+		,select:1
 	}
 	,created:function (){	
 		totalNList();
@@ -104,7 +104,7 @@ var assetHAT = new Vue({
             if(index == this.currPage) return;
             this.currPage = index;
             historyList(this);
-        }
+		}
         ,toggleCharge:function(_k){
         	$(".disabled-charge-warning.dischaw"+_k).removeClass("dn");
         }
@@ -264,7 +264,10 @@ var assetHAT = new Vue({
         	$(".chongti-dialogs").not(".chongbi-dialog:eq("+k+")").addClass("dn").removeClass("di").css("display","none");
         	$("#listView .btn").not(".chongbi-btns:eq("+k+")").removeClass("btn-active");
         	$(".chongbi-dialog").eq(k).addClass("di").removeClass("dn").css("display","block");
-        	$(".chongbi-btns").eq(k).addClass("btn-active");
+			$(".chongbi-btns").eq(k).addClass("btn-active");
+			if(currencyType==0){
+				return;
+			}
 			if(this.chongbiAddress[currencyName] == "" || this.chongbiAddress[currencyName] == "undefind"){
 				getAddressApi(currencyType,currencyName)
 			}else{
@@ -423,7 +426,7 @@ function asset(){
 	callServieOther("asset","/api/account/asset")
 }
 function assetCallBack(d){
-	$("#listView").html('');
+	// $("#listView").html('');
 	var strPin = '';
 	if(!d.success) return;
 	if(d.data.length > 0){

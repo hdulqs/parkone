@@ -90,7 +90,12 @@
     "4FIRST_RECHARGE":"交易送币",
     "4LANTERN_FESTIVAL_REWARD":"元宵活动送币",
     "4WISH_TOKEN":"社群许愿送币",
-    "4PRIZE_WHEEL":"幸运大转盘"
+    "4PRIZE_WHEEL":"幸运大转盘",
+    "chargeNotice":"充提提醒",
+    "chargeNoticeDetail":"PK充值需要输入联系客服。客服联系方式（二维码）",
+    "OpenWeChart":"打开微信扫一扫",
+    "WithdraNotice":"提现提醒",
+    "WithdraNoticeDetail":"PK提现需要联系客服，客服确认订单信息无误后方可完成到账操作。客服联系方式(二维码)"
   },
   "lang": {
     "english": "English",

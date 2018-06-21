@@ -77,8 +77,18 @@
 									<p v-show="item.withdrawStatus != 1 ? true : false" :class="'dn disabled-withdraw-warning diswitw'+k" data-i18n="assetManage.disabled-withdraw"></p>
 								</div>
 								<div :class="'row chongti-dialogs chongbi-dialog dn rowWithdrawal'+k+'1'">
+									<div class="col-sm-11 text-left" v-if="item.currencyType==0">
+										<dl class="pkZone">
+											<dt class="Notice" data-i18n="assetManage.chargeNotice"></dt>
+											<dt class="NoticeDetail" data-i18n="assetManage.chargeNoticeDetail"></dt>
+											<dd class="pkZoneDd">
+												<img src="../../images/PKkefu.jpg">
+											</dd>
+											<dd class="NoticeDetail" data-i18n="assetManage.OpenWeChart"></dd>
+										</dl>
+									</div>
 									<!--<div class="col-sm-1"></div>-->
-									<div class="col-sm-11 text-left">
+									<div class="col-sm-11 text-left" v-else>
 										<ul class="list-inline clearfix">
 											<li>
 												<p class="font-address">{{item.currencyName}}<span data-i18n="assetManage.addressVal">充值地址</span><i class="chongAddress"></i></p>
@@ -100,41 +110,92 @@
 									</div>
 								</div>
 								<div :class="'row chongti-dialogs tixian-dialog row-withdraw dn rowWithdrawal'+k+'2'">
-									<div class="col-sm-3  text-right font-address-wrap">{{item.currencyName}}<span data-i18n="assetManage.LTCWithdrawalAddr">提币地址</span></div>
-									<div class="col-sm-9 text-left">
-										<p v-if="item.currencyName=='SANC' " style="height: 64px;line-height: 64px;" class="font-warning" data-i18n="assetManage.SANCNotic">请确认您选择的SANC钱包账户中有资产余额，否则会导致提币失败。</p>
-										<div class="select-wrap" v-show="tixianAddress.length >0 ? true : false">
-											
-											<div class="tip-wrap handmouse" @click="toogleTibiAddress">
-												<span data-i18n="assetManage.addressNotice"></span>
-												<p class="btn-wrap"><i class="icon-triangle-up" @click="tibiTriangleUp()"></i><i class="icon-triangle-down" @click="tibiTriangleDown()"></i></p>
+									<div v-if="item.currencyType==0">
+											<dl class="pkZone pull-left" style="width:50%;">
+													<dt class="Notice" data-i18n="assetManage.WithdraNotice"></dt>
+													<dt class="NoticeDetail" data-i18n="assetManage.WithdraNoticeDetail"></dt>
+													<dd class="pkZoneDd" style="width:50%;">
+														<img src="../../images/PKkefu.jpg">
+													</dd>
+													<dd class="NoticeDetail" data-i18n="assetManage.OpenWeChart"></dd>
+											</dl>
+											<div class="pull-left">
+												<div class="num-wrap">
+													<input  type="text" v-model="tibiInputNumber" @keyup="checkInputVal" data-i18n="[placeholder]assetManage.WithdrawalNum" @keydown="checkFloat8" class="input-num withdrawalAmount" :data-typeName="item.currencyName" placeholder="提币数量">
+													<div class="balance-wrap"><span data-i18n="assetManage.avaliableNum">：</span><span class="allAmount">{{formatNumber(scientificToNumber(item.availableAmount),item.currencyType == 4 ? 6 : 8)}}</span><i class="btn-all" data-i18n="assetManage.allWithdrawal" @click="tiBiAll(formatNumber(scientificToNumber(item.availableAmount),item.currencyType == 4 ? 6 : 8))">全部</i></div>
+												</div>
+												<div class="fee-wrap clearfix">
+													<p class="pull-left"><span data-i18n="assetManage.fee">：</span><i class="withdrawalFee">{{tibiInputPoundage*100+"%"}}</i></p>
+												</div>
+												<div class="address-wrap text-left" >
+													<input type='text' style='display:none'>
+													<input data-i18n="[placeholder]assetManage.password" @keyup="checkKeyup('input-pwd','fh-warn2')" placeholder="请输入资金密码" type="password" class="input-pwd" autocomplete="new-password">
+												</div>
+												<div class="address-wrap">
+													<select class="form-control" v-model="select">
+														<option value="1">银行卡</option>
+														<option value="2">支付宝</option>
+													</select>
+												</div>
+												<div v-if="select==1">
+													<div class="address-wrap text-left" >
+														<input  placeholder="银行名称"  class="input-pwd">
+													</div>
+													<div class="address-wrap text-left">
+														<input  placeholder="支行名称"  class="input-pwd">
+													</div>
+													<div class="address-wrap text-left">
+														<input  placeholder="银行卡号"  class="input-pwd">
+													</div>
+												</div>
+												<div v-else>
+													<div class="address-wrap text-left" >
+														<input  placeholder="校验姓名"  class="input-pwd">
+													</div>
+													<div class="address-wrap text-left">
+														<input  placeholder="支付宝账号"  class="input-pwd">
+													</div>
+												</div>
+												<p class="btn-withdraw text-center" @click="pkSubmit" :data-currencyName="item.currencyName" data-i18n="assetManage.WithdrawalBtn">提币</p>
 											</div>
-											<div class="add-address-wrap handmouse" v-show="tibiAddressShow">
-												<p class="clearfix" v-for="(addItem,addK) in tixianAddress"><i @click="copyTibiAddress(addItem.address)">{{addItem.address}}</i><i @click="delectAddress(addItem.id,addK)" class="glyphicon glyphicon-remove-circle pull-right"></i></p>
-												<p class="clearfix" @click="toogleTibiAddress"><i class="icon-plus"></i><span data-i18n="assetManage.addNewAddress"></span></p>
+									</div>
+									<div v-else>
+										<div class="col-sm-3  text-right font-address-wrap">{{item.currencyName}}<span data-i18n="assetManage.LTCWithdrawalAddr">提币地址</span></div>
+										<div class="col-sm-9 text-left">
+											<p v-if="item.currencyName=='SANC' " style="height: 64px;line-height: 64px;" class="font-warning" data-i18n="assetManage.SANCNotic">请确认您选择的SANC钱包账户中有资产余额，否则会导致提币失败。</p>
+											<div class="select-wrap" v-show="tixianAddress.length >0 ? true : false">
+												
+												<div class="tip-wrap handmouse" @click="toogleTibiAddress">
+													<span data-i18n="assetManage.addressNotice"></span>
+													<p class="btn-wrap"><i class="icon-triangle-up" @click="tibiTriangleUp()"></i><i class="icon-triangle-down" @click="tibiTriangleDown()"></i></p>
+												</div>
+												<div class="add-address-wrap handmouse" v-show="tibiAddressShow">
+													<p class="clearfix" v-for="(addItem,addK) in tixianAddress"><i @click="copyTibiAddress(addItem.address)">{{addItem.address}}</i><i @click="delectAddress(addItem.id,addK)" class="glyphicon glyphicon-remove-circle pull-right"></i></p>
+													<p class="clearfix" @click="toogleTibiAddress"><i class="icon-plus"></i><span data-i18n="assetManage.addNewAddress"></span></p>
+												</div>
 											</div>
+											<div class="address-wrap">
+												<input type="text" data-i18n="[placeholder]assetManage.backMark" placeholder="备注标签" class="input-tag markAddress" @keyup="checkKeyup('markAddress','fh-warn0')">
+												<input type="text" v-model="tibiInputAddress" data-i18n="[placeholder]assetManage.WithdrawalAddr" @keyup="checkKeyup('withdrawalAddress','fh-warn0')" placeholder="提币地址" class="input-address withdrawalAddress">
+											</div>
+											<p class="font-hint fh-warn0 dn"><i data-i18n="assetManage.warning10"></i><span></span></p>
+											<div class="num-wrap">
+												<!-- <input v-if="item.currencyType == 4" type="text" v-model="tibiInputNumber" @keyup="checkInputVal" data-i18n="[placeholder]assetManage.WithdrawalNum" @keydown="checkFloat6" class="input-num withdrawalAmount" :data-typeName="item.currencyName" placeholder="提币数量"> -->
+												<input  type="text" v-model="tibiInputNumber" @keyup="checkInputVal" data-i18n="[placeholder]assetManage.WithdrawalNum" @keydown="checkFloat8" class="input-num withdrawalAmount" :data-typeName="item.currencyName" placeholder="提币数量">
+												<div class="balance-wrap"><span data-i18n="assetManage.avaliableNum">：</span><span class="allAmount">{{formatNumber(scientificToNumber(item.availableAmount),item.currencyType == 4 ? 6 : 8)}}</span><i class="btn-all" data-i18n="assetManage.allWithdrawal" @click="tiBiAll(formatNumber(scientificToNumber(item.availableAmount),item.currencyType == 4 ? 6 : 8))">全部</i></div>
+											</div>
+											<p class="font-hint fh-warn1 dn"><i data-i18n="assetManage.warning11"></i><span></span></p>
+											<div class="fee-wrap clearfix">
+												<p class="pull-left"><span data-i18n="assetManage.fee">：</span><i class="withdrawalFee">{{tibiInputPoundage}}</i>{{item.currencyName}}</p>
+												<p class="pull-right"><span data-i18n="assetManage.willget">：</span><span class="theAccount">{{formatNumber(scientificToNumber(tibiInputNumber > 0 && Number(tibiInputNumber)-Number(tibiInputPoundage) >0 ? tibiInputNumber-tibiInputPoundage : 0),item.currencyType == 4 ? 6 : 8)}}</span></p>
+											</div>
+											<div class="address-wrap ">
+												<input type='text' style='display:none'>
+												<input data-i18n="[placeholder]assetManage.password" @keyup="checkKeyup('input-pwd','fh-warn2')" placeholder="请输入资金密码" type="password" class="input-pwd" autocomplete="new-password">
+											</div>
+											<p class="font-hint fh-warn2 dn"><i data-i18n="assetManage.warning12"></i><span></span></p>
+											<p class="btn-withdraw text-center" @click="tibiSubmitForm()" :data-currencyName="item.currencyName" data-i18n="assetManage.WithdrawalBtn">提币</p>
 										</div>
-										<div class="address-wrap">
-											<input type="text" data-i18n="[placeholder]assetManage.backMark" placeholder="备注标签" class="input-tag markAddress" @keyup="checkKeyup('markAddress','fh-warn0')">
-											<input type="text" v-model="tibiInputAddress" data-i18n="[placeholder]assetManage.WithdrawalAddr" @keyup="checkKeyup('withdrawalAddress','fh-warn0')" placeholder="提币地址" class="input-address withdrawalAddress">
-										</div>
-										<p class="font-hint fh-warn0 dn"><i data-i18n="assetManage.warning10"></i><span></span></p>
-										<div class="num-wrap">
-											<!-- <input v-if="item.currencyType == 4" type="text" v-model="tibiInputNumber" @keyup="checkInputVal" data-i18n="[placeholder]assetManage.WithdrawalNum" @keydown="checkFloat6" class="input-num withdrawalAmount" :data-typeName="item.currencyName" placeholder="提币数量"> -->
-											<input  type="text" v-model="tibiInputNumber" @keyup="checkInputVal" data-i18n="[placeholder]assetManage.WithdrawalNum" @keydown="checkFloat8" class="input-num withdrawalAmount" :data-typeName="item.currencyName" placeholder="提币数量">
-											<div class="balance-wrap"><span data-i18n="assetManage.avaliableNum">：</span><span class="allAmount">{{formatNumber(scientificToNumber(item.availableAmount),item.currencyType == 4 ? 6 : 8)}}</span><i class="btn-all" data-i18n="assetManage.allWithdrawal" @click="tiBiAll(formatNumber(scientificToNumber(item.availableAmount),item.currencyType == 4 ? 6 : 8))">全部</i></div>
-										</div>
-										<p class="font-hint fh-warn1 dn"><i data-i18n="assetManage.warning11"></i><span></span></p>
-										<div class="fee-wrap clearfix">
-											<p class="pull-left"><span data-i18n="assetManage.fee">：</span><i class="withdrawalFee">{{tibiInputPoundage}}</i>{{item.currencyName}}</p>
-											<p class="pull-right"><span data-i18n="assetManage.willget">：</span><span class="theAccount">{{formatNumber(scientificToNumber(tibiInputNumber > 0 && Number(tibiInputNumber)-Number(tibiInputPoundage) >0 ? tibiInputNumber-tibiInputPoundage : 0),item.currencyType == 4 ? 6 : 8)}}</span></p>
-										</div>
-										<div class="address-wrap ">
-											<input type='text' style='display:none'>
-											<input data-i18n="[placeholder]assetManage.password" @keyup="checkKeyup('input-pwd','fh-warn2')" placeholder="请输入资金密码" type="password" class="input-pwd" autocomplete="new-password">
-										</div>
-										<p class="font-hint fh-warn2 dn"><i data-i18n="assetManage.warning12"></i><span></span></p>
-										<p class="btn-withdraw text-center" @click="tibiSubmitForm()" :data-currencyName="item.currencyName" data-i18n="assetManage.WithdrawalBtn">提币</p>
 									</div>
 								</div>
 							</div>

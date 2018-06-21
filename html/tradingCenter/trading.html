@@ -80,7 +80,7 @@
                                @click="TransactionPairFun(item.pair,TransactionPairList[item.pair]);toggleMarketBg(key,inde);addRecentBrowse(item.pair,item.new,item.increase,key);resetWeituor()"
                                :class="marketCheck[key]==inde ? 'market-rowBg':''">
                                 <span class="rowL"><!--  <b :class="'img-coin biT'+TransactionPairList[item.pair]"></b> -->{{item.pair}}</span>
-                                <span v-show="!isCNY" class="rowC">{{getFloat(scientificToNumber(item.new),6)}}</span>
+                                <span v-show="!isCNY" class="rowC">{{getFloat(scientificToNumber(item.new),8)}}</span>
                                 <span v-show="isCNY" class="rowC">{{getFloat(scientificToNumber(item.new)*Rate[tradeDataKey]*RateMoney,2)}}</span>
                                 <span v-if="item.increase>0" class="rowR font-green">+{{getFloat(scientificToNumber(item.increase*100),2)}}%</span>
                                 <span v-else-if="item.increase==0" class="rowR font-green">{{getFloat(scientificToNumber(item.increase*100),2)}}%</span>
@@ -92,7 +92,7 @@
                                @click="TransactionPairFun(item.pair,TransactionPairList[item.pair]);toggleMarketBg(item.key,inde);addRecentBrowse(item.pair,item.new,item.increase,item.key)"
                                :class="marketCheck[item.key]==inde ? 'market-rowBg':''">
                                 <span class="rowL"><!--  <b :class="'img-coin biT'+TransactionPairList[item.pair]"></b> -->{{item.pair}}</span>
-                                <span v-show="!isCNY" class="rowC">{{getFloat(scientificToNumber(item.new),6)}}</span>
+                                <span v-show="!isCNY" class="rowC">{{getFloat(scientificToNumber(item.new),8)}}</span>
                                 <span v-show="isCNY" class="rowC">{{getFloat(scientificToNumber(item.new)*Rate[item.pair.split("/")[1]]*RateMoney,2)}}</span>
                                 <span v-if="item.increase>0" class="rowR font-green">+{{getFloat(scientificToNumber(item.increase*100),2)}}%</span>
                                 <span v-else-if="item.increase==0" class="rowR font-green">{{getFloat(scientificToNumber(item.increase*100),2)}}%</span>
@@ -134,7 +134,7 @@
 										<i class="pull-left text-center handmouse font-money rowl-2">{{isCNY ? getFloat(scientificToNumber(item.money)*Rate[market]*RateMoney,2) : item.money}}</i>
 										<i class="pull-right text-right ratio-wrap rowl-3">
 											<i class="bg-ratio" :style="'padding-left:'+item.count/totalS*140+'px'"></i>
-											<i class="font-num">{{formatNumber(item.count,4)}}</i>
+											<i class="font-num">{{formatNumber(item.count,8)}}</i>
 										</i>
                                     </p>
                                 </div>
@@ -154,7 +154,7 @@
                                         <i class="pull-left text-center handmouse font-money rowl-2">{{isCNY ? getFloat(scientificToNumber(item.money)*Rate[market]*RateMoney,2) : item.money}}</i>
                                         <i class="pull-left text-right ratio-wrap rowl-3">
                                             <i class="bg-ratio" :style="'padding-left:'+item.count/totalM*140+'px'"></i>
-                                            <i class="font-num">{{formatNumber(item.count,4)}}</i>
+                                            <i class="font-num">{{formatNumber(item.count,8)}}</i>
                                         </i>
                                     </p>
                                 </div>
@@ -214,8 +214,8 @@
                                 <div class="tab-pane fade in active clearfix" id="check-price">
                                     <form class="pull-left buying-box xianjia-buy">
                                         <div class="bi-difference">
-                                            <p class="pull-left"><span data-i18n="assetManage.available1">可用</span>{{market}}<i>：{{formatNumber(assetList[market],6)
-                                                == 0 ? '0' : formatNumber(assetList[market],6)}}</i></p><a
+                                            <p class="pull-left"><span data-i18n="assetManage.available1">可用</span>{{market}}<i>：{{formatNumber(assetList[market],8)
+                                                == 0 ? '0' : formatNumber(assetList[market],8)}}</i></p><a
                                                 :href="'../asset/assetManage.html?currencyname='+market"
                                                 class="btn-recharge" data-i18n="assetManage.deposit">充币</a>
                                         </div>
@@ -242,7 +242,7 @@
                                             <div class="input-prompt"
                                                  @click="setMaxTradNum('.xianjia-buy .inputnum-wrap','buyVolume')">
                                                 <span class="ip-text"></span>
-                                                <span class="ip-value dn" v-if="buyPrice!=0">{{formatNumber(assetList[market]/buyPrice,4)}}</span>
+                                                <span class="ip-value dn" v-if="buyPrice!=0">{{formatNumber(assetList[market]/buyPrice,8)}}</span>
                                                 <span class="ip-value dn" v-else>0</span>
                                                 <span class="ip-unit dn"></span>
                                             </div>
@@ -282,8 +282,8 @@
                                     </form>
                                     <form class="pull-right offtake-box xianjia-sell">
                                         <div class="bi-difference">
-                                            <p class="pull-left"><span data-i18n="assetManage.available1">可用</span>{{buyAndCoin}}<i>：{{formatNumber(assetList[buyAndCoin],6)
-                                                == 0 ? '0' :formatNumber(assetList[buyAndCoin],6)}}</i></p><a
+                                            <p class="pull-left"><span data-i18n="assetManage.available1">可用</span>{{buyAndCoin}}<i>：{{formatNumber(assetList[buyAndCoin],8)
+                                                == 0 ? '0' :formatNumber(assetList[buyAndCoin],8)}}</i></p><a
                                                 :href="'../asset/assetManage.html?currencyname='+buyAndCoin"
                                                 class="btn-recharge" data-i18n="assetManage.deposit">充币</a>
                                         </div>
@@ -309,7 +309,7 @@
                                             <i class="text-center font-type">{{buyAndCoin}}</i>
                                             <div class="input-prompt dn"
                                                  @click="setMaxTradNum('.xianjia-sell .inputnum-wrap','sellvolume')">
-                                                <span class="ip-text"></span><span class="ip-value dn">{{formatNumber(assetList[buyAndCoin],4)}}</span><span
+                                                <span class="ip-text"></span><span class="ip-value dn">{{formatNumber(assetList[buyAndCoin],8)}}</span><span
                                                     class="ip-unit dn"></span>
                                             </div>
                                         </div>
@@ -351,8 +351,8 @@
                                 <div class="tab-pane fade" id="market-price">
                                     <form class="pull-left buying-box shijia-buy">
                                         <div class="bi-difference"><p class="pull-left"><span
-                                                data-i18n="assetManage.available1">可用</span>{{market}}<i>：{{formatNumber(assetList[market],6)
-                                            == 0 ? '0' : formatNumber(assetList[market],6)}}</i></p><a
+                                                data-i18n="assetManage.available1">可用</span>{{market}}<i>：{{formatNumber(assetList[market],8)
+                                            == 0 ? '0' : formatNumber(assetList[market],8)}}</i></p><a
                                                 :href="'../asset/assetManage.html?currencyname='+market"
                                                 class="btn-recharge" data-i18n="assetManage.deposit">充币</a></div>
                                         <p class="label-title" data-i18n="assetManage.buyPrice">价格</p>
@@ -371,7 +371,7 @@
                                             <i class="text-center font-type">{{market}}</i>
                                             <div class="input-prompt dn"
                                                  @click="setMaxTradNum('.shijia-buy .inputnum-wrap','shijiabuy')">
-                                                <span class="ip-text"></span><span class="ip-value dn">{{formatNumber(assetList[market],4)}}</span><span
+                                                <span class="ip-text"></span><span class="ip-value dn">{{formatNumber(assetList[market],8)}}</span><span
                                                     class="ip-unit dn"></span>
                                             </div>
                                         </div>
@@ -408,8 +408,8 @@
                                     </form>
                                     <form class="pull-right offtake-box shijia-sell">
                                         <div class="bi-difference">
-                                            <p class="pull-left"><span data-i18n="assetManage.available1">可用</span>{{buyAndCoin}}<i>：{{formatNumber(assetList[buyAndCoin],6)
-                                                == 0 ? '0' : formatNumber(assetList[buyAndCoin],6)}}</i></p><a
+                                            <p class="pull-left"><span data-i18n="assetManage.available1">可用</span>{{buyAndCoin}}<i>：{{formatNumber(assetList[buyAndCoin],8)
+                                                == 0 ? '0' : formatNumber(assetList[buyAndCoin],8)}}</i></p><a
                                                 class="btn-recharge"
                                                 :href="'../asset/assetManage.html?currencyname='+buyAndCoin"
                                                 data-i18n="assetManage.deposit">充币</a>
@@ -431,7 +431,7 @@
                                             <i class="text-center font-type">{{buyAndCoin}}</i>
                                             <div class="input-prompt dn"
                                                  @click="setMaxTradNum('.shijia-sell .inputnum-wrap','shijiasell')">
-                                                <span class="ip-text"></span><span class="ip-value dn">{{formatNumber(assetList[buyAndCoin],4)}}</span><span
+                                                <span class="ip-text"></span><span class="ip-value dn">{{formatNumber(assetList[buyAndCoin],8)}}</span><span
                                                     class="ip-unit dn"></span>
                                             </div>
                                         </div>
@@ -493,7 +493,7 @@
                                 <div class="consult-buying marketRowBox">
                                     <transition-group name="newList" tag="p" v-show="changeToMarketTrade">
                                         <p class="clearfix font-trading-des" v-for="item in consignationDataList"
-                                           @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_average_price),6),'',formatNumber(scientificToNumber(item.made_count),4)):inputSellFiled(formatNumber(scientificToNumber(item.made_average_price),6),'',formatNumber(scientificToNumber(item.made_count),4))"
+                                           @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_average_price),8),'',formatNumber(scientificToNumber(item.made_count),8)):inputSellFiled(formatNumber(scientificToNumber(item.made_average_price),8),'',formatNumber(scientificToNumber(item.made_count),8))"
                                            :key="item">
                                             <i :class="'pull-left text-left'">
                                                 {{(isCNY ? formatNumber(scientificToNumber(item.made_average_price)*Rate[market]*RateMoney,2) : scientificToNumber(item.made_average_price))}}
@@ -509,7 +509,7 @@
                                     </transition-group>
                                     <transition-group name="newList" tag="p" v-show="changeToMyTrade">
                                         <p class="clearfix font-trading-des" v-for="item in consignationDataListMy"
-                                           @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_average_price),6),'',formatNumber(scientificToNumber(item.made_count),4)):inputSellFiled(formatNumber(scientificToNumber(item.made_average_price),6),'',formatNumber(scientificToNumber(item.made_count),4))" :key="item">                                  
+                                           @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_average_price),8),'',formatNumber(scientificToNumber(item.made_count),8)):inputSellFiled(formatNumber(scientificToNumber(item.made_average_price),8),'',formatNumber(scientificToNumber(item.made_count),8))" :key="item">                                  
                                            <i :class="'pull-left text-left'">
                                                 {{isCNY ? formatNumber(scientificToNumber(item.made_average_price)*Rate[market]*RateMoney,2) : scientificToNumber(item.made_average_price)}}
                                             </i>
@@ -582,28 +582,28 @@
                                         {{tradList[item.trade_type]}}
                                     </td>
                                     <td width="13%" class="two-line">
-                                        {{formatNumber(scientificToNumber(item.consignation_price),6) <= 0 ? '-' :
-                                        formatNumber(scientificToNumber(item.consignation_price),6)}}
-                                        <span v-show="formatNumber(scientificToNumber(item.consignation_price),6) > 0 ? true : false"> <span
+                                        {{formatNumber(scientificToNumber(item.consignation_price),8) <= 0 ? '-' :
+                                        formatNumber(scientificToNumber(item.consignation_price),8)}}
+                                        <span v-show="formatNumber(scientificToNumber(item.consignation_price),8) > 0 ? true : false"> <span
                                                 style="margin-right: 2px">≈</span><i data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(scientificToNumber(item.consignation_price)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}
 												</span>
                                         
                                     </td>
-                                    <td width="10%">{{formatNumber(scientificToNumber(item.consignation_count),4)}}</td>
+                                    <td width="10%">{{formatNumber(scientificToNumber(item.consignation_count),8)}}</td>
                                     <td width="13%" class="two-line">
                                         {{formatNumber(scientificToNumber(item.consignationTotalMoney),8)}}
-                                        <span v-show="formatNumber(scientificToNumber(item.consignation_price),6) > 0 ? true : false"> <span
+                                        <span v-show="formatNumber(scientificToNumber(item.consignation_price),8) > 0 ? true : false"> <span
                                                 style="margin-right: 2px">≈</span><i data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(scientificToNumber(item.consignationTotalMoney)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
                                         
                                     </td>
-                                    <td width="8%">{{formatNumber(scientificToNumber(item.made_count),4)}}</td>
+                                    <td width="8%">{{formatNumber(scientificToNumber(item.made_count),8)}}</td>
                                     <td width="13%" class="two-line">
-                                        {{formatNumber(scientificToNumber(item.made_average_price),6) <= 0 ? '-' :
-                                        formatNumber(scientificToNumber(item.made_average_price),6)}}
-                                        <span v-show="formatNumber(scientificToNumber(item.made_average_price),6) > 0 ? true : false">≈<i
-                                                data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(formatNumber(scientificToNumber(item.made_average_price),6)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
+                                        {{formatNumber(scientificToNumber(item.made_average_price),8) <= 0 ? '-' :
+                                        formatNumber(scientificToNumber(item.made_average_price),8)}}
+                                        <span v-show="formatNumber(scientificToNumber(item.made_average_price),8) > 0 ? true : false">≈<i
+                                                data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(formatNumber(scientificToNumber(item.made_average_price),8)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
                                     </td>
-                                    <td width="8%">{{formatNumber(scientificToNumber(item.unTradeCount),4)}}</td>
+                                    <td width="8%">{{formatNumber(scientificToNumber(item.unTradeCount),8)}}</td>
                                     <td width="7%" class="text-center"><i class="btn-revoke handmouse"
                                                                           @click="revokeOrder"
                                                                           :data-id="item.consignation_no"
@@ -659,30 +659,30 @@
                                         {{tradList[item.trade_type]}}
                                     </td>
                                     <td width="13%" class="two-line">
-                                        {{item.trade_type>2 ? '-' : formatNumber(scientificToNumber(item.consignation_price),6)}}
+                                        {{item.trade_type>2 ? '-' : formatNumber(scientificToNumber(item.consignation_price),8)}}
                                         <span v-show="item.trade_type >2 ? false : true"><span
                                                 style="margin-right: 2px">≈</span><i
-                                                data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(formatNumber(scientificToNumber(item.consignation_price),6)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
+                                                data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(formatNumber(scientificToNumber(item.consignation_price),8)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
 
                                     </td>
                                     <td width="10%">
-                                        {{item.trade_type==3?"-":formatNumber(scientificToNumber(item.consignation_count),4)}}
+                                        {{item.trade_type==3?"-":formatNumber(scientificToNumber(item.consignation_count),8)}}
                                     </td>
                                     <td width="13%" class="two-line">
                                         {{item.trade_type==4?"-":formatNumber(scientificToNumber(item.consignationTotalMoney),8)}}
                                         <span v-show="item.trade_type==4?false : true"><span style="margin-right: 2px">≈</span><i
-                                                data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(formatNumber(scientificToNumber(item.consignationTotalMoney),6)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
+                                                data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(formatNumber(scientificToNumber(item.consignationTotalMoney),8)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
                                     </td>
-                                    <td width="8%">{{formatNumber(scientificToNumber(item.made_count),4)}}</td>
+                                    <td width="8%">{{formatNumber(scientificToNumber(item.made_count),8)}}</td>
                                     <td width="13%" class="two-line">
-                                        {{formatNumber(scientificToNumber(item.made_average_price),6) >0 ?
-                                        formatNumber(scientificToNumber(item.made_average_price),6):'-'}}
-                                        <span v-show="formatNumber(scientificToNumber(item.made_average_price),6) >0 ? true:false"><span
+                                        {{formatNumber(scientificToNumber(item.made_average_price),8) >0 ?
+                                        formatNumber(scientificToNumber(item.made_average_price),8):'-'}}
+                                        <span v-show="formatNumber(scientificToNumber(item.made_average_price),8) >0 ? true:false"><span
                                                 style="margin-right: 2px">≈</span><i
-                                                data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(formatNumber(scientificToNumber(item.made_average_price),6)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
+                                                data-i18n="assetManage.moneyTypeF"></i>{{formatNumber(formatNumber(scientificToNumber(item.made_average_price),8)*Rate[item.biz_type.split("/")[1]]*RateMoney,2)}}</span>
                                     </td>
                                     <td v-if="item.trade_type==3" width="8%">-</td>
-                                    <td v-else width="8%">{{formatNumber(scientificToNumber(item.unTradeCount),4)}}</td>
+                                    <td v-else width="8%">{{formatNumber(scientificToNumber(item.unTradeCount),8)}}</td>
                                     <td width="7%" class="text-center" :data-i18n="'assetManage.consignationStatus'+item.consignation_status">{{item.consignation_status}}</td>
                                 </tr>
                                 </tbody>

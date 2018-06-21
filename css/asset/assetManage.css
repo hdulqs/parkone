@@ -96,7 +96,22 @@
 .img-coin.biT5 {
 	background-image: url(../../images/icon-currency5.png);
 }
-
+.img-coin.biT0 {
+	background-image: url(../../images/pk.png);
+}
+.pkZone{
+  text-align: center;
+}
+.pkZoneDd{
+  width: 20%;
+  margin: 0 auto;
+}
+.Notice{
+  font-size: 20px;
+}
+.NoticeDetail{
+  font-size: 14px;
+}
 .currency-wrap .first-row {
   height: 55px;
   line-height: 55px !important;

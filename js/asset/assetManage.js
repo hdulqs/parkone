@@ -105,6 +105,9 @@ var assetHAT = new Vue({
             this.currPage = index;
             historyList(this);
 		}
+		,pkSubmit:function(){
+			
+		}
         ,toggleCharge:function(_k){
         	$(".disabled-charge-warning.dischaw"+_k).removeClass("dn");
         }

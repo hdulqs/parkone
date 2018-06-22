@@ -345,7 +345,7 @@ var assetHAT = new Vue({
 	        	if(_v) $(".tixian-dialog.di ."+err).addClass("dn");
         	}
 		}
-		,checkPk:function(val){
+		,checkPk:function(val,availableAmount){
 			val=""+val;
             val= val.replace(/[^\d.]/g,"");  //清除“数字”和“.”以外的字符     
             val= val.replace(/\.{2,}/g,"."); //只保留第一个. 清除多余的     
@@ -354,12 +354,16 @@ var assetHAT = new Vue({
             if(val.indexOf(".")< 0 && val !=""){//以上已经过滤，此处控制的是如果没有小数点，首位不能为类似于 01、02的金额    
                 val= parseFloat(val);    
 			}
+			if(val>availableAmount){
+				val=availableAmount
+			}
 			this.PKtibiInputNumber = val;
 			if(val<100||val>50000){
 				this.checkPKnum=true;
 			}else{
 				this.checkPKnum=false;
 			}
+			
 		}
 		,checkPkBankName:function(val){
 			if(val==""){

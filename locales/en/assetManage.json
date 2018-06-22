@@ -90,7 +90,14 @@
     "4FIRST_RECHARGE":"Trading Reward",
     "4LANTERN_FESTIVAL_REWARD":"Lantern Festival Reward",
     "4WISH_TOKEN":"Wish for Token",
-    "4PRIZE_WHEEL":"Prize Wheel"
+    "4PRIZE_WHEEL":"Prize Wheel",
+    "chargeNotice":"Recharging reminder",
+    "chargeNoticeDetail":"Recharging PK needs to contact customer service. Customer Service Contact (QR code)",
+    "OpenWeChart":"Open WeChat’s scan function",
+    "WithdraNotice":"Withdrawals reminder",
+    "WithdraNoticeDetail":"Withdrawing PK needs to contact customer service in advance. Customer Service Contact (QR code)",
+    "warning13":"Please enter the correct withdrawal amount,Single transaction limit 100PK-50000PK",
+    "warning14":"Please enter the correct billing information"
   },
   "lang": {
     "english": "English",

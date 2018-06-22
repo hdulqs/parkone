@@ -1,6 +1,7 @@
 var idcl="";
 var isCheckGM = false;//提币时校验页面填写是否正确
 var userToken = $.cookie("userToken");
+var pkSubmitFlag=false;//是否是PK提币
 //var tir = {
 //	//提币汇率
 //	"BTC":[0.05,20,0.002],
@@ -30,15 +31,24 @@ var assetHAT = new Vue({
 			"KNC":[100,10000,3],
 			"PARK":[10000,10000000,1000]
 		}
+		,zijinPwd:""
 		,msgSuccess: ["",'DepositSuccess','WithdrawalSuccess','loginReward','tradeReward','freeReward']
 		,msgSuccessOthers: ['','PendingDeposit','WithdrawalRequest']
 		,msgAmount: ['','DepositAmount','WithdrawalAmount','DepositAmount','DepositAmount','DepositAmount']
 		,msgAvaliable: ['','AvaliableMoney','AvaliableMoney2','AvaliableMoney','AvaliableMoney','AvaliableMoney']
 		,totalDataList:[]
 		,assetDataList:[]
+		,PKtibiInputNumber:0
+		,BankName:""
+		,BranchName:""
+		,DebitCardNumber:""
+		,CheckName:""
+		,AlipayID:""
 		,showCurrencyType:''
 		,showCurrencyName:''
 		,historyDataList:[]
+		,checkPKnum:false
+		,checkPkBankNameMsg:false
 		,historyShowType:0
 		,pageSize:5	//显示条数
         ,showItem:5 //显示页数
@@ -59,8 +69,6 @@ var assetHAT = new Vue({
 		
 		historyList(this);
 		getUSDCNYRate();
-	}
-	,mounted: function (){
 	}
 	,computed:{
         pages:function(){
@@ -106,7 +114,47 @@ var assetHAT = new Vue({
             historyList(this);
 		}
 		,pkSubmit:function(){
-			
+			if(this.select==1&&(this.BankName==""||this.DebitCardNumber=="")){
+				this.checkPkBankNameMsg=true;
+			}else if(this.select!=1&&(this.CheckName==""||this.AlipayID=="")){
+				this.checkPkBankNameMsg=true;
+			}else{
+				this.checkPkBankNameMsg=false;
+			}
+			this.checkPk(this.PKtibiInputNumber);
+			if(this.checkPkBankNameMsg||this.checkPKnum){
+				return;
+			}
+			var twoValid= $.cookie("twoValid");
+            var googleStatus=$.cookie("googleStatus");
+            var mobileStatus=$.cookie("mobileStatus");
+            var lastVerfiyType=$.cookie("lastVerfiyType");
+            pkSubmitFlag=true;
+            setTimeout(function(){$("#googleValidate .close-m,#twoTypeValidate .close-m,#mobileValidate .close-m").removeClass("dn")},400);
+            if (googleStatus == 1 && mobileStatus == 0) {
+                loadTwoVerifyGoogle();
+                $("#btn-googleValidate").click();
+            } else if (googleStatus == 0 && mobileStatus == 1) {
+                loadTwoVerifyMobile();
+                $("#btn-mobileValidate").click();
+            } else if (googleStatus == 1 && mobileStatus == 1) {
+                loadTwoVerify();
+                if (lastVerfiyType == "sms") {
+                    $("#btn-twoTypeValidate").click();
+                    $("#myTab li:eq(1)").addClass("active");
+                    $("#mobile").addClass("active");
+                    $("#mobile").addClass("in");
+                } else if (lastVerfiyType == "google" || lastVerfiyType == ""|| lastVerfiyType =="null") {
+                    $("#btn-twoTypeValidate").click();
+                    $("#myTab li:eq(0)").addClass("active");
+                    $("#myTabContent #google").addClass("active");
+                    $("#myTabContent #google").addClass("in");
+                }
+            }
+
+		}
+		,selectPay:function(){
+			this.checkPkBankNameMsg=false;
 		}
         ,toggleCharge:function(_k){
         	$(".disabled-charge-warning.dischaw"+_k).removeClass("dn");
@@ -288,8 +336,31 @@ var assetHAT = new Vue({
 	        	var _v = $(".tixian-dialog.di ."+elm).val();
 	        	if(_v) $(".tixian-dialog.di ."+err).addClass("dn");
         	}
-        }
-    }
+		}
+		,checkPk:function(val){
+			val=""+val;
+            val= val.replace(/[^\d.]/g,"");  //清除“数字”和“.”以外的字符     
+            val= val.replace(/\.{2,}/g,"."); //只保留第一个. 清除多余的     
+            val= val.replace(".","$#$").replace(/\./g,"").replace("$#$","."); 
+            val = val.replace(/^(\-)*(\d+)\.(\d).*$/,'$1$2.$3');//保留小数点后1位       
+            if(val.indexOf(".")< 0 && val !=""){//以上已经过滤，此处控制的是如果没有小数点，首位不能为类似于 01、02的金额    
+                val= parseFloat(val);    
+			}
+			this.PKtibiInputNumber = val;
+			if(val<100||val>50000){
+				this.checkPKnum=true;
+			}else{
+				this.checkPKnum=false;
+			}
+		}
+		,checkPkBankName:function(val){
+			if(val==""){
+				this.checkPkBankNameMsg=true;
+			}else{
+				this.checkPkBankNameMsg=false;
+			}
+		}
+	}
 });
 //获取充币地址
 function getAddressApi(currencyType,currencyName){
@@ -342,7 +413,9 @@ function checkWithdrawCallBack(d){
 		var currencyName = $(".status-checkRole").attr("data-currencyName");
 		var thisWith = $(".status-checkRole").attr("data-with");
 		$(".status-checkRole").removeClass("status-checkRole");
-		addressList();
+		if(currencyType){
+			addressList();
+		}
 		poundage();
 		$(".rowWithdrawal"+thisWith).removeClass("dn").addClass("di");	
 	}
@@ -538,7 +611,10 @@ function googleCodeValid() {
   }else {
 	loadbgloading();
 	$(".bgloading").show();
-  	if(isCheckGM){
+	if(pkSubmitFlag){
+		pkWithDrawa(1,gooleCode);
+	}
+  	else if(isCheckGM){
     	subTBApi(1,gooleCode);
     }else{
 	    callServieGetOther("googleCodeValid","/api/user/google-verify-code",{
@@ -558,7 +634,10 @@ function googleCodeValid2() {
     }else {
 		loadbgloading();
 		$("#bgloading").show();
-    	if(isCheckGM){
+		if(pkSubmitFlag){
+			pkWithDrawa(1,TwoGoogleCode);
+		}
+    	else if(isCheckGM){
     		subTBApi(1,TwoGoogleCode);
     	}else{
     		callServieGetOther("googleCodeValid","/api/user/google-verify-code",{
@@ -582,7 +661,10 @@ function mobileCodeVerify() {
     }else {
 		loadbgloading();
 		$("#bgloading").show();
-    	if(isCheckGM){	
+		if(pkSubmitFlag){
+			pkWithDrawa(0,mobileCode);
+		}
+    	else if(isCheckGM){	
     		subTBApi(0,mobileCode);
     	}else{
 	    	callServieGetOther("mobileCodeVerify","/api/user/sms-verify-code",{
@@ -612,7 +694,10 @@ function mobileCodeVerify2() {
       }else {
 		loadbgloading();
 		$("#bgloading").show();
-      	if(isCheckGM){
+		if(pkSubmitFlag){
+			pkWithDrawa(0,TwoMobileCode);
+		}
+    	else if(isCheckGM){
     		subTBApi(0,TwoMobileCode);
     	}else{
 	        callServieGetOther("mobileCodeVerify","/api/user/sms-verify-code",{
@@ -663,4 +748,36 @@ function Trim(str,is_global)
     	result = result.replace(/\s/g,"");
     }
     return result;
+}
+
+//PK提币
+function pkWithDrawa(verifyType,verifyCode){
+	callServieOther("Pkwithdraw","/api/account/pk/withdraw",{
+		amount:assetHAT.PKtibiInputNumber,
+		poundage:assetHAT.tibiInputPoundage,
+		assetPassword:assetHAT.zijinPwd,
+		transferType:assetHAT.select,
+		bankName:assetHAT.BankName,
+		branchName:assetHAT.BranchName,
+		cardNo:assetHAT.DebitCardNumber,
+		actualName:assetHAT.CheckName,
+		alipayNo:assetHAT.AlipayID,
+		verifyType:verifyType,
+		verifyCode:verifyCode
+	});
+}
+function PkwithdrawCallBack(d){
+	if(d.success){
+		window.location.reload();
+	}else{
+		$("#twoTypeValidate").modal('hide');
+		$("#mobileValidate").modal('hide');
+		$("#googleValidate").modal('hide');
+		alert(d.error.detail);
+		$(".bgloading").hide();
+		// setTimeout(function(){
+		// 	window.location.reload();
+		// },3000)
+	}
+	return false;
 }

@@ -1405,7 +1405,6 @@ function listOrderSetDataEndCallBack(r) {
     buyAndSell.consignationDataListMy = list;
 	if(buyAndSell.consignationDataListMy.length <= 0){
 		buyAndSell.MarketShowNoData = true;
-		return false;
 	}else{
 		buyAndSell.refreshMyTime = list[0].create_time;
 		buyAndSell.MarketShowNoData = false;

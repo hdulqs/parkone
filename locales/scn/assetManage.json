@@ -95,7 +95,9 @@
     "chargeNoticeDetail":"PK充值需要输入联系客服。客服联系方式（二维码）",
     "OpenWeChart":"打开微信扫一扫",
     "WithdraNotice":"提现提醒",
-    "WithdraNoticeDetail":"PK提现需要联系客服，客服确认订单信息无误后方可完成到账操作。客服联系方式(二维码)"
+    "WithdraNoticeDetail":"PK提现需要联系客服，客服确认订单信息无误后方可完成到账操作。客服联系方式(二维码)",
+    "warning13":"请输入正确的提现数量,单笔限额100PK-50000PK",
+    "warning14":"请输入正确的收款信息"
   },
   "lang": {
     "english": "English",

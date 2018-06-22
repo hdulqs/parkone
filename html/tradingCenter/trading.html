@@ -524,7 +524,7 @@
                                     </transition-group>
                                 </div>
                             </div>
-							<div :class="'no-data-msg3 text-center'+ (!MarketShowNoData ? ' dn' : '')">
+							<div class="no-data-msg3 text-center" v-show="MarketShowNoData">
 								<p class="icon-document-text text-center"></p>
 								<p class="font-hint text-center" data-i18n="assetManage.Nonewdelegate">暂无数据{{MarketShowNoData}}</p>
 							</div>

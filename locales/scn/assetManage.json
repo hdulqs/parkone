@@ -97,7 +97,15 @@
     "WithdraNotice":"提现提醒",
     "WithdraNoticeDetail":"PK提现需要联系客服，客服确认订单信息无误后方可完成到账操作。客服联系方式(二维码)",
     "warning13":"请输入正确的提现数量,单笔限额100PK-50000PK",
-    "warning14":"请输入正确的收款信息"
+    "warning14":"请输入正确的收款信息",
+    "warning15":"请填写付款人姓名",
+    "checkName":"校验姓名",
+    "AlipayID":"支付宝号",
+    "Alipay":"支付宝",
+    "BranchName":"支行名称",
+    "DebitCard":"银行卡",
+    "BankName":"银行名称",
+    "DebitCardNumber":"银行卡号"
   },
   "lang": {
     "english": "English",

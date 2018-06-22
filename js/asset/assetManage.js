@@ -44,6 +44,7 @@ var assetHAT = new Vue({
 		,DebitCardNumber:""
 		,CheckName:""
 		,AlipayID:""
+		,checkNameMsg:false
 		,showCurrencyType:''
 		,showCurrencyName:''
 		,historyDataList:[]
@@ -122,7 +123,7 @@ var assetHAT = new Vue({
 				this.checkPkBankNameMsg=false;
 			}
 			this.checkPk(this.PKtibiInputNumber);
-			if(this.checkPkBankNameMsg||this.checkPKnum){
+			if(this.checkPkBankNameMsg||this.checkPKnum||this.checkNameMsg){
 				return;
 			}
 			var twoValid= $.cookie("twoValid");
@@ -152,6 +153,13 @@ var assetHAT = new Vue({
                 }
             }
 
+		}
+		,checkPkName:function(v){
+			if(v==""){
+				this.checkNameMsg=true;
+			}else{
+				this.checkNameMsg=false;
+			}
 		}
 		,selectPay:function(){
 			this.checkPkBankNameMsg=false;

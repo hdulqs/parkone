@@ -487,16 +487,15 @@
                                 <p class="clearfix font-trading-title1">
                                     <i class="pull-left text-center"><span data-i18n="assetManage.Price">价格</span>（{{isCNY ? ChangeMoenyType : market}}）</i>
                                     <i class="pull-left text-left"><span data-i18n="assetManage.number">数量</span>（{{buyAndCoin}}）</i>
-                                    <i class="pull-left text-right"><span
-                                            data-i18n="assetManage.table.Date">时间</span></i>
+                                    <i class="pull-left text-right"><span data-i18n="assetManage.table.Date">时间</span></i>
                                 </p>
                                 <div class="consult-buying marketRowBox">
                                     <transition-group name="newList" tag="p" v-show="changeToMarketTrade">
                                         <p class="clearfix font-trading-des" v-for="item in consignationDataList"
-                                           @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_average_price),8),'',formatNumber(scientificToNumber(item.made_count),8)):inputSellFiled(formatNumber(scientificToNumber(item.made_average_price),8),'',formatNumber(scientificToNumber(item.made_count),8))"
+                                           @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_price),8),'',formatNumber(scientificToNumber(item.made_count),8)):inputSellFiled(formatNumber(scientificToNumber(item.made_price),8),'',formatNumber(scientificToNumber(item.made_count),8))"
                                            :key="item">
-                                            <i :class="'pull-left text-left'">
-                                                {{(isCNY ? formatNumber(scientificToNumber(item.made_average_price)*Rate[market]*RateMoney,2) : scientificToNumber(item.made_average_price))}}
+                                            <i :class="'pull-left text-left '+(item.trade_type==2 ? 'font-red1':'font-green')">
+                                                {{(isCNY ? formatNumber(scientificToNumber(item.made_price)*Rate[market]*RateMoney,2) : scientificToNumber(item.made_price))}}
                                             </i>
                                             <i class="pull-left text-center handmouse font-money">
                                                 {{scientificToNumber(item.made_count)}}
@@ -509,9 +508,9 @@
                                     </transition-group>
                                     <transition-group name="newList" tag="p" v-show="changeToMyTrade">
                                         <p class="clearfix font-trading-des" v-for="item in consignationDataListMy"
-                                           @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_average_price),8),'',formatNumber(scientificToNumber(item.made_count),8)):inputSellFiled(formatNumber(scientificToNumber(item.made_average_price),8),'',formatNumber(scientificToNumber(item.made_count),8))" :key="item">                                  
-                                           <i :class="'pull-left text-left'">
-                                                {{isCNY ? formatNumber(scientificToNumber(item.made_average_price)*Rate[market]*RateMoney,2) : scientificToNumber(item.made_average_price)}}
+                                           @click="item.trade_type==1||item.trade_type==3?inputBuyFiled(formatNumber(scientificToNumber(item.made_price),8),'',formatNumber(scientificToNumber(item.made_count),8)):inputSellFiled(formatNumber(scientificToNumber(item.made_price),8),'',formatNumber(scientificToNumber(item.made_count),8))" :key="item">                                  
+                                           <i :class="'pull-left text-left '+(item.trade_type==2 ? 'font-red1':'font-green')">
+                                                {{isCNY ? formatNumber(scientificToNumber(item.made_price)*Rate[market]*RateMoney,2) : scientificToNumber(item.made_price)}}
                                             </i>
                                             <i class="pull-left text-center handmouse font-money">
                                                 {{scientificToNumber(item.made_count)}}

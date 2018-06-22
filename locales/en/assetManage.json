@@ -97,7 +97,15 @@
     "WithdraNotice":"Withdrawals reminder",
     "WithdraNoticeDetail":"Withdrawing PK needs to contact customer service in advance. Customer Service Contact (QR code)",
     "warning13":"Please enter the correct withdrawal amount,Single transaction limit 100PK-50000PK",
-    "warning14":"Please enter the correct billing information"
+    "warning14":"Please enter the correct billing information",
+    "warning15":"Please fill in the name of the drawee",
+    "checkName":"Check name",
+    "AlipayID":"AlipayID",
+    "Alipay":"Alipay",
+    "BranchName":"BranchName",
+    "DebitCard":"DebitCard",
+    "BankName":"BankName",
+    "DebitCardNumber":"Debit card number"
   },
   "lang": {
     "english": "English",

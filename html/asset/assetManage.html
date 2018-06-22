@@ -132,29 +132,30 @@
 													<input type='text' style='display:none'>
 													<input data-i18n="[placeholder]assetManage.password" @keyup="checkKeyup('input-pwd','fh-warn2')" v-model="zijinPwd" type="password" class="input-pwd" autocomplete="new-password">
 												</div>
+												<div class="address-wrap text-left" >
+													<input  data-i18n="[placeholder]assetManage.checkName" v-model="CheckName"  @keyup="checkPkName(CheckName)"  class="input-pwd">
+												</div>
+												<p class="font-hint fh-warn1" style="text-align:left;" v-show="checkNameMsg"><i data-i18n="assetManage.warning15"></i><span></span></p>
 												<div class="address-wrap">
 													<select class="form-control" v-model="select" @change="selectPay">
-														<option value="1">银行卡</option>
-														<option value="2">支付宝</option>
+														<option value="1" data-i18n="assetManage.DebitCard"></option>
+														<option value="2" data-i18n="assetManage.Alipay"></option>
 													</select>
 												</div>
-												<div v-if="select==1">
+												<div v-show="select==1">
 													<div class="address-wrap text-left" >
-														<input  placeholder="银行名称" v-model="BankName" class="input-pwd">
+														<input  data-i18n="[placeholder]assetManage.BankName" v-model="BankName" class="input-pwd">
 													</div>
 													<div class="address-wrap text-left">
-														<input  placeholder="支行名称(选填)" v-model="BranchName" class="input-pwd">
+														<input  data-i18n="[placeholder]assetManage.BranchName" v-model="BranchName" class="input-pwd">
 													</div>
 													<div class="address-wrap text-left">
-														<input  placeholder="银行卡号"  v-model="DebitCardNumber"  class="input-pwd">
+														<input  data-i18n="[placeholder]assetManage.DebitCardNumber"  v-model="DebitCardNumber"  class="input-pwd">
 													</div>
 												</div>
-												<div v-else>
-													<div class="address-wrap text-left" >
-														<input  placeholder="校验姓名" v-model="CheckName" class="input-pwd">
-													</div>
+												<div v-show="select!=1">
 													<div class="address-wrap text-left">
-														<input  placeholder="支付宝账号"  v-model="AlipayID"  class="input-pwd">
+														<input  data-i18n="[placeholder]assetManage.AlipayID"  v-model="AlipayID"  class="input-pwd">
 													</div>
 												</div>
 												<p class="font-hint fh-warn1" style="text-align:left;" v-show="checkPkBankNameMsg"><i data-i18n="assetManage.warning14"></i><span></span></p>

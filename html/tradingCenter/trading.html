@@ -131,7 +131,7 @@
                                        class="clearfix font-trading-des" v-for="(item,index) in SellTop10List"
                                        @click="inputSellFiled(item.money,index,item.sumCount)">
 										<i class="pull-left text-left font-red rowl-1"><span data-i18n="assetManage.sell">卖</span>{{SellTop10List.length-index}}</i>
-										<i class="pull-left text-center handmouse font-money rowl-2">{{isCNY ? getFloat(scientificToNumber(item.money)*Rate[market]*RateMoney,2) : item.money}}</i>
+										<i class="pull-left text-center handmouse font-money rowl-2">{{isCNY ? getFloat(scientificToNumber(item.money)*Rate[market]*RateMoney,2) : getFloat(item.money,8)}}</i>
 										<i class="pull-right text-right ratio-wrap rowl-3">
 											<i class="bg-ratio" :style="'padding-left:'+item.count/totalS*140+'px'"></i>
 											<i class="font-num">{{formatNumber(item.count,8)}}</i>
@@ -151,7 +151,7 @@
                                             <span data-i18n="assetManage.buy1">买</span>
                                             {{index+1}}
                                         </i>
-                                        <i class="pull-left text-center handmouse font-money rowl-2">{{isCNY ? getFloat(scientificToNumber(item.money)*Rate[market]*RateMoney,2) : item.money}}</i>
+                                        <i class="pull-left text-center handmouse font-money rowl-2">{{isCNY ? getFloat(scientificToNumber(item.money)*Rate[market]*RateMoney,2) : getFloat(item.money,8)}}</i>
                                         <i class="pull-left text-right ratio-wrap rowl-3">
                                             <i class="bg-ratio" :style="'padding-left:'+item.count/totalM*140+'px'"></i>
                                             <i class="font-num">{{formatNumber(item.count,8)}}</i>

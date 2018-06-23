@@ -15,8 +15,8 @@
                 "Can’t receive e-mail?"
             ],
             "ans": [
-                "<p class='font-aspect1'>Step 1: To create an account, please make sure you are visiting our official website: www.cointobe.com. Then click the Sign Up button on the right side of the page.</p><p class='font-aspect1'>Step 2: Fill in the form, and click the Sign Up button. Then login your registered e-mail, PARK.ONE will send the Sign Up link to your e-mail. If not received, please check the spam.</p>",
-                "<p class='font-aspect1'>Step 1：Visit www.cointobe.com, and click Sign Up button；</p><p class='font-aspect1'>Step 2：On the Sign Up pop-up windows, click Forget Passwords and enter the Recover Password page;</p><p class='font-aspect1'>Step 3：Enter correct account information, and click immediate recovery. </p>",
+                "<p class='font-aspect1'>Step 1: To create an account, please make sure you are visiting our official website: www.park.one. Then click the Sign Up button on the right side of the page.</p><p class='font-aspect1'>Step 2: Fill in the form, and click the Sign Up button. Then login your registered e-mail, PARK.ONE will send the Sign Up link to your e-mail. If not received, please check the spam.</p>",
+                "<p class='font-aspect1'>Step 1：Visit www.park.one, and click Sign Up button；</p><p class='font-aspect1'>Step 2：On the Sign Up pop-up windows, click Forget Passwords and enter the Recover Password page;</p><p class='font-aspect1'>Step 3：Enter correct account information, and click immediate recovery. </p>",
                 "<p class='font-aspect1'>Step 1：Check if the e-mail address is correct?</p><p class='font-aspect1'>Step 2：Check your spam folder, the e-mail might be there. </p><p class='font-aspect1'>Step 3：The e-mail provider might be unavailable. Please change an e-mail sever which is available. </p><p class='font-aspect1'>Step 4：If you still couldn’t receive e-mail or login your account, create a support ticket. </p>"
             ]
         },

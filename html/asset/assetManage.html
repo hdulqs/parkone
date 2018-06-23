@@ -122,7 +122,7 @@
 											<div class="pull-left">
 												<div class="num-wrap">
 													<input  type="text" v-model="PKtibiInputNumber" @keyup="checkPk(PKtibiInputNumber,item.availableAmount)" data-i18n="[placeholder]assetManage.WithdrawalNum" class="input-num withdrawalAmount" placeholder="提币数量">
-													<div class="balance-wrap"><span data-i18n="assetManage.avaliableNum">：</span><span class="allAmount">{{formatNumber(scientificToNumber(item.availableAmount),item.currencyType == 4 ? 6 : 8)}}</span><i class="btn-all" data-i18n="assetManage.allWithdrawal" @click="tiBiAll(formatNumber(scientificToNumber(item.availableAmount),8))">全部</i></div>
+													<div class="balance-wrap"><span data-i18n="assetManage.avaliableNum">：</span><span class="allAmount">{{formatNumber(scientificToNumber(item.availableAmount),item.currencyType == 4 ? 6 : 8)}}</span><i class="btn-all" data-i18n="assetManage.allWithdrawal" @click="PKtiBiAll(formatNumber(scientificToNumber(item.availableAmount),8))">全部</i></div>
 												</div>
 												<p class="font-hint fh-warn1" style="text-align:left;" v-show="checkPKnum"><i data-i18n="assetManage.warning13"></i><span></span></p>
 												<div class="fee-wrap clearfix">

@@ -214,7 +214,10 @@ var assetHAT = new Vue({
         }
         ,tiBiAll:function(totalNum){
         	this.tibiInputNumber = totalNum;
-        }
+		}
+		,PKtiBiAll:function(totalNum){
+        	this.PKtibiInputNumber=totalNum;
+		}
         ,checkFloat4:function(e){
             checkFloat4(e.currentTarget);
         }

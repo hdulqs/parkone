@@ -30,7 +30,8 @@ var buyAndSell = new Vue({
         assetList: {
             "BTC": 0,
             "ETH": 0,
-            "LTC": 0
+            "LTC": 0,
+            "PK":0
         },
         Rate: {},
         newList: {},

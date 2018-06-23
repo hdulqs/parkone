@@ -123,7 +123,7 @@ function callServie(serviceName,urlPath,param,loadParam){
             withCredentials: true  
         },
         beforeSend: function (xhr) {   //beforeSend定义全局变量
-            xhr.setRequestHeader("Referer", "http://cointobe.com/account/Mregister.html");
+            xhr.setRequestHeader("Referer", "http://www.park.one/account/Mregister.html");
         },
         contentType:"application/json",
         headers: {
@@ -148,7 +148,7 @@ function callServieOther(serviceName,urlPath,param,loadParam) {
             withCredentials: true  
         },
         beforeSend: function (xhr) {   //beforeSend定义全局变量
-            xhr.setRequestHeader("Referer", "http://cointobe.com/account/Mregister.html");
+            xhr.setRequestHeader("Referer", "http://www.park.one/account/Mregister.html");
         },
         success: function (data) {
             return serviceNameCallBack(serviceName, data);

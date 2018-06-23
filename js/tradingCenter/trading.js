@@ -41,7 +41,8 @@ var buyAndSell = new Vue({
         showTradeData: false,
         transactionTit: {
             marketBTC: true,
-            marketETH: false
+            marketETH: false,
+            marketPK: false,
         },
 		ChangeMoenyType : '',
         isCNY: true,
@@ -277,6 +278,7 @@ var buyAndSell = new Vue({
                 marketBTC: false,
                 marketETH: false,
                 marketLTC: false,
+                marketPK: false,
                 recent: true,
             }
             this.tradeDataRecent = JSON.parse(sessionStorage.getItem("recentBrowse"));
@@ -286,7 +288,8 @@ var buyAndSell = new Vue({
             this.transactionTit = {
                 marketBTC: false,
                 marketETH: false,
-                marketLTC: false
+                marketLTC: false,
+                marketPK: false
             }
             this.transactionTit[B] = true;
             sessionStorage.setItem("sessionTit", B);
@@ -1229,7 +1232,7 @@ function refreshElement() {
         buyAndSell.shijiasell = "",//市价卖出
         buyAndSell.shijiabuy = "",//市价卖出
         //刷新当前币的滑块最大值
-        refreshPowerange(initClickInput1, formatNumber(buyAndSell.assetList[buyAndSell.market] / buyAndSell.newList.new, 4), 0);
+    refreshPowerange(initClickInput1, formatNumber(buyAndSell.assetList[buyAndSell.market] / buyAndSell.newList.new, 4), 0);
     refreshPowerange(initClickInput2, formatNumber(buyAndSell.assetList[buyAndSell.buyAndCoin], 4), 0);
     refreshPowerange(initClickInput3, formatNumber(buyAndSell.assetList[buyAndSell.market], 4), 0);
     refreshPowerange(initClickInput4, formatNumber(buyAndSell.assetList[buyAndSell.buyAndCoin], 4), 0);
@@ -1503,12 +1506,14 @@ function sessionB(){
     //显示当前记录币种
     buyAndSell.transactionTit={
         marketBTC:sessionStorage.getItem("sessionTit") ? (sessionStorage.getItem("sessionTit")=='marketBTC' ? true : false) : true,
-        marketETH:sessionStorage.getItem("sessionTit") && sessionStorage.getItem("sessionTit")=='marketETH' ? true : false
+        marketETH:sessionStorage.getItem("sessionTit") && sessionStorage.getItem("sessionTit")=='marketETH' ? true : false,
+        marketPK:sessionStorage.getItem("sessionTit") && sessionStorage.getItem("sessionTit")=='marketPK' ? true : false
     }
     //显示当前记录币种分类
     buyAndSell.marketCheck={
         BTC:sessionStorage.getItem("sessionCont") ? (sessionStorage.getItem("sessionCont")=='BTC' ? sessionStorage.getItem("sessionIndex") : null) : 0,
-        ETH:sessionStorage.getItem("sessionCont") && sessionStorage.getItem("sessionCont")=='ETH' ? sessionStorage.getItem("sessionIndex") : null
+        ETH:sessionStorage.getItem("sessionCont") && sessionStorage.getItem("sessionCont")=='ETH' ? sessionStorage.getItem("sessionIndex") : null,
+        PK:sessionStorage.getItem("sessionCont") && sessionStorage.getItem("sessionCont")=='PK' ? sessionStorage.getItem("sessionIndex") : null
     }
     //记录当前市场
     buyAndSell.tradeDataKey=sessionStorage.getItem("sessionCont") ? sessionStorage.getItem("sessionCont") : "BTC";
@@ -1525,7 +1530,6 @@ function resetTransactionInput() {
     $(".msg-prompt").removeClass("msg-prompt");
     $(".error-input-prompt").removeClass("error-input-prompt");
     $(".msg-input-prompt").removeClass("msg-input-prompt");
-
     $(elm + " input," + elm + " .input-check-warp").addClass("error-prompt");
     $(elm + " .input-prompt").addClass("error-input-prompt").removeClass("dn");
 }
@@ -1593,28 +1597,3 @@ function getDateFormate(str,typeV) {
 
 }
 
-var SliderL = function(id) {
-	return "string" == typeof id ? document.getElementById(id) : id;
-};
-var Class = {
-	create: function() {
-		return function() {
-			this.initialize.apply(this, arguments);
-		}
-	}
-}
-Object.extend = function(destination, source) {
-	for (var property in source) {
-		destination[property] = source[property];
-	}
-	return destination;
-}
-function addEventHandler(oTarget, sEventType, fnHandler) {
-	if (oTarget.addEventListener) {
-		oTarget.addEventListener(sEventType, fnHandler, false);
-	} else if (oTarget.attachEvent) {
-		oTarget.attachEvent("on" + sEventType, fnHandler);
-	} else {
-		oTarget["on" + sEventType] = fnHandler;
-	}
-};

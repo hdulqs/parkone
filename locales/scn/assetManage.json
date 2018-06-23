@@ -58,7 +58,7 @@
     "warning10": "备注标签和提币地址不能为空",
     "warning11": "请输入正确的提币数量",
     "warning12": "资金密码不能为空",
-    "useAddress":"地址",
+    "useAddress":"提现账户",
     "aletSuccess":"复制成功",
     "Actions":"操作",
     "deleteSuccess":"删除成功",

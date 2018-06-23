@@ -36,24 +36,8 @@ var isMobile = function(isLoad) {
 var deviceType = isMobile(0);
 var Path='';
 var Path1='';
-
-var gioHostId ={
-		"www.cointobe.vip":"82119bb048cae2c7",
-		"www.cointobe.tech":"bd6f2d29148ab7dc",
-		"www.cointobe.online":"ba22377416040bad",
-		"www.cointobe.ink":"9712d396b1402dc8",
-		"www.cointobe.club":"a53a3e2c70064967",
-		"www.cointobe2.com":"9af3935f57bda08a",
-		"www.cointobe3.com":"913fbeea31de0db3",
-		"www.cointobe6.com":"92a8975a2d8df9ac",
-		"www.cointobe8.com":"a078f1f706674295",
-		"www.cointoobe.com":"89c4aee1d4ced2d7"
-};
 var hostname = window.location.hostname;
-var gioID = '85080f31a5d48e6a';
-if(gioHostId[hostname] && gioHostId[hostname] != undefined){
-	gioID = gioHostId[hostname];
-};
+
 //GIO统计
 // var Dplus2 ='<script type="text/javascript">var _vds = _vds || [];window._vds = _vds;(function(){_vds.push(["setAccountId", "'+gioID+'"]);_vds.push(["setCS1","user_id", "'+sessionStorage.getItem("userid")+'"]);_vds.push(["setCS2","user_name", "'+ sessionStorage.getItem("userName")+'"]);(function() {var vds = document.createElement("script");vds.type="text/javascript";vds.async = true;vds.src = ("https:" == document.location.protocol ? "https://" : "http://") + "assets.growingio.com/vds.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(vds, s);})();})();</script>';
 // if(!sessionStorage.getItem("userid")){

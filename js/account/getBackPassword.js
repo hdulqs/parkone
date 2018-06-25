@@ -1,8 +1,4 @@
-    $(document).ready(function(){
-        $("input[type=text],input[type=password]").val("");
-        initLang();
-        windowOnresize();
-    })
+var thirdMode=false;
     getPhontData();
 	initYunD();
 	initYunD1();
@@ -244,6 +240,7 @@
     function submitMobileFirstCallBack(r) {
         $("#bgloading").hide();
         if(r.success){
+            thirdMode=true;
             $(".form-box").hide()
             $(".form-box").eq(2).show();
             $("#mobile1").val($("#mobile").val());
@@ -361,15 +358,23 @@
 
     }
     
-
+   
     $(function(){
+        $("input[type=text],input[type=password]").val("");
+        initLang();
+        windowOnresize();
         $(".register-switch span").click(function(){
             //initYunD1();
             $(".register-switch span").removeClass("active");
             $(this).addClass("active");
             var index=$(this).index();
             $(".form-box").hide();
-            $(".form-box").eq(index).show();
+            if(index>0&&thirdMode){
+                $(".form-box").eq(2).show();
+            }else{
+                $(".form-box").eq(index).show();
+
+            }   
             $("#warning-mobile").html("");
             $("#phone").removeClass("input-warning");
             if($("#mail").val()==""){

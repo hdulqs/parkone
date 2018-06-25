@@ -327,6 +327,8 @@ var buyAndSell = new Vue({
 			this.MarketShowNoData = false;
 			this.LastMarket();	//最新成交————市场
             getBuyAndSellDataList(true);
+            this.BuyTop10List={};
+            this.SellTop10List={};
             this.assetList[this.buyAndCoin] = isNaN(this.assetList[this.buyAndCoin]) ? 0 : this.assetList[this.buyAndCoin];
             $("#kline").html("");
             refreshElement();
@@ -778,9 +780,10 @@ function initPage() {
     var userToken = $.cookie("userToken");
     if (!userToken && userToken != 'undefined') {
         $(".black-shadow").show();
-        $("#havaLoginPersonal").hide();
-		$("#LastMarket,#myLast").hide();
+        
     } else {
+        $("#havaLoginPersonal").show();
+        $("#LastMarket,#myLast").show();
         $(".black-shadow").hide();
     }
 	//K set width

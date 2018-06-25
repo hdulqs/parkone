@@ -126,6 +126,7 @@ var assetHAT = new Vue({
 			if(this.checkPkBankNameMsg||this.checkPKnum||this.checkNameMsg){
 				return;
 			}
+			isCheckGM = true;
 			var twoValid= $.cookie("twoValid");
             var googleStatus=$.cookie("googleStatus");
             var mobileStatus=$.cookie("mobileStatus");

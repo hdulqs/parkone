@@ -33,7 +33,7 @@
     <!--css文件引入结束-->
 </head>
 <body class="trading">
-<div id="loaded" class="dn loaded">
+<div id="loaded" class="loaded">
     <div class="page">
         <div class="top-box" id="headerNav"></div>
         <div class="notice-wrap" id="topNotice"></div>
@@ -189,7 +189,7 @@
                                     <dt><span data-i18n="assetManage.lowprice"></span>{{getFloat(scientificToNumber(newList.min),6)}}
                                     </dt>
                                     <dt class="font-volume"><span data-i18n="assetManage.dayvolume">24H</span>{{getFloat(scientificToNumber(newList.volume),8)}}{{scientificToNumber(newList.volume)==0
-                                        ? '':buyAndCoin}}
+ ? '':buyAndCoin}}
                                     </dt>
                                 </dl>
                             </div>

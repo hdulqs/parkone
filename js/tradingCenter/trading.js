@@ -1,5 +1,6 @@
 var userToken = $.cookie("userToken");
 if (!userToken && userToken != 'undefined') {
+    window.location.href="../account/login.html";;
 } else {
     callServieaSync("AssetMsg", "/api/account/asset");
 }

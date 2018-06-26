@@ -15,6 +15,16 @@
 				}
 		},
 		"mContent":{
+			"list3":{
+				"id":3,
+				"title":"Suggestions for rewards",
+				"callName":"Dear Users",
+				"desText":"Suggestions for rewards",
+				"contentText":[
+					" The initial launch of the platform and the influx of large numbers of users resulted in congestion in the transaction. The platform is continuously improving. We hope that everyone will have a good trading experience on the PARK.ONE platform. We will also launch user improvement product plans. Users who propose product improvements will receive 6,666 PARK tokens, and then receive 8888 PARK token rewards after adoption. We hope that the platform can grow with everyone with the help of everyone, and let the PARK.ONE platform run all the way on the road to becoming a first-class trading platform."
+				],
+				"annTime":"Jun 26, 2018"
+			},
 			"list2":{
 				"id":2,
 				"title":"PARK.ONE Lists PARK/ETH Trading Pair",

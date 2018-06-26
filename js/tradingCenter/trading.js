@@ -1078,14 +1078,14 @@ var tradList = {
 getBuyAndSellDataList(true);
 getNewst();
 refreshNewTread(true);
-setInterval(function () {
-	//盘口数据
-    getBuyAndSellDataList(false);
-    //获取最新价格、交易对
-    getNewst();
-	//最新成交 市场
-	refreshNewTread();
-}, 5000)
+// setInterval(function () {
+// 	//盘口数据
+//     //getBuyAndSellDataList(false);
+//     //获取最新价格、交易对
+//     //getNewst();
+// 	//最新成交 市场
+// 	//refreshNewTread();
+// }, 5000)
 //顶部当前交易对
 function getNewst() {
     callServieGetOther("theNewest", '/api/market/nologin/realtime/index/' + buyAndSell.buyAndCoin + '/' + buyAndSell.market, {
@@ -1124,6 +1124,9 @@ function theAllNewestCallBack(r) {
             buyAndSell.tradeData[buyAndSell.tradeDataKey].sort(buyAndSell.compareAsce('increase'))
         }
     }
+    setTimeout(function(){
+        getNewst();
+    },5000)
 }
 function theNewestCallBack(r) {
     if (!r.success) {
@@ -1169,7 +1172,10 @@ function REAL_AGENCY_BUYCallBack(r) {
     $(r.data).each(function (k, v) {
         buyAndSell.totalM = buyAndSell.totalM + Number(v.count);
     });
-	initLang();
+    initLang();
+    setTimeout(function(){
+        getBuyDataList(false);
+    }, 5000);
 }
 //盘口卖数据
 function getSellDataList(isLoads){
@@ -1195,7 +1201,10 @@ function REAL_AGENCY_SELLCallBack(r) {
     $(r.data).each(function (k, v) {
         buyAndSell.totalS = buyAndSell.totalS + Number(v.count);
     });
-	initLang();
+    initLang();
+    setTimeout(function(){
+        getSellDataList(false);
+    }, 5000);
 }
 /* 获取当前币种买卖实时数据（盘口数据）  end*/
 
@@ -1458,8 +1467,10 @@ function listRealTimeOrderLogCallBack(r) {
         buyAndSell.MarketShowNoDat = false;
 		buyAndSell.refreshMarketTime = list[0].made_time;
     }
-   
     initLang();
+    setTimeout(function() {
+        refreshNewTread();
+    }, 5000);
 }
 function listRealTimeOrderLog1CallBack(r) {
 	$('.new-trades .topo-loading').addClass('dn');
@@ -1486,6 +1497,9 @@ function listRealTimeOrderLog1CallBack(r) {
 		buyAndSell.refreshMarketTime = list[0].made_time;
     }
     initLang();
+    setTimeout(function(){
+        refreshNewTread();
+    }, 5000);
 }
 
 

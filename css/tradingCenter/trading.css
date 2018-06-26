@@ -684,9 +684,9 @@
 .consult-offtake.maxHeight,.consult-buying.maxHeight{height:386px;}
 .marketRowBox .font-trading-des {position:relative;}
 
-.consult-info .rowl-1{width: 37%;}
+.consult-info .rowl-1{width: 20%;}
 .consult-info .rowl-2{width: 40%;}
-.consult-info .rowl-3{width: 23%;}
+.consult-info .rowl-3{width: 40%;}
 
 
 .pankou-info { width:100%; height:auto; overflow:hidden; padding:12px 0px 9px;}

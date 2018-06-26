@@ -1126,7 +1126,7 @@ function theAllNewestCallBack(r) {
     }
     setTimeout(function(){
         getNewst();
-    },5000)
+    },8000)
 }
 function theNewestCallBack(r) {
     if (!r.success) {
@@ -1175,7 +1175,7 @@ function REAL_AGENCY_BUYCallBack(r) {
     initLang();
     setTimeout(function(){
         getBuyDataList(false);
-    }, 5000);
+    }, 8000);
 }
 //盘口卖数据
 function getSellDataList(isLoads){
@@ -1204,7 +1204,7 @@ function REAL_AGENCY_SELLCallBack(r) {
     initLang();
     setTimeout(function(){
         getSellDataList(false);
-    }, 5000);
+    }, 8000);
 }
 /* 获取当前币种买卖实时数据（盘口数据）  end*/
 
@@ -1470,7 +1470,7 @@ function listRealTimeOrderLogCallBack(r) {
     initLang();
     setTimeout(function() {
         refreshNewTread();
-    }, 5000);
+    }, 8000);
 }
 function listRealTimeOrderLog1CallBack(r) {
 	$('.new-trades .topo-loading').addClass('dn');
@@ -1499,7 +1499,7 @@ function listRealTimeOrderLog1CallBack(r) {
     initLang();
     setTimeout(function(){
         refreshNewTread();
-    }, 5000);
+    }, 8000);
 }
 
 

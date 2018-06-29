@@ -1034,7 +1034,7 @@ $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
 			pageNo:0,
 			pageSize:20,
             bizType:bizType,
-            consignationStatus:0
+            consignationStatus:'3,4,5'
 		},{"isLoading":true,"elm":"#my24 .topo-loading"});
     }else if (e.currentTarget.hash == "#home1"){
 		consignationList.consignationDataList = {};

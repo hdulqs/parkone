@@ -68,6 +68,9 @@ var app = new Vue({
     },
     methods: {
         selectOnchang: function (it,ind) {
+                if(ind==0){
+                    ind=''
+                }
                 this.selectValue=it;
                 this.selectedIndex1 = ind;
                 this.bizType = this.selectedIndex1;

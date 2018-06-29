@@ -25,7 +25,7 @@ var app = new Vue({
         all: 0, //总页数
         cur: 1,//当前页码,
         pageSize:10,//每页显示条数
-        bizType:0,  //对
+        bizType:'',  //对
         status:1 ,//状态 按钮的状态
         selectedIndex1:1,
         show:false,

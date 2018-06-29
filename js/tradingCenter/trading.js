@@ -1426,30 +1426,7 @@ function listOrderSetDataEndCallBack(r) {
 		buyAndSell.refreshMyTime = list[0].create_time;
 		buyAndSell.MarketShowNoData = false;
 	}
-    initLang();
-}
-function listOrderSetDataEnd1CallBack(r) {
-	$('.new-trades .topo-loading').addClass('dn');
-    if (!r.success) {
-        return;
-    }
-    //最新成交价
-    var list = r.data.list;
-
-	var which = null;
-    for (var i = 0; i < list.length; i++) {
-        if (buyAndSell.refreshMyTime == list[i].create_time) {
-            which = i;
-        }
-    }
-    var newList = list.slice(0, which);
-    buyAndSell.consignationDataListMy = newList.concat(buyAndSell.consignationDataListMy)
-    buyAndSell.consignationDataListMy = buyAndSell.consignationDataListMy.slice(0, 50);
-    if (buyAndSell.consignationDataListMy.length > 0) {
-        buyAndSell.MarketShowNoDat = false;
-		buyAndSell.refreshMyTime = list[0].create_time;
-    }
-    initLang();
+    // initLang();
 }
 //最新成交  市场
 function listRealTimeOrderLogCallBack(r) {
@@ -1467,7 +1444,7 @@ function listRealTimeOrderLogCallBack(r) {
         buyAndSell.MarketShowNoDat = false;
 		buyAndSell.refreshMarketTime = list[0].made_time;
     }
-    initLang();
+    // initLang();
     setTimeout(function() {
         refreshNewTread();
     }, 8000);
@@ -1496,7 +1473,7 @@ function listRealTimeOrderLog1CallBack(r) {
         buyAndSell.MarketShowNoDat = false;
 		buyAndSell.refreshMarketTime = list[0].made_time;
     }
-    initLang();
+    // initLang();
     setTimeout(function(){
         refreshNewTread();
     }, 8000);

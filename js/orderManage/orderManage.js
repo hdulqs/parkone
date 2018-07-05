@@ -60,7 +60,7 @@ var app = new Vue({
         callServieOther("getBuySellOrder","/api/trade/getBuySellOrder",{
             pageNo: this.cur,
             pageSize: this.pageSize,
-            consignationStatus: 1,
+            consignationStatus: '1,2,3',
             bizType:this.bizType
         });
         

@@ -346,7 +346,7 @@ function revokeOrderCallBack(r){
         callServieOther('getBuySellOrderRevoke',"/api/trade/getBuySellOrder",{
             pageNo: app.cur,
             pageSize: app.pageSize,
-            consignationStatus: app.statusIndex,
+            consignationStatus: app.statusIndex==1?'1,2,3':app.statusIndex,
             bizType:app.bizType
         })
     },500)

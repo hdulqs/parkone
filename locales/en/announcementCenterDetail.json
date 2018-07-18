@@ -17,12 +17,12 @@
 		"mContent":{
 			"list4":{
 				"id":4,
-				"title":"Notice of PARK.ONE system upgrade maintenance",
+				"title":"About the PARK.ONE platform system upgrade maintenance announcement",
 				"callName":"Dear Users",
-				"desText":"Notice of PARK.ONE system upgrade maintenance",
+				"desText":"About the PARK.ONE platform system upgrade maintenance announcement",
 				"contentText":[
-					" To give you a better trading experience, PARKONE will upgrade the latest version tonight at 21:00-24:00 on July 18, 2018.",
-					"This upgrade involves data migration in the background. If the password is incorrect during login, please click forget password and reset password. Sorry for the inconvenience!"
+					"The latest version of PARKONE, the world's first anti-breaking digital asset trading platform, will be officially available to all users on July 19, 2018. In order to bring a better user experience to all users and enjoy the smoothest transaction service, system upgrade and data migration will be carried out on July 18, 2018 from 21:00 to 24:00.",
+					"Since this upgrade involves background changes, for users who have already registered in the previous period, if the password is incorrect during login, please click the forgot password and re-set it. Please forgive me for the same reason."
 				],
 				"annTime":"July 18, 2018"
 			},

@@ -448,9 +448,6 @@
 .market-row .rowC.last-price{
     cursor: pointer;
 }
-.market-row:nth-child(even){
-    
-}
 .market-tit {
     line-height: 30px;
     font-size: 12px;
